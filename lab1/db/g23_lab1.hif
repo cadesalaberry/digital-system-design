@@ -34,9 +34,6 @@ circuits|g23_lab1.bdf
 BLOCK_DESIGN_NAMING
 AUTO
 }
-# hierarchies {
-|
-}
 # macro_sequence
 
 # end
@@ -54,9 +51,39 @@ be3a5a606ed51c23ab882b6157ba727e
 BLOCK_DESIGN_NAMING
 AUTO
 }
-# hierarchies {
-g23_comp7:inst
+# macro_sequence
+
+# end
+# entity
+g23_Seconds_to_Days
+# storage
+db|g23_lab1.(2).cnf
+db|g23_lab1.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
 }
+# case_insensitive
+# source_file
+g23_seconds_to_days.vhd
+eeb1479b1454fae679b211e11c419c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end
