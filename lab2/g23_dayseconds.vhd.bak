@@ -34,9 +34,10 @@ end g23_dayseconds;
 architecture cascading of g23_dayseconds is
 
 	signal HoursMinutes		: STD_LOGIC_VECTOR(10 downto 0);
-	signal TotalMinutes		: STD_LOGIC_VECTOR(11 downto 0);
+	signal TotalMinutes		: STD_LOGIC_VECTOR(10 downto 0);
 	signal MinutSeconds		: STD_LOGIC_VECTOR(16 downto 0);
 	signal TotalSeconds		: STD_LOGIC_VECTOR(16 downto 0);
+	signal FinalSummation	: STD_LOGIC_VECTOR(16 downto 0);
 
 begin
 	-- HoursMinutes <= Hours * 60;
@@ -67,12 +68,12 @@ begin
 	)
 	PORT MAP (
 		dataa => HoursMinutes,
-		datab => STD_LOGIC_VECTOR(Minutes),
+		datab => "00000" & STD_LOGIC_VECTOR(Minutes),
 		result => TotalMinutes
 	);
 	
 	-- MinutSeconds <= TotalMinutes * 60;
-	lpm_mult_component : lpm_mult
+	lpm_mult_component_2 : lpm_mult
 	GENERIC MAP (
 		lpm_hint => "INPUT_B_IS_CONSTANT=YES,MAXIMIZE_SPEED=5",
 		lpm_representation => "UNSIGNED",
@@ -88,8 +89,8 @@ begin
 	);
 	
 	
-	-- DaySeconds <= TotalSeconds + Seconds;
-	lpm_add_sub_component : lpm_add_sub
+	-- DaySeconds <= MinutSeconds + Seconds;
+	lpm_add_sub_component_2 : lpm_add_sub
 	GENERIC MAP (
 		lpm_direction => "ADD",
 		lpm_hint => "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO",
@@ -98,9 +99,11 @@ begin
 		lpm_width => 17
 	)
 	PORT MAP (
-		dataa => TotalSeconds,
-		datab => Seconds,
-		result => DaySeconds
+		dataa => MinutSeconds,
+		datab => STD_LOGIC_VECTOR(Seconds),
+		result => FinalSummation 
 	);
+	
+	DaySeconds <= UNSIGNED (FinalSummation);
 
 end cascading;
