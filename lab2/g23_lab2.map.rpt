@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g23_lab2
-Tue Feb 04 18:14:20 2014
+Tue Feb 04 18:36:04 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -15,9 +15,9 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Parameter Settings for User Entity Instance: LPM_MULT:lpm_mult_component
- 10. Parameter Settings for User Entity Instance: LPM_ADD_SUB:lpm_add_sub_component
+ 10. Parameter Settings for User Entity Instance: lpm_add_sub:lpm_add_sub_component
  11. Parameter Settings for User Entity Instance: LPM_MULT:lpm_mult_component_2
- 12. Parameter Settings for User Entity Instance: LPM_ADD_SUB:lpm_add_sub_component_2
+ 12. Parameter Settings for User Entity Instance: lpm_add_sub:lpm_add_sub_component_2
  13. lpm_mult Parameter Settings by Entity Instance
  14. Analysis & Synthesis Messages
 
@@ -45,7 +45,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Tue Feb 04 18:14:19 2014         ;
+; Analysis & Synthesis Status   ; Successful - Tue Feb 04 18:36:04 2014         ;
 ; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                 ; g23_lab2                                      ;
 ; Top-level Entity Name         ; g23_dayseconds                                ;
@@ -224,23 +224,23 @@ applicable agreement for further details.
 ; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                   ; Library Name ;
 +------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; |g23_dayseconds                                ; 53 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 34   ; 0            ; |g23_dayseconds                                                                                                                                       ; work         ;
-;    |lpm_add_sub:lpm_add_sub_component_2|       ; 15 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_add_sub:lpm_add_sub_component_2                                                                                                   ;              ;
+;    |lpm_add_sub:lpm_add_sub_component_2|       ; 15 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_add_sub:lpm_add_sub_component_2                                                                                                   ; work         ;
 ;       |add_sub_93j:auto_generated|             ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_add_sub:lpm_add_sub_component_2|add_sub_93j:auto_generated                                                                        ; work         ;
-;    |lpm_add_sub:lpm_add_sub_component|         ; 9 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_add_sub:lpm_add_sub_component                                                                                                     ;              ;
-;       |add_sub_33j:auto_generated|             ; 9 (9)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_add_sub:lpm_add_sub_component|add_sub_33j:auto_generated                                                                          ;              ;
+;    |lpm_add_sub:lpm_add_sub_component|         ; 9 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_add_sub:lpm_add_sub_component                                                                                                     ; work         ;
+;       |add_sub_33j:auto_generated|             ; 9 (9)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_add_sub:lpm_add_sub_component|add_sub_33j:auto_generated                                                                          ; work         ;
 ;    |lpm_mult:lpm_mult_component_2|             ; 24 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component_2                                                                                                         ; work         ;
-;       |multcore:mult_core|                     ; 24 (7)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component_2|multcore:mult_core                                                                                      ;              ;
+;       |multcore:mult_core|                     ; 24 (7)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component_2|multcore:mult_core                                                                                      ; work         ;
 ;          |mpar_add:padder|                     ; 17 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder                                                                      ; work         ;
-;             |lpm_add_sub:adder[0]|             ; 10 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; work         ;
-;                |add_sub_3dh:auto_generated|    ; 10 (10)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_3dh:auto_generated                      ;              ;
+;             |lpm_add_sub:adder[0]|             ; 10 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ;              ;
+;                |add_sub_3dh:auto_generated|    ; 10 (10)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_3dh:auto_generated                      ; work         ;
 ;             |mpar_add:sub_par_add|             ; 7 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
-;                |lpm_add_sub:adder[0]|          ; 7 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
-;                   |add_sub_7dh:auto_generated| ; 7 (7)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_7dh:auto_generated ;              ;
+;                |lpm_add_sub:adder[0]|          ; 7 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ;              ;
+;                   |add_sub_7dh:auto_generated| ; 7 (7)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_7dh:auto_generated ; work         ;
 ;    |lpm_mult:lpm_mult_component|               ; 5 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component                                                                                                           ;              ;
-;       |multcore:mult_core|                     ; 5 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component|multcore:mult_core                                                                                        ;              ;
+;       |multcore:mult_core|                     ; 5 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component|multcore:mult_core                                                                                        ; work         ;
 ;          |mpar_add:padder|                     ; 5 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder                                                                        ; work         ;
-;             |lpm_add_sub:adder[0]|             ; 5 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                   ; work         ;
-;                |add_sub_3dh:auto_generated|    ; 5 (5)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_3dh:auto_generated                        ;              ;
+;             |lpm_add_sub:adder[0]|             ; 5 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                   ;              ;
+;                |add_sub_3dh:auto_generated|    ; 5 (5)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_dayseconds|lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_3dh:auto_generated                        ; work         ;
 +------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -296,7 +296,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: LPM_ADD_SUB:lpm_add_sub_component ;
+; Parameter Settings for User Entity Instance: lpm_add_sub:lpm_add_sub_component ;
 +------------------------+-------------+-----------------------------------------+
 ; Parameter Name         ; Value       ; Type                                    ;
 +------------------------+-------------+-----------------------------------------+
@@ -359,7 +359,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: LPM_ADD_SUB:lpm_add_sub_component_2 ;
+; Parameter Settings for User Entity Instance: lpm_add_sub:lpm_add_sub_component_2 ;
 +------------------------+-------------+-------------------------------------------+
 ; Parameter Name         ; Value       ; Type                                      ;
 +------------------------+-------------+-------------------------------------------+
@@ -423,7 +423,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Tue Feb 04 18:14:16 2014
+    Info: Processing started: Tue Feb 04 18:36:02 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g23_lab2 -c g23_lab2
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file g23_dayseconds.vhd
@@ -451,16 +451,16 @@ Info: Elaborating entity "multcore" for hierarchy "LPM_MULT:lpm_mult_component|m
 Info: Elaborated megafunction instantiation "LPM_MULT:lpm_mult_component|multcore:mult_core", which is child of megafunction instantiation "LPM_MULT:lpm_mult_component"
 Info: Elaborating entity "mpar_add" for hierarchy "LPM_MULT:lpm_mult_component|multcore:mult_core|mpar_add:padder"
 Info: Elaborated megafunction instantiation "LPM_MULT:lpm_mult_component|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "LPM_MULT:lpm_mult_component"
-Info: Elaborating entity "LPM_ADD_SUB" for hierarchy "LPM_MULT:lpm_mult_component|multcore:mult_core|mpar_add:padder|LPM_ADD_SUB:adder[0]"
-Info: Elaborated megafunction instantiation "LPM_MULT:lpm_mult_component|multcore:mult_core|mpar_add:padder|LPM_ADD_SUB:adder[0]", which is child of megafunction instantiation "LPM_MULT:lpm_mult_component"
+Info: Elaborating entity "lpm_add_sub" for hierarchy "LPM_MULT:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]"
+Info: Elaborated megafunction instantiation "LPM_MULT:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "LPM_MULT:lpm_mult_component"
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_3dh.tdf
     Info: Found entity 1: add_sub_3dh
-Info: Elaborating entity "add_sub_3dh" for hierarchy "LPM_MULT:lpm_mult_component|multcore:mult_core|mpar_add:padder|LPM_ADD_SUB:adder[0]|add_sub_3dh:auto_generated"
+Info: Elaborating entity "add_sub_3dh" for hierarchy "LPM_MULT:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_3dh:auto_generated"
 Info: Elaborating entity "altshift" for hierarchy "LPM_MULT:lpm_mult_component|altshift:external_latency_ffs"
 Info: Elaborated megafunction instantiation "LPM_MULT:lpm_mult_component|altshift:external_latency_ffs", which is child of megafunction instantiation "LPM_MULT:lpm_mult_component"
-Info: Elaborating entity "LPM_ADD_SUB" for hierarchy "LPM_ADD_SUB:lpm_add_sub_component"
-Info: Elaborated megafunction instantiation "LPM_ADD_SUB:lpm_add_sub_component"
-Info: Instantiated megafunction "LPM_ADD_SUB:lpm_add_sub_component" with the following parameter:
+Info: Elaborating entity "lpm_add_sub" for hierarchy "lpm_add_sub:lpm_add_sub_component"
+Info: Elaborated megafunction instantiation "lpm_add_sub:lpm_add_sub_component"
+Info: Instantiated megafunction "lpm_add_sub:lpm_add_sub_component" with the following parameter:
     Info: Parameter "LPM_WIDTH" = "11"
     Info: Parameter "LPM_DIRECTION" = "ADD"
     Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
@@ -469,7 +469,7 @@ Info: Instantiated megafunction "LPM_ADD_SUB:lpm_add_sub_component" with the fol
     Info: Parameter "LPM_HINT" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_33j.tdf
     Info: Found entity 1: add_sub_33j
-Info: Elaborating entity "add_sub_33j" for hierarchy "LPM_ADD_SUB:lpm_add_sub_component|add_sub_33j:auto_generated"
+Info: Elaborating entity "add_sub_33j" for hierarchy "lpm_add_sub:lpm_add_sub_component|add_sub_33j:auto_generated"
 Info: Elaborating entity "LPM_MULT" for hierarchy "LPM_MULT:lpm_mult_component_2"
 Info: Elaborated megafunction instantiation "LPM_MULT:lpm_mult_component_2"
 Info: Instantiated megafunction "LPM_MULT:lpm_mult_component_2" with the following parameter:
@@ -487,16 +487,16 @@ Info: Elaborating entity "mpar_add" for hierarchy "LPM_MULT:lpm_mult_component_2
 Info: Elaborated megafunction instantiation "LPM_MULT:lpm_mult_component_2|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "LPM_MULT:lpm_mult_component_2"
 Info: Elaborating entity "mpar_add" for hierarchy "LPM_MULT:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add"
 Info: Elaborated megafunction instantiation "LPM_MULT:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "LPM_MULT:lpm_mult_component_2"
-Info: Elaborating entity "LPM_ADD_SUB" for hierarchy "LPM_MULT:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|LPM_ADD_SUB:adder[0]"
-Info: Elaborated megafunction instantiation "LPM_MULT:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|LPM_ADD_SUB:adder[0]", which is child of megafunction instantiation "LPM_MULT:lpm_mult_component_2"
+Info: Elaborating entity "lpm_add_sub" for hierarchy "LPM_MULT:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]"
+Info: Elaborated megafunction instantiation "LPM_MULT:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "LPM_MULT:lpm_mult_component_2"
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_7dh.tdf
     Info: Found entity 1: add_sub_7dh
-Info: Elaborating entity "add_sub_7dh" for hierarchy "LPM_MULT:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|LPM_ADD_SUB:adder[0]|add_sub_7dh:auto_generated"
+Info: Elaborating entity "add_sub_7dh" for hierarchy "LPM_MULT:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_7dh:auto_generated"
 Info: Elaborating entity "altshift" for hierarchy "LPM_MULT:lpm_mult_component_2|altshift:external_latency_ffs"
 Info: Elaborated megafunction instantiation "LPM_MULT:lpm_mult_component_2|altshift:external_latency_ffs", which is child of megafunction instantiation "LPM_MULT:lpm_mult_component_2"
-Info: Elaborating entity "LPM_ADD_SUB" for hierarchy "LPM_ADD_SUB:lpm_add_sub_component_2"
-Info: Elaborated megafunction instantiation "LPM_ADD_SUB:lpm_add_sub_component_2"
-Info: Instantiated megafunction "LPM_ADD_SUB:lpm_add_sub_component_2" with the following parameter:
+Info: Elaborating entity "lpm_add_sub" for hierarchy "lpm_add_sub:lpm_add_sub_component_2"
+Info: Elaborated megafunction instantiation "lpm_add_sub:lpm_add_sub_component_2"
+Info: Instantiated megafunction "lpm_add_sub:lpm_add_sub_component_2" with the following parameter:
     Info: Parameter "LPM_WIDTH" = "17"
     Info: Parameter "LPM_DIRECTION" = "ADD"
     Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
@@ -505,15 +505,15 @@ Info: Instantiated megafunction "LPM_ADD_SUB:lpm_add_sub_component_2" with the f
     Info: Parameter "LPM_HINT" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_93j.tdf
     Info: Found entity 1: add_sub_93j
-Info: Elaborating entity "add_sub_93j" for hierarchy "LPM_ADD_SUB:lpm_add_sub_component_2|add_sub_93j:auto_generated"
+Info: Elaborating entity "add_sub_93j" for hierarchy "lpm_add_sub:lpm_add_sub_component_2|add_sub_93j:auto_generated"
 Info: Implemented 87 device resources after synthesis - the final resource count might be different
     Info: Implemented 17 input pins
     Info: Implemented 17 output pins
     Info: Implemented 53 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 320 megabytes
-    Info: Processing ended: Tue Feb 04 18:14:20 2014
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 321 megabytes
+    Info: Processing ended: Tue Feb 04 18:36:05 2014
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 
