@@ -1,5 +1,5 @@
 Flow report for g23_lab2
-Tue Feb 04 18:36:04 2014
+Tue Feb 11 17:24:32 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +-------------------------------+-----------------------------------------------+
-; Flow Status                   ; Successful - Tue Feb 04 18:36:04 2014         ;
+; Flow Status                   ; Successful - Tue Feb 11 17:24:32 2014         ;
 ; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                 ; g23_lab2                                      ;
 ; Top-level Entity Name         ; g23_dayseconds                                ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/04/2014 18:36:02 ;
+; Start date & time ; 02/11/2014 17:24:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; g23_lab2            ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------+---------------+----------------+----------------+
 ; Assignment Name                    ; Value                           ; Default Value ; Entity Name    ; Section Id     ;
 +------------------------------------+---------------------------------+---------------+----------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 132129496018668.139155696203796 ; --            ; --             ; --             ;
+; COMPILER_SIGNATURE_ID              ; 132129496019222.139215746706512 ; --            ; --             ; --             ;
 ; IP_TOOL_NAME                       ; LPM_MULT                        ; --            ; --             ; --             ;
 ; IP_TOOL_NAME                       ; LPM_ADD_SUB                     ; --            ; --             ; --             ;
 ; IP_TOOL_VERSION                    ; 9.1                             ; --            ; --             ; --             ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 321 MB              ; 00:00:02                           ;
-; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 321 MB              ; 00:00:02                           ;
+; Total                ; 00:00:06     ; --                      ; --                  ; 00:00:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -102,7 +102,7 @@ applicable agreement for further details.
 +----------------------+------------------+---------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +----------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis ; 156TR4060DS-02   ; Windows Vista ; 6.1        ; x86_64         ;
+; Analysis & Synthesis ; 156TR4060DS-09   ; Windows Vista ; 6.1        ; x86_64         ;
 +----------------------+------------------+---------------+------------+----------------+
 
 

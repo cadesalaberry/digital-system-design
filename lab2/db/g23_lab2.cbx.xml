@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="g23_lab2">
-		<CBX_INST_ENTRY INSTANCE_NAME="|g23_dayseconds|LPM_ADD_SUB:lpm_add_sub_component" CBX_FILE_NAME="add_sub_33j.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|g23_dayseconds|LPM_MULT:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|LPM_ADD_SUB:adder[0]" CBX_FILE_NAME="add_sub_3dh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|g23_dayseconds|LPM_MULT:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|LPM_ADD_SUB:adder[0]" CBX_FILE_NAME="add_sub_7dh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|g23_dayseconds|LPM_ADD_SUB:lpm_add_sub_component_2" CBX_FILE_NAME="add_sub_93j.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|g23_dayseconds|LPM_MULT:lpm_mult_component|multcore:mult_core|mpar_add:padder|LPM_ADD_SUB:adder[0]" CBX_FILE_NAME="add_sub_3dh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_dayseconds|LPM_MULT:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_3dh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_dayseconds|LPM_MULT:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_7dh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_dayseconds|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_33j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_dayseconds|LPM_MULT:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_3dh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_dayseconds|lpm_add_sub:lpm_add_sub_component_2" CBX_FILE_NAME="add_sub_93j.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
