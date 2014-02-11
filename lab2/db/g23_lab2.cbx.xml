@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="g23_lab2">
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_binary_to_BCD|LPM_ROM:b2BCD_table|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_5311.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
