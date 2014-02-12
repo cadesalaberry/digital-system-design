@@ -1,5 +1,5 @@
 Simulator report for g23_lab2
-Tue Feb 04 18:46:46 2014
+Tue Feb 11 18:56:09 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -44,10 +44,10 @@ applicable agreement for further details.
 ; Type                        ; Value        ;
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
-; Simulation End Time         ; 1.0 us       ;
+; Simulation End Time         ; 87.4 ns      ;
 ; Simulation Netlist Size     ; 244 nodes    ;
 ; Simulation Coverage         ;      99.59 % ;
-; Total Number of Transitions ; 4636046      ;
+; Total Number of Transitions ; 617360       ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Stratix II   ;
 +-----------------------------+--------------+
@@ -60,6 +60,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------------+-------------------------+---------------+
 ; Simulation mode                                                                            ; Functional              ; Timing        ;
 ; Start time                                                                                 ; 0 ns                    ; 0 ns          ;
+; End time                                                                                   ; 87400 ps                ;               ;
 ; Simulation results format                                                                  ; CVWF                    ;               ;
 ; Vector input source                                                                        ; g23_lab2_DaySeconds.vwf ;               ;
 ; Add pins automatically to simulation output waveforms                                      ; On                      ; On            ;
@@ -389,21 +390,22 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Tue Feb 04 18:36:29 2014
+    Info: Processing started: Tue Feb 11 18:55:29 2014
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off g23_lab2 -c g23_lab2
 Info: Using vector source file "P:/Apps/digital-system-design/lab2/g23_lab2_DaySeconds.vwf"
 Info: Overwriting simulation input file with simulation results
     Info: A backup of g23_lab2_DaySeconds.vwf called g23_lab2.sim_ori.vwf has been created in the db folder
+Info: Simulation end time 87.4 ns did not reach the end of the input vector, which ended at 1.0 us
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
 Info: Simulation coverage is      99.59 %
-Info: Number of transitions in simulation is 4636046
+Info: Number of transitions in simulation is 617360
 Info: Vector file g23_lab2_DaySeconds.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 181 megabytes
-    Info: Processing ended: Tue Feb 04 18:46:48 2014
-    Info: Elapsed time: 00:10:19
-    Info: Total CPU time (on all processors): 00:10:16
+    Info: Peak virtual memory: 185 megabytes
+    Info: Processing ended: Tue Feb 11 18:56:11 2014
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:00:39
 
 

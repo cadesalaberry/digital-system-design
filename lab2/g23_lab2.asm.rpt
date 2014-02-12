@@ -1,5 +1,5 @@
 Assembler report for g23_lab2
-Tue Feb 11 17:28:45 2014
+Tue Feb 11 18:40:06 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Feb 11 17:28:45 2014 ;
+; Assembler Status      ; Successful - Tue Feb 11 18:40:06 2014 ;
 ; Revision Name         ; g23_lab2                              ;
 ; Top-level Entity Name ; g23_dayseconds                        ;
 ; Family                ; Stratix II                            ;
@@ -118,14 +118,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Tue Feb 11 17:28:42 2014
+    Info: Processing started: Tue Feb 11 18:40:04 2014
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off g23_lab2 -c g23_lab2
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 275 megabytes
-    Info: Processing ended: Tue Feb 11 17:28:45 2014
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Tue Feb 11 18:40:06 2014
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

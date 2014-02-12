@@ -43,6 +43,9 @@ ON
 AUTO_ROM_RECOGNITION
 ON
 }
+# hierarchies {
+|
+}
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
@@ -233,6 +236,9 @@ DATAB2
 -1
 2
 }
+# hierarchies {
+lpm_mult:lpm_mult_component
+}
 # macro_sequence
 
 # end
@@ -383,6 +389,9 @@ dataa1
 dataa0
 -1
 3
+}
+# hierarchies {
+lpm_mult:lpm_mult_component|multcore:mult_core
 }
 # macro_sequence
 
@@ -541,6 +550,9 @@ data0_1
 data0_0
 -1
 3
+}
+# hierarchies {
+lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder
 }
 # macro_sequence
 
@@ -725,6 +737,10 @@ dataa6
 -1
 1
 }
+# hierarchies {
+lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]
+lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]
+}
 # macro_sequence
 
 # end
@@ -830,6 +846,10 @@ dataa0
 -1
 3
 }
+# hierarchies {
+lpm_mult:lpm_mult_component|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_3dh:auto_generated
+lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_3dh:auto_generated
+}
 # macro_sequence
 
 # end
@@ -920,6 +940,9 @@ data1
 data0
 -1
 3
+}
+# hierarchies {
+lpm_mult:lpm_mult_component|altshift:external_latency_ffs
 }
 # macro_sequence
 
@@ -1113,6 +1136,9 @@ DATAB10
 -1
 1
 }
+# hierarchies {
+lpm_add_sub:lpm_add_sub_component
+}
 # macro_sequence
 
 # end
@@ -1226,6 +1252,9 @@ dataa1
 dataa0
 -1
 3
+}
+# hierarchies {
+lpm_add_sub:lpm_add_sub_component|add_sub_33j:auto_generated
 }
 # macro_sequence
 
@@ -1450,6 +1479,9 @@ DATAB2
 -1
 2
 }
+# hierarchies {
+lpm_mult:lpm_mult_component_2
+}
 # macro_sequence
 
 # end
@@ -1636,6 +1668,9 @@ dataa1
 dataa0
 -1
 3
+}
+# hierarchies {
+lpm_mult:lpm_mult_component_2|multcore:mult_core
 }
 # macro_sequence
 
@@ -1843,6 +1878,9 @@ data0_0
 -1
 3
 }
+# hierarchies {
+lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder
+}
 # macro_sequence
 
 # end
@@ -2045,6 +2083,9 @@ data0_1
 data0_0
 -1
 3
+}
+# hierarchies {
+lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add
 }
 # macro_sequence
 
@@ -2265,6 +2306,9 @@ dataa10
 -1
 1
 }
+# hierarchies {
+lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]
+}
 # macro_sequence
 
 # end
@@ -2406,6 +2450,9 @@ dataa0
 -1
 3
 }
+# hierarchies {
+lpm_mult:lpm_mult_component_2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_7dh:auto_generated
+}
 # macro_sequence
 
 # end
@@ -2532,6 +2579,9 @@ data1
 data0
 -1
 3
+}
+# hierarchies {
+lpm_mult:lpm_mult_component_2|altshift:external_latency_ffs
 }
 # macro_sequence
 
@@ -2779,6 +2829,9 @@ DATAB10
 -1
 1
 }
+# hierarchies {
+lpm_add_sub:lpm_add_sub_component_2
+}
 # macro_sequence
 
 # end
@@ -2947,6 +3000,9 @@ dataa0
 -1
 3
 }
+# hierarchies {
+lpm_add_sub:lpm_add_sub_component_2|add_sub_93j:auto_generated
+}
 # macro_sequence
 
 # end
@@ -2973,9 +3029,6 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
-}
-# hierarchies {
-|
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -3085,9 +3138,6 @@ ADDRESS1
 ADDRESS0
 -1
 3
-}
-# hierarchies {
-lpm_rom:b2BCD_table
 }
 # macro_sequence
 
@@ -3210,9 +3260,6 @@ address1
 address0
 -1
 3
-}
-# hierarchies {
-lpm_rom:b2BCD_table|altrom:srom
 }
 # macro_sequence
 
@@ -3476,9 +3523,6 @@ address_a0
 -1
 3
 }
-# hierarchies {
-lpm_rom:b2BCD_table|altrom:srom|altsyncram:rom_block
-}
 # macro_sequence
 
 # end
@@ -3542,9 +3586,6 @@ address_a0
 # memory_file {
 g23_binary_to_bcd.mif
 aa502d74e47e5975f54bb94fa7fdeb
-}
-# hierarchies {
-lpm_rom:b2BCD_table|altrom:srom|altsyncram:rom_block|altsyncram_5311:auto_generated
 }
 # macro_sequence
 

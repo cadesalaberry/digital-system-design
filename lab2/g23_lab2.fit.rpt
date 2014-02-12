@@ -1,5 +1,5 @@
 Fitter report for g23_lab2
-Tue Feb 11 17:28:37 2014
+Tue Feb 11 18:39:59 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +-------------------------------+-----------------------------------------------+
-; Fitter Status                 ; Successful - Tue Feb 11 17:28:37 2014         ;
+; Fitter Status                 ; Successful - Tue Feb 11 18:39:59 2014         ;
 ; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                 ; g23_lab2                                      ;
 ; Top-level Entity Name         ; g23_dayseconds                                ;
@@ -144,12 +144,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 2.71        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
-;     2-4 processors         ; < 0.1%      ;
+;     2-4 processors         ;  25.0%      ;
 +----------------------------+-------------+
 
 
@@ -1424,7 +1424,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Tue Feb 11 17:28:32 2014
+    Info: Processing started: Tue Feb 11 18:39:56 2014
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off g23_lab2 -c g23_lab2
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Automatically selected device EP2S15F484C3 for design g23_lab2
@@ -1527,9 +1527,9 @@ Info: Delay annotation completed successfully
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Generated suppressed messages file P:/Apps/digital-system-design/lab2/g23_lab2.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 407 megabytes
-    Info: Processing ended: Tue Feb 11 17:28:37 2014
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 408 megabytes
+    Info: Processing ended: Tue Feb 11 18:40:00 2014
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

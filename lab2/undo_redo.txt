@@ -1,0 +1,21 @@
+MED
+P:\Apps\digital-system-design\lab2\g23_binary_to_BCD.mif
+
+	Undo Commands
+	     1.	Change Memory Radix
+	     2.	Change Memory Radix
+	     3.	Change Memory Radix
+	     4.	Change Memory Radix
+
+
+WED
+
+	Undo Commands
+	     1.	Count Value
+			 *** 
+	     2.	End Time
+	     3.	Count Value
+			 *** 
+	     4.	Insert Node or Bus
+
+
