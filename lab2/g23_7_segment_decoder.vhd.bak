@@ -31,7 +31,7 @@ begin
 	WITH RippleBlank_In & code select
 		RippleBlank_Out	<=
 			RippleBlank_In	when "10000",
-			"0"				when others;
+			'0'				when others;
 
 	with RippleBlank_In & code select
 		segments <=
@@ -46,7 +46,7 @@ begin
 			"0000000" when "01000",  -- '8'
 			"0000100" when "01001",  -- '9'
 			"0001000" when "01010",  -- 'A'
-			"0000000" when "01011",  -- 'B'
+			"1100000" when "01011",  -- 'b' (lowercase B)
 			"0110001" when "01100",  -- 'C'
 			"0000001" when "01101",  -- 'D'
 			"0110000" when "01110",  -- 'E'

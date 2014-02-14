@@ -502,7 +502,7 @@ VECTOR("P:/Apps/digital-system-design/lab2/g23_7_segment_decoder.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 76656;
+		ZEND = 250000;
 		NUMERATOR = 1055;
 		DENOMINATOR = 76656;
 		TOP_INDEX = 0;

@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C20F484C7
-set_global_assignment -name TOP_LEVEL_ENTITY g23_7_segment_decoder
+set_global_assignment -name TOP_LEVEL_ENTITY g23_7_segment_decoder_tester
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:58:04  FEBRUARY 04, 2014"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
@@ -52,15 +52,50 @@ set_global_assignment -name VHDL_FILE g23_binary_to_BCD.vhd
 set_global_assignment -name MIF_FILE g23_binary_to_BCD.mif
 set_global_assignment -name VECTOR_WAVEFORM_FILE g23_binary_to_BCD.vwf
 set_global_assignment -name VHDL_FILE g23_7_segment_decoder.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name VECTOR_WAVEFORM_FILE g23_7_segment_decoder.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE g23_7_segment_decoder.vwf
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name MISC_FILE "P:/Apps/digital-system-design/lab2/g23_lab2.dpf"
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT FAST
+set_global_assignment -name BDF_FILE g23_7_segment_decoder_tester.bdf
+set_location_assignment PIN_L22 -to input_number[0]
+set_location_assignment PIN_L21 -to input_number[1]
+set_location_assignment PIN_M22 -to input_number[2]
+set_location_assignment PIN_V12 -to input_number[3]
+set_location_assignment PIN_E2 -to digit0[0]
+set_location_assignment PIN_F1 -to digit0[1]
+set_location_assignment PIN_F2 -to digit0[2]
+set_location_assignment PIN_H1 -to digit0[3]
+set_location_assignment PIN_H2 -to digit0[4]
+set_location_assignment PIN_J1 -to digit0[5]
+set_location_assignment PIN_J2 -to digit0[6]
+set_location_assignment PIN_D1 -to digit1[0]
+set_location_assignment PIN_D2 -to digit1[1]
+set_location_assignment PIN_G3 -to digit1[2]
+set_location_assignment PIN_H4 -to digit1[3]
+set_location_assignment PIN_H5 -to digit1[4]
+set_location_assignment PIN_H6 -to digit1[5]
+set_location_assignment PIN_E1 -to digit1[6]
+set_location_assignment PIN_D3 -to digit2[0]
+set_location_assignment PIN_E4 -to digit2[1]
+set_location_assignment PIN_E3 -to digit2[2]
+set_location_assignment PIN_C1 -to digit2[3]
+set_location_assignment PIN_C2 -to digit2[4]
+set_location_assignment PIN_G6 -to digit2[5]
+set_location_assignment PIN_G5 -to digit2[6]
+set_location_assignment PIN_D4 -to digit3[0]
+set_location_assignment PIN_F3 -to digit3[1]
+set_location_assignment PIN_L8 -to digit3[2]
+set_location_assignment PIN_J4 -to digit3[3]
+set_location_assignment PIN_D6 -to digit3[4]
+set_location_assignment PIN_D5 -to digit3[5]
+set_location_assignment PIN_F4 -to digit3[6]
+set_location_assignment PIN_W12 -to ripple_blank
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name BDF_FILE g23_7_segment_BCD.bdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
