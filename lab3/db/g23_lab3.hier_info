@@ -1,41 +1,11 @@
-|g23_earth_timer
-PULSE <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-reset => lpm_or0:inst1.data1
-clock => lpm_counter0:inst.clock
-enable => lpm_counter0:inst.cnt_en
+|g23_earth_timer_optimized
+clock => lpm_counter0:b2v_inst.clock
+enable => lpm_counter0:b2v_inst.cnt_en
+reset => lpm_or0:b2v_inst1.data1
+PULSE <= lpm_or2:b2v_inst8.result
 
 
-|g23_earth_timer|lpm_or2:inst8
-data0x[0] => Equal0.IN25
-data0x[1] => Equal0.IN24
-data0x[2] => Equal0.IN23
-data0x[3] => Equal0.IN22
-data0x[4] => Equal0.IN21
-data0x[5] => Equal0.IN20
-data0x[6] => Equal0.IN19
-data0x[7] => Equal0.IN18
-data0x[8] => Equal0.IN17
-data0x[9] => Equal0.IN16
-data0x[10] => Equal0.IN15
-data0x[11] => Equal0.IN14
-data0x[12] => Equal0.IN13
-data0x[13] => Equal0.IN12
-data0x[14] => Equal0.IN11
-data0x[15] => Equal0.IN10
-data0x[16] => Equal0.IN9
-data0x[17] => Equal0.IN8
-data0x[18] => Equal0.IN7
-data0x[19] => Equal0.IN6
-data0x[20] => Equal0.IN5
-data0x[21] => Equal0.IN4
-data0x[22] => Equal0.IN3
-data0x[23] => Equal0.IN2
-data0x[24] => Equal0.IN1
-data0x[25] => Equal0.IN0
-result <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|g23_earth_timer|lpm_counter0:inst
+|g23_earth_timer_optimized|lpm_counter0:b2v_inst
 clock => lpm_counter:lpm_counter_component.clock
 cnt_en => lpm_counter:lpm_counter_component.cnt_en
 data[0] => lpm_counter:lpm_counter_component.data[0]
@@ -93,7 +63,7 @@ q[24] <= lpm_counter:lpm_counter_component.q[24]
 q[25] <= lpm_counter:lpm_counter_component.q[25]
 
 
-|g23_earth_timer|lpm_counter0:inst|lpm_counter:lpm_counter_component
+|g23_earth_timer_optimized|lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component
 clock => cntr_3hj:auto_generated.clock
 clk_en => ~NO_FANOUT~
 cnt_en => cntr_3hj:auto_generated.cnt_en
@@ -178,7 +148,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|g23_earth_timer|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_3hj:auto_generated
+|g23_earth_timer_optimized|lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component|cntr_3hj:auto_generated
 clock => counter_reg_bit1a[25].CLK
 clock => counter_reg_bit1a[24].CLK
 clock => counter_reg_bit1a[23].CLK
@@ -262,73 +232,45 @@ sload => _~1.IN1
 sload => counter_reg_bit1a[25]~27.IN1
 
 
-|g23_earth_timer|lpm_or0:inst1
+|g23_earth_timer_optimized|lpm_or0:b2v_inst1
 data0 => LPM_OR:lpm_or_component.DATA[0][0]
 data1 => LPM_OR:lpm_or_component.DATA[1][0]
 result <= LPM_OR:lpm_or_component.RESULT[0]
 
 
-|g23_earth_timer|lpm_or0:inst1|LPM_OR:lpm_or_component
+|g23_earth_timer_optimized|lpm_or0:b2v_inst1|LPM_OR:lpm_or_component
 data[0][0] => or_node[0][1].IN1
 data[1][0] => or_node[0][1].IN0
 result[0] <= or_node[0][1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g23_earth_timer|lpm_constant0:inst5
-result[0] <= lpm_constant:lpm_constant_component.result[0]
-result[1] <= lpm_constant:lpm_constant_component.result[1]
-result[2] <= lpm_constant:lpm_constant_component.result[2]
-result[3] <= lpm_constant:lpm_constant_component.result[3]
-result[4] <= lpm_constant:lpm_constant_component.result[4]
-result[5] <= lpm_constant:lpm_constant_component.result[5]
-result[6] <= lpm_constant:lpm_constant_component.result[6]
-result[7] <= lpm_constant:lpm_constant_component.result[7]
-result[8] <= lpm_constant:lpm_constant_component.result[8]
-result[9] <= lpm_constant:lpm_constant_component.result[9]
-result[10] <= lpm_constant:lpm_constant_component.result[10]
-result[11] <= lpm_constant:lpm_constant_component.result[11]
-result[12] <= lpm_constant:lpm_constant_component.result[12]
-result[13] <= lpm_constant:lpm_constant_component.result[13]
-result[14] <= lpm_constant:lpm_constant_component.result[14]
-result[15] <= lpm_constant:lpm_constant_component.result[15]
-result[16] <= lpm_constant:lpm_constant_component.result[16]
-result[17] <= lpm_constant:lpm_constant_component.result[17]
-result[18] <= lpm_constant:lpm_constant_component.result[18]
-result[19] <= lpm_constant:lpm_constant_component.result[19]
-result[20] <= lpm_constant:lpm_constant_component.result[20]
-result[21] <= lpm_constant:lpm_constant_component.result[21]
-result[22] <= lpm_constant:lpm_constant_component.result[22]
-result[23] <= lpm_constant:lpm_constant_component.result[23]
-result[24] <= lpm_constant:lpm_constant_component.result[24]
-result[25] <= lpm_constant:lpm_constant_component.result[25]
-
-
-|g23_earth_timer|lpm_constant0:inst5|lpm_constant:lpm_constant_component
-result[0] <= <GND>
-result[1] <= <GND>
-result[2] <= <GND>
-result[3] <= <GND>
-result[4] <= <VCC>
-result[5] <= <GND>
-result[6] <= <VCC>
-result[7] <= <GND>
-result[8] <= <VCC>
-result[9] <= <VCC>
-result[10] <= <GND>
-result[11] <= <GND>
-result[12] <= <GND>
-result[13] <= <GND>
-result[14] <= <VCC>
-result[15] <= <VCC>
-result[16] <= <GND>
-result[17] <= <GND>
-result[18] <= <GND>
-result[19] <= <GND>
-result[20] <= <GND>
-result[21] <= <GND>
-result[22] <= <GND>
-result[23] <= <GND>
-result[24] <= <GND>
-result[25] <= <GND>
+|g23_earth_timer_optimized|lpm_or2:b2v_inst8
+data0x[0] => Equal0.IN25
+data0x[1] => Equal0.IN24
+data0x[2] => Equal0.IN23
+data0x[3] => Equal0.IN22
+data0x[4] => Equal0.IN21
+data0x[5] => Equal0.IN20
+data0x[6] => Equal0.IN19
+data0x[7] => Equal0.IN18
+data0x[8] => Equal0.IN17
+data0x[9] => Equal0.IN16
+data0x[10] => Equal0.IN15
+data0x[11] => Equal0.IN14
+data0x[12] => Equal0.IN13
+data0x[13] => Equal0.IN12
+data0x[14] => Equal0.IN11
+data0x[15] => Equal0.IN10
+data0x[16] => Equal0.IN9
+data0x[17] => Equal0.IN8
+data0x[18] => Equal0.IN7
+data0x[19] => Equal0.IN6
+data0x[20] => Equal0.IN5
+data0x[21] => Equal0.IN4
+data0x[22] => Equal0.IN3
+data0x[23] => Equal0.IN2
+data0x[24] => Equal0.IN1
+data0x[25] => Equal0.IN0
+result <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 

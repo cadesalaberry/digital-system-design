@@ -26,7 +26,8 @@ ENTITY g23_earth_timer_optimized IS
 		clock 	: IN  STD_LOGIC;
 		enable	: IN  STD_LOGIC;
 		reset	: IN  STD_LOGIC;
-		PULSE	: OUT  STD_LOGIC
+		EarthSecond	: OUT  STD_LOGIC;
+		MarsSecond	: OUT  STD_LOGIC;	
 	);
 END g23_earth_timer_optimized;
 
@@ -72,12 +73,21 @@ PULSE	<= result;
 result	<= NOT(inverted_result);
 
 
-b2v_inst : lpm_counter0
+earth_counter : lpm_counter0
 PORT MAP(sload => sload,
 		 clock => clock,
 		 cnt_en => enable,
-		 data => "10111110101111000010000000",
+		 data => "00000000001100001101001111",
 		 q => counter_out);
+		 
+mars_counter : lpm_counter0
+PORT MAP(sload => sload,
+		 clock => clock,
+		 cnt_en => enable,
+		 data => "00000000001100001101001111",
+		 q => counter_out);
+		 -- 10111110101111000001111111 is 49,999,999 in binary
+		 -- 00000000001100001101001111 is 49,999 in binary
 
 
 b2v_inst1 : lpm_or0

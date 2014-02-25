@@ -20,59 +20,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-g23_earth_timer
-# storage
-db|g23_lab3.(0).cnf
-db|g23_lab3.(0).cnf
-# case_insensitive
-# source_file
-g23_earth_timer.bdf
-fde6f4442d4b87a649bbbc047da1bd
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
-lpm_or2
-# storage
-db|g23_lab3.(1).cnf
-db|g23_lab3.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-lpm_or2.vhd
-a4cda26e16184ddb7a28a1f89ad4e5
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-lpm_or2:inst8
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 lpm_counter0
 # storage
 db|g23_lab3.(2).cnf
@@ -97,7 +44,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-lpm_counter0:inst
+lpm_counter0:b2v_inst
 }
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -357,7 +304,7 @@ clock
 3
 }
 # hierarchies {
-lpm_counter0:inst|lpm_counter:lpm_counter_component
+lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component
 }
 # macro_sequence
 
@@ -540,7 +487,7 @@ clock
 3
 }
 # hierarchies {
-lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_3hj:auto_generated
+lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component|cntr_3hj:auto_generated
 }
 # macro_sequence
 
@@ -570,7 +517,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-lpm_or0:inst1
+lpm_or0:b2v_inst1
 }
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -642,41 +589,8 @@ DATA0_0
 3
 }
 # hierarchies {
-lpm_or0:inst1|lpm_or:lpm_or_component
+lpm_or0:b2v_inst1|lpm_or:lpm_or_component
 }
-# macro_sequence
-
-# end
-# entity
-lpm_constant0
-# storage
-db|g23_lab3.(7).cnf
-db|g23_lab3.(7).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-lpm_constant0.vhd
-d399e9d4ba5a9063a7ba5027e931595
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-lpm_constant0:inst5
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end
@@ -788,9 +702,78 @@ result0
 -1
 3
 }
-# hierarchies {
-lpm_constant0:inst5|lpm_constant:lpm_constant_component
+# macro_sequence
+
+# end
+# entity
+g23_earth_timer_optimized
+# storage
+db|g23_lab3.(0).cnf
+db|g23_lab3.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
 }
+# case_insensitive
+# source_file
+g23_earth_timer_optimized.vhd
+5cc4d4d2288bcb9bcff583e6da19d5a5
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+lpm_or2
+# storage
+db|g23_lab3.(1).cnf
+db|g23_lab3.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_or2.vhd
+659911126998ae53f6ec8abd0978572
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(data0x)
+25 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+lpm_or2:b2v_inst8
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end
