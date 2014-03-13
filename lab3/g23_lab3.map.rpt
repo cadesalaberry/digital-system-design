@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g23_lab3
-Tue Feb 25 15:02:05 2014
+Thu Mar 13 19:33:31 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -14,11 +14,10 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Source assignments for lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component
- 10. Parameter Settings for User Entity Instance: lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component
- 11. Parameter Settings for User Entity Instance: lpm_or0:b2v_inst1|LPM_OR:lpm_or_component
- 12. Port Connectivity Checks: "lpm_counter0:b2v_inst"
- 13. Analysis & Synthesis Messages
+  9. Source assignments for g23_generic_timer:earth|LPM_COUNTER:counter
+ 10. Parameter Settings for User Entity Instance: g23_generic_timer:earth
+ 11. Parameter Settings for User Entity Instance: g23_generic_timer:earth|LPM_COUNTER:counter
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -44,15 +43,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 25 15:02:05 2014         ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 13 19:33:31 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab3                                      ;
-; Top-level Entity Name              ; g23_earth_timer_optimized                     ;
+; Top-level Entity Name              ; g23_earth_timer                               ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 38                                            ;
-;     Total combinational functions  ; 38                                            ;
-;     Dedicated logic registers      ; 26                                            ;
-; Total registers                    ; 26                                            ;
+; Total logic elements               ; 57                                            ;
+;     Total combinational functions  ; 57                                            ;
+;     Dedicated logic registers      ; 40                                            ;
+; Total registers                    ; 40                                            ;
 ; Total pins                         ; 4                                             ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
@@ -61,83 +60,83 @@ applicable agreement for further details.
 +------------------------------------+-----------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                               ;
-+----------------------------------------------------------------------------+---------------------------+--------------------+
-; Option                                                                     ; Setting                   ; Default Value      ;
-+----------------------------------------------------------------------------+---------------------------+--------------------+
-; Device                                                                     ; EP2C20F484C7              ;                    ;
-; Top-level entity name                                                      ; g23_earth_timer_optimized ; g23_lab3           ;
-; Family name                                                                ; Cyclone II                ; Stratix II         ;
-; Use Generated Physical Constraints File                                    ; Off                       ;                    ;
-; Use smart compilation                                                      ; Off                       ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                        ; On                 ;
-; Enable compact report table                                                ; Off                       ; Off                ;
-; Restructure Multiplexers                                                   ; Auto                      ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                       ; Off                ;
-; Preserve fewer node names                                                  ; On                        ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                       ; Off                ;
-; Verilog Version                                                            ; Verilog_2001              ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993                 ; VHDL_1993          ;
-; State Machine Processing                                                   ; Auto                      ; Auto               ;
-; Safe State Machine                                                         ; Off                       ; Off                ;
-; Extract Verilog State Machines                                             ; On                        ; On                 ;
-; Extract VHDL State Machines                                                ; On                        ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                       ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000                      ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                       ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                        ; On                 ;
-; Parallel Synthesis                                                         ; On                        ; On                 ;
-; DSP Block Balancing                                                        ; Auto                      ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                        ; On                 ;
-; Power-Up Don't Care                                                        ; On                        ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                       ; Off                ;
-; Remove Duplicate Registers                                                 ; On                        ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                       ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                       ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                       ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                       ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                       ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                        ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                       ; Off                ;
-; Optimization Technique                                                     ; Balanced                  ; Balanced           ;
-; Carry Chain Length                                                         ; 70                        ; 70                 ;
-; Auto Carry Chains                                                          ; On                        ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                        ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                       ; Off                ;
-; Auto ROM Replacement                                                       ; On                        ; On                 ;
-; Auto RAM Replacement                                                       ; On                        ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto                      ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                        ; On                 ;
-; Strict RAM Replacement                                                     ; Off                       ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                        ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                       ; Off                ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                       ; Off                ;
-; Auto Resource Sharing                                                      ; Off                       ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                       ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                       ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                       ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                        ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                       ; Off                ;
-; Timing-Driven Synthesis                                                    ; Off                       ; Off                ;
-; Show Parameter Settings Tables in Synthesis Report                         ; On                        ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                       ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                         ; 2                  ;
-; PowerPlay Power Optimization                                               ; Normal compilation        ; Normal compilation ;
-; HDL message level                                                          ; Level2                    ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                       ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000                      ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                       ; 100                ;
-; Clock MUX Protection                                                       ; On                        ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                       ; Off                ;
-; Block Design Naming                                                        ; Auto                      ; Auto               ;
-; SDC constraint protection                                                  ; Off                       ; Off                ;
-; Synthesis Effort                                                           ; Auto                      ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                        ; On                 ;
-; Analysis & Synthesis Message Level                                         ; Medium                    ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto                      ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                        ; On                 ;
-+----------------------------------------------------------------------------+---------------------------+--------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                      ; g23_earth_timer    ; g23_lab3           ;
+; Family name                                                                ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -157,63 +156,57 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+-----------------------------------+---------------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                         ; File Name with Absolute Path                                                    ;
-+----------------------------------+-----------------+-----------------------------------+---------------------------------------------------------------------------------+
-; g23_earth_timer_optimized.vhd    ; yes             ; User VHDL File                    ; C:/Users/cdesal/github/digital-system-design/lab3/g23_earth_timer_optimized.vhd ;
-; lpm_counter0.vhd                 ; yes             ; Auto-Found Wizard-Generated File  ; C:/Users/cdesal/github/digital-system-design/lab3/lpm_counter0.vhd              ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                      ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf                 ;
-; db/cntr_3hj.tdf                  ; yes             ; Auto-Generated Megafunction       ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_3hj.tdf               ;
-; lpm_or0.vhd                      ; yes             ; Auto-Found Wizard-Generated File  ; C:/Users/cdesal/github/digital-system-design/lab3/lpm_or0.vhd                   ;
-; lpm_or.tdf                       ; yes             ; Megafunction                      ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_or.tdf                      ;
-; lpm_or2.vhd                      ; yes             ; Auto-Found VHDL File              ; C:/Users/cdesal/github/digital-system-design/lab3/lpm_or2.vhd                   ;
-+----------------------------------+-----------------+-----------------------------------+---------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                            ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+
+; g23_earth_timer.vhd              ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab3/g23_earth_timer.vhd   ;
+; g23_generic_timer.vhd            ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab3/g23_generic_timer.vhd ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf         ;
+; db/cntr_8fl.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_8fl.tdf       ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                           ;
-+---------------------------------------------+---------------------------------------------------------+
-; Resource                                    ; Usage                                                   ;
-+---------------------------------------------+---------------------------------------------------------+
-; Estimated Total logic elements              ; 38                                                      ;
-;                                             ;                                                         ;
-; Total combinational functions               ; 38                                                      ;
-; Logic element usage by number of LUT inputs ;                                                         ;
-;     -- 4 input functions                    ; 9                                                       ;
-;     -- 3 input functions                    ; 1                                                       ;
-;     -- <=2 input functions                  ; 28                                                      ;
-;                                             ;                                                         ;
-; Logic elements by mode                      ;                                                         ;
-;     -- normal mode                          ; 13                                                      ;
-;     -- arithmetic mode                      ; 25                                                      ;
-;                                             ;                                                         ;
-; Total registers                             ; 26                                                      ;
-;     -- Dedicated logic registers            ; 26                                                      ;
-;     -- I/O registers                        ; 0                                                       ;
-;                                             ;                                                         ;
-; I/O pins                                    ; 4                                                       ;
-; Maximum fan-out node                        ; lpm_or0:b2v_inst1|lpm_or:lpm_or_component|or_node[0][1] ;
-; Maximum fan-out                             ; 26                                                      ;
-; Total fan-out                               ; 211                                                     ;
-; Average fan-out                             ; 3.10                                                    ;
-+---------------------------------------------+---------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                 ;
++---------------------------------------------+-------------------------------+
+; Resource                                    ; Usage                         ;
++---------------------------------------------+-------------------------------+
+; Estimated Total logic elements              ; 57                            ;
+;                                             ;                               ;
+; Total combinational functions               ; 57                            ;
+; Logic element usage by number of LUT inputs ;                               ;
+;     -- 4 input functions                    ; 14                            ;
+;     -- 3 input functions                    ; 0                             ;
+;     -- <=2 input functions                  ; 43                            ;
+;                                             ;                               ;
+; Logic elements by mode                      ;                               ;
+;     -- normal mode                          ; 18                            ;
+;     -- arithmetic mode                      ; 39                            ;
+;                                             ;                               ;
+; Total registers                             ; 40                            ;
+;     -- Dedicated logic registers            ; 40                            ;
+;     -- I/O registers                        ; 0                             ;
+;                                             ;                               ;
+; I/O pins                                    ; 4                             ;
+; Maximum fan-out node                        ; g23_generic_timer:earth|sload ;
+; Maximum fan-out                             ; 41                            ;
+; Total fan-out                               ; 337                           ;
+; Average fan-out                             ; 3.34                          ;
++---------------------------------------------+-------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                               ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Library Name ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
-; |g23_earth_timer_optimized                ; 38 (1)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |g23_earth_timer_optimized                                                                                 ; work         ;
-;    |lpm_counter0:b2v_inst|                ; 27 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_earth_timer_optimized|lpm_counter0:b2v_inst                                                           ;              ;
-;       |lpm_counter:lpm_counter_component| ; 27 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_earth_timer_optimized|lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component                         ;              ;
-;          |cntr_3hj:auto_generated|        ; 27 (27)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_earth_timer_optimized|lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component|cntr_3hj:auto_generated ; work         ;
-;    |lpm_or0:b2v_inst1|                    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_earth_timer_optimized|lpm_or0:b2v_inst1                                                               ; work         ;
-;       |lpm_or:lpm_or_component|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_earth_timer_optimized|lpm_or0:b2v_inst1|lpm_or:lpm_or_component                                       ; work         ;
-;    |lpm_or2:b2v_inst8|                    ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_earth_timer_optimized|lpm_or2:b2v_inst8                                                               ; work         ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                  ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Library Name ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
+; |g23_earth_timer                   ; 57 (1)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |g23_earth_timer                                                                     ; work         ;
+;    |g23_generic_timer:earth|       ; 56 (15)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_earth_timer|g23_generic_timer:earth                                             ;              ;
+;       |lpm_counter:counter|        ; 41 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_earth_timer|g23_generic_timer:earth|lpm_counter:counter                         ; work         ;
+;          |cntr_8fl:auto_generated| ; 41 (41)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_earth_timer|g23_generic_timer:earth|lpm_counter:counter|cntr_8fl:auto_generated ; work         ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -222,89 +215,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 26    ;
+; Total registers                              ; 40    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 26    ;
+; Number of registers using Synchronous Load   ; 40    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 26    ;
+; Number of registers using Clock Enable       ; 40    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------+
-; Source assignments for lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component ;
-+---------------------------+-------+------+-------------------------------------+
-; Assignment                ; Value ; From ; To                                  ;
-+---------------------------+-------+------+-------------------------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                   ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                   ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                   ;
-+---------------------------+-------+------+-------------------------------------+
++--------------------------------------------------------------------+
+; Source assignments for g23_generic_timer:earth|LPM_COUNTER:counter ;
++---------------------------+-------+------+-------------------------+
+; Assignment                ; Value ; From ; To                      ;
++---------------------------+-------+------+-------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                       ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                       ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                       ;
++---------------------------+-------+------+-------------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component ;
-+------------------------+-------------+---------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                          ;
-+------------------------+-------------+---------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                  ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                ;
-; LPM_WIDTH              ; 26          ; Signed Integer                                                ;
-; LPM_DIRECTION          ; DOWN        ; Untyped                                                       ;
-; LPM_MODULUS            ; 0           ; Untyped                                                       ;
-; LPM_AVALUE             ; UNUSED      ; Untyped                                                       ;
-; LPM_SVALUE             ; UNUSED      ; Untyped                                                       ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                       ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                       ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                       ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                            ;
-; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                            ;
-; CARRY_CNT_EN           ; SMART       ; Untyped                                                       ;
-; LABWIDE_SCLR           ; ON          ; Untyped                                                       ;
-; USE_NEW_VERSION        ; TRUE        ; Untyped                                                       ;
-; CBXI_PARAMETER         ; cntr_3hj    ; Untyped                                                       ;
-+------------------------+-------------+---------------------------------------------------------------+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_generic_timer:earth ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; max            ; 100   ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_or0:b2v_inst1|LPM_OR:lpm_or_component ;
-+------------------------+------------+--------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                             ;
-+------------------------+------------+--------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                       ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                     ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                     ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                   ;
-; LPM_WIDTH              ; 1          ; Signed Integer                                   ;
-; LPM_SIZE               ; 2          ; Signed Integer                                   ;
-; CARRY_CHAIN_LENGTH     ; 48         ; CARRY_CHAIN_LENGTH                               ;
-; CARRY_CHAIN            ; MANUAL     ; Untyped                                          ;
-; CASCADE_CHAIN          ; MANUAL     ; Untyped                                          ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                          ;
-+------------------------+------------+--------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_generic_timer:earth|LPM_COUNTER:counter ;
++------------------------+-------------------+---------------------------------------------+
+; Parameter Name         ; Value             ; Type                                        ;
++------------------------+-------------------+---------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                              ;
+; LPM_WIDTH              ; 40                ; Signed Integer                              ;
+; LPM_DIRECTION          ; down              ; Untyped                                     ;
+; LPM_MODULUS            ; 0                 ; Signed Integer                              ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                     ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                     ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                     ;
+; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                     ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                     ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                          ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                          ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                     ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                     ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                     ;
+; CBXI_PARAMETER         ; cntr_8fl          ; Untyped                                     ;
++------------------------+-------------------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------+
-; Port Connectivity Checks: "lpm_counter0:b2v_inst" ;
-+--------------+-------+----------+-----------------+
-; Port         ; Type  ; Severity ; Details         ;
-+--------------+-------+----------+-----------------+
-; data[23..19] ; Input ; Info     ; Stuck at VCC    ;
-; data[15..12] ; Input ; Info     ; Stuck at VCC    ;
-; data[11..8]  ; Input ; Info     ; Stuck at GND    ;
-; data[6..0]   ; Input ; Info     ; Stuck at GND    ;
-; data[25]     ; Input ; Info     ; Stuck at VCC    ;
-; data[24]     ; Input ; Info     ; Stuck at GND    ;
-; data[18]     ; Input ; Info     ; Stuck at GND    ;
-; data[17]     ; Input ; Info     ; Stuck at VCC    ;
-; data[16]     ; Input ; Info     ; Stuck at GND    ;
-; data[7]      ; Input ; Info     ; Stuck at VCC    ;
-+--------------+-------+----------+-----------------+
 
 
 +-------------------------------+
@@ -313,57 +279,47 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Tue Feb 25 15:02:04 2014
+    Info: Processing started: Thu Mar 13 19:33:30 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g23_lab3 -c g23_lab3
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info: Found 2 design units, including 1 entities, in source file lpm_constant0.vhd
-    Info: Found design unit 1: lpm_constant0-SYN
-    Info: Found entity 1: lpm_constant0
 Info: Found 1 design units, including 1 entities, in source file g23_earth_timer_tester.bdf
     Info: Found entity 1: g23_earth_timer_tester
-Info: Found 2 design units, including 1 entities, in source file lpm_or3.vhd
-    Info: Found design unit 1: lpm_or3-SYN
-    Info: Found entity 1: lpm_or3
-Info: Found 2 design units, including 1 entities, in source file g23_earth_timer_optimized.vhd
-    Info: Found design unit 1: g23_earth_timer_optimized-bdf_type
-    Info: Found entity 1: g23_earth_timer_optimized
-Info: Elaborating entity "g23_earth_timer_optimized" for the top level hierarchy
-Warning: Using design file lpm_counter0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info: Found design unit 1: lpm_counter0-SYN
-    Info: Found entity 1: lpm_counter0
-Info: Elaborating entity "lpm_counter0" for hierarchy "lpm_counter0:b2v_inst"
-Info: Elaborating entity "lpm_counter" for hierarchy "lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component"
-Info: Elaborated megafunction instantiation "lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component"
-Info: Instantiated megafunction "lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component" with the following parameter:
-    Info: Parameter "lpm_direction" = "DOWN"
-    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
-    Info: Parameter "lpm_type" = "LPM_COUNTER"
-    Info: Parameter "lpm_width" = "26"
-Info: Found 1 design units, including 1 entities, in source file db/cntr_3hj.tdf
-    Info: Found entity 1: cntr_3hj
-Info: Elaborating entity "cntr_3hj" for hierarchy "lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component|cntr_3hj:auto_generated"
-Warning: Using design file lpm_or0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info: Found design unit 1: lpm_or0-SYN
-    Info: Found entity 1: lpm_or0
-Info: Elaborating entity "lpm_or0" for hierarchy "lpm_or0:b2v_inst1"
-Info: Elaborating entity "LPM_OR" for hierarchy "lpm_or0:b2v_inst1|LPM_OR:lpm_or_component"
-Info: Elaborated megafunction instantiation "lpm_or0:b2v_inst1|LPM_OR:lpm_or_component"
-Info: Instantiated megafunction "lpm_or0:b2v_inst1|LPM_OR:lpm_or_component" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "1"
-    Info: Parameter "LPM_SIZE" = "2"
-    Info: Parameter "LPM_TYPE" = "LPM_OR"
+Info: Found 2 design units, including 1 entities, in source file g23_earth_timer.vhd
+    Info: Found design unit 1: g23_earth_timer-alpha
+    Info: Found entity 1: g23_earth_timer
+Info: Found 2 design units, including 1 entities, in source file g23_basic_timer.vhd
+    Info: Found design unit 1: g23_basic_timer-alpha
+    Info: Found entity 1: g23_basic_timer
+Info: Found 2 design units, including 1 entities, in source file g23_generic_timer.vhd
+    Info: Found design unit 1: g23_generic_timer-alpha
+    Info: Found entity 1: g23_generic_timer
+Info: Found 2 design units, including 1 entities, in source file g23_mars_timer.vhd
+    Info: Found design unit 1: g23_mars_timer-alpha
+    Info: Found entity 1: g23_mars_timer
+Info: Elaborating entity "g23_earth_timer" for the top level hierarchy
+Info: Elaborating entity "g23_generic_timer" for hierarchy "g23_generic_timer:earth"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_generic_timer:earth|LPM_COUNTER:counter"
+Info: Elaborated megafunction instantiation "g23_generic_timer:earth|LPM_COUNTER:counter"
+Info: Instantiated megafunction "g23_generic_timer:earth|LPM_COUNTER:counter" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "40"
+    Info: Parameter "LPM_MODULUS" = "0"
+    Info: Parameter "LPM_DIRECTION" = "down"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
     Info: Parameter "LPM_HINT" = "UNUSED"
-Warning: Using design file lpm_or2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info: Found design unit 1: lpm_or2-alpha
-    Info: Found entity 1: lpm_or2
-Info: Elaborating entity "lpm_or2" for hierarchy "lpm_or2:b2v_inst8"
-Info: Implemented 42 device resources after synthesis - the final resource count might be different
+Info: Found 1 design units, including 1 entities, in source file db/cntr_8fl.tdf
+    Info: Found entity 1: cntr_8fl
+Info: Elaborating entity "cntr_8fl" for hierarchy "g23_generic_timer:earth|LPM_COUNTER:counter|cntr_8fl:auto_generated"
+Info: Implemented 61 device resources after synthesis - the final resource count might be different
     Info: Implemented 3 input pins
     Info: Implemented 1 output pins
-    Info: Implemented 38 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Implemented 57 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 313 megabytes
-    Info: Processing ended: Tue Feb 25 15:02:05 2014
+    Info: Processing ended: Thu Mar 13 19:33:31 2014
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

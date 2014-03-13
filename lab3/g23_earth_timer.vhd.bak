@@ -1,102 +1,57 @@
--- Copyright (C) 1991-2010 Altera Corporation
--- Your use of Altera Corporation's design tools, logic functions 
--- and other software and tools, and its AMPP partner logic 
--- functions, and any output files from any of the foregoing 
--- (including device programming or simulation files), and any 
--- associated documentation or information are expressly subject 
--- to the terms and conditions of the Altera Program License 
--- Subscription Agreement, Altera MegaCore Function License 
--- Agreement, or other applicable license agreement, including, 
--- without limitation, that your use is for the sole purpose of 
--- programming logic devices manufactured by Altera and sold by 
--- Altera or its authorized distributors.  Please refer to the 
--- applicable agreement for further details.
+-- An Earth timer calibrated for a 50MHz clock.
+--
+-- entity name: g23_earth_timer
+--
+-- Copyright (C) 2014 cadesalaberry, grahamludwinski
+--
+-- Version 1.0
+--
+-- Author:
+-- Charles-Antoine de Salaberry; ca.desalaberry@mail.mcgill.ca,
+-- Graham Ludwinski; graham.ludwinski@mail.mcgill.ca
+--
+-- Date: 13/03/2014
 
--- PROGRAM		"Quartus II 64-Bit"
--- VERSION		"Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version"
--- CREATED		"Tue Feb 25 14:44:05 2014"
 
 LIBRARY ieee;
-USE ieee.std_logic_1164.all; 
+USE ieee.STD_LOGIC_1164.all;
 
-LIBRARY work;
 
-ENTITY g23_earth_timer IS 
+ENTITY g23_basic_timer IS
+
 	PORT (
-		clock 	: IN  STD_LOGIC;
-		enable	: IN  STD_LOGIC;
-		reset	: IN  STD_LOGIC;
-		PULSE	: OUT  STD_LOGIC
+		clk		: in	STD_LOGIC;
+		enable	: in	STD_LOGIC;
+		reset	: in	STD_LOGIC;
+		pulse	: out	STD_LOGIC
 	);
-END g23_earth_timer;
+	
+END g23_basic_timer;
 
-ARCHITECTURE bdf_type OF g23_earth_timer IS 
 
-COMPONENT lpm_counter0
-	PORT(
-		sload	: IN STD_LOGIC;
-		clock	: IN STD_LOGIC;
-		cnt_en	: IN STD_LOGIC;
-		data	: IN STD_LOGIC_VECTOR(25 DOWNTO 0);
-		q		: OUT STD_LOGIC_VECTOR(25 DOWNTO 0)
+ARCHITECTURE alpha OF g23_basic_timer IS
+
+	COMPONENT g23_generic_timer
+		GENERIC (max : natural := 0);
+		PORT (
+			clk		: in	STD_LOGIC;
+			enable	: in	STD_LOGIC;
+			reset	: in	STD_LOGIC;
+			pulse	: out	STD_LOGIC
+		);
+	END COMPONENT;
+	
+BEGIN
+
+	earth	: g23_generic_timer
+--	GENERIC MAP (max => 49999999)
+	GENERIC MAP (max => 100)
+	PORT MAP (
+		clk => clk,
+		enable => enable,
+		reset => reset,
+		pulse => pulse
 	);
-END COMPONENT;
+	
+END alpha;
 
-COMPONENT lpm_or0
-	PORT(data0 : IN STD_LOGIC;
-		 data1 : IN STD_LOGIC;
-		 result : OUT STD_LOGIC
-	);
-END COMPONENT;
-
-COMPONENT lpm_constant0
-	PORT(		 result : OUT STD_LOGIC_VECTOR(25 DOWNTO 0)
-	);
-END COMPONENT;
-
-COMPONENT lpm_or2
-	PORT(data0x : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
-		 result : OUT STD_LOGIC
-	);
-END COMPONENT;
-
-SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC_VECTOR(25 DOWNTO 0);
-SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_3 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_4 :  STD_LOGIC_VECTOR(25 DOWNTO 0);
-
-
-BEGIN 
-PULSE <= SYNTHESIZED_WIRE_2;
-
-
-
-b2v_inst : lpm_counter0
-PORT MAP(sload => SYNTHESIZED_WIRE_0,
-		 clock => clock,
-		 cnt_en => enable,
-		 data => SYNTHESIZED_WIRE_1,
-		 q => SYNTHESIZED_WIRE_4);
-
-
-b2v_inst1 : lpm_or0
-PORT MAP(data0 => SYNTHESIZED_WIRE_2,
-		 data1 => reset,
-		 result => SYNTHESIZED_WIRE_0);
-
-
-SYNTHESIZED_WIRE_2 <= NOT(SYNTHESIZED_WIRE_3);
-
-
-
-b2v_inst5 : lpm_constant0
-PORT MAP(		 result => SYNTHESIZED_WIRE_1);
-
-
-b2v_inst8 : lpm_or2
-PORT MAP(data0x => SYNTHESIZED_WIRE_4,
-		 result => SYNTHESIZED_WIRE_3);
-
-
-END bdf_type;

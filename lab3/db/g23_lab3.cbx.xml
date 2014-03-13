@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="g23_lab3">
-		<CBX_INST_ENTRY INSTANCE_NAME="|g23_earth_timer_optimized|lpm_counter0:b2v_inst|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_3hj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_earth_timer|g23_generic_timer:earth|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
