@@ -23,10 +23,10 @@ applicable agreement for further details.
 VECTOR("C:/Users/cdesal/github/digital-system-design/lab3/g23_earth_timer_tester.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 557538849;
-		ZEND = 1224461345;
-		NUMERATOR = 1059;
-		DENOMINATOR = 666922496;
+		ZBEGIN = 0;
+		ZEND = 200000000;
+		NUMERATOR = 867;
+		DENOMINATOR = 200000000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -38,7 +38,7 @@ VECTOR("C:/Users/cdesal/github/digital-system-design/lab3/g23_earth_timer_tester
 		INTERVAL_TYPE = HALF_GRID;
 	}
 	LINE{
-		SIGNAL = "clock";
+		SIGNAL = "enable";
 		INDEX = 0;
 		FORMAT = E;
 		SCALE = 1;
@@ -46,7 +46,7 @@ VECTOR("C:/Users/cdesal/github/digital-system-design/lab3/g23_earth_timer_tester
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "enable";
+		SIGNAL = "reset";
 		INDEX = 1;
 		FORMAT = E;
 		SCALE = 1;
@@ -54,7 +54,7 @@ VECTOR("C:/Users/cdesal/github/digital-system-design/lab3/g23_earth_timer_tester
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "PULSE";
+		SIGNAL = "epulse";
 		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
@@ -62,7 +62,7 @@ VECTOR("C:/Users/cdesal/github/digital-system-design/lab3/g23_earth_timer_tester
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "reset";
+		SIGNAL = "mpulse";
 		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;

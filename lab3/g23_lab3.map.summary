@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Mar 13 19:33:31 2014
+Analysis & Synthesis Status : Successful - Thu Mar 13 19:40:09 2014
 Quartus II 64-Bit Version : 9.1 Build 350 03/24/2010 SP 2 SJ Full Version
 Revision Name : g23_lab3
-Top-level Entity Name : g23_earth_timer
+Top-level Entity Name : g23_basic_timer
 Family : Cyclone II
-Total logic elements : 57
-    Total combinational functions : 57
-    Dedicated logic registers : 40
-Total registers : 40
-Total pins : 4
+Total logic elements : 113
+    Total combinational functions : 113
+    Dedicated logic registers : 80
+Total registers : 80
+Total pins : 5
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

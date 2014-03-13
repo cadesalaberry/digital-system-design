@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.461 ns
+From           : reset
+To             : g23_generic_timer:earth|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[7]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.350 ns
+From           : g23_generic_timer:earth|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[34]
+To             : EPULSE
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -4.976 ns
+From           : reset
+To             : g23_generic_timer:mars|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[29]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 144.03 MHz ( period = 6.943 ns )
+From           : g23_generic_timer:earth|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[34]
+To             : g23_generic_timer:earth|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[7]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

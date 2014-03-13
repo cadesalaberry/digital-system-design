@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="g23_lab3">
-		<CBX_INST_ENTRY INSTANCE_NAME="|g23_earth_timer|g23_generic_timer:earth|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
