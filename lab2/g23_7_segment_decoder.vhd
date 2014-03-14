@@ -1,4 +1,4 @@
--- generates the appropriate 7-segment display associated with the input code
+---- generates the appropriate 7-segment display associated with the input code
 --
 -- entity name: g23_7_segment_decoder
 --
@@ -27,14 +27,16 @@ entity g23_7_segment_decoder is
 end g23_7_segment_decoder;
 
 architecture alpha of g23_7_segment_decoder is
+
+	signal temp : std_logic_vector(7 downto 0);
+	
 begin
-	WITH RippleBlank_In & code select
-		RippleBlank_Out	<=
-			RippleBlank_In	when "10000",
-			'0'				when others;
+
+	RippleBlank_Out	<= temp(7);
+	segments		<= temp(6 downto 0);
 
 	with RippleBlank_In & code select
-		segments <=
+		temp <=
 			"0000001" when "00000",  -- '0'
 			"1001111" when "00001",  -- '1'
 			"0010010" when "00010",  -- '2'
@@ -69,4 +71,5 @@ begin
 			"0110000" when "11110",  -- 'E'
 			"0111000" when "11111",  -- 'F'
 			"1011010" when others;
+
 end alpha;

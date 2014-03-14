@@ -1,4 +1,40 @@
-|g23_basic_timer
+|g23_timer_test_bed
+earth_5_led[0] <= g23_7_segment_decoder:earth_msd.segments[0]
+earth_5_led[1] <= g23_7_segment_decoder:earth_msd.segments[1]
+earth_5_led[2] <= g23_7_segment_decoder:earth_msd.segments[2]
+earth_5_led[3] <= g23_7_segment_decoder:earth_msd.segments[3]
+earth_5_led[4] <= g23_7_segment_decoder:earth_msd.segments[4]
+earth_5_led[5] <= g23_7_segment_decoder:earth_msd.segments[5]
+earth_5_led[6] <= g23_7_segment_decoder:earth_msd.segments[6]
+earth_9_led[0] <= g23_7_segment_decoder:earth_lsd.segments[0]
+earth_9_led[1] <= g23_7_segment_decoder:earth_lsd.segments[1]
+earth_9_led[2] <= g23_7_segment_decoder:earth_lsd.segments[2]
+earth_9_led[3] <= g23_7_segment_decoder:earth_lsd.segments[3]
+earth_9_led[4] <= g23_7_segment_decoder:earth_lsd.segments[4]
+earth_9_led[5] <= g23_7_segment_decoder:earth_lsd.segments[5]
+earth_9_led[6] <= g23_7_segment_decoder:earth_lsd.segments[6]
+mars_5_led[0] <= g23_7_segment_decoder:mars_tens_display.segments[0]
+mars_5_led[1] <= g23_7_segment_decoder:mars_tens_display.segments[1]
+mars_5_led[2] <= g23_7_segment_decoder:mars_tens_display.segments[2]
+mars_5_led[3] <= g23_7_segment_decoder:mars_tens_display.segments[3]
+mars_5_led[4] <= g23_7_segment_decoder:mars_tens_display.segments[4]
+mars_5_led[5] <= g23_7_segment_decoder:mars_tens_display.segments[5]
+mars_5_led[6] <= g23_7_segment_decoder:mars_tens_display.segments[6]
+mars_9_led[0] <= g23_7_segment_decoder:mars_ones_display.segments[0]
+mars_9_led[1] <= g23_7_segment_decoder:mars_ones_display.segments[1]
+mars_9_led[2] <= g23_7_segment_decoder:mars_ones_display.segments[2]
+mars_9_led[3] <= g23_7_segment_decoder:mars_ones_display.segments[3]
+mars_9_led[4] <= g23_7_segment_decoder:mars_ones_display.segments[4]
+mars_9_led[5] <= g23_7_segment_decoder:mars_ones_display.segments[5]
+mars_9_led[6] <= g23_7_segment_decoder:mars_ones_display.segments[6]
+reset => g23_basic_timer:timer.reset
+reset => g23_count_to_59:earth_counter.reset
+reset => g23_count_to_59:mars_counter.reset
+clk => g23_basic_timer:timer.clk
+debug <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g23_timer_test_bed|g23_basic_timer:timer
 clk => g23_generic_timer:earth.clk
 clk => g23_generic_timer:mars.clk
 enable => g23_generic_timer:earth.enable
@@ -9,14 +45,14 @@ EPULSE <= g23_generic_timer:earth.pulse
 MPULSE <= g23_generic_timer:mars.pulse
 
 
-|g23_basic_timer|g23_generic_timer:earth
+|g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:earth
 clk => LPM_COUNTER:counter.CLOCK
 enable => LPM_COUNTER:counter.CNT_EN
 reset => sload.IN1
 pulse <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g23_basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter
+|g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter
 clock => cntr_8fl:auto_generated.clock
 clk_en => ~NO_FANOUT~
 cnt_en => cntr_8fl:auto_generated.cnt_en
@@ -129,7 +165,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|g23_basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter|cntr_8fl:auto_generated
+|g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter|cntr_8fl:auto_generated
 clock => counter_reg_bit1a[39].CLK
 clock => counter_reg_bit1a[38].CLK
 clock => counter_reg_bit1a[37].CLK
@@ -170,47 +206,47 @@ clock => counter_reg_bit1a[3].CLK
 clock => counter_reg_bit1a[2].CLK
 clock => counter_reg_bit1a[1].CLK
 clock => counter_reg_bit1a[0].CLK
-cnt_en => _.IN1
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-data[4] => _.IN1
-data[5] => _.IN1
-data[6] => _.IN1
-data[7] => _.IN1
-data[8] => _.IN1
-data[9] => _.IN1
-data[10] => _.IN1
-data[11] => _.IN1
-data[12] => _.IN1
-data[13] => _.IN1
-data[14] => _.IN1
-data[15] => _.IN1
-data[16] => _.IN1
-data[17] => _.IN1
-data[18] => _.IN1
-data[19] => _.IN1
-data[20] => _.IN1
-data[21] => _.IN1
-data[22] => _.IN1
-data[23] => _.IN1
-data[24] => _.IN1
-data[25] => _.IN1
-data[26] => _.IN1
-data[27] => _.IN1
-data[28] => _.IN1
-data[29] => _.IN1
-data[30] => _.IN1
-data[31] => _.IN1
-data[32] => _.IN1
-data[33] => _.IN1
-data[34] => _.IN1
-data[35] => _.IN1
-data[36] => _.IN1
-data[37] => _.IN1
-data[38] => _.IN1
-data[39] => _.IN1
+cnt_en => _~2.IN1
+data[0] => _~84.IN1
+data[1] => _~83.IN1
+data[2] => _~82.IN1
+data[3] => _~81.IN1
+data[4] => _~80.IN1
+data[5] => _~79.IN1
+data[6] => _~78.IN1
+data[7] => _~77.IN1
+data[8] => _~76.IN1
+data[9] => _~75.IN1
+data[10] => _~74.IN1
+data[11] => _~73.IN1
+data[12] => _~72.IN1
+data[13] => _~71.IN1
+data[14] => _~70.IN1
+data[15] => _~69.IN1
+data[16] => _~68.IN1
+data[17] => _~67.IN1
+data[18] => _~66.IN1
+data[19] => _~65.IN1
+data[20] => _~64.IN1
+data[21] => _~63.IN1
+data[22] => _~62.IN1
+data[23] => _~61.IN1
+data[24] => _~60.IN1
+data[25] => _~59.IN1
+data[26] => _~58.IN1
+data[27] => _~57.IN1
+data[28] => _~56.IN1
+data[29] => _~55.IN1
+data[30] => _~54.IN1
+data[31] => _~53.IN1
+data[32] => _~52.IN1
+data[33] => _~51.IN1
+data[34] => _~50.IN1
+data[35] => _~49.IN1
+data[36] => _~48.IN1
+data[37] => _~47.IN1
+data[38] => _~46.IN1
+data[39] => _~45.IN1
 q[0] <= counter_reg_bit1a[0].REGOUT
 q[1] <= counter_reg_bit1a[1].REGOUT
 q[2] <= counter_reg_bit1a[2].REGOUT
@@ -251,18 +287,18 @@ q[36] <= counter_reg_bit1a[36].REGOUT
 q[37] <= counter_reg_bit1a[37].REGOUT
 q[38] <= counter_reg_bit1a[38].REGOUT
 q[39] <= counter_reg_bit1a[39].REGOUT
-sload => _.IN1
-sload => counter_reg_bit1a[39].IN1
+sload => _~1.IN1
+sload => counter_reg_bit1a[39]~41.IN1
 
 
-|g23_basic_timer|g23_generic_timer:mars
+|g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:mars
 clk => LPM_COUNTER:counter.CLOCK
 enable => LPM_COUNTER:counter.CNT_EN
 reset => sload.IN1
 pulse <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|g23_basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter
+|g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter
 clock => cntr_8fl:auto_generated.clock
 clk_en => ~NO_FANOUT~
 cnt_en => cntr_8fl:auto_generated.cnt_en
@@ -375,7 +411,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|g23_basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter|cntr_8fl:auto_generated
+|g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter|cntr_8fl:auto_generated
 clock => counter_reg_bit1a[39].CLK
 clock => counter_reg_bit1a[38].CLK
 clock => counter_reg_bit1a[37].CLK
@@ -416,47 +452,47 @@ clock => counter_reg_bit1a[3].CLK
 clock => counter_reg_bit1a[2].CLK
 clock => counter_reg_bit1a[1].CLK
 clock => counter_reg_bit1a[0].CLK
-cnt_en => _.IN1
-data[0] => _.IN1
-data[1] => _.IN1
-data[2] => _.IN1
-data[3] => _.IN1
-data[4] => _.IN1
-data[5] => _.IN1
-data[6] => _.IN1
-data[7] => _.IN1
-data[8] => _.IN1
-data[9] => _.IN1
-data[10] => _.IN1
-data[11] => _.IN1
-data[12] => _.IN1
-data[13] => _.IN1
-data[14] => _.IN1
-data[15] => _.IN1
-data[16] => _.IN1
-data[17] => _.IN1
-data[18] => _.IN1
-data[19] => _.IN1
-data[20] => _.IN1
-data[21] => _.IN1
-data[22] => _.IN1
-data[23] => _.IN1
-data[24] => _.IN1
-data[25] => _.IN1
-data[26] => _.IN1
-data[27] => _.IN1
-data[28] => _.IN1
-data[29] => _.IN1
-data[30] => _.IN1
-data[31] => _.IN1
-data[32] => _.IN1
-data[33] => _.IN1
-data[34] => _.IN1
-data[35] => _.IN1
-data[36] => _.IN1
-data[37] => _.IN1
-data[38] => _.IN1
-data[39] => _.IN1
+cnt_en => _~2.IN1
+data[0] => _~84.IN1
+data[1] => _~83.IN1
+data[2] => _~82.IN1
+data[3] => _~81.IN1
+data[4] => _~80.IN1
+data[5] => _~79.IN1
+data[6] => _~78.IN1
+data[7] => _~77.IN1
+data[8] => _~76.IN1
+data[9] => _~75.IN1
+data[10] => _~74.IN1
+data[11] => _~73.IN1
+data[12] => _~72.IN1
+data[13] => _~71.IN1
+data[14] => _~70.IN1
+data[15] => _~69.IN1
+data[16] => _~68.IN1
+data[17] => _~67.IN1
+data[18] => _~66.IN1
+data[19] => _~65.IN1
+data[20] => _~64.IN1
+data[21] => _~63.IN1
+data[22] => _~62.IN1
+data[23] => _~61.IN1
+data[24] => _~60.IN1
+data[25] => _~59.IN1
+data[26] => _~58.IN1
+data[27] => _~57.IN1
+data[28] => _~56.IN1
+data[29] => _~55.IN1
+data[30] => _~54.IN1
+data[31] => _~53.IN1
+data[32] => _~52.IN1
+data[33] => _~51.IN1
+data[34] => _~50.IN1
+data[35] => _~49.IN1
+data[36] => _~48.IN1
+data[37] => _~47.IN1
+data[38] => _~46.IN1
+data[39] => _~45.IN1
 q[0] <= counter_reg_bit1a[0].REGOUT
 q[1] <= counter_reg_bit1a[1].REGOUT
 q[2] <= counter_reg_bit1a[2].REGOUT
@@ -497,7 +533,497 @@ q[36] <= counter_reg_bit1a[36].REGOUT
 q[37] <= counter_reg_bit1a[37].REGOUT
 q[38] <= counter_reg_bit1a[38].REGOUT
 q[39] <= counter_reg_bit1a[39].REGOUT
-sload => _.IN1
-sload => counter_reg_bit1a[39].IN1
+sload => _~1.IN1
+sload => counter_reg_bit1a[39]~41.IN1
+
+
+|g23_timer_test_bed|g23_count_to_59:earth_counter
+clk => LPM_COUNTER:count_to_9.CLOCK
+clk => LPM_COUNTER:count_to_5.CLOCK
+enable => ~NO_FANOUT~
+reset => LPM_COUNTER:count_to_9.ACLR
+reset => LPM_COUNTER:count_to_5.ACLR
+sec_msd[0] <= LPM_COUNTER:count_to_5.Q[0]
+sec_msd[1] <= LPM_COUNTER:count_to_5.Q[1]
+sec_msd[2] <= LPM_COUNTER:count_to_5.Q[2]
+sec_lsd[0] <= LPM_COUNTER:count_to_9.Q[0]
+sec_lsd[1] <= LPM_COUNTER:count_to_9.Q[1]
+sec_lsd[2] <= LPM_COUNTER:count_to_9.Q[2]
+sec_lsd[3] <= LPM_COUNTER:count_to_9.Q[3]
+
+
+|g23_timer_test_bed|g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9
+clock => cntr_5bi:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+aclr => cntr_5bi:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_5bi:auto_generated.q[0]
+q[1] <= cntr_5bi:auto_generated.q[1]
+q[2] <= cntr_5bi:auto_generated.q[2]
+q[3] <= cntr_5bi:auto_generated.q[3]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|g23_timer_test_bed|g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9|cntr_5bi:auto_generated
+aclr => counter_reg_bit1a[3].ACLR
+aclr => counter_reg_bit1a[2].ACLR
+aclr => counter_reg_bit1a[1].ACLR
+aclr => counter_reg_bit1a[0].ACLR
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+q[0] <= counter_reg_bit1a[0].REGOUT
+q[1] <= counter_reg_bit1a[1].REGOUT
+q[2] <= counter_reg_bit1a[2].REGOUT
+q[3] <= counter_reg_bit1a[3].REGOUT
+
+
+|g23_timer_test_bed|g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9|cntr_5bi:auto_generated|cmpr_8cc:cmpr2
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[0]~2.IN0
+dataa[1] => data_wire[0]~3.IN0
+dataa[2] => data_wire[1]~0.IN0
+dataa[3] => data_wire[1]~1.IN0
+datab[0] => data_wire[0]~2.IN1
+datab[1] => data_wire[0]~3.IN1
+datab[2] => data_wire[1]~0.IN1
+datab[3] => data_wire[1]~1.IN1
+
+
+|g23_timer_test_bed|g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5
+clock => cntr_gui:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_gui:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => cntr_gui:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_gui:auto_generated.q[0]
+q[1] <= cntr_gui:auto_generated.q[1]
+q[2] <= cntr_gui:auto_generated.q[2]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|g23_timer_test_bed|g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5|cntr_gui:auto_generated
+aclr => counter_reg_bit1a[2].ACLR
+aclr => counter_reg_bit1a[1].ACLR
+aclr => counter_reg_bit1a[0].ACLR
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => counter_reg_bit1a[2]~0.IN1
+q[0] <= counter_reg_bit1a[0].REGOUT
+q[1] <= counter_reg_bit1a[1].REGOUT
+q[2] <= counter_reg_bit1a[2].REGOUT
+
+
+|g23_timer_test_bed|g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5|cntr_gui:auto_generated|cmpr_7cc:cmpr3
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[0]~0.IN0
+dataa[1] => data_wire[0]~1.IN0
+dataa[2] => data_wire[1].IN0
+datab[0] => data_wire[0]~0.IN1
+datab[1] => data_wire[0]~1.IN1
+datab[2] => data_wire[1].IN1
+
+
+|g23_timer_test_bed|g23_count_to_59:mars_counter
+clk => LPM_COUNTER:count_to_9.CLOCK
+clk => LPM_COUNTER:count_to_5.CLOCK
+enable => ~NO_FANOUT~
+reset => LPM_COUNTER:count_to_9.ACLR
+reset => LPM_COUNTER:count_to_5.ACLR
+sec_msd[0] <= LPM_COUNTER:count_to_5.Q[0]
+sec_msd[1] <= LPM_COUNTER:count_to_5.Q[1]
+sec_msd[2] <= LPM_COUNTER:count_to_5.Q[2]
+sec_lsd[0] <= LPM_COUNTER:count_to_9.Q[0]
+sec_lsd[1] <= LPM_COUNTER:count_to_9.Q[1]
+sec_lsd[2] <= LPM_COUNTER:count_to_9.Q[2]
+sec_lsd[3] <= LPM_COUNTER:count_to_9.Q[3]
+
+
+|g23_timer_test_bed|g23_count_to_59:mars_counter|LPM_COUNTER:count_to_9
+clock => cntr_5bi:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+aclr => cntr_5bi:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_5bi:auto_generated.q[0]
+q[1] <= cntr_5bi:auto_generated.q[1]
+q[2] <= cntr_5bi:auto_generated.q[2]
+q[3] <= cntr_5bi:auto_generated.q[3]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|g23_timer_test_bed|g23_count_to_59:mars_counter|LPM_COUNTER:count_to_9|cntr_5bi:auto_generated
+aclr => counter_reg_bit1a[3].ACLR
+aclr => counter_reg_bit1a[2].ACLR
+aclr => counter_reg_bit1a[1].ACLR
+aclr => counter_reg_bit1a[0].ACLR
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+q[0] <= counter_reg_bit1a[0].REGOUT
+q[1] <= counter_reg_bit1a[1].REGOUT
+q[2] <= counter_reg_bit1a[2].REGOUT
+q[3] <= counter_reg_bit1a[3].REGOUT
+
+
+|g23_timer_test_bed|g23_count_to_59:mars_counter|LPM_COUNTER:count_to_9|cntr_5bi:auto_generated|cmpr_8cc:cmpr2
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[0]~2.IN0
+dataa[1] => data_wire[0]~3.IN0
+dataa[2] => data_wire[1]~0.IN0
+dataa[3] => data_wire[1]~1.IN0
+datab[0] => data_wire[0]~2.IN1
+datab[1] => data_wire[0]~3.IN1
+datab[2] => data_wire[1]~0.IN1
+datab[3] => data_wire[1]~1.IN1
+
+
+|g23_timer_test_bed|g23_count_to_59:mars_counter|LPM_COUNTER:count_to_5
+clock => cntr_gui:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_gui:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => cntr_gui:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_gui:auto_generated.q[0]
+q[1] <= cntr_gui:auto_generated.q[1]
+q[2] <= cntr_gui:auto_generated.q[2]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|g23_timer_test_bed|g23_count_to_59:mars_counter|LPM_COUNTER:count_to_5|cntr_gui:auto_generated
+aclr => counter_reg_bit1a[2].ACLR
+aclr => counter_reg_bit1a[1].ACLR
+aclr => counter_reg_bit1a[0].ACLR
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => counter_reg_bit1a[2]~0.IN1
+q[0] <= counter_reg_bit1a[0].REGOUT
+q[1] <= counter_reg_bit1a[1].REGOUT
+q[2] <= counter_reg_bit1a[2].REGOUT
+
+
+|g23_timer_test_bed|g23_count_to_59:mars_counter|LPM_COUNTER:count_to_5|cntr_gui:auto_generated|cmpr_7cc:cmpr3
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[0]~0.IN0
+dataa[1] => data_wire[0]~1.IN0
+dataa[2] => data_wire[1].IN0
+datab[0] => data_wire[0]~0.IN1
+datab[1] => data_wire[0]~1.IN1
+datab[2] => data_wire[1].IN1
+
+
+|g23_timer_test_bed|g23_7_segment_decoder:earth_msd
+code[0] => Mux0.IN35
+code[0] => Mux1.IN19
+code[0] => Mux2.IN35
+code[0] => Mux3.IN35
+code[0] => Mux4.IN35
+code[0] => Mux5.IN35
+code[0] => Mux6.IN35
+code[0] => Mux7.IN35
+code[1] => Mux0.IN34
+code[1] => Mux1.IN18
+code[1] => Mux2.IN34
+code[1] => Mux3.IN34
+code[1] => Mux4.IN34
+code[1] => Mux5.IN34
+code[1] => Mux6.IN34
+code[1] => Mux7.IN34
+code[2] => Mux0.IN33
+code[2] => Mux1.IN17
+code[2] => Mux2.IN33
+code[2] => Mux3.IN33
+code[2] => Mux4.IN33
+code[2] => Mux5.IN33
+code[2] => Mux6.IN33
+code[2] => Mux7.IN33
+code[3] => Mux0.IN32
+code[3] => Mux1.IN16
+code[3] => Mux2.IN32
+code[3] => Mux3.IN32
+code[3] => Mux4.IN32
+code[3] => Mux5.IN32
+code[3] => Mux6.IN32
+code[3] => Mux7.IN32
+RippleBlank_In => Mux0.IN36
+RippleBlank_In => Mux2.IN36
+RippleBlank_In => Mux3.IN36
+RippleBlank_In => Mux4.IN36
+RippleBlank_In => Mux5.IN36
+RippleBlank_In => Mux6.IN36
+RippleBlank_In => Mux7.IN36
+RippleBlank_Out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+segments[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g23_timer_test_bed|g23_7_segment_decoder:earth_lsd
+code[0] => Mux0.IN35
+code[0] => Mux1.IN19
+code[0] => Mux2.IN35
+code[0] => Mux3.IN35
+code[0] => Mux4.IN35
+code[0] => Mux5.IN35
+code[0] => Mux6.IN35
+code[0] => Mux7.IN35
+code[1] => Mux0.IN34
+code[1] => Mux1.IN18
+code[1] => Mux2.IN34
+code[1] => Mux3.IN34
+code[1] => Mux4.IN34
+code[1] => Mux5.IN34
+code[1] => Mux6.IN34
+code[1] => Mux7.IN34
+code[2] => Mux0.IN33
+code[2] => Mux1.IN17
+code[2] => Mux2.IN33
+code[2] => Mux3.IN33
+code[2] => Mux4.IN33
+code[2] => Mux5.IN33
+code[2] => Mux6.IN33
+code[2] => Mux7.IN33
+code[3] => Mux0.IN32
+code[3] => Mux1.IN16
+code[3] => Mux2.IN32
+code[3] => Mux3.IN32
+code[3] => Mux4.IN32
+code[3] => Mux5.IN32
+code[3] => Mux6.IN32
+code[3] => Mux7.IN32
+RippleBlank_In => Mux0.IN36
+RippleBlank_In => Mux2.IN36
+RippleBlank_In => Mux3.IN36
+RippleBlank_In => Mux4.IN36
+RippleBlank_In => Mux5.IN36
+RippleBlank_In => Mux6.IN36
+RippleBlank_In => Mux7.IN36
+RippleBlank_Out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+segments[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g23_timer_test_bed|g23_7_segment_decoder:mars_tens_display
+code[0] => Mux0.IN35
+code[0] => Mux1.IN19
+code[0] => Mux2.IN35
+code[0] => Mux3.IN35
+code[0] => Mux4.IN35
+code[0] => Mux5.IN35
+code[0] => Mux6.IN35
+code[0] => Mux7.IN35
+code[1] => Mux0.IN34
+code[1] => Mux1.IN18
+code[1] => Mux2.IN34
+code[1] => Mux3.IN34
+code[1] => Mux4.IN34
+code[1] => Mux5.IN34
+code[1] => Mux6.IN34
+code[1] => Mux7.IN34
+code[2] => Mux0.IN33
+code[2] => Mux1.IN17
+code[2] => Mux2.IN33
+code[2] => Mux3.IN33
+code[2] => Mux4.IN33
+code[2] => Mux5.IN33
+code[2] => Mux6.IN33
+code[2] => Mux7.IN33
+code[3] => Mux0.IN32
+code[3] => Mux1.IN16
+code[3] => Mux2.IN32
+code[3] => Mux3.IN32
+code[3] => Mux4.IN32
+code[3] => Mux5.IN32
+code[3] => Mux6.IN32
+code[3] => Mux7.IN32
+RippleBlank_In => Mux0.IN36
+RippleBlank_In => Mux2.IN36
+RippleBlank_In => Mux3.IN36
+RippleBlank_In => Mux4.IN36
+RippleBlank_In => Mux5.IN36
+RippleBlank_In => Mux6.IN36
+RippleBlank_In => Mux7.IN36
+RippleBlank_Out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+segments[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g23_timer_test_bed|g23_7_segment_decoder:mars_ones_display
+code[0] => Mux0.IN35
+code[0] => Mux1.IN19
+code[0] => Mux2.IN35
+code[0] => Mux3.IN35
+code[0] => Mux4.IN35
+code[0] => Mux5.IN35
+code[0] => Mux6.IN35
+code[0] => Mux7.IN35
+code[1] => Mux0.IN34
+code[1] => Mux1.IN18
+code[1] => Mux2.IN34
+code[1] => Mux3.IN34
+code[1] => Mux4.IN34
+code[1] => Mux5.IN34
+code[1] => Mux6.IN34
+code[1] => Mux7.IN34
+code[2] => Mux0.IN33
+code[2] => Mux1.IN17
+code[2] => Mux2.IN33
+code[2] => Mux3.IN33
+code[2] => Mux4.IN33
+code[2] => Mux5.IN33
+code[2] => Mux6.IN33
+code[2] => Mux7.IN33
+code[3] => Mux0.IN32
+code[3] => Mux1.IN16
+code[3] => Mux2.IN32
+code[3] => Mux3.IN32
+code[3] => Mux4.IN32
+code[3] => Mux5.IN32
+code[3] => Mux6.IN32
+code[3] => Mux7.IN32
+RippleBlank_In => Mux0.IN36
+RippleBlank_In => Mux2.IN36
+RippleBlank_In => Mux3.IN36
+RippleBlank_In => Mux4.IN36
+RippleBlank_In => Mux5.IN36
+RippleBlank_In => Mux6.IN36
+RippleBlank_In => Mux7.IN36
+RippleBlank_Out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+segments[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 
 

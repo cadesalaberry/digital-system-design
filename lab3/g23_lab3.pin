@@ -83,8 +83,8 @@ GND*                         : A9        :        :                   :         
 GND*                         : A10       :        :                   :         : 3         :                
 GND*                         : A11       :        :                   :         : 3         :                
 GND+                         : A12       :        :                   :         : 4         :                
-GND*                         : A13       :        :                   :         : 4         :                
-GND*                         : A14       :        :                   :         : 4         :                
+debug                        : A13       : output : 3.3-V LVTTL       :         : 4         : N              
+earth_9_led[1]               : A14       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : A15       :        :                   :         : 4         :                
 GND*                         : A16       :        :                   :         : 4         :                
 GND*                         : A17       :        :                   :         : 4         :                
@@ -105,7 +105,7 @@ GND*                         : AA9       :        :                   :         
 GND*                         : AA10      :        :                   :         : 8         :                
 GND*                         : AA11      :        :                   :         : 8         :                
 GND*                         : AA12      :        :                   :         : 7         :                
-MPULSE                       : AA13      : output : 3.3-V LVTTL       :         : 7         : N              
+GND*                         : AA13      :        :                   :         : 7         :                
 GND*                         : AA14      :        :                   :         : 7         :                
 GND*                         : AA15      :        :                   :         : 7         :                
 GND*                         : AA16      :        :                   :         : 7         :                
@@ -129,7 +129,7 @@ GND*                         : AB11      :        :                   :         
 GND*                         : AB12      :        :                   :         : 7         :                
 GND*                         : AB13      :        :                   :         : 7         :                
 GND*                         : AB14      :        :                   :         : 7         :                
-GND*                         : AB15      :        :                   :         : 7         :                
+earth_9_led[3]               : AB15      : output : 3.3-V LVTTL       :         : 7         : N              
 GND*                         : AB16      :        :                   :         : 7         :                
 GND*                         : AB17      :        :                   :         : 7         :                
 GND*                         : AB18      :        :                   :         : 7         :                
@@ -150,7 +150,7 @@ GND*                         : B10       :        :                   :         
 GND*                         : B11       :        :                   :         : 3         :                
 GND+                         : B12       :        :                   :         : 4         :                
 GND*                         : B13       :        :                   :         : 4         :                
-GND*                         : B14       :        :                   :         : 4         :                
+earth_5_led[1]               : B14       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : B15       :        :                   :         : 4         :                
 GND*                         : B16       :        :                   :         : 4         :                
 GND*                         : B17       :        :                   :         : 4         :                
@@ -159,8 +159,8 @@ GND*                         : B19       :        :                   :         
 GND*                         : B20       :        :                   :         : 4         :                
 GND                          : B21       : gnd    :                   :         :           :                
 VCCIO5                       : B22       : power  :                   : 3.3V    : 5         :                
-GND*                         : C1        :        :                   :         : 2         :                
-GND*                         : C2        :        :                   :         : 2         :                
+mars_5_led[6]                : C1        : output : 3.3-V LVTTL       :         : 2         : N              
+mars_5_led[0]                : C2        : output : 3.3-V LVTTL       :         : 2         : N              
 ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C3        : input  : 3.3-V LVTTL       :         : 2         : N              
 ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C4        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND                          : C5        : gnd    :                   :         :           :                
@@ -171,7 +171,7 @@ GND*                         : C9        :        :                   :         
 GND*                         : C10       :        :                   :         : 3         :                
 VCCIO3                       : C11       : power  :                   : 3.3V    : 3         :                
 VCCIO4                       : C12       : power  :                   : 3.3V    : 4         :                
-GND*                         : C13       :        :                   :         : 4         :                
+earth_5_led[3]               : C13       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : C14       :        :                   :         : 4         :                
 GND                          : C15       : gnd    :                   :         :           :                
 GND*                         : C16       :        :                   :         : 4         :                
@@ -183,10 +183,10 @@ GND*                         : C21       :        :                   :         
 GND*                         : C22       :        :                   :         : 5         :                
 GND*                         : D1        :        :                   :         : 2         :                
 GND*                         : D2        :        :                   :         : 2         :                
-GND*                         : D3        :        :                   :         : 2         :                
-GND*                         : D4        :        :                   :         : 2         :                
-GND*                         : D5        :        :                   :         : 2         :                
-GND*                         : D6        :        :                   :         : 2         :                
+mars_9_led[1]                : D3        : output : 3.3-V LVTTL       :         : 2         : N              
+mars_5_led[3]                : D4        : output : 3.3-V LVTTL       :         : 2         : N              
+earth_5_led[2]               : D5        : output : 3.3-V LVTTL       :         : 2         : N              
+mars_9_led[6]                : D6        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : D7        :        :                   :         : 3         :                
 GND*                         : D8        :        :                   :         : 3         :                
 GND*                         : D9        :        :                   :         : 3         :                
@@ -199,19 +199,19 @@ GND*                         : D15       :        :                   :         
 GND*                         : D16       :        :                   :         : 4         :                
 VCCIO4                       : D17       : power  :                   : 3.3V    : 4         :                
 GND                          : D18       : gnd    :                   :         :           :                
-GND*                         : D19       :        :                   :         : 5         :                
-GND*                         : D20       :        :                   :         : 5         :                
+mars_5_led[5]                : D19       : output : 3.3-V LVTTL       :         : 5         : N              
+earth_9_led[5]               : D20       : output : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : D21       :        :                   :         : 5         :                
 GND*                         : D22       :        :                   :         : 5         :                
 GND*                         : E1        :        :                   :         : 2         :                
-GND*                         : E2        :        :                   :         : 2         :                
-GND*                         : E3        :        :                   :         : 2         :                
-GND*                         : E4        :        :                   :         : 2         :                
+earth_5_led[0]               : E2        : output : 3.3-V LVTTL       :         : 2         : N              
+earth_5_led[6]               : E3        : output : 3.3-V LVTTL       :         : 2         : N              
+mars_9_led[2]                : E4        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCD_PLL3                    : E5        : power  :                   : 1.2V    :           :                
 VCCA_PLL3                    : E6        : power  :                   : 1.2V    :           :                
 GND*                         : E7        :        :                   :         : 3         :                
 GND*                         : E8        :        :                   :         : 3         :                
-GND*                         : E9        :        :                   :         : 3         :                
+mars_9_led[0]                : E9        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : E10       : power  :                   : 3.3V    : 3         :                
 GND*                         : E11       :        :                   :         : 3         :                
 GND+                         : E12       :        :                   :         : 3         :                
@@ -220,15 +220,15 @@ GND*                         : E14       :        :                   :         
 GND*                         : E15       :        :                   :         : 4         :                
 GNDA_PLL2                    : E16       : gnd    :                   :         :           :                
 GND_PLL2                     : E17       : gnd    :                   :         :           :                
-GND*                         : E18       :        :                   :         : 5         :                
-GND*                         : E19       :        :                   :         : 5         :                
+earth_5_led[5]               : E18       : output : 3.3-V LVTTL       :         : 5         : N              
+mars_9_led[4]                : E19       : output : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : E20       :        :                   :         : 5         :                
 GND*                         : E21       :        :                   :         : 5         :                
 GND*                         : E22       :        :                   :         : 5         :                
-enable                       : F1        : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : F1        :        :                   :         : 2         :                
 GND*                         : F2        :        :                   :         : 2         :                
 GND*                         : F3        :        :                   :         : 2         :                
-GND*                         : F4        :        :                   :         : 2         :                
+mars_9_led[5]                : F4        : output : 3.3-V LVTTL       :         : 2         : N              
 GND_PLL3                     : F5        : gnd    :                   :         :           :                
 GND_PLL3                     : F6        : gnd    :                   :         :           :                
 GNDA_PLL3                    : F7        : gnd    :                   :         :           :                
@@ -236,7 +236,7 @@ GND*                         : F8        :        :                   :         
 GND*                         : F9        :        :                   :         : 3         :                
 GND*                         : F10       :        :                   :         : 3         :                
 GND*                         : F11       :        :                   :         : 3         :                
-GND*                         : F12       :        :                   :         : 4         :                
+earth_9_led[6]               : F12       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : F13       :        :                   :         : 4         :                
 GND*                         : F14       :        :                   :         : 4         :                
 GND*                         : F15       :        :                   :         : 4         :                
@@ -246,13 +246,13 @@ GND_PLL2                     : F18       : gnd    :                   :         
 GND                          : F19       : gnd    :                   :         :           :                
 GND*                         : F20       :        :                   :         : 5         :                
 GND*                         : F21       :        :                   :         : 5         :                
-GND*                         : F22       :        :                   :         : 5         :                
+earth_9_led[0]               : F22       : output : 3.3-V LVTTL       :         : 5         : N              
 NC                           : G1        :        :                   :         :           :                
 NC                           : G2        :        :                   :         :           :                
 GND*                         : G3        :        :                   :         : 2         :                
 GND                          : G4        : gnd    :                   :         :           :                
-GND*                         : G5        :        :                   :         : 2         :                
-GND*                         : G6        :        :                   :         : 2         :                
+earth_9_led[2]               : G5        : output : 3.3-V LVTTL       :         : 2         : N              
+mars_5_led[2]                : G6        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : G7        :        :                   :         : 3         :                
 GND*                         : G8        :        :                   :         : 3         :                
 VCCIO3                       : G9        : power  :                   : 3.3V    : 3         :                
@@ -268,8 +268,8 @@ GND*                         : G18       :        :                   :         
 VCCIO5                       : G19       : power  :                   : 3.3V    : 5         :                
 GND*                         : G20       :        :                   :         : 5         :                
 GND*                         : G21       :        :                   :         : 5         :                
-reset                        : G22       : input  : 3.3-V LVTTL       :         : 5         : N              
-GND*                         : H1        :        :                   :         : 2         :                
+GND*                         : G22       :        :                   :         : 5         :                
+mars_5_led[4]                : H1        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : H2        :        :                   :         : 2         :                
 GND*                         : H3        :        :                   :         : 2         :                
 GND*                         : H4        :        :                   :         : 2         :                
@@ -292,7 +292,7 @@ GND                          : H20       : gnd    :                   :         
 NC                           : H21       :        :                   :         :           :                
 NC                           : H22       :        :                   :         :           :                
 GND*                         : J1        :        :                   :         : 2         :                
-EPULSE                       : J2        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : J2        :        :                   :         : 2         :                
 NC                           : J3        :        :                   :         :           :                
 GND*                         : J4        :        :                   :         : 2         :                
 NC                           : J5        :        :                   :         :           :                
@@ -311,7 +311,7 @@ GND*                         : J17       :        :                   :         
 GND*                         : J18       :        :                   :         : 5         :                
 GND*                         : J19       :        :                   :         : 5         :                
 GND*                         : J20       :        :                   :         : 5         :                
-GND*                         : J21       :        :                   :         : 5         :                
+clk                          : J21       : input  : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : J22       :        :                   :         : 5         :                
 nCE                          : K1        :        :                   :         : 2         :                
 TCK                          : K2        : input  :                   :         : 2         :                
@@ -342,7 +342,7 @@ nCONFIG                      : L4        :        :                   :         
 TDO                          : L5        : output :                   :         : 2         :                
 DCLK                         : L6        :        :                   :         : 2         :                
 NC                           : L7        :        :                   :         :           :                
-GND*                         : L8        :        :                   :         : 2         :                
+earth_5_led[4]               : L8        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : L9        : power  :                   : 1.2V    :           :                
 GND                          : L10       : gnd    :                   :         :           :                
 GND                          : L11       : gnd    :                   :         :           :                
@@ -357,7 +357,7 @@ GND*                         : L19       :        :                   :         
 VCCIO5                       : L20       : power  :                   : 3.3V    : 5         :                
 GND+                         : L21       :        :                   :         : 5         :                
 GND+                         : L22       :        :                   :         : 5         :                
-clk                          : M1        : input  : 3.3-V LVTTL       :         : 1         : N              
+reset                        : M1        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND+                         : M2        :        :                   :         : 1         :                
 VCCIO1                       : M3        : power  :                   : 3.3V    : 1         :                
 GND                          : M4        : gnd    :                   :         :           :                
@@ -431,7 +431,7 @@ GND*                         : R5        :        :                   :         
 GND*                         : R6        :        :                   :         : 1         :                
 GND*                         : R7        :        :                   :         : 1         :                
 GND*                         : R8        :        :                   :         : 1         :                
-GND*                         : R9        :        :                   :         : 8         :                
+mars_9_led[3]                : R9        : output : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : R10       :        :                   :         : 8         :                
 GND*                         : R11       :        :                   :         : 8         :                
 GND*                         : R12       :        :                   :         : 7         :                
@@ -456,7 +456,7 @@ GND*                         : T8        :        :                   :         
 VCCIO8                       : T9        : power  :                   : 3.3V    : 8         :                
 GND                          : T10       : gnd    :                   :         :           :                
 GND*                         : T11       :        :                   :         : 8         :                
-GND*                         : T12       :        :                   :         : 7         :                
+earth_9_led[4]               : T12       : output : 3.3-V LVTTL       :         : 7         : N              
 GND                          : T13       : gnd    :                   :         :           :                
 VCCIO7                       : T14       : power  :                   : 3.3V    : 7         :                
 GND*                         : T15       :        :                   :         : 7         :                
@@ -476,7 +476,7 @@ VCCD_PLL1                    : U6        : power  :                   : 1.2V    
 VCCA_PLL1                    : U7        : power  :                   : 1.2V    :           :                
 GND*                         : U8        :        :                   :         : 8         :                
 GND*                         : U9        :        :                   :         : 8         :                
-GND*                         : U10       :        :                   :         : 8         :                
+mars_5_led[1]                : U10       : output : 3.3-V LVTTL       :         : 8         : N              
 GND+                         : U11       :        :                   :         : 8         :                
 GND+                         : U12       :        :                   :         : 8         :                
 GND*                         : U13       :        :                   :         : 7         :                

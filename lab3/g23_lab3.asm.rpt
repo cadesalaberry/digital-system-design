@@ -1,5 +1,5 @@
 Assembler report for g23_lab3
-Thu Mar 13 19:40:20 2014
+Thu Mar 13 21:52:03 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,9 +38,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Mar 13 19:40:20 2014 ;
+; Assembler Status      ; Successful - Thu Mar 13 21:52:03 2014 ;
 ; Revision Name         ; g23_lab3                              ;
-; Top-level Entity Name ; g23_basic_timer                       ;
+; Top-level Entity Name ; g23_timer_test_bed                    ;
 ; Family                ; Cyclone II                            ;
 ; Device                ; EP2C20F484C7                          ;
 +-----------------------+---------------------------------------+
@@ -95,7 +95,7 @@ applicable agreement for further details.
 +----------------+-------------------------------------------------------------------------+
 ; Device         ; EP2C20F484C7                                                            ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                              ;
-; Checksum       ; 0x001C2BD0                                                              ;
+; Checksum       ; 0x001CC24D                                                              ;
 +----------------+-------------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+---------------------------------------------------------------------+
 ; Device             ; EPCS16                                                              ;
 ; JTAG usercode      ; 0x00000000                                                          ;
-; Checksum           ; 0x1DD7816C                                                          ;
+; Checksum           ; 0x1DD6A916                                                          ;
 ; Compression Ratio  ; 3                                                                   ;
 +--------------------+---------------------------------------------------------------------+
 
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Thu Mar 13 19:40:19 2014
+    Info: Processing started: Thu Mar 13 21:52:02 2014
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off g23_lab3 -c g23_lab3
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 266 megabytes
-    Info: Processing ended: Thu Mar 13 19:40:21 2014
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 267 megabytes
+    Info: Processing ended: Thu Mar 13 21:52:03 2014
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

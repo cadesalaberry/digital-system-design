@@ -1,5 +1,5 @@
 Flow report for g23_lab3
-Thu Mar 13 19:40:24 2014
+Thu Mar 13 21:52:07 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,19 +38,19 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 13 19:40:24 2014         ;
+; Flow Status                        ; Successful - Thu Mar 13 21:52:07 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab3                                      ;
-; Top-level Entity Name              ; g23_basic_timer                               ;
+; Top-level Entity Name              ; g23_timer_test_bed                            ;
 ; Family                             ; Cyclone II                                    ;
 ; Device                             ; EP2C20F484C7                                  ;
 ; Timing Models                      ; Final                                         ;
-; Met timing requirements            ; Yes                                           ;
-; Total logic elements               ; 113 / 18,752 ( < 1 % )                        ;
-;     Total combinational functions  ; 113 / 18,752 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 80 / 18,752 ( < 1 % )                         ;
-; Total registers                    ; 80                                            ;
-; Total pins                         ; 5 / 315 ( 2 % )                               ;
+; Met timing requirements            ; No                                            ;
+; Total logic elements               ; 157 / 18,752 ( < 1 % )                        ;
+;     Total combinational functions  ; 157 / 18,752 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 94 / 18,752 ( < 1 % )                         ;
+; Total registers                    ; 94                                            ;
+; Total pins                         ; 31 / 315 ( 10 % )                             ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                           ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                ;
@@ -63,26 +63,26 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/13/2014 19:40:08 ;
+; Start date & time ; 03/13/2014 21:51:49 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; g23_lab3            ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                       ;
-+------------------------------------+----------------------------------------------------------------+---------------+-----------------+----------------+
-; Assignment Name                    ; Value                                                          ; Default Value ; Entity Name     ; Section Id     ;
-+------------------------------------+----------------------------------------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 132129495416082.139475400805612                                ; --            ; --              ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                                                             ; --            ; --              ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                                                              ; --            ; --              ; --             ;
-; MISC_FILE                          ; C:/Users/cdesal/github/digital-system-design/lab3/g23_lab3.dpf ; --            ; --              ; --             ;
-; PARTITION_COLOR                    ; 16764057                                                       ; --            ; g23_basic_timer ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                                                         ; --            ; g23_basic_timer ; Top            ;
-; TOP_LEVEL_ENTITY                   ; g23_basic_timer                                                ; g23_lab3      ; --              ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                            ; --            ; --              ; eda_blast_fpga ;
-+------------------------------------+----------------------------------------------------------------+---------------+-----------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                          ;
++------------------------------------+----------------------------------------------------------------+---------------+--------------------+----------------+
+; Assignment Name                    ; Value                                                          ; Default Value ; Entity Name        ; Section Id     ;
++------------------------------------+----------------------------------------------------------------+---------------+--------------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 132129495416082.139476190902980                                ; --            ; --                 ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                                                             ; --            ; --                 ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                                                              ; --            ; --                 ; --             ;
+; MISC_FILE                          ; C:/Users/cdesal/github/digital-system-design/lab3/g23_lab3.dpf ; --            ; --                 ; --             ;
+; PARTITION_COLOR                    ; 16764057                                                       ; --            ; g23_timer_test_bed ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                                                         ; --            ; g23_timer_test_bed ; Top            ;
+; TOP_LEVEL_ENTITY                   ; g23_timer_test_bed                                             ; g23_lab3      ; --                 ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                            ; --            ; --                 ; eda_blast_fpga ;
++------------------------------------+----------------------------------------------------------------+---------------+--------------------+----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -90,11 +90,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:04     ; 1.0                     ; 313 MB              ; 00:00:01                           ;
-; Fitter                  ; 00:00:06     ; 3.0                     ; 352 MB              ; 00:00:03                           ;
-; Assembler               ; 00:00:04     ; 1.0                     ; 266 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 196 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:17     ; --                      ; --                  ; 00:00:05                           ;
+; Analysis & Synthesis    ; 00:00:05     ; 1.0                     ; 314 MB              ; 00:00:01                           ;
+; Fitter                  ; 00:00:06     ; 1.0                     ; 353 MB              ; 00:00:03                           ;
+; Assembler               ; 00:00:04     ; 1.0                     ; 267 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 197 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:18     ; --                      ; --                  ; 00:00:05                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
