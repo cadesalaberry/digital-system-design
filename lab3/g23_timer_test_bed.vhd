@@ -17,7 +17,7 @@ LIBRARY ieee;
 USE ieee.STD_LOGIC_1164.all;
 
 LIBRARY lpm;
-USE lpm.lpm_COMPONENTs.all;
+USE lpm.lpm_components.all;
 
 ENTITY g23_timer_test_bed IS
 
@@ -27,8 +27,7 @@ ENTITY g23_timer_test_bed IS
 		mars_5_led	: OUT STD_LOGIC_VECTOR(6 downto 0);
 		mars_9_led	: OUT STD_LOGIC_VECTOR(6 downto 0);
 		reset		: IN STD_LOGIC;
-		clk			: IN STD_LOGIC;
-		debug		: OUT STD_LOGIC	
+		clk			: IN STD_LOGIC
 	);
 	
 END g23_timer_test_bed;
@@ -36,8 +35,8 @@ END g23_timer_test_bed;
 
 ARCHITECTURE alpha OF g23_timer_test_bed IS
 
-	signal earth_sec	: STD_LOGIC;
-	signal mars_sec		: STD_LOGIC;
+	signal earth_clk	: STD_LOGIC;
+	signal mars_clk		: STD_LOGIC;
 	signal earth_tens	: STD_LOGIC_VECTOR(2 downto 0);
 	signal earth_ones	: STD_LOGIC_VECTOR(3 downto 0);
 	signal mars_tens	: STD_LOGIC_VECTOR(2 downto 0);
@@ -82,13 +81,13 @@ BEGIN
 		clk		=> clk,
 		reset	=> reset_inv,
 		enable	=> '1',
-		EPULSE	=> earth_sec,
-		MPULSE	=> mars_sec
+		EPULSE	=> earth_clk,
+		MPULSE	=> mars_clk
 	);
 	
 	earth_counter : g23_count_to_59
 	PORT MAP (
-		clk			=> earth_sec,
+		clk			=> earth_clk,
 		enable		=> '1',
 		reset		=> reset_inv,
 		sec_msd		=> earth_tens,
@@ -97,7 +96,7 @@ BEGIN
 	
 	mars_counter : g23_count_to_59
 	PORT MAP (
-		clk			=> mars_sec,
+		clk			=> mars_clk,
 		enable		=> '1',
 		reset		=> reset_inv,
 		sec_msd		=> mars_tens,

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g23_lab3
-Thu Mar 13 21:51:51 2014
+Fri Mar 14 17:22:34 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -14,28 +14,13 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Source assignments for g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter
- 10. Source assignments for g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter
- 11. Source assignments for g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9
- 12. Source assignments for g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5
- 13. Source assignments for g23_count_to_59:mars_counter|LPM_COUNTER:count_to_9
- 14. Source assignments for g23_count_to_59:mars_counter|LPM_COUNTER:count_to_5
- 15. Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:earth
- 16. Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter
- 17. Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:mars
- 18. Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter
- 19. Parameter Settings for User Entity Instance: g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9
- 20. Parameter Settings for User Entity Instance: g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5
- 21. Parameter Settings for User Entity Instance: g23_count_to_59:mars_counter|LPM_COUNTER:count_to_9
- 22. Parameter Settings for User Entity Instance: g23_count_to_59:mars_counter|LPM_COUNTER:count_to_5
- 23. Port Connectivity Checks: "g23_7_segment_decoder:mars_ones_display"
- 24. Port Connectivity Checks: "g23_7_segment_decoder:mars_tens_display"
- 25. Port Connectivity Checks: "g23_7_segment_decoder:earth_lsd"
- 26. Port Connectivity Checks: "g23_7_segment_decoder:earth_msd"
- 27. Port Connectivity Checks: "g23_count_to_59:mars_counter"
- 28. Port Connectivity Checks: "g23_count_to_59:earth_counter"
- 29. Port Connectivity Checks: "g23_basic_timer:timer"
- 30. Analysis & Synthesis Messages
+  9. Source assignments for LPM_COUNTER:seconds_counter
+ 10. Source assignments for LPM_COUNTER:minutes_counter
+ 11. Source assignments for LPM_COUNTER:hours_counter
+ 12. Parameter Settings for User Entity Instance: LPM_COUNTER:seconds_counter
+ 13. Parameter Settings for User Entity Instance: LPM_COUNTER:minutes_counter
+ 14. Parameter Settings for User Entity Instance: LPM_COUNTER:hours_counter
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -61,16 +46,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 13 21:51:51 2014         ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 14 17:22:34 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab3                                      ;
-; Top-level Entity Name              ; g23_timer_test_bed                            ;
+; Top-level Entity Name              ; g23_HMS_counter                               ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 157                                           ;
-;     Total combinational functions  ; 157                                           ;
-;     Dedicated logic registers      ; 94                                            ;
-; Total registers                    ; 94                                            ;
-; Total pins                         ; 31                                            ;
+; Total logic elements               ; 31                                            ;
+;     Total combinational functions  ; 31                                            ;
+;     Dedicated logic registers      ; 17                                            ;
+; Total registers                    ; 17                                            ;
+; Total pins                         ; 40                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                             ;
@@ -84,7 +69,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F484C7       ;                    ;
-; Top-level entity name                                                      ; g23_timer_test_bed ; g23_lab3           ;
+; Top-level entity name                                                      ; g23_HMS_Counter    ; g23_lab3           ;
 ; Family name                                                                ; Cyclone II         ; Stratix II         ;
 ; Use Generated Physical Constraints File                                    ; Off                ;                    ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -174,23 +159,18 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+
-; g23_generic_timer.vhd            ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab3/g23_generic_timer.vhd     ;
-; g23_basic_timer.vhd              ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab3/g23_basic_timer.vhd       ;
-; g23_timer_test_bed.vhd           ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab3/g23_timer_test_bed.vhd    ;
-; g23_7_segment_decoder.vhd        ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab3/g23_7_segment_decoder.vhd ;
-; g23_count_to_59.vhd              ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab3/g23_count_to_59.vhd       ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf             ;
-; db/cntr_8fl.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_8fl.tdf           ;
-; db/cntr_5bi.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_5bi.tdf           ;
-; db/cmpr_8cc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cmpr_8cc.tdf           ;
-; db/cntr_gui.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_gui.tdf           ;
-; db/cmpr_7cc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cmpr_7cc.tdf           ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
+; g23_HMS_Counter.vhd              ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab3/g23_HMS_Counter.vhd ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf       ;
+; db/cntr_73k.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_73k.tdf     ;
+; db/cmpr_acc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cmpr_acc.tdf     ;
+; db/cntr_63k.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_63k.tdf     ;
+; db/cmpr_9cc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cmpr_9cc.tdf     ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -198,58 +178,44 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 157   ;
+; Estimated Total logic elements              ; 31    ;
 ;                                             ;       ;
-; Total combinational functions               ; 157   ;
+; Total combinational functions               ; 31    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 42    ;
-;     -- 3 input functions                    ; 14    ;
-;     -- <=2 input functions                  ; 101   ;
+;     -- 4 input functions                    ; 8     ;
+;     -- 3 input functions                    ; 1     ;
+;     -- <=2 input functions                  ; 22    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 71    ;
-;     -- arithmetic mode                      ; 86    ;
+;     -- normal mode                          ; 14    ;
+;     -- arithmetic mode                      ; 17    ;
 ;                                             ;       ;
-; Total registers                             ; 94    ;
-;     -- Dedicated logic registers            ; 94    ;
+; Total registers                             ; 17    ;
+;     -- Dedicated logic registers            ; 17    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 31    ;
+; I/O pins                                    ; 40    ;
 ; Maximum fan-out node                        ; ~GND  ;
-; Maximum fan-out                             ; 81    ;
-; Total fan-out                               ; 807   ;
-; Average fan-out                             ; 2.86  ;
+; Maximum fan-out                             ; 17    ;
+; Total fan-out                               ; 191   ;
+; Average fan-out                             ; 2.17  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                     ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Library Name ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
-; |g23_timer_test_bed                          ; 157 (1)           ; 94 (0)       ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |g23_timer_test_bed                                                                                           ; work         ;
-;    |g23_7_segment_decoder:earth_lsd|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_7_segment_decoder:earth_lsd                                                           ; work         ;
-;    |g23_7_segment_decoder:earth_msd|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_7_segment_decoder:earth_msd                                                           ; work         ;
-;    |g23_7_segment_decoder:mars_ones_display| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_7_segment_decoder:mars_ones_display                                                   ; work         ;
-;    |g23_7_segment_decoder:mars_tens_display| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_7_segment_decoder:mars_tens_display                                                   ; work         ;
-;    |g23_basic_timer:timer|                   ; 108 (0)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_basic_timer:timer                                                                     ;              ;
-;       |g23_generic_timer:earth|              ; 54 (14)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:earth                                             ;              ;
-;          |lpm_counter:counter|               ; 40 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:earth|lpm_counter:counter                         ; work         ;
-;             |cntr_8fl:auto_generated|        ; 40 (40)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:earth|lpm_counter:counter|cntr_8fl:auto_generated ; work         ;
-;       |g23_generic_timer:mars|               ; 54 (14)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:mars                                              ; work         ;
-;          |lpm_counter:counter|               ; 40 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:mars|lpm_counter:counter                          ; work         ;
-;             |cntr_8fl:auto_generated|        ; 40 (40)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:mars|lpm_counter:counter|cntr_8fl:auto_generated  ; work         ;
-;    |g23_count_to_59:earth_counter|           ; 10 (1)            ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:earth_counter                                                             ; work         ;
-;       |lpm_counter:count_to_5|               ; 3 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:earth_counter|lpm_counter:count_to_5                                      ; work         ;
-;          |cntr_gui:auto_generated|           ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:earth_counter|lpm_counter:count_to_5|cntr_gui:auto_generated              ; work         ;
-;       |lpm_counter:count_to_9|               ; 6 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:earth_counter|lpm_counter:count_to_9                                      ; work         ;
-;          |cntr_5bi:auto_generated|           ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:earth_counter|lpm_counter:count_to_9|cntr_5bi:auto_generated              ; work         ;
-;    |g23_count_to_59:mars_counter|            ; 10 (1)            ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:mars_counter                                                              ; work         ;
-;       |lpm_counter:count_to_5|               ; 3 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:mars_counter|lpm_counter:count_to_5                                       ; work         ;
-;          |cntr_gui:auto_generated|           ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:mars_counter|lpm_counter:count_to_5|cntr_gui:auto_generated               ; work         ;
-;       |lpm_counter:count_to_9|               ; 6 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:mars_counter|lpm_counter:count_to_9                                       ; work         ;
-;          |cntr_5bi:auto_generated|           ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:mars_counter|lpm_counter:count_to_9|cntr_5bi:auto_generated               ; work         ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                             ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Library Name ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
+; |g23_HMS_counter                 ; 31 (7)            ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 40   ; 0            ; |g23_HMS_counter                                                                  ; work         ;
+;    |lpm_counter:hours_counter|   ; 8 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:hours_counter                                        ;              ;
+;       |cntr_63k:auto_generated|  ; 8 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated                ;              ;
+;          |cmpr_9cc:cmpr2|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2 ;              ;
+;    |lpm_counter:minutes_counter| ; 8 (0)             ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:minutes_counter                                      ;              ;
+;       |cntr_73k:auto_generated|  ; 8 (8)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated              ;              ;
+;    |lpm_counter:seconds_counter| ; 8 (0)             ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:seconds_counter                                      ;              ;
+;       |cntr_73k:auto_generated|  ; 8 (8)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated              ;              ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -258,331 +224,128 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 94    ;
+; Total registers                              ; 17    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 88    ;
-; Number of registers using Asynchronous Clear ; 14    ;
+; Number of registers using Synchronous Load   ; 17    ;
+; Number of registers using Asynchronous Clear ; 17    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 6     ;
+; Number of registers using Clock Enable       ; 17    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------+
-; Source assignments for g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter ;
-+---------------------------+-------+------+-----------------------------------------------+
-; Assignment                ; Value ; From ; To                                            ;
-+---------------------------+-------+------+-----------------------------------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                             ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                             ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                             ;
-+---------------------------+-------+------+-----------------------------------------------+
++----------------------------------------------------+
+; Source assignments for LPM_COUNTER:seconds_counter ;
++---------------------------+-------+------+---------+
+; Assignment                ; Value ; From ; To      ;
++---------------------------+-------+------+---------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -       ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -       ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -       ;
++---------------------------+-------+------+---------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Source assignments for g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter ;
-+---------------------------+-------+------+----------------------------------------------+
-; Assignment                ; Value ; From ; To                                           ;
-+---------------------------+-------+------+----------------------------------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                            ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                            ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                            ;
-+---------------------------+-------+------+----------------------------------------------+
++----------------------------------------------------+
+; Source assignments for LPM_COUNTER:minutes_counter ;
++---------------------------+-------+------+---------+
+; Assignment                ; Value ; From ; To      ;
++---------------------------+-------+------+---------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -       ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -       ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -       ;
++---------------------------+-------+------+---------+
 
 
-+-----------------------------------------------------------------------------+
-; Source assignments for g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9 ;
-+---------------------------+-------+------+----------------------------------+
-; Assignment                ; Value ; From ; To                               ;
-+---------------------------+-------+------+----------------------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                ;
-+---------------------------+-------+------+----------------------------------+
++--------------------------------------------------+
+; Source assignments for LPM_COUNTER:hours_counter ;
++---------------------------+-------+------+-------+
+; Assignment                ; Value ; From ; To    ;
++---------------------------+-------+------+-------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -     ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -     ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -     ;
++---------------------------+-------+------+-------+
 
 
-+-----------------------------------------------------------------------------+
-; Source assignments for g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5 ;
-+---------------------------+-------+------+----------------------------------+
-; Assignment                ; Value ; From ; To                               ;
-+---------------------------+-------+------+----------------------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                ;
-+---------------------------+-------+------+----------------------------------+
-
-
-+----------------------------------------------------------------------------+
-; Source assignments for g23_count_to_59:mars_counter|LPM_COUNTER:count_to_9 ;
-+---------------------------+-------+------+---------------------------------+
-; Assignment                ; Value ; From ; To                              ;
-+---------------------------+-------+------+---------------------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                               ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                               ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                               ;
-+---------------------------+-------+------+---------------------------------+
-
-
-+----------------------------------------------------------------------------+
-; Source assignments for g23_count_to_59:mars_counter|LPM_COUNTER:count_to_5 ;
-+---------------------------+-------+------+---------------------------------+
-; Assignment                ; Value ; From ; To                              ;
-+---------------------------+-------+------+---------------------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                               ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                               ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                               ;
-+---------------------------+-------+------+---------------------------------+
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:earth ;
-+----------------+-------+-------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                              ;
-+----------------+-------+-------------------------------------------------------------------+
-; max            ; 100   ; Signed Integer                                                    ;
-+----------------+-------+-------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_COUNTER:seconds_counter ;
++------------------------+-------------+-----------------------------------+
+; Parameter Name         ; Value       ; Type                              ;
++------------------------+-------------+-----------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                    ;
+; LPM_WIDTH              ; 6           ; Signed Integer                    ;
+; LPM_DIRECTION          ; UP          ; Untyped                           ;
+; LPM_MODULUS            ; 60          ; Signed Integer                    ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                           ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                           ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                           ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                           ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                           ;
+; LABWIDE_SCLR           ; ON          ; Untyped                           ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                           ;
+; CBXI_PARAMETER         ; cntr_73k    ; Untyped                           ;
++------------------------+-------------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter ;
-+------------------------+-------------------+-------------------------------------------------------------------+
-; Parameter Name         ; Value             ; Type                                                              ;
-+------------------------+-------------------+-------------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                                        ;
-; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                                      ;
-; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                                      ;
-; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                                    ;
-; LPM_WIDTH              ; 40                ; Signed Integer                                                    ;
-; LPM_DIRECTION          ; down              ; Untyped                                                           ;
-; LPM_MODULUS            ; 0                 ; Signed Integer                                                    ;
-; LPM_AVALUE             ; UNUSED            ; Untyped                                                           ;
-; LPM_SVALUE             ; UNUSED            ; Untyped                                                           ;
-; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                                           ;
-; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                                           ;
-; CARRY_CHAIN            ; MANUAL            ; Untyped                                                           ;
-; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                                ;
-; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                                ;
-; CARRY_CNT_EN           ; SMART             ; Untyped                                                           ;
-; LABWIDE_SCLR           ; ON                ; Untyped                                                           ;
-; USE_NEW_VERSION        ; TRUE              ; Untyped                                                           ;
-; CBXI_PARAMETER         ; cntr_8fl          ; Untyped                                                           ;
-+------------------------+-------------------+-------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_COUNTER:minutes_counter ;
++------------------------+-------------+-----------------------------------+
+; Parameter Name         ; Value       ; Type                              ;
++------------------------+-------------+-----------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                    ;
+; LPM_WIDTH              ; 6           ; Signed Integer                    ;
+; LPM_DIRECTION          ; UP          ; Untyped                           ;
+; LPM_MODULUS            ; 60          ; Signed Integer                    ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                           ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                           ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                           ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                           ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                           ;
+; LABWIDE_SCLR           ; ON          ; Untyped                           ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                           ;
+; CBXI_PARAMETER         ; cntr_73k    ; Untyped                           ;
++------------------------+-------------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:mars ;
-+----------------+-------+------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                             ;
-+----------------+-------+------------------------------------------------------------------+
-; max            ; 102   ; Signed Integer                                                   ;
-+----------------+-------+------------------------------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_COUNTER:hours_counter ;
++------------------------+-------------+---------------------------------+
+; Parameter Name         ; Value       ; Type                            ;
++------------------------+-------------+---------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                    ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                  ;
+; LPM_WIDTH              ; 5           ; Signed Integer                  ;
+; LPM_DIRECTION          ; UP          ; Untyped                         ;
+; LPM_MODULUS            ; 24          ; Signed Integer                  ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                         ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                         ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                         ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                         ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                         ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH              ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK              ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                         ;
+; LABWIDE_SCLR           ; ON          ; Untyped                         ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                         ;
+; CBXI_PARAMETER         ; cntr_63k    ; Untyped                         ;
++------------------------+-------------+---------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter ;
-+------------------------+-------------------+------------------------------------------------------------------+
-; Parameter Name         ; Value             ; Type                                                             ;
-+------------------------+-------------------+------------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                                       ;
-; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                                     ;
-; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                                     ;
-; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                                   ;
-; LPM_WIDTH              ; 40                ; Signed Integer                                                   ;
-; LPM_DIRECTION          ; down              ; Untyped                                                          ;
-; LPM_MODULUS            ; 0                 ; Signed Integer                                                   ;
-; LPM_AVALUE             ; UNUSED            ; Untyped                                                          ;
-; LPM_SVALUE             ; UNUSED            ; Untyped                                                          ;
-; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                                          ;
-; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                                          ;
-; CARRY_CHAIN            ; MANUAL            ; Untyped                                                          ;
-; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                               ;
-; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                               ;
-; CARRY_CNT_EN           ; SMART             ; Untyped                                                          ;
-; LABWIDE_SCLR           ; ON                ; Untyped                                                          ;
-; USE_NEW_VERSION        ; TRUE              ; Untyped                                                          ;
-; CBXI_PARAMETER         ; cntr_8fl          ; Untyped                                                          ;
-+------------------------+-------------------+------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9 ;
-+------------------------+-------------------+------------------------------------------------------+
-; Parameter Name         ; Value             ; Type                                                 ;
-+------------------------+-------------------+------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                           ;
-; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                         ;
-; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                         ;
-; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                       ;
-; LPM_WIDTH              ; 4                 ; Signed Integer                                       ;
-; LPM_DIRECTION          ; DEFAULT           ; Untyped                                              ;
-; LPM_MODULUS            ; 10                ; Signed Integer                                       ;
-; LPM_AVALUE             ; UNUSED            ; Untyped                                              ;
-; LPM_SVALUE             ; UNUSED            ; Untyped                                              ;
-; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                              ;
-; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                              ;
-; CARRY_CHAIN            ; MANUAL            ; Untyped                                              ;
-; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                   ;
-; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                   ;
-; CARRY_CNT_EN           ; SMART             ; Untyped                                              ;
-; LABWIDE_SCLR           ; ON                ; Untyped                                              ;
-; USE_NEW_VERSION        ; TRUE              ; Untyped                                              ;
-; CBXI_PARAMETER         ; cntr_5bi          ; Untyped                                              ;
-+------------------------+-------------------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5 ;
-+------------------------+-------------------+------------------------------------------------------+
-; Parameter Name         ; Value             ; Type                                                 ;
-+------------------------+-------------------+------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                           ;
-; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                         ;
-; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                         ;
-; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                       ;
-; LPM_WIDTH              ; 3                 ; Signed Integer                                       ;
-; LPM_DIRECTION          ; DEFAULT           ; Untyped                                              ;
-; LPM_MODULUS            ; 6                 ; Signed Integer                                       ;
-; LPM_AVALUE             ; UNUSED            ; Untyped                                              ;
-; LPM_SVALUE             ; UNUSED            ; Untyped                                              ;
-; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                              ;
-; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                              ;
-; CARRY_CHAIN            ; MANUAL            ; Untyped                                              ;
-; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                   ;
-; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                   ;
-; CARRY_CNT_EN           ; SMART             ; Untyped                                              ;
-; LABWIDE_SCLR           ; ON                ; Untyped                                              ;
-; USE_NEW_VERSION        ; TRUE              ; Untyped                                              ;
-; CBXI_PARAMETER         ; cntr_gui          ; Untyped                                              ;
-+------------------------+-------------------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g23_count_to_59:mars_counter|LPM_COUNTER:count_to_9 ;
-+------------------------+-------------------+-----------------------------------------------------+
-; Parameter Name         ; Value             ; Type                                                ;
-+------------------------+-------------------+-----------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                          ;
-; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                        ;
-; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                        ;
-; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                      ;
-; LPM_WIDTH              ; 4                 ; Signed Integer                                      ;
-; LPM_DIRECTION          ; DEFAULT           ; Untyped                                             ;
-; LPM_MODULUS            ; 10                ; Signed Integer                                      ;
-; LPM_AVALUE             ; UNUSED            ; Untyped                                             ;
-; LPM_SVALUE             ; UNUSED            ; Untyped                                             ;
-; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                             ;
-; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                             ;
-; CARRY_CHAIN            ; MANUAL            ; Untyped                                             ;
-; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                  ;
-; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                  ;
-; CARRY_CNT_EN           ; SMART             ; Untyped                                             ;
-; LABWIDE_SCLR           ; ON                ; Untyped                                             ;
-; USE_NEW_VERSION        ; TRUE              ; Untyped                                             ;
-; CBXI_PARAMETER         ; cntr_5bi          ; Untyped                                             ;
-+------------------------+-------------------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g23_count_to_59:mars_counter|LPM_COUNTER:count_to_5 ;
-+------------------------+-------------------+-----------------------------------------------------+
-; Parameter Name         ; Value             ; Type                                                ;
-+------------------------+-------------------+-----------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                          ;
-; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                        ;
-; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                        ;
-; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                      ;
-; LPM_WIDTH              ; 3                 ; Signed Integer                                      ;
-; LPM_DIRECTION          ; DEFAULT           ; Untyped                                             ;
-; LPM_MODULUS            ; 6                 ; Signed Integer                                      ;
-; LPM_AVALUE             ; UNUSED            ; Untyped                                             ;
-; LPM_SVALUE             ; UNUSED            ; Untyped                                             ;
-; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                             ;
-; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                             ;
-; CARRY_CHAIN            ; MANUAL            ; Untyped                                             ;
-; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                  ;
-; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                  ;
-; CARRY_CNT_EN           ; SMART             ; Untyped                                             ;
-; LABWIDE_SCLR           ; ON                ; Untyped                                             ;
-; USE_NEW_VERSION        ; TRUE              ; Untyped                                             ;
-; CBXI_PARAMETER         ; cntr_gui          ; Untyped                                             ;
-+------------------------+-------------------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "g23_7_segment_decoder:mars_ones_display"                                                       ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; rippleblank_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; rippleblank_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "g23_7_segment_decoder:mars_tens_display"                                                       ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; code[3]         ; Input  ; Info     ; Stuck at GND                                                                        ;
-; rippleblank_in  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; rippleblank_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "g23_7_segment_decoder:earth_lsd"                                                               ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; rippleblank_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; rippleblank_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "g23_7_segment_decoder:earth_msd"                                                               ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; code[3]         ; Input  ; Info     ; Stuck at GND                                                                        ;
-; rippleblank_in  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; rippleblank_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "g23_count_to_59:mars_counter" ;
-+--------+-------+----------+------------------------------+
-; Port   ; Type  ; Severity ; Details                      ;
-+--------+-------+----------+------------------------------+
-; enable ; Input ; Info     ; Stuck at VCC                 ;
-+--------+-------+----------+------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "g23_count_to_59:earth_counter" ;
-+--------+-------+----------+-------------------------------+
-; Port   ; Type  ; Severity ; Details                       ;
-+--------+-------+----------+-------------------------------+
-; enable ; Input ; Info     ; Stuck at VCC                  ;
-+--------+-------+----------+-------------------------------+
-
-
-+---------------------------------------------------+
-; Port Connectivity Checks: "g23_basic_timer:timer" ;
-+--------+-------+----------+-----------------------+
-; Port   ; Type  ; Severity ; Details               ;
-+--------+-------+----------+-----------------------+
-; enable ; Input ; Info     ; Stuck at VCC          ;
-+--------+-------+----------+-----------------------+
 
 
 +-------------------------------+
@@ -591,7 +354,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Thu Mar 13 21:51:49 2014
+    Info: Processing started: Fri Mar 14 17:22:32 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g23_lab3 -c g23_lab3
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file g23_generic_timer.vhd
@@ -606,95 +369,89 @@ Info: Found 2 design units, including 1 entities, in source file g23_mars_timer.
 Info: Found 2 design units, including 1 entities, in source file g23_basic_timer.vhd
     Info: Found design unit 1: g23_basic_timer-alpha
     Info: Found entity 1: g23_basic_timer
-Info: Found 2 design units, including 1 entities, in source file g23_timer_test_bed.vhd
-    Info: Found design unit 1: g23_timer_test_bed-alpha
-    Info: Found entity 1: g23_timer_test_bed
 Info: Found 2 design units, including 1 entities, in source file g23_7_segment_decoder.vhd
     Info: Found design unit 1: g23_7_segment_decoder-alpha
     Info: Found entity 1: g23_7_segment_decoder
 Info: Found 2 design units, including 1 entities, in source file g23_count_to_59.vhd
     Info: Found design unit 1: g23_count_to_59-alpha
     Info: Found entity 1: g23_count_to_59
-Info: Elaborating entity "g23_timer_test_bed" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at g23_timer_test_bed.vhd(31): used implicit default value for signal "debug" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Info: Elaborating entity "g23_basic_timer" for hierarchy "g23_basic_timer:timer"
-Info: Elaborating entity "g23_generic_timer" for hierarchy "g23_basic_timer:timer|g23_generic_timer:earth"
-Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter"
-Info: Elaborated megafunction instantiation "g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter"
-Info: Instantiated megafunction "g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "40"
-    Info: Parameter "LPM_MODULUS" = "0"
-    Info: Parameter "LPM_DIRECTION" = "down"
+Info: Found 2 design units, including 1 entities, in source file g23_timer_test_bed.vhd
+    Info: Found design unit 1: g23_timer_test_bed-alpha
+    Info: Found entity 1: g23_timer_test_bed
+Info: Found 2 design units, including 1 entities, in source file g23_count_to_23.vhd
+    Info: Found design unit 1: g23_count_to_23-alpha
+    Info: Found entity 1: g23_count_to_23
+Info: Found 2 design units, including 1 entities, in source file g23_hms_counter.vhd
+    Info: Found design unit 1: g23_HMS_counter-alpha
+    Info: Found entity 1: g23_HMS_counter
+Info: Found 2 design units, including 1 entities, in source file counter.vhd
+    Info: Found design unit 1: counter-SYN
+    Info: Found entity 1: counter
+Info: Elaborating entity "g23_HMS_Counter" for the top level hierarchy
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "LPM_COUNTER:seconds_counter"
+Info: Elaborated megafunction instantiation "LPM_COUNTER:seconds_counter"
+Info: Instantiated megafunction "LPM_COUNTER:seconds_counter" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "6"
+    Info: Parameter "LPM_MODULUS" = "60"
+    Info: Parameter "LPM_DIRECTION" = "UP"
     Info: Parameter "LPM_AVALUE" = "UNUSED"
     Info: Parameter "LPM_SVALUE" = "UNUSED"
-    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_UNUSED"
     Info: Parameter "LPM_PVALUE" = "UNUSED"
     Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
     Info: Parameter "LPM_HINT" = "UNUSED"
-Info: Found 1 design units, including 1 entities, in source file db/cntr_8fl.tdf
-    Info: Found entity 1: cntr_8fl
-Info: Elaborating entity "cntr_8fl" for hierarchy "g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter|cntr_8fl:auto_generated"
-Info: Elaborating entity "g23_generic_timer" for hierarchy "g23_basic_timer:timer|g23_generic_timer:mars"
-Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter"
-Info: Elaborated megafunction instantiation "g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter"
-Info: Instantiated megafunction "g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "40"
-    Info: Parameter "LPM_MODULUS" = "0"
-    Info: Parameter "LPM_DIRECTION" = "down"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_73k.tdf
+    Info: Found entity 1: cntr_73k
+Info: Elaborating entity "cntr_73k" for hierarchy "LPM_COUNTER:seconds_counter|cntr_73k:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_acc.tdf
+    Info: Found entity 1: cmpr_acc
+Info: Elaborating entity "cmpr_acc" for hierarchy "LPM_COUNTER:seconds_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "LPM_COUNTER:hours_counter"
+Info: Elaborated megafunction instantiation "LPM_COUNTER:hours_counter"
+Info: Instantiated megafunction "LPM_COUNTER:hours_counter" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "5"
+    Info: Parameter "LPM_MODULUS" = "24"
+    Info: Parameter "LPM_DIRECTION" = "UP"
     Info: Parameter "LPM_AVALUE" = "UNUSED"
     Info: Parameter "LPM_SVALUE" = "UNUSED"
-    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_UNUSED"
     Info: Parameter "LPM_PVALUE" = "UNUSED"
     Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
     Info: Parameter "LPM_HINT" = "UNUSED"
-Info: Elaborating entity "g23_count_to_59" for hierarchy "g23_count_to_59:earth_counter"
-Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9"
-Info: Elaborated megafunction instantiation "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9"
-Info: Instantiated megafunction "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "4"
-    Info: Parameter "LPM_MODULUS" = "10"
-    Info: Parameter "LPM_DIRECTION" = "UNUSED"
-    Info: Parameter "LPM_AVALUE" = "UNUSED"
-    Info: Parameter "LPM_SVALUE" = "UNUSED"
-    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
-    Info: Parameter "LPM_PVALUE" = "UNUSED"
-    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
-    Info: Parameter "LPM_HINT" = "UNUSED"
-Info: Found 1 design units, including 1 entities, in source file db/cntr_5bi.tdf
-    Info: Found entity 1: cntr_5bi
-Info: Elaborating entity "cntr_5bi" for hierarchy "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9|cntr_5bi:auto_generated"
-Info: Found 1 design units, including 1 entities, in source file db/cmpr_8cc.tdf
-    Info: Found entity 1: cmpr_8cc
-Info: Elaborating entity "cmpr_8cc" for hierarchy "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9|cntr_5bi:auto_generated|cmpr_8cc:cmpr2"
-Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5"
-Info: Elaborated megafunction instantiation "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5"
-Info: Instantiated megafunction "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "3"
-    Info: Parameter "LPM_MODULUS" = "6"
-    Info: Parameter "LPM_DIRECTION" = "UNUSED"
-    Info: Parameter "LPM_AVALUE" = "UNUSED"
-    Info: Parameter "LPM_SVALUE" = "UNUSED"
-    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
-    Info: Parameter "LPM_PVALUE" = "UNUSED"
-    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
-    Info: Parameter "LPM_HINT" = "UNUSED"
-Info: Found 1 design units, including 1 entities, in source file db/cntr_gui.tdf
-    Info: Found entity 1: cntr_gui
-Info: Elaborating entity "cntr_gui" for hierarchy "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5|cntr_gui:auto_generated"
-Info: Found 1 design units, including 1 entities, in source file db/cmpr_7cc.tdf
-    Info: Found entity 1: cmpr_7cc
-Info: Elaborating entity "cmpr_7cc" for hierarchy "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5|cntr_gui:auto_generated|cmpr_7cc:cmpr3"
-Info: Elaborating entity "g23_7_segment_decoder" for hierarchy "g23_7_segment_decoder:earth_msd"
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "debug" is stuck at GND
-Info: Implemented 188 device resources after synthesis - the final resource count might be different
-    Info: Implemented 2 input pins
-    Info: Implemented 29 output pins
-    Info: Implemented 157 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 314 megabytes
-    Info: Processing ended: Thu Mar 13 21:51:51 2014
+Info: Found 1 design units, including 1 entities, in source file db/cntr_63k.tdf
+    Info: Found entity 1: cntr_63k
+Info: Elaborating entity "cntr_63k" for hierarchy "LPM_COUNTER:hours_counter|cntr_63k:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_9cc.tdf
+    Info: Found entity 1: cmpr_9cc
+Info: Elaborating entity "cmpr_9cc" for hierarchy "LPM_COUNTER:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2"
+Warning: Design contains 19 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "h_set[0]"
+    Warning (15610): No output dependent on input pin "h_set[1]"
+    Warning (15610): No output dependent on input pin "h_set[2]"
+    Warning (15610): No output dependent on input pin "h_set[3]"
+    Warning (15610): No output dependent on input pin "h_set[4]"
+    Warning (15610): No output dependent on input pin "m_set[0]"
+    Warning (15610): No output dependent on input pin "m_set[1]"
+    Warning (15610): No output dependent on input pin "m_set[2]"
+    Warning (15610): No output dependent on input pin "m_set[3]"
+    Warning (15610): No output dependent on input pin "m_set[4]"
+    Warning (15610): No output dependent on input pin "m_set[5]"
+    Warning (15610): No output dependent on input pin "s_set[0]"
+    Warning (15610): No output dependent on input pin "s_set[1]"
+    Warning (15610): No output dependent on input pin "s_set[2]"
+    Warning (15610): No output dependent on input pin "s_set[3]"
+    Warning (15610): No output dependent on input pin "s_set[4]"
+    Warning (15610): No output dependent on input pin "s_set[5]"
+    Warning (15610): No output dependent on input pin "load_enable"
+    Warning (15610): No output dependent on input pin "count_enable"
+Info: Implemented 71 device resources after synthesis - the final resource count might be different
+    Info: Implemented 22 input pins
+    Info: Implemented 18 output pins
+    Info: Implemented 31 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 319 megabytes
+    Info: Processing ended: Fri Mar 14 17:22:34 2014
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

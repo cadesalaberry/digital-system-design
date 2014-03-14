@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C20F484C7
-set_global_assignment -name TOP_LEVEL_ENTITY g23_timer_test_bed
+set_global_assignment -name TOP_LEVEL_ENTITY g23_HMS_Counter
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:21:48  FEBRUARY 20, 2014"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
@@ -47,18 +47,52 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name MISC_FILE "C:/Users/cdesal/github/digital-system-design/lab3/g23_lab3.dpf"
+set_location_assignment PIN_L22 -to reset
+set_location_assignment PIN_E1 -to earth_5_led[0]
+set_location_assignment PIN_H6 -to earth_5_led[1]
+set_location_assignment PIN_H5 -to earth_5_led[2]
+set_location_assignment PIN_H4 -to earth_5_led[3]
+set_location_assignment PIN_G3 -to earth_5_led[4]
+set_location_assignment PIN_D2 -to earth_5_led[5]
+set_location_assignment PIN_D1 -to earth_5_led[6]
+set_location_assignment PIN_L1 -to clk
+set_location_assignment PIN_J2 -to earth_9_led[0]
+set_location_assignment PIN_J1 -to earth_9_led[1]
+set_location_assignment PIN_H2 -to earth_9_led[2]
+set_location_assignment PIN_H1 -to earth_9_led[3]
+set_location_assignment PIN_F2 -to earth_9_led[4]
+set_location_assignment PIN_F1 -to earth_9_led[5]
+set_location_assignment PIN_E2 -to earth_9_led[6]
+set_location_assignment PIN_F4 -to mars_5_led[0]
+set_location_assignment PIN_D5 -to mars_5_led[1]
+set_location_assignment PIN_D6 -to mars_5_led[2]
+set_location_assignment PIN_J4 -to mars_5_led[3]
+set_location_assignment PIN_L8 -to mars_5_led[4]
+set_location_assignment PIN_F3 -to mars_5_led[5]
+set_location_assignment PIN_D4 -to mars_5_led[6]
+set_location_assignment PIN_G5 -to mars_9_led[0]
+set_location_assignment PIN_G6 -to mars_9_led[1]
+set_location_assignment PIN_C2 -to mars_9_led[2]
+set_location_assignment PIN_C1 -to mars_9_led[3]
+set_location_assignment PIN_E3 -to mars_9_led[4]
+set_location_assignment PIN_E4 -to mars_9_led[5]
+set_location_assignment PIN_D3 -to mars_9_led[6]
 set_global_assignment -name VHDL_FILE g23_generic_timer.vhd
 set_global_assignment -name VHDL_FILE g23_earth_timer.vhd
 set_global_assignment -name VHDL_FILE g23_mars_timer.vhd
 set_global_assignment -name VHDL_FILE g23_basic_timer.vhd
 set_global_assignment -name ZIP_VECTOR_WAVEFORM_FILE g23_basic_timer.cvwf
-set_global_assignment -name VHDL_FILE g23_timer_test_bed.vhd
 set_global_assignment -name VHDL_FILE g23_7_segment_decoder.vhd
 set_global_assignment -name VHDL_FILE g23_count_to_59.vhd
+set_global_assignment -name VHDL_FILE g23_timer_test_bed.vhd
+set_global_assignment -name ZIP_VECTOR_WAVEFORM_FILE g23_timer_test_bed.cvwf
+set_global_assignment -name VHDL_FILE g23_count_to_23.vhd
+set_global_assignment -name VHDL_FILE g23_HMS_Counter.vhd
+set_global_assignment -name ZIP_VECTOR_WAVEFORM_FILE g23_lab3_hmscounter.cvwf
+set_global_assignment -name QIP_FILE counter.qip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_global_assignment -name ZIP_VECTOR_WAVEFORM_FILE g23_timer_test_bed.cvwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE g23_timer_test_bed.cvwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE g23_lab3_hmscounter.cvwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

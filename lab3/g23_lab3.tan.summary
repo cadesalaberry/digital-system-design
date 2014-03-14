@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 2.446 ns
-From           : reset
-To             : g23_basic_timer:timer|g23_generic_timer:earth|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[9]
+Actual Time    : 6.135 ns
+From           : sec_clock
+To             : lpm_counter:hours_counter|cntr_63k:auto_generated|safe_q[1]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 17.785 ns
-From           : g23_count_to_59:mars_counter|lpm_counter:count_to_5|cntr_gui:auto_generated|current_reg_q_w[1]
-To             : mars_5_led[1]
+Actual Time    : 8.911 ns
+From           : lpm_counter:hours_counter|cntr_63k:auto_generated|safe_q[0]
+To             : end_of_day
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -0.908 ns
-From           : reset
-To             : g23_basic_timer:timer|g23_generic_timer:mars|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[28]
+Actual Time    : -4.601 ns
+From           : sec_clock
+To             : lpm_counter:seconds_counter|cntr_73k:auto_generated|safe_q[4]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -35,22 +35,12 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 163.56 MHz ( period = 6.114 ns )
-From           : g23_basic_timer:timer|g23_generic_timer:mars|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[19]
-To             : g23_basic_timer:timer|g23_generic_timer:mars|lpm_counter:counter|cntr_8fl:auto_generated|safe_q[9]
+Actual Time    : 244.14 MHz ( period = 4.096 ns )
+From           : lpm_counter:seconds_counter|cntr_73k:auto_generated|safe_q[0]
+To             : lpm_counter:seconds_counter|cntr_73k:auto_generated|safe_q[4]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
-
-Type           : Clock Hold: 'clk'
-Slack          : Not operational: Clock Skew > Data Delay
-Required Time  : None
-Actual Time    : N/A
-From           : g23_count_to_59:mars_counter|lpm_counter:count_to_5|cntr_gui:auto_generated|current_reg_q_w[1]
-To             : g23_count_to_59:mars_counter|lpm_counter:count_to_5|cntr_gui:auto_generated|current_reg_q_w[1]
-From Clock     : clk
-To Clock       : clk
-Failed Paths   : 48
 
 Type           : Total number of failed paths
 Slack          : 
@@ -60,7 +50,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 48
+Failed Paths   : 0
 
 --------------------------------------------------------------------------------------
 
