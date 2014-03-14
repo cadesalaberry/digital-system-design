@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Fri Mar 14 17:47:42 2014
+Analysis & Synthesis Status : Successful - Fri Mar 14 19:15:44 2014
 Quartus II 64-Bit Version : 9.1 Build 350 03/24/2010 SP 2 SJ Full Version
 Revision Name : g23_lab3
 Top-level Entity Name : g23_HMS_counter
 Family : Cyclone II
-Total logic elements : 103
-    Total combinational functions : 103
-    Dedicated logic registers : 17
-Total registers : 17
+Total logic elements : 831
+    Total combinational functions : 512
+    Dedicated logic registers : 604
+Total registers : 604
 Total pins : 40
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 11,264
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

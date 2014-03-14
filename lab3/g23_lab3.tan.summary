@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 8.160 ns
+Actual Time    : 8.084 ns
 From           : s_set[0]
-To             : lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_hazard[3]
+To             : lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_hazard[2]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,8 +15,8 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.345 ns
-From           : lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[4]~9
+Actual Time    : 12.093 ns
+From           : lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[3]~9
 To             : end_of_day
 From Clock     : load_enable
 To Clock       : --
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.478 ns
-From           : s_set[0]
-To             : seconds[0]
+Actual Time    : 14.801 ns
+From           : m_set[3]
+To             : end_of_day
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,19 +35,29 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -1.078 ns
-From           : reset
-To             : lpm_counter:hours_counter|cntr_12l:auto_generated|pre_hazard[4]
+Actual Time    : 2.046 ns
+From           : altera_internal_jtag~TDIUTAP
+To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|lpm_shiftreg:trigger_condition_deserialize|dffs[65]
 From Clock     : --
-To Clock       : clk
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 119.30 MHz ( period = 8.382 ns )
+From           : sld_hub:auto_hub|irf_reg[1][5]
+To             : sld_hub:auto_hub|tdo
+From Clock     : altera_internal_jtag~TCKUTAP
+To Clock       : altera_internal_jtag~TCKUTAP
 Failed Paths   : 0
 
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 228.99 MHz ( period = 4.367 ns )
-From           : lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_hazard[0]
-To             : lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_hazard[3]
+Actual Time    : 174.40 MHz ( period = 5.734 ns )
+From           : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[1]
+To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[5]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0

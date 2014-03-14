@@ -1,5 +1,5 @@
 Flow report for g23_lab3
-Fri Mar 14 17:47:56 2014
+Fri Mar 14 19:16:00 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Fri Mar 14 17:47:56 2014         ;
+; Flow Status                        ; Successful - Fri Mar 14 19:16:00 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab3                                      ;
 ; Top-level Entity Name              ; g23_HMS_counter                               ;
@@ -46,13 +46,13 @@ applicable agreement for further details.
 ; Device                             ; EP2C20F484C7                                  ;
 ; Timing Models                      ; Final                                         ;
 ; Met timing requirements            ; Yes                                           ;
-; Total logic elements               ; 103 / 18,752 ( < 1 % )                        ;
-;     Total combinational functions  ; 103 / 18,752 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 17 / 18,752 ( < 1 % )                         ;
-; Total registers                    ; 17                                            ;
+; Total logic elements               ; 807 / 18,752 ( 4 % )                          ;
+;     Total combinational functions  ; 514 / 18,752 ( 3 % )                          ;
+;     Dedicated logic registers      ; 604 / 18,752 ( 3 % )                          ;
+; Total registers                    ; 604                                           ;
 ; Total pins                         ; 40 / 315 ( 13 % )                             ;
 ; Total virtual pins                 ; 0                                             ;
-; Total memory bits                  ; 0 / 239,616 ( 0 % )                           ;
+; Total memory bits                  ; 11,264 / 239,616 ( 5 % )                      ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                 ;
 +------------------------------------+-----------------------------------------------+
@@ -63,29 +63,55 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/14/2014 17:47:40 ;
+; Start date & time ; 03/14/2014 19:15:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; g23_lab3            ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                       ;
-+------------------------------------+----------------------------------------------------------------+---------------+-----------------+----------------+
-; Assignment Name                    ; Value                                                          ; Default Value ; Entity Name     ; Section Id     ;
-+------------------------------------+----------------------------------------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 132129496028479.139483366002352                                ; --            ; --              ; --             ;
-; IP_TOOL_NAME                       ; LPM_COUNTER                                                    ; --            ; --              ; --             ;
-; IP_TOOL_VERSION                    ; 9.1                                                            ; --            ; --              ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                                                             ; --            ; --              ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                                                              ; --            ; --              ; --             ;
-; MISC_FILE                          ; C:/Users/cdesal/github/digital-system-design/lab3/g23_lab3.dpf ; --            ; --              ; --             ;
-; MISC_FILE                          ; counter.cmp                                                    ; --            ; --              ; --             ;
-; PARTITION_COLOR                    ; 16764057                                                       ; --            ; g23_HMS_Counter ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                                                         ; --            ; g23_HMS_Counter ; Top            ;
-; TOP_LEVEL_ENTITY                   ; g23_HMS_Counter                                                ; g23_lab3      ; --              ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                            ; --            ; --              ; eda_blast_fpga ;
-+------------------------------------+----------------------------------------------------------------+---------------+-----------------+----------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                        ;
++-------------------------------------+--------------------------------------------------------------------------------------------------------------+---------------+-----------------+------------------+
+; Assignment Name                     ; Value                                                                                                        ; Default Value ; Entity Name     ; Section Id       ;
++-------------------------------------+--------------------------------------------------------------------------------------------------------------+---------------+-----------------+------------------+
+; COMPILER_SIGNATURE_ID               ; 132129496028479.139483893803884                                                                              ; --            ; --              ; --               ;
+; ENABLE_SIGNALTAP                    ; On                                                                                                           ; --            ; --              ; --               ;
+; IP_TOOL_NAME                        ; LPM_COUNTER                                                                                                  ; --            ; --              ; --               ;
+; IP_TOOL_VERSION                     ; 9.1                                                                                                          ; --            ; --              ; --               ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                                           ; --            ; --              ; --               ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                                            ; --            ; --              ; --               ;
+; MISC_FILE                           ; C:/Users/cdesal/github/digital-system-design/lab3/g23_lab3.dpf                                               ; --            ; --              ; --               ;
+; MISC_FILE                           ; counter.cmp                                                                                                  ; --            ; --              ; --               ;
+; PARTITION_COLOR                     ; 16764057                                                                                                     ; --            ; g23_HMS_Counter ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                                                        ; --            ; g23_HMS_Counter ; Top              ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                                                       ; --            ; g23_HMS_Counter ; Top              ;
+; SLD_NODE_CREATOR_ID                 ; 110                                                                                                          ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_ENTITY_NAME                ; sld_signaltap                                                                                                ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_INFO=805334528                                                                                      ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_POWER_UP_TRIGGER=0                                                                                       ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                                                ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                                                   ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_FLOW_USE_GENERATED=0                                                                               ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_BITS=11                                                                                            ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_BUFFER_FULL_STOP=1                                                                                       ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_CURRENT_RESOURCE_WIDTH=1                                                                                 ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL=1                                                                                          ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_IN_ENABLED=0                                                                                     ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,                                                                         ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                                                 ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ENABLE_ADVANCED_TRIGGER=0                                                                                ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_DATA_BITS=22                                                                                             ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=22                                                                                          ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK=00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK_LENGTH=89                                                                                 ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SEGMENT_SIZE=512                                                                                         ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_LOWORD=12692                                                                                    ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_HIWORD=36132                                                                                    ; --            ; --              ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SAMPLE_DEPTH=512                                                                                         ; --            ; --              ; auto_signaltap_0 ;
+; TOP_LEVEL_ENTITY                    ; g23_HMS_Counter                                                                                              ; g23_lab3      ; --              ; --               ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                                                                                                          ; --            ; --              ; eda_blast_fpga   ;
+; USE_SIGNALTAP_FILE                  ; g23_HMS_counter.stp                                                                                          ; --            ; --              ; --               ;
++-------------------------------------+--------------------------------------------------------------------------------------------------------------+---------------+-----------------+------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -93,11 +119,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:05     ; 1.0                     ; 319 MB              ; 00:00:02                           ;
-; Fitter                  ; 00:00:06     ; 1.0                     ; 356 MB              ; 00:00:03                           ;
-; Assembler               ; 00:00:03     ; 1.0                     ; 270 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 200 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:17     ; --                      ; --                  ; 00:00:06                           ;
+; Analysis & Synthesis    ; 00:00:08     ; 1.0                     ; 345 MB              ; 00:00:05                           ;
+; Fitter                  ; 00:00:07     ; 3.4                     ; 365 MB              ; 00:00:05                           ;
+; Assembler               ; 00:00:04     ; 1.0                     ; 273 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 209 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:22     ; --                      ; --                  ; 00:00:11                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -65,13 +65,13 @@ ARCHITECTURE alpha OF g23_HMS_counter IS
 BEGIN
 
 	reset_inv	<= NOT reset;
-	end_of_day	<= h_maxed;
+	end_of_day	<= h_maxed AND m_maxed AND s_maxed;
 	
 	hours <= h;
 	minutes <= m;
 	seconds <= s;
 	
-	h_maxed 	<= '1' WHEN (h = "01011") ELSE '0'; 
+	h_maxed 	<= '1' WHEN (h = "10111") ELSE '0'; 
 	m_maxed 	<= '1' WHEN (m = "111011") ELSE '0';
 	s_maxed 	<= '1' WHEN (s = "111011") ELSE '0';
 	
