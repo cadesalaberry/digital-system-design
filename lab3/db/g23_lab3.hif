@@ -3278,8 +3278,8 @@ aeb
 3
 }
 # hierarchies {
-lpm_counter:seconds_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2
-lpm_counter:minutes_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2
+lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2
+lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2
 }
 # macro_sequence
 
@@ -3482,7 +3482,7 @@ aeb
 3
 }
 # hierarchies {
-lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2
+lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2
 }
 # macro_sequence
 
@@ -3510,39 +3510,6 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-g23_HMS_Counter
-# storage
-db|g23_lab3.(11).cnf
-db|g23_lab3.(11).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-g23_hms_counter.vhd
-ec6be6af724367ec40616da72e6df92d
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-|
 }
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -3684,10 +3651,6 @@ ALOAD
 -1
 1
 }
-# hierarchies {
-lpm_counter:seconds_counter
-lpm_counter:minutes_counter
-}
 # macro_sequence
 
 # end
@@ -3729,10 +3692,6 @@ clock
 aclr
 -1
 3
-}
-# hierarchies {
-lpm_counter:seconds_counter|cntr_73k:auto_generated
-lpm_counter:minutes_counter|cntr_73k:auto_generated
 }
 # macro_sequence
 
@@ -3865,9 +3824,6 @@ ALOAD
 -1
 1
 }
-# hierarchies {
-lpm_counter:hours_counter
-}
 # macro_sequence
 
 # end
@@ -3907,8 +3863,440 @@ aclr
 -1
 3
 }
+# macro_sequence
+
+# end
+# entity
+g23_HMS_Counter
+# storage
+db|g23_lab3.(11).cnf
+db|g23_lab3.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+g23_hms_counter.vhd
+7c7eebd64ad23906a2f3c892b954061
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
 # hierarchies {
-lpm_counter:hours_counter|cntr_63k:auto_generated
+|
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+LPM_COUNTER
+# storage
+db|g23_lab3.(38).cnf
+db|g23_lab3.(38).cnf
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|libraries|megafunctions|lpm_counter.tdf
+151f75e8fcf5e87e72b7df6bb2ea
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+6
+PARAMETER_SIGNED_DEC
+USR
+LPM_DIRECTION
+UP
+PARAMETER_UNKNOWN
+USR
+LPM_MODULUS
+60
+PARAMETER_SIGNED_DEC
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_PORT_UPDOWN
+PORT_UNUSED
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+cntr_22l
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+Q5
+-1
+3
+Q4
+-1
+3
+Q3
+-1
+3
+Q2
+-1
+3
+Q1
+-1
+3
+Q0
+-1
+3
+DATA5
+-1
+3
+DATA4
+-1
+3
+DATA3
+-1
+3
+DATA2
+-1
+3
+DATA1
+-1
+3
+DATA0
+-1
+3
+CNT_EN
+-1
+3
+CLOCK
+-1
+3
+ALOAD
+-1
+3
+ACLR
+-1
+3
+}
+# hierarchies {
+lpm_counter:seconds_counter
+lpm_counter:minutes_counter
+}
+# macro_sequence
+
+# end
+# entity
+cntr_22l
+# storage
+db|g23_lab3.(39).cnf
+db|g23_lab3.(39).cnf
+# case_insensitive
+# source_file
+db|cntr_22l.tdf
+b338ed857d6fa64f804137c73fb3027
+7
+# used_port {
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+aload
+-1
+3
+aclr
+-1
+3
+}
+# hierarchies {
+lpm_counter:seconds_counter|cntr_22l:auto_generated
+lpm_counter:minutes_counter|cntr_22l:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+LPM_COUNTER
+# storage
+db|g23_lab3.(40).cnf
+db|g23_lab3.(40).cnf
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|libraries|megafunctions|lpm_counter.tdf
+151f75e8fcf5e87e72b7df6bb2ea
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+5
+PARAMETER_SIGNED_DEC
+USR
+LPM_DIRECTION
+UP
+PARAMETER_UNKNOWN
+USR
+LPM_MODULUS
+24
+PARAMETER_SIGNED_DEC
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_PORT_UPDOWN
+PORT_UNUSED
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+cntr_12l
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+Q4
+-1
+3
+Q3
+-1
+3
+Q2
+-1
+3
+Q1
+-1
+3
+Q0
+-1
+3
+DATA4
+-1
+3
+DATA3
+-1
+3
+DATA2
+-1
+3
+DATA1
+-1
+3
+DATA0
+-1
+3
+CNT_EN
+-1
+3
+CLOCK
+-1
+3
+ALOAD
+-1
+3
+ACLR
+-1
+3
+}
+# hierarchies {
+lpm_counter:hours_counter
+}
+# macro_sequence
+
+# end
+# entity
+cntr_12l
+# storage
+db|g23_lab3.(41).cnf
+db|g23_lab3.(41).cnf
+# case_insensitive
+# source_file
+db|cntr_12l.tdf
+b3fa26ef1dc52ad1de2a81dbf2619678
+7
+# used_port {
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+aload
+-1
+3
+aclr
+-1
+3
+}
+# hierarchies {
+lpm_counter:hours_counter|cntr_12l:auto_generated
 }
 # macro_sequence
 

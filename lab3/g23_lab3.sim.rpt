@@ -1,5 +1,5 @@
 Simulator report for g23_lab3
-Fri Mar 14 17:24:59 2014
+Fri Mar 14 17:51:38 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -45,41 +45,41 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 ms       ;
-; Simulation Netlist Size     ; 94 nodes     ;
-; Simulation Coverage         ;      67.39 % ;
-; Total Number of Transitions ; 1543291      ;
+; Simulation Netlist Size     ; 304 nodes    ;
+; Simulation Coverage         ;      58.13 % ;
+; Total Number of Transitions ; 348471       ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 +-----------------------------+--------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                                   ;
-+--------------------------------------------------------------------------------------------+-------------------------+---------------+
-; Option                                                                                     ; Setting                 ; Default Value ;
-+--------------------------------------------------------------------------------------------+-------------------------+---------------+
-; Simulation mode                                                                            ; Functional              ; Timing        ;
-; Start time                                                                                 ; 0 ns                    ; 0 ns          ;
-; Simulation results format                                                                  ; CVWF                    ;               ;
-; Vector input source                                                                        ; g23_timer_test_bed.cvwf ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On                      ; On            ;
-; Check outputs                                                                              ; Off                     ; Off           ;
-; Report simulation coverage                                                                 ; On                      ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On                      ; On            ;
-; Display missing 1-value coverage report                                                    ; On                      ; On            ;
-; Display missing 0-value coverage report                                                    ; On                      ; On            ;
-; Detect setup and hold time violations                                                      ; Off                     ; Off           ;
-; Detect glitches                                                                            ; Off                     ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off                     ; Off           ;
-; Generate Signal Activity File                                                              ; Off                     ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                     ; Off           ;
-; Group bus channels in simulation results                                                   ; Off                     ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On                      ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE              ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                     ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                      ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto                    ; Auto          ;
-+--------------------------------------------------------------------------------------------+-------------------------+---------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                ;
++--------------------------------------------------------------------------------------------+----------------------+---------------+
+; Option                                                                                     ; Setting              ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------+---------------+
+; Simulation mode                                                                            ; Functional           ; Timing        ;
+; Start time                                                                                 ; 0 ns                 ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                 ;               ;
+; Vector input source                                                                        ; g23_HMS_Counter.cvwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                   ; On            ;
+; Check outputs                                                                              ; Off                  ; Off           ;
+; Report simulation coverage                                                                 ; On                   ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                   ; On            ;
+; Display missing 1-value coverage report                                                    ; On                   ; On            ;
+; Display missing 0-value coverage report                                                    ; On                   ; On            ;
+; Detect setup and hold time violations                                                      ; Off                  ; Off           ;
+; Detect glitches                                                                            ; Off                  ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                  ; Off           ;
+; Generate Signal Activity File                                                              ; Off                  ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                  ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                  ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                   ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE           ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                  ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                   ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                 ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------------+---------------+
 
 
 +----------------------+
@@ -94,13 +94,13 @@ Please use Quartus II 64-Bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      67.39 % ;
-; Total nodes checked                                 ; 94           ;
-; Total output ports checked                          ; 92           ;
-; Total output ports with complete 1/0-value coverage ; 62           ;
-; Total output ports with no 1/0-value coverage       ; 29           ;
-; Total output ports with no 1-value coverage         ; 30           ;
-; Total output ports with no 0-value coverage         ; 29           ;
+; Total coverage as a percentage                      ;      58.13 % ;
+; Total nodes checked                                 ; 304          ;
+; Total output ports checked                          ; 320          ;
+; Total output ports with complete 1/0-value coverage ; 186          ;
+; Total output ports with no 1/0-value coverage       ; 67           ;
+; Total output ports with no 1-value coverage         ; 113          ;
+; Total output ports with no 0-value coverage         ; 88           ;
 +-----------------------------------------------------+--------------+
 
 
@@ -110,7 +110,24 @@ The following table displays output ports that toggle between 1 and 0 during sim
 +-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+------------------+
 ; Node Name                                                                                                 ; Output Port Name                                                                                          ; Output Port Type ;
 +-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+------------------+
+; |g23_HMS_counter|comb~0                                                                                   ; |g23_HMS_counter|comb~0                                                                                   ; out0             ;
+; |g23_HMS_counter|comb~1                                                                                   ; |g23_HMS_counter|comb~1                                                                                   ; out0             ;
+; |g23_HMS_counter|comb~2                                                                                   ; |g23_HMS_counter|comb~2                                                                                   ; out0             ;
+; |g23_HMS_counter|h_set[0]                                                                                 ; |g23_HMS_counter|h_set[0]                                                                                 ; out              ;
+; |g23_HMS_counter|m_set[0]                                                                                 ; |g23_HMS_counter|m_set[0]                                                                                 ; out              ;
+; |g23_HMS_counter|m_set[1]                                                                                 ; |g23_HMS_counter|m_set[1]                                                                                 ; out              ;
+; |g23_HMS_counter|m_set[2]                                                                                 ; |g23_HMS_counter|m_set[2]                                                                                 ; out              ;
+; |g23_HMS_counter|m_set[4]                                                                                 ; |g23_HMS_counter|m_set[4]                                                                                 ; out              ;
+; |g23_HMS_counter|s_set[0]                                                                                 ; |g23_HMS_counter|s_set[0]                                                                                 ; out              ;
+; |g23_HMS_counter|s_set[1]                                                                                 ; |g23_HMS_counter|s_set[1]                                                                                 ; out              ;
+; |g23_HMS_counter|s_set[2]                                                                                 ; |g23_HMS_counter|s_set[2]                                                                                 ; out              ;
+; |g23_HMS_counter|s_set[4]                                                                                 ; |g23_HMS_counter|s_set[4]                                                                                 ; out              ;
+; |g23_HMS_counter|load_enable                                                                              ; |g23_HMS_counter|load_enable                                                                              ; out              ;
+; |g23_HMS_counter|sec_clock                                                                                ; |g23_HMS_counter|sec_clock                                                                                ; out              ;
 ; |g23_HMS_counter|clk                                                                                      ; |g23_HMS_counter|clk                                                                                      ; out              ;
+; |g23_HMS_counter|hours[0]                                                                                 ; |g23_HMS_counter|hours[0]                                                                                 ; pin_out          ;
+; |g23_HMS_counter|hours[1]                                                                                 ; |g23_HMS_counter|hours[1]                                                                                 ; pin_out          ;
+; |g23_HMS_counter|hours[2]                                                                                 ; |g23_HMS_counter|hours[2]                                                                                 ; pin_out          ;
 ; |g23_HMS_counter|minutes[0]                                                                               ; |g23_HMS_counter|minutes[0]                                                                               ; pin_out          ;
 ; |g23_HMS_counter|minutes[1]                                                                               ; |g23_HMS_counter|minutes[1]                                                                               ; pin_out          ;
 ; |g23_HMS_counter|minutes[2]                                                                               ; |g23_HMS_counter|minutes[2]                                                                               ; pin_out          ;
@@ -123,95 +140,285 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |g23_HMS_counter|seconds[3]                                                                               ; |g23_HMS_counter|seconds[3]                                                                               ; pin_out          ;
 ; |g23_HMS_counter|seconds[4]                                                                               ; |g23_HMS_counter|seconds[4]                                                                               ; pin_out          ;
 ; |g23_HMS_counter|seconds[5]                                                                               ; |g23_HMS_counter|seconds[5]                                                                               ; pin_out          ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|cout_actual                          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|cout_actual                          ; out0             ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita0                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita0                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita0                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita0~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita1                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita1                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita1                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita1~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita2                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita2                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita2                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita2~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita3                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita3                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita3                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita3~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita4                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita4                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita4                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita4~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita5                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita5                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita5                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_comb_bita5~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_reg_bit1a[5]                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|safe_q[5]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_reg_bit1a[4]                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|safe_q[4]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_reg_bit1a[3]                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|safe_q[3]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_reg_bit1a[2]                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|safe_q[2]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_reg_bit1a[1]                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|safe_q[1]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|counter_reg_bit1a[0]                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|safe_q[0]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]~0 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]~0 ; out0             ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]   ; out0             ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|data_wire[2]          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|data_wire[2]          ; out0             ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|data_wire[1]          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|data_wire[1]          ; out0             ;
-; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|data_wire[0]          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|data_wire[0]          ; out0             ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|cout_actual                          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|cout_actual                          ; out0             ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita0                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita0                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita0                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita0~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita1                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita1                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita1                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita1~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita2                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita2                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita2                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita2~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita3                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita3                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita3                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita3~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita4                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita4                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita4                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita4~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita5                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita5                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita5                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_comb_bita5~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_reg_bit1a[5]                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|safe_q[5]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_reg_bit1a[4]                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|safe_q[4]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_reg_bit1a[3]                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|safe_q[3]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_reg_bit1a[2]                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|safe_q[2]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_reg_bit1a[1]                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|safe_q[1]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|counter_reg_bit1a[0]                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|safe_q[0]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]~0 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]~0 ; out0             ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]   ; out0             ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|data_wire[2]          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|data_wire[2]          ; out0             ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|data_wire[1]          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|data_wire[1]          ; out0             ;
-; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|data_wire[0]          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_73k:auto_generated|cmpr_acc:cmpr2|data_wire[0]          ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|aclr_actual                            ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|aclr_actual                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~67                                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~67                                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~68                                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~68                                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~69                                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~69                                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~70                                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~70                                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_clrn[4]~0                    ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_clrn[4]~0                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_clrn[3]~1                    ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_clrn[3]~1                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_clrn[2]~2                    ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_clrn[2]~2                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_clrn[1]~3                    ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_clrn[1]~3                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[0]~4                     ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[0]~4                     ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~76                                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~76                                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~81                                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~81                                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~97                                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~97                                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~102                                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~102                                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[2]~2                            ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[2]~2                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[1]~3                            ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[1]~3                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[0]~4                            ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[0]~4                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[0]~9                            ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[0]~9                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[2]                              ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[2]                              ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[1]                              ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[1]                              ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[0]                              ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[0]                              ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita0                     ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita0                     ; combout          ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita0                     ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita0~COUT                ; cout             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita1                     ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita1                     ; combout          ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita1                     ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita1~COUT                ; cout             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita2                     ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita2                     ; combout          ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita2                     ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita2~COUT                ; cout             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita3                     ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita3                     ; combout          ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_reg_bit1a[1]                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_hazard[1]                          ; regout           ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_reg_bit1a[0]                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_hazard[0]                          ; regout           ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2|data_wire[1]            ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2|data_wire[1]            ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2|data_wire[0]            ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2|data_wire[0]            ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|aclr_actual                          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|aclr_actual                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cout_actual                          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cout_actual                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~78                                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~78                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~80                                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~80                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[5]~0                  ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[5]~0                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[3]~2                  ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[3]~2                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[4]~1                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[4]~1                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[2]~3                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[2]~3                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[1]~4                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[1]~4                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[0]~5                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[0]~5                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~85                                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~85                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~87                                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~87                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~91                                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~91                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~93                                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~93                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~110                                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~110                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~112                                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~112                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~113                                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~113                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~114                                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~114                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~116                                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~116                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~118                                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~118                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~119                                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~119                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~120                                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~120                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[5]~0                          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[5]~0                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[4]~1                          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[4]~1                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[3]~2                          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[3]~2                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[2]~3                          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[2]~3                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[1]~4                          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[1]~4                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[0]~5                          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[0]~5                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[4]~7                          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[4]~7                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[2]~9                          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[2]~9                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[1]~10                         ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[1]~10                         ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[0]~11                         ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[0]~11                         ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[5]                            ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[5]                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[4]                            ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[4]                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[3]                            ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[3]                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[2]                            ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[2]                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[1]                            ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[1]                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[0]                            ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[0]                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita0                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita0                   ; combout          ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita0                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita0~COUT              ; cout             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita1                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita1                   ; combout          ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita1                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita1~COUT              ; cout             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita2                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita2                   ; combout          ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita2                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita2~COUT              ; cout             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita3                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita3                   ; combout          ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita3                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita3~COUT              ; cout             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita4                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita4                   ; combout          ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita4                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita4~COUT              ; cout             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita5                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita5                   ; combout          ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita5                   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_comb_bita5~COUT              ; cout             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_reg_bit1a[5]                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_hazard[5]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_reg_bit1a[4]                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_hazard[4]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_reg_bit1a[3]                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_hazard[3]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_reg_bit1a[2]                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_hazard[2]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_reg_bit1a[1]                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_hazard[1]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|counter_reg_bit1a[0]                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_hazard[0]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]~0 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]~0 ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]   ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]   ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|data_wire[2]          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|data_wire[2]          ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|data_wire[1]          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|data_wire[1]          ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|data_wire[0]          ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|data_wire[0]          ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|aclr_actual                          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|aclr_actual                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cout_actual                          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cout_actual                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~78                                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~78                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~80                                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~80                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[5]~0                  ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[5]~0                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[3]~2                  ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[3]~2                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[4]~1                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[4]~1                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[2]~3                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[2]~3                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[1]~4                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[1]~4                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[0]~5                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[0]~5                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~85                                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~85                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~87                                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~87                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~91                                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~91                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~93                                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~93                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~110                                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~110                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~112                                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~112                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~113                                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~113                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~114                                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~114                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~116                                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~116                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~118                                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~118                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~119                                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~119                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~120                                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~120                                ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[5]~0                          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[5]~0                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[4]~1                          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[4]~1                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[3]~2                          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[3]~2                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[2]~3                          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[2]~3                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[1]~4                          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[1]~4                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[0]~5                          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[0]~5                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[4]~7                          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[4]~7                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[2]~9                          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[2]~9                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[1]~10                         ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[1]~10                         ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[0]~11                         ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[0]~11                         ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[5]                            ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[5]                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[4]                            ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[4]                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[3]                            ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[3]                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[2]                            ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[2]                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[1]                            ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[1]                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[0]                            ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[0]                            ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita0                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita0                   ; combout          ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita0                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita0~COUT              ; cout             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita1                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita1                   ; combout          ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita1                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita1~COUT              ; cout             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita2                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita2                   ; combout          ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita2                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita2~COUT              ; cout             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita3                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita3                   ; combout          ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita3                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita3~COUT              ; cout             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita4                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita4                   ; combout          ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita4                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita4~COUT              ; cout             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita5                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita5                   ; combout          ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita5                   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_comb_bita5~COUT              ; cout             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_reg_bit1a[5]                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_hazard[5]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_reg_bit1a[4]                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_hazard[4]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_reg_bit1a[3]                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_hazard[3]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_reg_bit1a[2]                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_hazard[2]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_reg_bit1a[1]                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_hazard[1]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|counter_reg_bit1a[0]                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_hazard[0]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]~0 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]~0 ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]   ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|aneb_result_wire[0]   ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|data_wire[2]          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|data_wire[2]          ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|data_wire[1]          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|data_wire[1]          ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|data_wire[0]          ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2|data_wire[0]          ; out0             ;
 ; |g23_HMS_counter|Equal1~0                                                                                 ; |g23_HMS_counter|Equal1~0                                                                                 ; out0             ;
+; |g23_HMS_counter|Equal2~0                                                                                 ; |g23_HMS_counter|Equal2~0                                                                                 ; out0             ;
 +-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                                                                                                                                                                             ;
-+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
-; Node Name                                                                                               ; Output Port Name                                                                                        ; Output Port Type ;
-+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
-; |g23_HMS_counter|comb~0                                                                                 ; |g23_HMS_counter|comb~0                                                                                 ; out0             ;
-; |g23_HMS_counter|sec_clock                                                                              ; |g23_HMS_counter|sec_clock                                                                              ; out              ;
-; |g23_HMS_counter|reset                                                                                  ; |g23_HMS_counter|reset                                                                                  ; out              ;
-; |g23_HMS_counter|hours[0]                                                                               ; |g23_HMS_counter|hours[0]                                                                               ; pin_out          ;
-; |g23_HMS_counter|hours[1]                                                                               ; |g23_HMS_counter|hours[1]                                                                               ; pin_out          ;
-; |g23_HMS_counter|hours[2]                                                                               ; |g23_HMS_counter|hours[2]                                                                               ; pin_out          ;
-; |g23_HMS_counter|hours[3]                                                                               ; |g23_HMS_counter|hours[3]                                                                               ; pin_out          ;
-; |g23_HMS_counter|hours[4]                                                                               ; |g23_HMS_counter|hours[4]                                                                               ; pin_out          ;
-; |g23_HMS_counter|end_of_day                                                                             ; |g23_HMS_counter|end_of_day                                                                             ; pin_out          ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cout_actual                          ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cout_actual                          ; out0             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita0                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita0                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita0                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita0~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita1                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita1                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita1                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita1~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita2                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita2                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita2                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita2~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita3                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita3                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita3                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita3~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita4                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita4                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita4                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita4~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_reg_bit1a[4]                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|safe_q[4]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_reg_bit1a[3]                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|safe_q[3]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_reg_bit1a[2]                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|safe_q[2]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_reg_bit1a[1]                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|safe_q[1]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_reg_bit1a[0]                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|safe_q[0]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|aneb_result_wire[0]~0 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|aneb_result_wire[0]~0 ; out0             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|aneb_result_wire[0]   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|aneb_result_wire[0]   ; out0             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|data_wire[1]          ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|data_wire[1]          ; out0             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|data_wire[0]          ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|data_wire[0]          ; out0             ;
-; |g23_HMS_counter|Equal0~0                                                                               ; |g23_HMS_counter|Equal0~0                                                                               ; out0             ;
-+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                 ;
++------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                ; Output Port Name                                                                           ; Output Port Type ;
++------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+; |g23_HMS_counter|h_set[1]                                                                ; |g23_HMS_counter|h_set[1]                                                                  ; out              ;
+; |g23_HMS_counter|h_set[2]                                                                ; |g23_HMS_counter|h_set[2]                                                                  ; out              ;
+; |g23_HMS_counter|h_set[3]                                                                ; |g23_HMS_counter|h_set[3]                                                                  ; out              ;
+; |g23_HMS_counter|h_set[4]                                                                ; |g23_HMS_counter|h_set[4]                                                                  ; out              ;
+; |g23_HMS_counter|m_set[3]                                                                ; |g23_HMS_counter|m_set[3]                                                                  ; out              ;
+; |g23_HMS_counter|m_set[5]                                                                ; |g23_HMS_counter|m_set[5]                                                                  ; out              ;
+; |g23_HMS_counter|s_set[3]                                                                ; |g23_HMS_counter|s_set[3]                                                                  ; out              ;
+; |g23_HMS_counter|s_set[5]                                                                ; |g23_HMS_counter|s_set[5]                                                                  ; out              ;
+; |g23_HMS_counter|reset                                                                   ; |g23_HMS_counter|reset                                                                     ; out              ;
+; |g23_HMS_counter|hours[3]                                                                ; |g23_HMS_counter|hours[3]                                                                  ; pin_out          ;
+; |g23_HMS_counter|hours[4]                                                                ; |g23_HMS_counter|hours[4]                                                                  ; pin_out          ;
+; |g23_HMS_counter|end_of_day                                                              ; |g23_HMS_counter|end_of_day                                                                ; pin_out          ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|cout_actual           ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|cout_actual             ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~71                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~71                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_clrn[0]~4   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_clrn[0]~4     ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[4]~0    ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[4]~0      ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[3]~1    ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[3]~1      ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[2]~2    ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[2]~2      ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[1]~3    ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[1]~3      ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[0]       ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[0]         ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_latch_signal[0]   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_latch_signal[0]     ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~73                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~73                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~74                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~74                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~77                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~77                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~78                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~78                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~79                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~79                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~82                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~82                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~93                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~93                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~94                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~94                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~95                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~95                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~96                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~96                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~98                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~98                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~99                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~99                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~100                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~100                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~101                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~101                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[4]~0           ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[4]~0             ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[3]~1           ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[3]~1             ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[4]~5           ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[4]~5             ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[3]~6           ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[3]~6             ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[2]~7           ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[2]~7             ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[1]~8           ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[1]~8             ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[4]             ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[4]               ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[3]             ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[3]               ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita3    ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita3~COUT ; cout             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita4    ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita4      ; combout          ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita4    ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_comb_bita4~COUT ; cout             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_reg_bit1a[4]  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_hazard[4]           ; regout           ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_reg_bit1a[3]  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_hazard[3]           ; regout           ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~79                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~79                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~81                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~81                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~82                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~82                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~83                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~83                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[4]~1 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[4]~1   ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[2]~3 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[2]~3   ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[1]~4 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[1]~4   ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[0]~5 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[0]~5   ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[5]~0  ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[5]~0    ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[3]~2  ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[3]~2    ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[4]     ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[4]       ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[2]     ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[2]       ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[1]     ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[1]       ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[0]     ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[0]       ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_latch_signal[4] ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_latch_signal[4]   ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_latch_signal[2] ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_latch_signal[2]   ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_latch_signal[1] ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_latch_signal[1]   ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_latch_signal[0] ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_latch_signal[0]   ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~86                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~86                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~88                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~88                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~89                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~89                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~90                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~90                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~92                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~92                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~94                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~94                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~95                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~95                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~96                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~96                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~109               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~109                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~111               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~111                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~115               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~115                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~117               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~117                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[5]~6         ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[5]~6           ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[3]~8         ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[3]~8           ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~79                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~79                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~81                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~81                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~82                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~82                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~83                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~83                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[4]~1 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[4]~1   ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[2]~3 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[2]~3   ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[1]~4 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[1]~4   ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[0]~5 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[0]~5   ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[5]~0  ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[5]~0    ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[3]~2  ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[3]~2    ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[4]     ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[4]       ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[2]     ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[2]       ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[1]     ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[1]       ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[0]     ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[0]       ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_latch_signal[4] ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_latch_signal[4]   ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_latch_signal[2] ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_latch_signal[2]   ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_latch_signal[1] ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_latch_signal[1]   ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_latch_signal[0] ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_latch_signal[0]   ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~86                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~86                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~88                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~88                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~89                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~89                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~90                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~90                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~92                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~92                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~94                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~94                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~95                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~95                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~96                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~96                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~109               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~109                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~111               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~111                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~115               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~115                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~117               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~117                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[5]~6         ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[5]~6           ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[3]~8         ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[3]~8           ; out0             ;
+; |g23_HMS_counter|Equal0~0                                                                ; |g23_HMS_counter|Equal0~0                                                                  ; out0             ;
++------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
@@ -220,35 +427,94 @@ The following table displays output ports that do not toggle to 0 during simulat
 +---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
 ; Node Name                                                                                               ; Output Port Name                                                                                        ; Output Port Type ;
 +---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
-; |g23_HMS_counter|sec_clock                                                                              ; |g23_HMS_counter|sec_clock                                                                              ; out              ;
+; |g23_HMS_counter|h_set[1]                                                                               ; |g23_HMS_counter|h_set[1]                                                                               ; out              ;
+; |g23_HMS_counter|h_set[2]                                                                               ; |g23_HMS_counter|h_set[2]                                                                               ; out              ;
+; |g23_HMS_counter|h_set[3]                                                                               ; |g23_HMS_counter|h_set[3]                                                                               ; out              ;
+; |g23_HMS_counter|h_set[4]                                                                               ; |g23_HMS_counter|h_set[4]                                                                               ; out              ;
+; |g23_HMS_counter|m_set[3]                                                                               ; |g23_HMS_counter|m_set[3]                                                                               ; out              ;
+; |g23_HMS_counter|m_set[5]                                                                               ; |g23_HMS_counter|m_set[5]                                                                               ; out              ;
+; |g23_HMS_counter|s_set[3]                                                                               ; |g23_HMS_counter|s_set[3]                                                                               ; out              ;
+; |g23_HMS_counter|s_set[5]                                                                               ; |g23_HMS_counter|s_set[5]                                                                               ; out              ;
 ; |g23_HMS_counter|reset                                                                                  ; |g23_HMS_counter|reset                                                                                  ; out              ;
-; |g23_HMS_counter|hours[0]                                                                               ; |g23_HMS_counter|hours[0]                                                                               ; pin_out          ;
-; |g23_HMS_counter|hours[1]                                                                               ; |g23_HMS_counter|hours[1]                                                                               ; pin_out          ;
-; |g23_HMS_counter|hours[2]                                                                               ; |g23_HMS_counter|hours[2]                                                                               ; pin_out          ;
-; |g23_HMS_counter|hours[3]                                                                               ; |g23_HMS_counter|hours[3]                                                                               ; pin_out          ;
-; |g23_HMS_counter|hours[4]                                                                               ; |g23_HMS_counter|hours[4]                                                                               ; pin_out          ;
-; |g23_HMS_counter|end_of_day                                                                             ; |g23_HMS_counter|end_of_day                                                                             ; pin_out          ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cout_actual                          ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cout_actual                          ; out0             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita0                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita0                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita0                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita0~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita1                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita1                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita1                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita1~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita2                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita2                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita2                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita2~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita3                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita3                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita3                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita3~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita4                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita4                   ; combout          ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita4                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_comb_bita4~COUT              ; cout             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_reg_bit1a[4]                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|safe_q[4]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_reg_bit1a[3]                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|safe_q[3]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_reg_bit1a[2]                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|safe_q[2]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_reg_bit1a[1]                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|safe_q[1]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|counter_reg_bit1a[0]                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|safe_q[0]                            ; regout           ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|aneb_result_wire[0]~0 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|aneb_result_wire[0]~0 ; out0             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|aneb_result_wire[0]   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|aneb_result_wire[0]   ; out0             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|data_wire[1]          ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|data_wire[1]          ; out0             ;
-; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|data_wire[0]          ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_63k:auto_generated|cmpr_9cc:cmpr2|data_wire[0]          ; out0             ;
-; |g23_HMS_counter|Equal0~0                                                                               ; |g23_HMS_counter|Equal0~0                                                                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~71                                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~71                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_clrn[0]~4                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_clrn[0]~4                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[4]~0                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[4]~0                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[3]~1                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[3]~1                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[2]~2                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[2]~2                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[1]~3                   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|effective_prn[1]~3                   ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[4]                      ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[4]                      ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[3]                      ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[3]                      ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[2]                      ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[2]                      ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[1]                      ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[1]                      ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_latch_signal[4]                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_latch_signal[4]                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_latch_signal[3]                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_latch_signal[3]                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_latch_signal[2]                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_latch_signal[2]                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_latch_signal[1]                  ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_latch_signal[1]                  ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~73                                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~73                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~74                                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~74                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~75                                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~75                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~77                                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~77                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~78                                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~78                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~79                                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~79                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~80                                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~80                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~82                                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|_~82                                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[4]~5                          ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[4]~5                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[3]~6                          ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[3]~6                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[2]~7                          ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[2]~7                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[1]~8                          ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[1]~8                          ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_reg_bit1a[4]                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_hazard[4]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_reg_bit1a[3]                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_hazard[3]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|counter_reg_bit1a[2]                 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_hazard[2]                        ; regout           ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2|aneb_result_wire[0]~0 ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2|aneb_result_wire[0]~0 ; out0             ;
+; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2|aneb_result_wire[0]   ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2|aneb_result_wire[0]   ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~79                               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~79                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~81                               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~81                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~82                               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~82                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~83                               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~83                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[4]~1                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[4]~1                ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[2]~3                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[2]~3                ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[1]~4                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[1]~4                ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[0]~5                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_clrn[0]~5                ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[5]~0                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[5]~0                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[3]~2                 ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|effective_prn[3]~2                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[5]                    ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[5]                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[3]                    ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[3]                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_latch_signal[5]                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_latch_signal[5]                ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_latch_signal[3]                ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_latch_signal[3]                ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~86                               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~86                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~88                               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~88                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~89                               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~89                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~90                               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~90                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~92                               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~92                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~94                               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~94                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~95                               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~95                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~96                               ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|_~96                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[5]~6                        ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[5]~6                        ; out0             ;
+; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[3]~8                        ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[3]~8                        ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~79                               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~79                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~81                               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~81                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~82                               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~82                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~83                               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~83                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[4]~1                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[4]~1                ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[2]~3                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[2]~3                ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[1]~4                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[1]~4                ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[0]~5                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_clrn[0]~5                ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[5]~0                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[5]~0                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[3]~2                 ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|effective_prn[3]~2                 ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[5]                    ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[5]                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[3]                    ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[3]                    ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_latch_signal[5]                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_latch_signal[5]                ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_latch_signal[3]                ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|pre_latch_signal[3]                ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~86                               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~86                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~88                               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~88                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~89                               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~89                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~90                               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~90                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~92                               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~92                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~94                               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~94                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~95                               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~95                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~96                               ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|_~96                               ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[5]~6                        ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[5]~6                        ; out0             ;
+; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[3]~8                        ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[3]~8                        ; out0             ;
 +---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
 
 
@@ -265,68 +531,20 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Fri Mar 14 17:24:55 2014
+    Info: Processing started: Fri Mar 14 17:51:34 2014
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off g23_lab3 -c g23_lab3
-Info: Using vector source file "C:/Users/cdesal/github/digital-system-design/lab3/g23_timer_test_bed.cvwf"
+Info: Using vector source file "C:/Users/cdesal/github/digital-system-design/lab3/g23_HMS_Counter.cvwf"
 Info: Overwriting simulation input file with simulation results
-    Info: A backup of g23_timer_test_bed.cvwf called g23_lab3.sim_ori.cvwf has been created in the db folder
-Warning: Can't find node "earth_5_led[6]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "earth_5_led[5]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "earth_5_led[4]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "earth_5_led[3]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "earth_5_led[2]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "earth_5_led[1]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "earth_5_led[0]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "earth_9_led[6]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "earth_9_led[5]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "earth_9_led[4]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "earth_9_led[3]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "earth_9_led[2]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "earth_9_led[1]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "earth_9_led[0]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "mars_5_led[6]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "mars_5_led[5]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "mars_5_led[4]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "mars_5_led[3]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "mars_5_led[2]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "mars_5_led[1]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "mars_5_led[0]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "mars_9_led[6]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "mars_9_led[5]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "mars_9_led[4]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "mars_9_led[3]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "mars_9_led[2]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "mars_9_led[1]" for functional simulation. Ignored vector source file node.
-Warning: Can't find node "mars_9_led[0]" for functional simulation. Ignored vector source file node.
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|h_set[0]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|h_set[1]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|h_set[2]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|h_set[3]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|h_set[4]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|m_set[0]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|m_set[1]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|m_set[2]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|m_set[3]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|m_set[4]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|m_set[5]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|s_set[0]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|s_set[1]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|s_set[2]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|s_set[3]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|s_set[4]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|s_set[5]"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|load_enable"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|count_enable"
-Warning: Can't find signal in vector source file for input pin "|g23_HMS_counter|sec_clock"
+    Info: A backup of g23_HMS_Counter.cvwf called g23_lab3.sim_ori.cvwf has been created in the db folder
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      67.39 %
-Info: Number of transitions in simulation is 1543291
-Info: Quartus II 64-Bit Simulator was successful. 0 errors, 48 warnings
-    Info: Peak virtual memory: 175 megabytes
-    Info: Processing ended: Fri Mar 14 17:25:02 2014
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Simulation coverage is      58.13 %
+Info: Number of transitions in simulation is 348471
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 176 megabytes
+    Info: Processing ended: Fri Mar 14 17:51:40 2014
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:03
 
 

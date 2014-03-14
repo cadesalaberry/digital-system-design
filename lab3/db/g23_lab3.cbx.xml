@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="g23_lab3">
-		<CBX_INST_ENTRY INSTANCE_NAME="|g23_HMS_Counter|LPM_COUNTER:hours_counter" CBX_FILE_NAME="cntr_63k.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|g23_HMS_Counter|LPM_COUNTER:minutes_counter" CBX_FILE_NAME="cntr_73k.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|g23_HMS_Counter|LPM_COUNTER:seconds_counter" CBX_FILE_NAME="cntr_73k.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_HMS_Counter|LPM_COUNTER:hours_counter" CBX_FILE_NAME="cntr_12l.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_HMS_Counter|LPM_COUNTER:minutes_counter" CBX_FILE_NAME="cntr_22l.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_HMS_Counter|LPM_COUNTER:seconds_counter" CBX_FILE_NAME="cntr_22l.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

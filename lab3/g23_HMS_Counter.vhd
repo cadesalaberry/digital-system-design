@@ -84,10 +84,10 @@ BEGIN
 		lpm_width => 6
 	)
 	PORT MAP (
-		aload => '0',
+		aload => load_enable,
 		aclr => reset_inv,
 		clock => clk,
-		data => "000000",
+		data => s_set,
 		cnt_en => sec_clock,
 		q => s
 	);
@@ -101,11 +101,11 @@ BEGIN
 		lpm_width => 6
 	)
 	PORT MAP (
-		aload => '0',
+		aload => load_enable,
 		aclr => reset_inv,
 		clock => clk,
-		data => "000000",
-		cnt_en => sec_clock,
+		data => m_set,
+		cnt_en => sec_clock AND s_maxed,
 		q => m
 	);
 	
@@ -118,11 +118,11 @@ BEGIN
 		lpm_width => 5
 	)
 	PORT MAP (
-		aload => '0',
+		aload => load_enable,
 		aclr => reset_inv,
 		clock => clk,
-		data => "00000",
-		cnt_en => sec_clock AND m_maxed,
+		data => h_set,
+		cnt_en => sec_clock AND m_maxed AND s_maxed,
 		q => h
 	);
 	
