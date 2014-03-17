@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g23_lab3
-Fri Mar 14 19:15:44 2014
+Mon Mar 17 17:13:49 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -14,36 +14,43 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Logic Cells Representing Combinational Loops
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for LPM_COUNTER:seconds_counter
- 15. Source assignments for LPM_COUNTER:seconds_counter|cntr_22l:auto_generated
- 16. Source assignments for LPM_COUNTER:minutes_counter
- 17. Source assignments for LPM_COUNTER:minutes_counter|cntr_22l:auto_generated
- 18. Source assignments for LPM_COUNTER:hours_counter
- 19. Source assignments for LPM_COUNTER:hours_counter|cntr_12l:auto_generated
- 20. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body
- 21. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst
- 22. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_jps3:auto_generated
- 23. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_jps3:auto_generated|altsyncram_2eq1:altsyncram1
- 24. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter
- 25. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter
- 26. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter
- 27. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter
- 28. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr
- 29. Source assignments for sld_hub:auto_hub
- 30. Source assignments for sld_hub:auto_hub|sld_rom_sr:hub_info_reg
- 31. Parameter Settings for User Entity Instance: LPM_COUNTER:seconds_counter
- 32. Parameter Settings for User Entity Instance: LPM_COUNTER:minutes_counter
- 33. Parameter Settings for User Entity Instance: LPM_COUNTER:hours_counter
- 34. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 35. Parameter Settings for Inferred Entity Instance: sld_hub:auto_hub
- 36. SignalTap II Logic Analyzer Settings
- 37. Connections to In-System Debugging Instance "auto_signaltap_0"
- 38. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Source assignments for g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter
+ 12. Source assignments for g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter
+ 13. Source assignments for g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9
+ 14. Source assignments for g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5
+ 15. Source assignments for g23_count_to_59:mars_counter|LPM_COUNTER:count_to_9
+ 16. Source assignments for g23_count_to_59:mars_counter|LPM_COUNTER:count_to_5
+ 17. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body
+ 18. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst
+ 19. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_jps3:auto_generated
+ 20. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_jps3:auto_generated|altsyncram_2eq1:altsyncram1
+ 21. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter
+ 22. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter
+ 23. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter
+ 24. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter
+ 25. Source assignments for sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr
+ 26. Source assignments for sld_hub:auto_hub
+ 27. Source assignments for sld_hub:auto_hub|sld_rom_sr:hub_info_reg
+ 28. Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:earth
+ 29. Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter
+ 30. Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:mars
+ 31. Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter
+ 32. Parameter Settings for User Entity Instance: g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9
+ 33. Parameter Settings for User Entity Instance: g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5
+ 34. Parameter Settings for User Entity Instance: g23_count_to_59:mars_counter|LPM_COUNTER:count_to_9
+ 35. Parameter Settings for User Entity Instance: g23_count_to_59:mars_counter|LPM_COUNTER:count_to_5
+ 36. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 37. Parameter Settings for Inferred Entity Instance: sld_hub:auto_hub
+ 38. Port Connectivity Checks: "g23_7_segment_decoder:mars_9_display"
+ 39. Port Connectivity Checks: "g23_7_segment_decoder:mars_5_display"
+ 40. Port Connectivity Checks: "g23_7_segment_decoder:earth_lsd"
+ 41. Port Connectivity Checks: "g23_7_segment_decoder:earth_msd"
+ 42. Port Connectivity Checks: "g23_basic_timer:timer"
+ 43. SignalTap II Logic Analyzer Settings
+ 44. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 45. Analysis & Synthesis Messages
 
 
 
@@ -69,16 +76,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 14 19:15:44 2014         ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar 17 17:13:49 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab3                                      ;
-; Top-level Entity Name              ; g23_HMS_counter                               ;
+; Top-level Entity Name              ; g23_timer_test_bed                            ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 831                                           ;
-;     Total combinational functions  ; 512                                           ;
-;     Dedicated logic registers      ; 604                                           ;
-; Total registers                    ; 604                                           ;
-; Total pins                         ; 40                                            ;
+; Total logic elements               ; 905                                           ;
+;     Total combinational functions  ; 569                                           ;
+;     Dedicated logic registers      ; 681                                           ;
+; Total registers                    ; 681                                           ;
+; Total pins                         ; 30                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 11,264                                        ;
 ; Embedded Multiplier 9-bit elements ; 0                                             ;
@@ -92,7 +99,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F484C7       ;                    ;
-; Top-level entity name                                                      ; g23_HMS_Counter    ; g23_lab3           ;
+; Top-level entity name                                                      ; g23_timer_test_bed ; g23_lab3           ;
 ; Family name                                                                ; Cyclone II         ; Stratix II         ;
 ; Use Generated Physical Constraints File                                    ; Off                ;                    ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -187,12 +194,17 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+
 ; File Name with User-Entered Path                                         ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ;
 +--------------------------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+
-; g23_HMS_Counter.vhd                                                      ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab3/g23_HMS_Counter.vhd        ;
+; g23_generic_timer.vhd                                                    ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab3/g23_generic_timer.vhd      ;
+; g23_basic_timer.vhd                                                      ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab3/g23_basic_timer.vhd        ;
+; g23_7_segment_decoder.vhd                                                ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab3/g23_7_segment_decoder.vhd  ;
+; g23_count_to_59.vhd                                                      ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab3/g23_count_to_59.vhd        ;
+; g23_timer_test_bed.vhd                                                   ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab3/g23_timer_test_bed.vhd     ;
 ; lpm_counter.tdf                                                          ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf              ;
-; db/cntr_22l.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_22l.tdf            ;
-; db/cmpr_acc.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cmpr_acc.tdf            ;
-; db/cntr_12l.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_12l.tdf            ;
-; db/cmpr_9cc.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cmpr_9cc.tdf            ;
+; db/cntr_8fl.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_8fl.tdf            ;
+; db/cntr_svi.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_svi.tdf            ;
+; db/cmpr_8cc.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cmpr_8cc.tdf            ;
+; db/cntr_gui.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_gui.tdf            ;
+; db/cmpr_7cc.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cmpr_7cc.tdf            ;
 ; sld_signaltap.vhd                                                        ; yes             ; Encrypted Megafunction       ; c:/altera/91sp2/quartus/libraries/megafunctions/sld_signaltap.vhd            ;
 ; sld_ela_control.vhd                                                      ; yes             ; Encrypted Megafunction       ; c:/altera/91sp2/quartus/libraries/megafunctions/sld_ela_control.vhd          ;
 ; lpm_shiftreg.tdf                                                         ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_shiftreg.tdf             ;
@@ -208,18 +220,21 @@ applicable agreement for further details.
 ; lpm_decode.tdf                                                           ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_decode.tdf               ;
 ; db/decode_rqf.tdf                                                        ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/decode_rqf.tdf          ;
 ; db/cntr_rbi.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_rbi.tdf            ;
+; db/cmpr_9cc.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cmpr_9cc.tdf            ;
 ; db/cntr_v1j.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_v1j.tdf            ;
 ; db/cntr_1ci.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_1ci.tdf            ;
 ; db/cntr_hui.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_hui.tdf            ;
 ; db/cmpr_5cc.tdf                                                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cmpr_5cc.tdf            ;
 ; sld_rom_sr.vhd                                                           ; yes             ; Encrypted Megafunction       ; c:/altera/91sp2/quartus/libraries/megafunctions/sld_rom_sr.vhd               ;
 ; sld_hub.vhd                                                              ; yes             ; Encrypted Megafunction       ; c:/altera/91sp2/quartus/libraries/megafunctions/sld_hub.vhd                  ;
+; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_22l.tdf        ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_22l.tdf            ;
+; C:/Users/cdesal/github/digital-system-design/lab3/db/cmpr_acc.tdf        ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cmpr_acc.tdf            ;
+; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_12l.tdf        ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_12l.tdf            ;
 ; C:/Users/cdesal/github/digital-system-design/lab3/db/altsyncram_tps3.tdf ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/altsyncram_tps3.tdf     ;
 ; C:/Users/cdesal/github/digital-system-design/lab3/db/mux_aoc.tdf         ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/mux_aoc.tdf             ;
 ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_3ci.tdf        ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_3ci.tdf            ;
 ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_02j.tdf        ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_02j.tdf            ;
 ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_sbi.tdf        ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cntr_sbi.tdf            ;
-; C:/Users/cdesal/github/digital-system-design/lab3/db/cmpr_8cc.tdf        ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab3/db/cmpr_8cc.tdf            ;
 +--------------------------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+
 
 
@@ -228,105 +243,117 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 831   ;
+; Estimated Total logic elements              ; 905   ;
 ;                                             ;       ;
-; Total combinational functions               ; 512   ;
+; Total combinational functions               ; 569   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 206   ;
-;     -- 3 input functions                    ; 168   ;
-;     -- <=2 input functions                  ; 138   ;
+;     -- 4 input functions                    ; 203   ;
+;     -- 3 input functions                    ; 162   ;
+;     -- <=2 input functions                  ; 204   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 447   ;
-;     -- arithmetic mode                      ; 65    ;
+;     -- normal mode                          ; 435   ;
+;     -- arithmetic mode                      ; 134   ;
 ;                                             ;       ;
-; Total registers                             ; 604   ;
-;     -- Dedicated logic registers            ; 604   ;
+; Total registers                             ; 681   ;
+;     -- Dedicated logic registers            ; 681   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 40    ;
+; I/O pins                                    ; 30    ;
 ; Total memory bits                           ; 11264 ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 337   ;
-; Total fan-out                               ; 3938  ;
-; Average fan-out                             ; 3.33  ;
+; Maximum fan-out                             ; 414   ;
+; Total fan-out                               ; 4344  ;
+; Average fan-out                             ; 3.32  ;
 +---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
-+------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                                                                           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                            ; Library Name ;
-+------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |g23_HMS_counter                                                                                     ; 512 (10)          ; 604 (0)      ; 11264       ; 0            ; 0       ; 0         ; 40   ; 0            ; |g23_HMS_counter                                                                                                                                                                                                                                                                                               ; work         ;
-;    |lpm_counter:hours_counter|                                                                       ; 29 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:hours_counter                                                                                                                                                                                                                                                                     ;              ;
-;       |cntr_12l:auto_generated|                                                                      ; 29 (28)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated                                                                                                                                                                                                                                             ;              ;
-;          |cmpr_9cc:cmpr2|                                                                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2                                                                                                                                                                                                                              ;              ;
-;    |lpm_counter:minutes_counter|                                                                     ; 34 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:minutes_counter                                                                                                                                                                                                                                                                   ;              ;
-;       |cntr_22l:auto_generated|                                                                      ; 34 (32)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated                                                                                                                                                                                                                                           ;              ;
-;          |cmpr_acc:cmpr2|                                                                            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                                                                                                                                                                                                                            ;              ;
-;    |lpm_counter:seconds_counter|                                                                     ; 33 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:seconds_counter                                                                                                                                                                                                                                                                   ;              ;
-;       |cntr_22l:auto_generated|                                                                      ; 33 (32)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated                                                                                                                                                                                                                                           ;              ;
-;          |cmpr_acc:cmpr2|                                                                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                                                                                                                                                                                                                            ;              ;
-;    |sld_hub:auto_hub|                                                                                ; 103 (64)          ; 73 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_hub:auto_hub                                                                                                                                                                                                                                                                              ;              ;
-;       |sld_rom_sr:hub_info_reg|                                                                      ; 22 (22)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_hub:auto_hub|sld_rom_sr:hub_info_reg                                                                                                                                                                                                                                                      ;              ;
-;       |sld_shadow_jsm:shadow_jsm|                                                                    ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_hub:auto_hub|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                                                                    ;              ;
-;    |sld_signaltap:auto_signaltap_0|                                                                  ; 303 (1)           ; 514 (0)      ; 11264       ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                ;              ;
-;       |sld_signaltap_impl:sld_signaltap_body|                                                        ; 302 (20)          ; 514 (162)    ; 11264       ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body                                                                                                                                                                                                                          ;              ;
-;          |altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|                            ; 21 (0)            ; 58 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem                                                                                                                                                           ;              ;
-;             |lpm_decode:wdecoder|                                                                    ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder                                                                                                                                       ;              ;
-;                |decode_rqf:auto_generated|                                                           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder|decode_rqf:auto_generated                                                                                                             ;              ;
-;             |lpm_mux:mux|                                                                            ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux                                                                                                                                               ;              ;
-;                |mux_eoc:auto_generated|                                                              ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux|mux_eoc:auto_generated                                                                                                                        ;              ;
-;          |altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|                                           ; 0 (0)             ; 0 (0)        ; 11264       ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram                                                                                                                                                                          ;              ;
-;             |altsyncram_jps3:auto_generated|                                                         ; 0 (0)             ; 0 (0)        ; 11264       ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_jps3:auto_generated                                                                                                                                           ;              ;
-;                |altsyncram_2eq1:altsyncram1|                                                         ; 0 (0)             ; 0 (0)        ; 11264       ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_jps3:auto_generated|altsyncram_2eq1:altsyncram1                                                                                                               ;              ;
-;          |lpm_shiftreg:segment_offset_config_deserialize|                                            ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|lpm_shiftreg:segment_offset_config_deserialize                                                                                                                                                                           ;              ;
-;          |lpm_shiftreg:status_register|                                                              ; 17 (17)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|lpm_shiftreg:status_register                                                                                                                                                                                             ;              ;
-;          |sld_buffer_manager:sld_buffer_manager_inst|                                                ; 75 (75)           ; 54 (54)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst                                                                                                                                                                               ;              ;
-;          |sld_ela_control:ela_control|                                                               ; 53 (1)            ; 126 (1)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control                                                                                                                                                                                              ;              ;
-;             |lpm_shiftreg:trigger_config_deserialize|                                                ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|lpm_shiftreg:trigger_config_deserialize                                                                                                                                                      ;              ;
-;             |sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm| ; 44 (0)            ; 110 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm                                                                                                       ;              ;
-;                |lpm_shiftreg:trigger_condition_deserialize|                                          ; 0 (0)             ; 66 (66)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|lpm_shiftreg:trigger_condition_deserialize                                                            ;              ;
-;                |sld_mbpmg:\trigger_modules_gen:0:trigger_match|                                      ; 44 (0)            ; 44 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match                                                        ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1  ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:10:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:10:sm1 ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:11:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:11:sm1 ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:12:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:12:sm1 ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:13:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:13:sm1 ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:14:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:14:sm1 ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:15:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:15:sm1 ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:16:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:16:sm1 ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:17:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:17:sm1 ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:18:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:18:sm1 ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:19:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:19:sm1 ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:1:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:1:sm1  ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:20:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:20:sm1 ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:21:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:21:sm1 ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:2:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:2:sm1  ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:3:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:3:sm1  ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:4:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:4:sm1  ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:5:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:5:sm1  ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:6:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:6:sm1  ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:7:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:7:sm1  ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:8:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:8:sm1  ;              ;
-;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:9:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:9:sm1  ;              ;
-;             |sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity|                          ; 8 (8)             ; 11 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity                                                                                                                                ;              ;
-;                |lpm_shiftreg:trigger_config_deserialize|                                             ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity|lpm_shiftreg:trigger_config_deserialize                                                                                        ;              ;
-;          |sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|          ; 98 (12)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst                                                                                                                                         ;              ;
-;             |lpm_counter:\adv_point_3_and_more:advance_pointer_counter|                              ; 7 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter                                                                               ;              ;
-;                |cntr_rbi:auto_generated|                                                             ; 7 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter|cntr_rbi:auto_generated                                                       ;              ;
-;             |lpm_counter:read_pointer_counter|                                                       ; 9 (0)             ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter                                                                                                        ;              ;
-;                |cntr_v1j:auto_generated|                                                             ; 9 (9)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter|cntr_v1j:auto_generated                                                                                ;              ;
-;             |lpm_counter:status_advance_pointer_counter|                                             ; 7 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter                                                                                              ;              ;
-;                |cntr_1ci:auto_generated|                                                             ; 7 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter|cntr_1ci:auto_generated                                                                      ;              ;
-;             |lpm_counter:status_read_pointer_counter|                                                ; 3 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter                                                                                                 ;              ;
-;                |cntr_hui:auto_generated|                                                             ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter|cntr_hui:auto_generated                                                                         ;              ;
-;             |lpm_shiftreg:info_data_shift_out|                                                       ; 19 (19)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:info_data_shift_out                                                                                                        ;              ;
-;             |lpm_shiftreg:ram_data_shift_out|                                                        ; 22 (22)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                         ;              ;
-;             |lpm_shiftreg:status_data_shift_out|                                                     ; 19 (19)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                      ;              ;
-;          |sld_rom_sr:crc_rom_sr|                                                                     ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                    ;              ;
-+------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
++------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                                                           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                               ; Library Name ;
++------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |g23_timer_test_bed                                                                                  ; 569 (3)           ; 681 (0)      ; 11264       ; 0            ; 0       ; 0         ; 30   ; 0            ; |g23_timer_test_bed                                                                                                                                                                                                                                                                                               ; work         ;
+;    |g23_7_segment_decoder:earth_lsd|                                                                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_7_segment_decoder:earth_lsd                                                                                                                                                                                                                                                               ;              ;
+;    |g23_7_segment_decoder:earth_msd|                                                                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_7_segment_decoder:earth_msd                                                                                                                                                                                                                                                               ;              ;
+;    |g23_7_segment_decoder:mars_5_display|                                                            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_7_segment_decoder:mars_5_display                                                                                                                                                                                                                                                          ;              ;
+;    |g23_7_segment_decoder:mars_9_display|                                                            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_7_segment_decoder:mars_9_display                                                                                                                                                                                                                                                          ;              ;
+;    |g23_basic_timer:timer|                                                                           ; 110 (0)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_basic_timer:timer                                                                                                                                                                                                                                                                         ;              ;
+;       |g23_generic_timer:earth|                                                                      ; 55 (15)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:earth                                                                                                                                                                                                                                                 ;              ;
+;          |lpm_counter:counter|                                                                       ; 40 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:earth|lpm_counter:counter                                                                                                                                                                                                                             ;              ;
+;             |cntr_8fl:auto_generated|                                                                ; 40 (40)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:earth|lpm_counter:counter|cntr_8fl:auto_generated                                                                                                                                                                                                     ;              ;
+;       |g23_generic_timer:mars|                                                                       ; 55 (15)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:mars                                                                                                                                                                                                                                                  ;              ;
+;          |lpm_counter:counter|                                                                       ; 40 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:mars|lpm_counter:counter                                                                                                                                                                                                                              ;              ;
+;             |cntr_8fl:auto_generated|                                                                ; 40 (40)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_basic_timer:timer|g23_generic_timer:mars|lpm_counter:counter|cntr_8fl:auto_generated                                                                                                                                                                                                      ;              ;
+;    |g23_count_to_59:earth_counter|                                                                   ; 11 (2)            ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:earth_counter                                                                                                                                                                                                                                                                 ;              ;
+;       |lpm_counter:count_to_5|                                                                       ; 3 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:earth_counter|lpm_counter:count_to_5                                                                                                                                                                                                                                          ;              ;
+;          |cntr_gui:auto_generated|                                                                   ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:earth_counter|lpm_counter:count_to_5|cntr_gui:auto_generated                                                                                                                                                                                                                  ;              ;
+;       |lpm_counter:count_to_9|                                                                       ; 6 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:earth_counter|lpm_counter:count_to_9                                                                                                                                                                                                                                          ;              ;
+;          |cntr_svi:auto_generated|                                                                   ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:earth_counter|lpm_counter:count_to_9|cntr_svi:auto_generated                                                                                                                                                                                                                  ;              ;
+;    |g23_count_to_59:mars_counter|                                                                    ; 11 (2)            ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:mars_counter                                                                                                                                                                                                                                                                  ;              ;
+;       |lpm_counter:count_to_5|                                                                       ; 3 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:mars_counter|lpm_counter:count_to_5                                                                                                                                                                                                                                           ;              ;
+;          |cntr_gui:auto_generated|                                                                   ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:mars_counter|lpm_counter:count_to_5|cntr_gui:auto_generated                                                                                                                                                                                                                   ;              ;
+;       |lpm_counter:count_to_9|                                                                       ; 6 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:mars_counter|lpm_counter:count_to_9                                                                                                                                                                                                                                           ;              ;
+;          |cntr_svi:auto_generated|                                                                   ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|g23_count_to_59:mars_counter|lpm_counter:count_to_9|cntr_svi:auto_generated                                                                                                                                                                                                                   ;              ;
+;    |sld_hub:auto_hub|                                                                                ; 103 (64)          ; 73 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_hub:auto_hub                                                                                                                                                                                                                                                                              ;              ;
+;       |sld_rom_sr:hub_info_reg|                                                                      ; 22 (22)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_hub:auto_hub|sld_rom_sr:hub_info_reg                                                                                                                                                                                                                                                      ;              ;
+;       |sld_shadow_jsm:shadow_jsm|                                                                    ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_hub:auto_hub|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                                                                    ;              ;
+;    |sld_signaltap:auto_signaltap_0|                                                                  ; 303 (1)           ; 514 (0)      ; 11264       ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                ;              ;
+;       |sld_signaltap_impl:sld_signaltap_body|                                                        ; 302 (20)          ; 514 (162)    ; 11264       ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body                                                                                                                                                                                                                          ;              ;
+;          |altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|                            ; 21 (0)            ; 58 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem                                                                                                                                                           ;              ;
+;             |lpm_decode:wdecoder|                                                                    ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder                                                                                                                                       ;              ;
+;                |decode_rqf:auto_generated|                                                           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder|decode_rqf:auto_generated                                                                                                             ;              ;
+;             |lpm_mux:mux|                                                                            ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux                                                                                                                                               ;              ;
+;                |mux_eoc:auto_generated|                                                              ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux|mux_eoc:auto_generated                                                                                                                        ;              ;
+;          |altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|                                           ; 0 (0)             ; 0 (0)        ; 11264       ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram                                                                                                                                                                          ;              ;
+;             |altsyncram_jps3:auto_generated|                                                         ; 0 (0)             ; 0 (0)        ; 11264       ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_jps3:auto_generated                                                                                                                                           ;              ;
+;                |altsyncram_2eq1:altsyncram1|                                                         ; 0 (0)             ; 0 (0)        ; 11264       ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_jps3:auto_generated|altsyncram_2eq1:altsyncram1                                                                                                               ;              ;
+;          |lpm_shiftreg:segment_offset_config_deserialize|                                            ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|lpm_shiftreg:segment_offset_config_deserialize                                                                                                                                                                           ;              ;
+;          |lpm_shiftreg:status_register|                                                              ; 17 (17)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|lpm_shiftreg:status_register                                                                                                                                                                                             ;              ;
+;          |sld_buffer_manager:sld_buffer_manager_inst|                                                ; 75 (75)           ; 54 (54)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst                                                                                                                                                                               ;              ;
+;          |sld_ela_control:ela_control|                                                               ; 53 (1)            ; 126 (1)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control                                                                                                                                                                                              ;              ;
+;             |lpm_shiftreg:trigger_config_deserialize|                                                ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|lpm_shiftreg:trigger_config_deserialize                                                                                                                                                      ;              ;
+;             |sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm| ; 44 (0)            ; 110 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm                                                                                                       ;              ;
+;                |lpm_shiftreg:trigger_condition_deserialize|                                          ; 0 (0)             ; 66 (66)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|lpm_shiftreg:trigger_condition_deserialize                                                            ;              ;
+;                |sld_mbpmg:\trigger_modules_gen:0:trigger_match|                                      ; 44 (0)            ; 44 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match                                                        ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:10:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:10:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:11:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:11:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:12:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:12:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:13:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:13:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:14:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:14:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:15:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:15:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:16:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:16:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:17:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:17:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:18:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:18:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:19:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:19:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:1:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:1:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:20:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:20:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:21:sm1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:21:sm1 ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:2:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:2:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:3:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:3:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:4:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:4:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:5:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:5:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:6:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:6:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:7:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:7:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:8:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:8:sm1  ;              ;
+;                   |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:9:sm1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_basic_multi_level_trigger:\basic_multi_level_mbpm_trigger_gen:multi_level_mbpm|sld_mbpmg:\trigger_modules_gen:0:trigger_match|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:9:sm1  ;              ;
+;             |sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity|                          ; 8 (8)             ; 11 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity                                                                                                                                ;              ;
+;                |lpm_shiftreg:trigger_config_deserialize|                                             ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity|lpm_shiftreg:trigger_config_deserialize                                                                                        ;              ;
+;          |sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|          ; 98 (12)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst                                                                                                                                         ;              ;
+;             |lpm_counter:\adv_point_3_and_more:advance_pointer_counter|                              ; 7 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter                                                                               ;              ;
+;                |cntr_rbi:auto_generated|                                                             ; 7 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter|cntr_rbi:auto_generated                                                       ;              ;
+;             |lpm_counter:read_pointer_counter|                                                       ; 9 (0)             ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter                                                                                                        ;              ;
+;                |cntr_v1j:auto_generated|                                                             ; 9 (9)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter|cntr_v1j:auto_generated                                                                                ;              ;
+;             |lpm_counter:status_advance_pointer_counter|                                             ; 7 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter                                                                                              ;              ;
+;                |cntr_1ci:auto_generated|                                                             ; 7 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter|cntr_1ci:auto_generated                                                                      ;              ;
+;             |lpm_counter:status_read_pointer_counter|                                                ; 3 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter                                                                                                 ;              ;
+;                |cntr_hui:auto_generated|                                                             ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter|cntr_hui:auto_generated                                                                         ;              ;
+;             |lpm_shiftreg:info_data_shift_out|                                                       ; 19 (19)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:info_data_shift_out                                                                                                        ;              ;
+;             |lpm_shiftreg:ram_data_shift_out|                                                        ; 22 (22)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                         ;              ;
+;             |lpm_shiftreg:status_data_shift_out|                                                     ; 19 (19)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                      ;              ;
+;          |sld_rom_sr:crc_rom_sr|                                                                     ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_timer_test_bed|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                    ;              ;
++------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -339,72 +366,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+------+
 
 
-+----------------------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops                               ;
-+-----------------------------------------------------------------------+----+
-; Logic Cell Name                                                       ;    ;
-+-----------------------------------------------------------------------+----+
-; lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[0]~0   ;    ;
-; lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[1]~1   ;    ;
-; lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[2]~2   ;    ;
-; lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[3]~3   ;    ;
-; lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[4]~4   ;    ;
-; lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[0]~0 ;    ;
-; lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[1]~1 ;    ;
-; lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[2]~2 ;    ;
-; lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[3]~3 ;    ;
-; lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[4]~4 ;    ;
-; lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[5]~5 ;    ;
-; lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[0]~0 ;    ;
-; lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[1]~1 ;    ;
-; lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[2]~2 ;    ;
-; lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[3]~3 ;    ;
-; lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[4]~4 ;    ;
-; lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[5]~5 ;    ;
-; Number of logic cells representing combinational loops                ; 17 ;
-+-----------------------------------------------------------------------+----+
-Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                                                                                                                            ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Register name                                                                                                                                   ; Reason for Removal                                                                                                                                          ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|segment_shift_clk_ena                                                      ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|buffer_write_enable_delayed                                                ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[0] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[0] ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[1] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[1] ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[2] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[2] ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[3] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[3] ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[4] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[4] ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[5] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[5] ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[6] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[6] ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[7] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[7] ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[8] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[8] ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[0]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[0]                                            ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[1]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[1]                                            ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[2]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[2]                                            ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[3]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[3]                                            ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[4]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[4]                                            ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[5]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[5]                                            ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[6]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[6]                                            ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[7]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[7]                                            ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|current_offset_delayed[8]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|buffer_write_address_delayed[8]                                            ;
-; Total Number of Removed Registers = 19                                                                                                          ;                                                                                                                                                             ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 604   ;
+; Total registers                              ; 681   ;
 ; Number of registers using Synchronous Clear  ; 13    ;
-; Number of registers using Synchronous Load   ; 38    ;
-; Number of registers using Asynchronous Clear ; 265   ;
+; Number of registers using Synchronous Load   ; 109   ;
+; Number of registers using Asynchronous Clear ; 262   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 298   ;
+; Number of registers using Clock Enable       ; 295   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -429,31 +401,52 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|counter[5]   ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr|word_counter[0]                   ;
-; 12:1               ; 4 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; Yes        ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr|WORD_SR[1]                        ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; No         ; |g23_HMS_counter|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|offset_count ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Source assignments for g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter ;
++---------------------------+-------+------+-----------------------------------------------+
+; Assignment                ; Value ; From ; To                                            ;
++---------------------------+-------+------+-----------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                             ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                             ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                             ;
++---------------------------+-------+------+-----------------------------------------------+
 
 
-+----------------------------------------------------+
-; Source assignments for LPM_COUNTER:seconds_counter ;
-+---------------------------+-------+------+---------+
-; Assignment                ; Value ; From ; To      ;
-+---------------------------+-------+------+---------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -       ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -       ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -       ;
-+---------------------------+-------+------+---------+
++-----------------------------------------------------------------------------------------+
+; Source assignments for g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter ;
++---------------------------+-------+------+----------------------------------------------+
+; Assignment                ; Value ; From ; To                                           ;
++---------------------------+-------+------+----------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                            ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                            ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                            ;
++---------------------------+-------+------+----------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Source assignments for g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9 ;
++---------------------------+-------+------+----------------------------------+
+; Assignment                ; Value ; From ; To                               ;
++---------------------------+-------+------+----------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                ;
++---------------------------+-------+------+----------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Source assignments for g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5 ;
++---------------------------+-------+------+----------------------------------+
+; Assignment                ; Value ; From ; To                               ;
++---------------------------+-------+------+----------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                ;
++---------------------------+-------+------+----------------------------------+
 
 
 +----------------------------------------------------------------------------+
-; Source assignments for LPM_COUNTER:seconds_counter|cntr_22l:auto_generated ;
+; Source assignments for g23_count_to_59:mars_counter|LPM_COUNTER:count_to_9 ;
 +---------------------------+-------+------+---------------------------------+
 ; Assignment                ; Value ; From ; To                              ;
 +---------------------------+-------+------+---------------------------------+
@@ -463,19 +456,8 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +---------------------------+-------+------+---------------------------------+
 
 
-+----------------------------------------------------+
-; Source assignments for LPM_COUNTER:minutes_counter ;
-+---------------------------+-------+------+---------+
-; Assignment                ; Value ; From ; To      ;
-+---------------------------+-------+------+---------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -       ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -       ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -       ;
-+---------------------------+-------+------+---------+
-
-
 +----------------------------------------------------------------------------+
-; Source assignments for LPM_COUNTER:minutes_counter|cntr_22l:auto_generated ;
+; Source assignments for g23_count_to_59:mars_counter|LPM_COUNTER:count_to_5 ;
 +---------------------------+-------+------+---------------------------------+
 ; Assignment                ; Value ; From ; To                              ;
 +---------------------------+-------+------+---------------------------------+
@@ -483,28 +465,6 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                               ;
 ; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                               ;
 +---------------------------+-------+------+---------------------------------+
-
-
-+--------------------------------------------------+
-; Source assignments for LPM_COUNTER:hours_counter ;
-+---------------------------+-------+------+-------+
-; Assignment                ; Value ; From ; To    ;
-+---------------------------+-------+------+-------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -     ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -     ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -     ;
-+---------------------------+-------+------+-------+
-
-
-+--------------------------------------------------------------------------+
-; Source assignments for LPM_COUNTER:hours_counter|cntr_12l:auto_generated ;
-+---------------------------+-------+------+-------------------------------+
-; Assignment                ; Value ; From ; To                            ;
-+---------------------------+-------+------+-------------------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                             ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                             ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                             ;
-+---------------------------+-------+------+-------------------------------+
 
 
 +---------------------------------------------------------------------------------------------+
@@ -628,84 +588,185 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------+-------+------+---------------------------+
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: LPM_COUNTER:seconds_counter ;
-+------------------------+-------------+-----------------------------------+
-; Parameter Name         ; Value       ; Type                              ;
-+------------------------+-------------+-----------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                        ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                      ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                      ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                    ;
-; LPM_WIDTH              ; 6           ; Signed Integer                    ;
-; LPM_DIRECTION          ; UP          ; Untyped                           ;
-; LPM_MODULUS            ; 60          ; Signed Integer                    ;
-; LPM_AVALUE             ; UNUSED      ; Untyped                           ;
-; LPM_SVALUE             ; UNUSED      ; Untyped                           ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                           ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                           ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                           ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                ;
-; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                ;
-; CARRY_CNT_EN           ; SMART       ; Untyped                           ;
-; LABWIDE_SCLR           ; ON          ; Untyped                           ;
-; USE_NEW_VERSION        ; TRUE        ; Untyped                           ;
-; CBXI_PARAMETER         ; cntr_22l    ; Untyped                           ;
-+------------------------+-------------+-----------------------------------+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:earth ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; max            ; 100   ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: LPM_COUNTER:minutes_counter ;
-+------------------------+-------------+-----------------------------------+
-; Parameter Name         ; Value       ; Type                              ;
-+------------------------+-------------+-----------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                        ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                      ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                      ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                    ;
-; LPM_WIDTH              ; 6           ; Signed Integer                    ;
-; LPM_DIRECTION          ; UP          ; Untyped                           ;
-; LPM_MODULUS            ; 60          ; Signed Integer                    ;
-; LPM_AVALUE             ; UNUSED      ; Untyped                           ;
-; LPM_SVALUE             ; UNUSED      ; Untyped                           ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                           ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                           ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                           ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                ;
-; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                ;
-; CARRY_CNT_EN           ; SMART       ; Untyped                           ;
-; LABWIDE_SCLR           ; ON          ; Untyped                           ;
-; USE_NEW_VERSION        ; TRUE        ; Untyped                           ;
-; CBXI_PARAMETER         ; cntr_22l    ; Untyped                           ;
-+------------------------+-------------+-----------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter ;
++------------------------+-------------------+-------------------------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                                              ;
++------------------------+-------------------+-------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                                    ;
+; LPM_WIDTH              ; 40                ; Signed Integer                                                    ;
+; LPM_DIRECTION          ; down              ; Untyped                                                           ;
+; LPM_MODULUS            ; 0                 ; Signed Integer                                                    ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                                           ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                                           ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                                           ;
+; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                                           ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                                           ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                                ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                                ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                                           ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                                           ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                                           ;
+; CBXI_PARAMETER         ; cntr_8fl          ; Untyped                                                           ;
++------------------------+-------------------+-------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: LPM_COUNTER:hours_counter ;
-+------------------------+-------------+---------------------------------+
-; Parameter Name         ; Value       ; Type                            ;
-+------------------------+-------------+---------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                      ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                    ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                    ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                  ;
-; LPM_WIDTH              ; 5           ; Signed Integer                  ;
-; LPM_DIRECTION          ; UP          ; Untyped                         ;
-; LPM_MODULUS            ; 24          ; Signed Integer                  ;
-; LPM_AVALUE             ; UNUSED      ; Untyped                         ;
-; LPM_SVALUE             ; UNUSED      ; Untyped                         ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                         ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                         ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                         ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH              ;
-; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK              ;
-; CARRY_CNT_EN           ; SMART       ; Untyped                         ;
-; LABWIDE_SCLR           ; ON          ; Untyped                         ;
-; USE_NEW_VERSION        ; TRUE        ; Untyped                         ;
-; CBXI_PARAMETER         ; cntr_12l    ; Untyped                         ;
-+------------------------+-------------+---------------------------------+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:mars ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; max            ; 102   ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter ;
++------------------------+-------------------+------------------------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                                             ;
++------------------------+-------------------+------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                                   ;
+; LPM_WIDTH              ; 40                ; Signed Integer                                                   ;
+; LPM_DIRECTION          ; down              ; Untyped                                                          ;
+; LPM_MODULUS            ; 0                 ; Signed Integer                                                   ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                                          ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                                          ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                                          ;
+; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                                          ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                                          ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                               ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                               ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                                          ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                                          ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                                          ;
+; CBXI_PARAMETER         ; cntr_8fl          ; Untyped                                                          ;
++------------------------+-------------------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9 ;
++------------------------+-------------------+------------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                                 ;
++------------------------+-------------------+------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                       ;
+; LPM_WIDTH              ; 4                 ; Signed Integer                                       ;
+; LPM_DIRECTION          ; DEFAULT           ; Untyped                                              ;
+; LPM_MODULUS            ; 10                ; Signed Integer                                       ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                              ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                              ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                              ;
+; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                              ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                   ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                   ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                              ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                              ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                              ;
+; CBXI_PARAMETER         ; cntr_svi          ; Untyped                                              ;
++------------------------+-------------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5 ;
++------------------------+-------------------+------------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                                 ;
++------------------------+-------------------+------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                       ;
+; LPM_WIDTH              ; 3                 ; Signed Integer                                       ;
+; LPM_DIRECTION          ; DEFAULT           ; Untyped                                              ;
+; LPM_MODULUS            ; 6                 ; Signed Integer                                       ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                              ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                              ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                              ;
+; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                              ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                   ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                   ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                              ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                              ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                              ;
+; CBXI_PARAMETER         ; cntr_gui          ; Untyped                                              ;
++------------------------+-------------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_count_to_59:mars_counter|LPM_COUNTER:count_to_9 ;
++------------------------+-------------------+-----------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                                ;
++------------------------+-------------------+-----------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                        ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                      ;
+; LPM_WIDTH              ; 4                 ; Signed Integer                                      ;
+; LPM_DIRECTION          ; DEFAULT           ; Untyped                                             ;
+; LPM_MODULUS            ; 10                ; Signed Integer                                      ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                             ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                             ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                             ;
+; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                             ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                             ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                  ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                  ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                             ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                             ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                             ;
+; CBXI_PARAMETER         ; cntr_svi          ; Untyped                                             ;
++------------------------+-------------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_count_to_59:mars_counter|LPM_COUNTER:count_to_5 ;
++------------------------+-------------------+-----------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                                ;
++------------------------+-------------------+-----------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                        ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                      ;
+; LPM_WIDTH              ; 3                 ; Signed Integer                                      ;
+; LPM_DIRECTION          ; DEFAULT           ; Untyped                                             ;
+; LPM_MODULUS            ; 6                 ; Signed Integer                                      ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                             ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                             ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                             ;
+; DEVICE_FAMILY          ; Cyclone II        ; Untyped                                             ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                             ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                  ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                  ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                             ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                             ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                             ;
+; CBXI_PARAMETER         ; cntr_gui          ; Untyped                                             ;
++------------------------+-------------------+-----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -785,6 +846,57 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g23_7_segment_decoder:mars_9_display"                                                          ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; rippleblank_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rippleblank_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g23_7_segment_decoder:mars_5_display"                                                          ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; code[3]         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rippleblank_in  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; rippleblank_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g23_7_segment_decoder:earth_lsd"                                                               ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; rippleblank_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rippleblank_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g23_7_segment_decoder:earth_msd"                                                               ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; code[3]         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rippleblank_in  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; rippleblank_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "g23_basic_timer:timer" ;
++--------+-------+----------+-----------------------+
+; Port   ; Type  ; Severity ; Details               ;
++--------+-------+----------+-----------------------+
+; enable ; Input ; Info     ; Stuck at VCC          ;
++--------+-------+----------+-----------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; SignalTap II Logic Analyzer Settings                                                                                                                                                                                                           ;
 +----------------+------------------+---------------------+------------------+--------------+----------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
@@ -794,57 +906,57 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+------------------+---------------------+------------------+--------------+----------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                             ;
-+--------------+---------------+-----------+----------------+-------------------+------------------------------------------------------------------+---------+
-; Name         ; Type          ; Status    ; Partition Name ; Netlist Type Used ; Actual Connection                                                ; Details ;
-+--------------+---------------+-----------+----------------+-------------------+------------------------------------------------------------------+---------+
-; clk          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; clk                                                              ; N/A     ;
-; count_enable ; pre-synthesis ; connected ; Top            ; post-synthesis    ; count_enable                                                     ; N/A     ;
-; count_enable ; pre-synthesis ; connected ; Top            ; post-synthesis    ; count_enable                                                     ; N/A     ;
-; end_of_day   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; end_of_day~5                                                     ; N/A     ;
-; end_of_day   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; end_of_day~5                                                     ; N/A     ;
-; hours[0]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[0]~1    ; N/A     ;
-; hours[0]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[0]~1    ; N/A     ;
-; hours[1]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[1]~3    ; N/A     ;
-; hours[1]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[1]~3    ; N/A     ;
-; hours[2]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[2]~5    ; N/A     ;
-; hours[2]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[2]~5    ; N/A     ;
-; hours[3]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[3]~7    ; N/A     ;
-; hours[3]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[3]~7    ; N/A     ;
-; hours[4]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[4]~9    ; N/A     ;
-; hours[4]     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:hours_counter|cntr_12l:auto_generated|safe_q[4]~9    ; N/A     ;
-; load_enable  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; load_enable                                                      ; N/A     ;
-; load_enable  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; load_enable                                                      ; N/A     ;
-; minutes[0]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[0]~1  ; N/A     ;
-; minutes[0]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[0]~1  ; N/A     ;
-; minutes[1]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[1]~3  ; N/A     ;
-; minutes[1]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[1]~3  ; N/A     ;
-; minutes[2]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[2]~5  ; N/A     ;
-; minutes[2]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[2]~5  ; N/A     ;
-; minutes[3]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[3]~7  ; N/A     ;
-; minutes[3]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[3]~7  ; N/A     ;
-; minutes[4]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[4]~9  ; N/A     ;
-; minutes[4]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[4]~9  ; N/A     ;
-; minutes[5]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[5]~11 ; N/A     ;
-; minutes[5]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:minutes_counter|cntr_22l:auto_generated|safe_q[5]~11 ; N/A     ;
-; reset        ; pre-synthesis ; connected ; Top            ; post-synthesis    ; reset                                                            ; N/A     ;
-; reset        ; pre-synthesis ; connected ; Top            ; post-synthesis    ; reset                                                            ; N/A     ;
-; sec_clock    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; sec_clock                                                        ; N/A     ;
-; sec_clock    ; pre-synthesis ; connected ; Top            ; post-synthesis    ; sec_clock                                                        ; N/A     ;
-; seconds[0]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[0]~1  ; N/A     ;
-; seconds[0]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[0]~1  ; N/A     ;
-; seconds[1]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[1]~3  ; N/A     ;
-; seconds[1]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[1]~3  ; N/A     ;
-; seconds[2]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[2]~5  ; N/A     ;
-; seconds[2]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[2]~5  ; N/A     ;
-; seconds[3]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[3]~7  ; N/A     ;
-; seconds[3]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[3]~7  ; N/A     ;
-; seconds[4]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[4]~9  ; N/A     ;
-; seconds[4]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[4]~9  ; N/A     ;
-; seconds[5]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[5]~11 ; N/A     ;
-; seconds[5]   ; pre-synthesis ; connected ; Top            ; post-synthesis    ; lpm_counter:seconds_counter|cntr_22l:auto_generated|safe_q[5]~11 ; N/A     ;
-+--------------+---------------+-----------+----------------+-------------------+------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                                                                     ;
++--------------+---------------+-----------+----------------+-------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Name         ; Type          ; Status    ; Partition Name ; Netlist Type Used ; Actual Connection ; Details                                                                                                                                                        ;
++--------------+---------------+-----------+----------------+-------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; clk          ; pre-synthesis ; connected ; Top            ; post-synthesis    ; clk               ; N/A                                                                                                                                                            ;
+; count_enable ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; count_enable ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; end_of_day   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; end_of_day   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; hours[0]     ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; hours[0]     ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; hours[1]     ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; hours[1]     ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; hours[2]     ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; hours[2]     ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; hours[3]     ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; hours[3]     ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; hours[4]     ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; hours[4]     ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; load_enable  ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; load_enable  ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; minutes[0]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; minutes[0]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; minutes[1]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; minutes[1]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; minutes[2]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; minutes[2]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; minutes[3]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; minutes[3]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; minutes[4]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; minutes[4]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; minutes[5]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; minutes[5]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; reset        ; pre-synthesis ; connected ; Top            ; post-synthesis    ; reset             ; N/A                                                                                                                                                            ;
+; reset        ; pre-synthesis ; connected ; Top            ; post-synthesis    ; reset             ; N/A                                                                                                                                                            ;
+; sec_clock    ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; sec_clock    ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; seconds[0]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; seconds[0]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; seconds[1]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; seconds[1]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; seconds[2]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; seconds[2]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; seconds[3]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; seconds[3]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; seconds[4]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; seconds[4]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; seconds[5]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
+; seconds[5]   ; pre-synthesis ; missing   ; Top            ; post-synthesis    ; GND               ; The name does not exist in your design or refers to an invalid hierarchy or bus element.  You may have modified your design after creating the debug instance. ;
++--------------+---------------+-----------+----------------+-------------------+-------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -853,7 +965,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Fri Mar 14 19:15:37 2014
+    Info: Processing started: Mon Mar 17 17:13:44 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g23_lab3 -c g23_lab3
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file g23_generic_timer.vhd
@@ -883,48 +995,75 @@ Info: Found 2 design units, including 1 entities, in source file g23_count_to_23
 Info: Found 2 design units, including 1 entities, in source file g23_hms_counter.vhd
     Info: Found design unit 1: g23_HMS_counter-alpha
     Info: Found entity 1: g23_HMS_counter
-Info: Found 2 design units, including 1 entities, in source file counter.vhd
-    Info: Found design unit 1: counter-SYN
-    Info: Found entity 1: counter
-Info: Elaborating entity "g23_HMS_Counter" for the top level hierarchy
-Info: Elaborating entity "LPM_COUNTER" for hierarchy "LPM_COUNTER:seconds_counter"
-Info: Elaborated megafunction instantiation "LPM_COUNTER:seconds_counter"
-Info: Instantiated megafunction "LPM_COUNTER:seconds_counter" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "6"
-    Info: Parameter "LPM_MODULUS" = "60"
-    Info: Parameter "LPM_DIRECTION" = "UP"
+Info: Elaborating entity "g23_timer_test_bed" for the top level hierarchy
+Info: Elaborating entity "g23_basic_timer" for hierarchy "g23_basic_timer:timer"
+Info: Elaborating entity "g23_generic_timer" for hierarchy "g23_basic_timer:timer|g23_generic_timer:earth"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter"
+Info: Elaborated megafunction instantiation "g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter"
+Info: Instantiated megafunction "g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "40"
+    Info: Parameter "LPM_MODULUS" = "0"
+    Info: Parameter "LPM_DIRECTION" = "down"
     Info: Parameter "LPM_AVALUE" = "UNUSED"
     Info: Parameter "LPM_SVALUE" = "UNUSED"
-    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
     Info: Parameter "LPM_PVALUE" = "UNUSED"
     Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
     Info: Parameter "LPM_HINT" = "UNUSED"
-Warning: Assertion warning: Counter will power up to an undefined state.  An asynchronous signal should be asserted before the counter reaches a known state.
-Info: Found 1 design units, including 1 entities, in source file db/cntr_22l.tdf
-    Info: Found entity 1: cntr_22l
-Info: Elaborating entity "cntr_22l" for hierarchy "LPM_COUNTER:seconds_counter|cntr_22l:auto_generated"
-Info: Found 1 design units, including 1 entities, in source file db/cmpr_acc.tdf
-    Info: Found entity 1: cmpr_acc
-Info: Elaborating entity "cmpr_acc" for hierarchy "LPM_COUNTER:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2"
-Info: Elaborating entity "LPM_COUNTER" for hierarchy "LPM_COUNTER:hours_counter"
-Info: Elaborated megafunction instantiation "LPM_COUNTER:hours_counter"
-Info: Instantiated megafunction "LPM_COUNTER:hours_counter" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "5"
-    Info: Parameter "LPM_MODULUS" = "24"
-    Info: Parameter "LPM_DIRECTION" = "UP"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_8fl.tdf
+    Info: Found entity 1: cntr_8fl
+Info: Elaborating entity "cntr_8fl" for hierarchy "g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter|cntr_8fl:auto_generated"
+Info: Elaborating entity "g23_generic_timer" for hierarchy "g23_basic_timer:timer|g23_generic_timer:mars"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter"
+Info: Elaborated megafunction instantiation "g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter"
+Info: Instantiated megafunction "g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "40"
+    Info: Parameter "LPM_MODULUS" = "0"
+    Info: Parameter "LPM_DIRECTION" = "down"
     Info: Parameter "LPM_AVALUE" = "UNUSED"
     Info: Parameter "LPM_SVALUE" = "UNUSED"
-    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
     Info: Parameter "LPM_PVALUE" = "UNUSED"
     Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
     Info: Parameter "LPM_HINT" = "UNUSED"
-Warning: Assertion warning: Counter will power up to an undefined state.  An asynchronous signal should be asserted before the counter reaches a known state.
-Info: Found 1 design units, including 1 entities, in source file db/cntr_12l.tdf
-    Info: Found entity 1: cntr_12l
-Info: Elaborating entity "cntr_12l" for hierarchy "LPM_COUNTER:hours_counter|cntr_12l:auto_generated"
-Info: Found 1 design units, including 1 entities, in source file db/cmpr_9cc.tdf
-    Info: Found entity 1: cmpr_9cc
-Info: Elaborating entity "cmpr_9cc" for hierarchy "LPM_COUNTER:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2"
+Info: Elaborating entity "g23_count_to_59" for hierarchy "g23_count_to_59:earth_counter"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9"
+Info: Elaborated megafunction instantiation "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9"
+Info: Instantiated megafunction "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "4"
+    Info: Parameter "LPM_MODULUS" = "10"
+    Info: Parameter "LPM_DIRECTION" = "UNUSED"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_svi.tdf
+    Info: Found entity 1: cntr_svi
+Info: Elaborating entity "cntr_svi" for hierarchy "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9|cntr_svi:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_8cc.tdf
+    Info: Found entity 1: cmpr_8cc
+Info: Elaborating entity "cmpr_8cc" for hierarchy "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_9|cntr_svi:auto_generated|cmpr_8cc:cmpr2"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5"
+Info: Elaborated megafunction instantiation "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5"
+Info: Instantiated megafunction "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "3"
+    Info: Parameter "LPM_MODULUS" = "6"
+    Info: Parameter "LPM_DIRECTION" = "UNUSED"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_gui.tdf
+    Info: Found entity 1: cntr_gui
+Info: Elaborating entity "cntr_gui" for hierarchy "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5|cntr_gui:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_7cc.tdf
+    Info: Found entity 1: cmpr_7cc
+Info: Elaborating entity "cmpr_7cc" for hierarchy "g23_count_to_59:earth_counter|LPM_COUNTER:count_to_5|cntr_gui:auto_generated|cmpr_7cc:cmpr3"
+Info: Elaborating entity "g23_7_segment_decoder" for hierarchy "g23_7_segment_decoder:earth_msd"
 Info: Found 1 design units, including 1 entities, in source file db/altsyncram_jps3.tdf
     Info: Found entity 1: altsyncram_jps3
 Info: Found 1 design units, including 1 entities, in source file db/altsyncram_2eq1.tdf
@@ -935,6 +1074,8 @@ Info: Found 1 design units, including 1 entities, in source file db/decode_rqf.t
     Info: Found entity 1: decode_rqf
 Info: Found 1 design units, including 1 entities, in source file db/cntr_rbi.tdf
     Info: Found entity 1: cntr_rbi
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_9cc.tdf
+    Info: Found entity 1: cmpr_9cc
 Info: Found 1 design units, including 1 entities, in source file db/cntr_v1j.tdf
     Info: Found entity 1: cntr_v1j
 Info: Found 1 design units, including 1 entities, in source file db/cntr_1ci.tdf
@@ -944,18 +1085,16 @@ Info: Found 1 design units, including 1 entities, in source file db/cntr_hui.tdf
 Info: Found 1 design units, including 1 entities, in source file db/cmpr_5cc.tdf
     Info: Found entity 1: cmpr_5cc
 Info: Analysis and Synthesis generated SignalTap II or debug node instance "auto_signaltap_0"
-Info: Registers with preset signals will power-up high
-Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Info: Succesfully connected in-system debug instance "auto_signaltap_0" to all 45 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
-Info: Implemented 930 device resources after synthesis - the final resource count might be different
-    Info: Implemented 25 input pins
-    Info: Implemented 19 output pins
-    Info: Implemented 863 logic cells
+Critical Warning: Partially connected in-system debug instance "auto_signaltap_0" to 3 of its 45 required data inputs, trigger inputs, acquisition clocks, and dynamic pins.  There were 0 illegal, 0 inaccessible, and 42 missing sources or connections.
+Info: Implemented 977 device resources after synthesis - the final resource count might be different
+    Info: Implemented 5 input pins
+    Info: Implemented 29 output pins
+    Info: Implemented 920 logic cells
     Info: Implemented 22 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 345 megabytes
-    Info: Processing ended: Fri Mar 14 19:15:44 2014
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:05
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 338 megabytes
+    Info: Processing ended: Mon Mar 17 17:13:49 2014
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 

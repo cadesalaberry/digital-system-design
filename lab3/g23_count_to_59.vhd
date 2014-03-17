@@ -40,7 +40,7 @@ ARCHITECTURE alpha OF g23_count_to_59 IS
 
 BEGIN
 
-	decade_reached	<= '1' when (seconds_lsd = "1001") else '0';
+	decade_reached	<= '1' when (seconds_lsd = "1001" AND enable = '1') else '0';
 	sec_msd			<= seconds_msd;
 	sec_lsd			<= seconds_lsd;
 
@@ -50,6 +50,7 @@ BEGIN
 		lpm_width	=> 4
 	)
 	PORT MAP (
+		cnt_en	=> enable,
 		clock	=> clk,
 		aclr	=> reset,
 		q		=> seconds_lsd

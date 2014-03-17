@@ -37,10 +37,10 @@ ARCHITECTURE alpha OF g23_timer_test_bed IS
 
 	signal earth_clk	: STD_LOGIC;
 	signal mars_clk		: STD_LOGIC;
-	signal earth_tens	: STD_LOGIC_VECTOR(2 downto 0);
-	signal earth_ones	: STD_LOGIC_VECTOR(3 downto 0);
-	signal mars_tens	: STD_LOGIC_VECTOR(2 downto 0);
-	signal mars_ones	: STD_LOGIC_VECTOR(3 downto 0);
+	signal earth_5	: STD_LOGIC_VECTOR(2 downto 0);
+	signal earth_9	: STD_LOGIC_VECTOR(3 downto 0);
+	signal mars_5	: STD_LOGIC_VECTOR(2 downto 0);
+	signal mars_9	: STD_LOGIC_VECTOR(3 downto 0);
 	signal reset_inv	: STD_LOGIC;
 	
 	COMPONENT g23_7_segment_decoder
@@ -87,46 +87,46 @@ BEGIN
 	
 	earth_counter : g23_count_to_59
 	PORT MAP (
-		clk			=> earth_clk,
-		enable		=> '1',
+		clk			=> clk,
+		enable		=> earth_clk,
 		reset		=> reset_inv,
-		sec_msd		=> earth_tens,
-		sec_lsd		=> earth_ones
+		sec_msd		=> earth_5,
+		sec_lsd		=> earth_9
 	);
 	
 	mars_counter : g23_count_to_59
 	PORT MAP (
-		clk			=> mars_clk,
-		enable		=> '1',
+		clk			=> clk,
+		enable		=> mars_clk,
 		reset		=> reset_inv,
-		sec_msd		=> mars_tens,
-		sec_lsd		=> mars_ones
+		sec_msd		=> mars_5,
+		sec_lsd		=> mars_9
 	);
 	
 	earth_msd : g23_7_segment_decoder
 	PORT MAP (
-		code			=> '0' & earth_tens,
+		code			=> '0' & earth_5,
 		RippleBlank_In	=> '1',
 		segments		=> earth_5_led
 	);
 	
 	earth_lsd : g23_7_segment_decoder
 	PORT MAP (
-		code			=> earth_ones,
+		code			=> earth_9,
 		RippleBlank_In	=> '0',
 		segments		=> earth_9_led
 	);
 	
-	mars_tens_display : g23_7_segment_decoder
+	mars_5_display : g23_7_segment_decoder
 	PORT MAP (
-		code			=> '0' & mars_tens,
+		code			=> '0' & mars_5,
 		RippleBlank_In	=> '1',
 		segments		=> mars_5_led
 	);
 	
-	mars_ones_display : g23_7_segment_decoder
+	mars_9_display : g23_7_segment_decoder
 	PORT MAP (
-		code			=> mars_ones,
+		code			=> mars_9,
 		RippleBlank_In	=> '0',
 		segments		=> mars_9_led
 	);
