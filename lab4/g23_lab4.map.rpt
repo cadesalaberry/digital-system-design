@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g23_lab4
-Tue Mar 18 16:33:58 2014
+Tue Mar 18 17:39:12 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -14,10 +14,11 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
- 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 12. Analysis & Synthesis Messages
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -43,13 +44,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 18 16:33:58 2014         ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 18 17:39:12 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab4                                      ;
 ; Top-level Entity Name              ; g23_YMD_counter                               ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 301                                           ;
-;     Total combinational functions  ; 301                                           ;
+; Total logic elements               ; 316                                           ;
+;     Total combinational functions  ; 316                                           ;
 ;     Dedicated logic registers      ; 22                                            ;
 ; Total registers                    ; 22                                            ;
 ; Total pins                         ; 46                                            ;
@@ -176,17 +177,17 @@ applicable agreement for further details.
 +---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                                       ;
 +---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 301                                                                                                                         ;
+; Estimated Total logic elements              ; 316                                                                                                                         ;
 ;                                             ;                                                                                                                             ;
-; Total combinational functions               ; 301                                                                                                                         ;
+; Total combinational functions               ; 316                                                                                                                         ;
 ; Logic element usage by number of LUT inputs ;                                                                                                                             ;
-;     -- 4 input functions                    ; 80                                                                                                                          ;
+;     -- 4 input functions                    ; 96                                                                                                                          ;
 ;     -- 3 input functions                    ; 69                                                                                                                          ;
-;     -- <=2 input functions                  ; 152                                                                                                                         ;
+;     -- <=2 input functions                  ; 151                                                                                                                         ;
 ;                                             ;                                                                                                                             ;
 ; Logic elements by mode                      ;                                                                                                                             ;
-;     -- normal mode                          ; 216                                                                                                                         ;
-;     -- arithmetic mode                      ; 85                                                                                                                          ;
+;     -- normal mode                          ; 230                                                                                                                         ;
+;     -- arithmetic mode                      ; 86                                                                                                                          ;
 ;                                             ;                                                                                                                             ;
 ; Total registers                             ; 22                                                                                                                          ;
 ;     -- Dedicated logic registers            ; 22                                                                                                                          ;
@@ -195,8 +196,8 @@ applicable agreement for further details.
 ; I/O pins                                    ; 46                                                                                                                          ;
 ; Maximum fan-out node                        ; lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider|add_sub_9_result_int[10]~12 ;
 ; Maximum fan-out                             ; 29                                                                                                                          ;
-; Total fan-out                               ; 917                                                                                                                         ;
-; Average fan-out                             ; 2.49                                                                                                                        ;
+; Total fan-out                               ; 984                                                                                                                         ;
+; Average fan-out                             ; 2.56                                                                                                                        ;
 +---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -205,11 +206,11 @@ applicable agreement for further details.
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                              ; Library Name ;
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
-; |g23_YMD_counter                       ; 301 (65)          ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 46   ; 0            ; |g23_YMD_counter                                                                                                 ; work         ;
-;    |lpm_divide:Mod0|                   ; 137 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_YMD_counter|lpm_divide:Mod0                                                                                 ;              ;
-;       |lpm_divide_u7m:auto_generated|  ; 137 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated                                                   ;              ;
-;          |sign_div_unsign_5nh:divider| ; 137 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
-;             |alt_u_div_c5f:divider|    ; 137 (137)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider ;              ;
+; |g23_YMD_counter                       ; 316 (83)          ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 46   ; 0            ; |g23_YMD_counter                                                                                                 ; work         ;
+;    |lpm_divide:Mod0|                   ; 134 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_YMD_counter|lpm_divide:Mod0                                                                                 ;              ;
+;       |lpm_divide_u7m:auto_generated|  ; 134 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated                                                   ;              ;
+;          |sign_div_unsign_5nh:divider| ; 134 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
+;             |alt_u_div_c5f:divider|    ; 134 (134)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider ;              ;
 ;    |lpm_divide:Mod1|                   ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_YMD_counter|lpm_divide:Mod1                                                                                 ;              ;
 ;       |lpm_divide_u7m:auto_generated|  ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated                                                   ;              ;
 ;          |sign_div_unsign_5nh:divider| ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
@@ -224,13 +225,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 22    ;
-; Number of registers using Synchronous Clear  ; 5     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 3     ;
 ; Number of registers using Asynchronous Clear ; 21    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 17    ;
+; Number of registers using Clock Enable       ; 21    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; y[0]                                   ; 4       ;
+; m[0]                                   ; 10      ;
+; d[0]                                   ; 4       ;
+; Total number of inverted registers = 3 ;         ;
++----------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
@@ -238,7 +251,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |g23_YMD_counter|d[0]      ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |g23_YMD_counter|y[1]      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |g23_YMD_counter|m[1]      ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |g23_YMD_counter|d[1]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -294,14 +309,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Tue Mar 18 16:33:56 2014
+    Info: Processing started: Tue Mar 18 17:39:10 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g23_lab4 -c g23_lab4
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file g23_ymd_counter.vhd
     Info: Found design unit 1: g23_YMD_counter-alpha
     Info: Found entity 1: g23_YMD_counter
 Info: Elaborating entity "g23_YMD_counter" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at g23_YMD_counter.vhd(49): object "years_end" assigned a value but never read
 Info: Inferred 2 megafunctions from design logic
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
@@ -327,35 +341,15 @@ Info: Instantiated megafunction "lpm_divide:Mod0" with the following parameter:
     Info: Parameter "LPM_WIDTHD" = "12"
     Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Warning: Design contains 21 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Y_set[0]"
-    Warning (15610): No output dependent on input pin "Y_set[1]"
-    Warning (15610): No output dependent on input pin "Y_set[2]"
-    Warning (15610): No output dependent on input pin "Y_set[3]"
-    Warning (15610): No output dependent on input pin "Y_set[4]"
-    Warning (15610): No output dependent on input pin "Y_set[5]"
-    Warning (15610): No output dependent on input pin "Y_set[6]"
-    Warning (15610): No output dependent on input pin "Y_set[7]"
-    Warning (15610): No output dependent on input pin "Y_set[8]"
-    Warning (15610): No output dependent on input pin "Y_set[9]"
-    Warning (15610): No output dependent on input pin "Y_set[10]"
-    Warning (15610): No output dependent on input pin "Y_set[11]"
-    Warning (15610): No output dependent on input pin "M_set[0]"
-    Warning (15610): No output dependent on input pin "M_set[1]"
-    Warning (15610): No output dependent on input pin "M_set[2]"
-    Warning (15610): No output dependent on input pin "M_set[3]"
-    Warning (15610): No output dependent on input pin "D_set[0]"
-    Warning (15610): No output dependent on input pin "D_set[1]"
-    Warning (15610): No output dependent on input pin "D_set[2]"
-    Warning (15610): No output dependent on input pin "D_set[3]"
-    Warning (15610): No output dependent on input pin "D_set[4]"
-Info: Implemented 347 device resources after synthesis - the final resource count might be different
+Info: Registers with preset signals will power-up high
+Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info: Implemented 362 device resources after synthesis - the final resource count might be different
     Info: Implemented 25 input pins
     Info: Implemented 21 output pins
-    Info: Implemented 301 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 318 megabytes
-    Info: Processing ended: Tue Mar 18 16:33:58 2014
+    Info: Implemented 316 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 319 megabytes
+    Info: Processing ended: Tue Mar 18 17:39:12 2014
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

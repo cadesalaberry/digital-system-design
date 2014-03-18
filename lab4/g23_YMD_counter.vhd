@@ -15,7 +15,6 @@
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
-USE ieee.std_logic_arith.all;
 use ieee.numeric_std.all;
 
 
@@ -41,9 +40,9 @@ end g23_YMD_counter;
 
 ARCHITECTURE alpha OF g23_YMD_counter IS
 		
-		signal y			: integer range 0 to 4000;
-		signal m			: integer range 0 to 11;
-		signal d			: integer range 0 to 30;
+		signal y			: integer range 1 to 4000;
+		signal m			: integer range 1 to 11;
+		signal d			: integer range 1 to 30;
 		
 		signal years_end	: STD_LOGIC;
 		signal months_end	: STD_LOGIC;
@@ -65,11 +64,11 @@ BEGIN
   	months_end	<= '1' WHEN m = 12 else '0';
   	
   	leap_year	<= '1' WHEN ((y mod 4) = 0 AND (y mod 100) /= 0 AND (y mod 400) = 0) else '0';
-  	
-  	mth_31d		<= '1' WHEN (m=0) OR (m=2) OR (m=4) OR (m=6) OR (m=7) OR (m=9) OR (m=11) else '0';
-  	mth_30d		<= '1' WHEN (m=3) OR (m=5) OR (m=8) OR (m=10) OR (m=12) else '0';
-  	mth_29d		<= '1' WHEN (m=1) AND leap_year = '1' else '0';
-  	mth_28d		<= '1' WHEN (m=1) AND leap_year = '0' else '0';
+
+	mth_31d		<= '1' WHEN (m=1) OR (m=3) OR (m=5) OR (m=7) OR (m=8) OR (m=10) OR (m=12) else '0';
+  	mth_30d		<= '1' WHEN (m=4) OR (m=6) OR (m=9) OR (m=11) else '0';
+  	mth_29d		<= '1' WHEN (m=2) AND leap_year = '1' else '0';
+  	mth_28d		<= '1' WHEN (m=2) AND leap_year = '0' else '0';
 
   	
   	-- The counters are copycat from slide 43 in the VHDL 3 pdf
@@ -78,7 +77,7 @@ BEGIN
 		
 		IF reset ='1' THEN
 			
-			d <= 0;
+			d <= 1;
 			
 		ELSIF clock = '1' AND clock'event THEN
 			
@@ -87,19 +86,19 @@ BEGIN
 			IF day_count_en = '1' THEN
 			
 				if load_enable = '1' THEN
-					--d <= TO_INTEGER(TO_UNSIGNED(D_set, 4));
+					d <= TO_INTEGER(UNSIGNED(D_set));
 				ELSE
-					IF mth_31d = '1' AND d < 30 THEN
+					IF mth_31d = '1' AND d < 31 THEN
 						d <= d + 1;
-					ELSIF mth_30d = '1' AND d < 29 THEN
+					ELSIF mth_30d = '1' AND d < 30 THEN
 						d <= d + 1;
-					ELSIF mth_29d = '1' AND d < 28 THEN
+					ELSIF mth_29d = '1' AND d < 29 THEN
 						d <= d + 1;
-					ELSIF mth_28d = '1' AND d < 27 THEN
+					ELSIF mth_28d = '1' AND d < 28 THEN
 						d <= d + 1;
 					ELSE
 						-- RESET EVERYTHING
-						d			<= 0;
+						d			<= 1;
 						days_end	<= '1';
 					END IF;
 				END IF; --if load
@@ -116,14 +115,16 @@ BEGIN
 		
 		IF reset ='1' THEN
 			
-			m <= 0;
+			m <= 1;
 			
 		ELSIF clock = '1' AND clock'event THEN
 
 			IF days_end = '1' THEN
 			
 				IF load_enable = '1' THEN
-					--m <= TO_INTEGER(TO_UNSIGNED(M_set, 3));
+					m <= TO_INTEGER(UNSIGNED(M_set));
+				ELSIF months_end = '1' THEN
+					m <= 1;
 				ELSE
 					m <= m + 1;
 					
@@ -141,14 +142,16 @@ BEGIN
  
 		IF reset ='1' THEN
 			
-			y <= 0;
+			y <= 1;
 			
 		ELSIF clock = '1' AND clock'event THEN
   	
 			IF days_end = '1' AND months_end = '1' THEN
 			
 				IF load_enable = '1' THEN
-					--y <= TO_INTEGER(TO_UNSIGNED(Y_set, 11));
+					y <= TO_INTEGER(UNSIGNED(Y_set));
+				ELSIF years_end = '1' THEN
+					y <= 1;
 				ELSE
 					y <= y + 1;
 				END IF; --if load
