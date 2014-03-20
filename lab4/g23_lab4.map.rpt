@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g23_lab4
-Tue Mar 18 17:39:12 2014
+Thu Mar 20 15:57:08 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -44,7 +44,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 18 17:39:12 2014         ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 20 15:57:08 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab4                                      ;
 ; Top-level Entity Name              ; g23_YMD_counter                               ;
@@ -157,19 +157,19 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                           ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+
-; g23_YMD_counter.vhd              ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab4/g23_YMD_counter.vhd        ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_divide.tdf               ;
-; db/lpm_divide_u7m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab4/db/lpm_divide_u7m.tdf      ;
-; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab4/db/sign_div_unsign_5nh.tdf ;
-; db/alt_u_div_c5f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab4/db/alt_u_div_c5f.tdf       ;
-; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab4/db/add_sub_lkc.tdf         ;
-; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab4/db/add_sub_mkc.tdf         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
+; g23_YMD_counter.vhd              ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab4/g23_YMD_counter.vhd        ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_divide.tdf        ;
+; db/lpm_divide_u7m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab4/db/lpm_divide_u7m.tdf      ;
+; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab4/db/sign_div_unsign_5nh.tdf ;
+; db/alt_u_div_c5f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab4/db/alt_u_div_c5f.tdf       ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab4/db/add_sub_lkc.tdf         ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab4/db/add_sub_mkc.tdf         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -181,8 +181,8 @@ applicable agreement for further details.
 ;                                             ;                                                                                                                             ;
 ; Total combinational functions               ; 316                                                                                                                         ;
 ; Logic element usage by number of LUT inputs ;                                                                                                                             ;
-;     -- 4 input functions                    ; 96                                                                                                                          ;
-;     -- 3 input functions                    ; 69                                                                                                                          ;
+;     -- 4 input functions                    ; 97                                                                                                                          ;
+;     -- 3 input functions                    ; 68                                                                                                                          ;
 ;     -- <=2 input functions                  ; 151                                                                                                                         ;
 ;                                             ;                                                                                                                             ;
 ; Logic elements by mode                      ;                                                                                                                             ;
@@ -196,8 +196,8 @@ applicable agreement for further details.
 ; I/O pins                                    ; 46                                                                                                                          ;
 ; Maximum fan-out node                        ; lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_c5f:divider|add_sub_9_result_int[10]~12 ;
 ; Maximum fan-out                             ; 29                                                                                                                          ;
-; Total fan-out                               ; 984                                                                                                                         ;
-; Average fan-out                             ; 2.56                                                                                                                        ;
+; Total fan-out                               ; 985                                                                                                                         ;
+; Average fan-out                             ; 2.57                                                                                                                        ;
 +---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -239,10 +239,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; y[0]                                   ; 4       ;
 ; m[0]                                   ; 10      ;
 ; d[0]                                   ; 4       ;
-; Total number of inverted registers = 3 ;         ;
+; Total number of inverted registers = 2 ;         ;
 +----------------------------------------+---------+
 
 
@@ -251,7 +250,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |g23_YMD_counter|y[1]      ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |g23_YMD_counter|y[0]      ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |g23_YMD_counter|m[1]      ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |g23_YMD_counter|d[1]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
@@ -309,7 +308,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Tue Mar 18 17:39:10 2014
+    Info: Processing started: Thu Mar 20 15:57:06 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g23_lab4 -c g23_lab4
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file g23_ymd_counter.vhd
@@ -349,7 +348,7 @@ Info: Implemented 362 device resources after synthesis - the final resource coun
     Info: Implemented 316 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 319 megabytes
-    Info: Processing ended: Tue Mar 18 17:39:12 2014
+    Info: Processing ended: Thu Mar 20 15:57:08 2014
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

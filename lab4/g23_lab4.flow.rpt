@@ -1,5 +1,5 @@
 Flow report for g23_lab4
-Tue Mar 18 17:39:27 2014
+Thu Mar 20 15:57:22 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Tue Mar 18 17:39:27 2014         ;
+; Flow Status                        ; Successful - Thu Mar 20 15:57:22 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab4                                      ;
 ; Top-level Entity Name              ; g23_YMD_counter                               ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/18/2014 17:39:10 ;
+; Start date & time ; 03/20/2014 15:57:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; g23_lab4            ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------+---------------+-----------------+----------------+
 ; Assignment Name                    ; Value                           ; Default Value ; Entity Name     ; Section Id     ;
 +------------------------------------+---------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 132129496018564.139517875002016 ; --            ; --              ; --             ;
+; COMPILER_SIGNATURE_ID              ; 132129495416082.139534542604760 ; --            ; --              ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --              ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --              ; --             ;
 ; PARTITION_COLOR                    ; 16764057                        ; --            ; g23_YMD_counter ; Top            ;
@@ -89,11 +89,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:05     ; 1.0                     ; 319 MB              ; 00:00:01                           ;
-; Fitter                  ; 00:00:06     ; 3.0                     ; 358 MB              ; 00:00:03                           ;
+; Analysis & Synthesis    ; 00:00:04     ; 1.0                     ; 319 MB              ; 00:00:02                           ;
+; Fitter                  ; 00:00:06     ; 1.0                     ; 358 MB              ; 00:00:03                           ;
 ; Assembler               ; 00:00:04     ; 1.0                     ; 271 MB              ; 00:00:01                           ;
 ; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 201 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:18     ; --                      ; --                  ; 00:00:05                           ;
+; Total                   ; 00:00:17     ; --                      ; --                  ; 00:00:06                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -102,10 +102,10 @@ applicable agreement for further details.
 +-------------------------+------------------+---------------+------------+----------------+
 ; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; 156TR4060DS-10   ; Windows Vista ; 6.1        ; x86_64         ;
-; Fitter                  ; 156TR4060DS-10   ; Windows Vista ; 6.1        ; x86_64         ;
-; Assembler               ; 156TR4060DS-10   ; Windows Vista ; 6.1        ; x86_64         ;
-; Classic Timing Analyzer ; 156TR4060DS-10   ; Windows Vista ; 6.1        ; x86_64         ;
+; Analysis & Synthesis    ; 156TR4060DS-15   ; Windows Vista ; 6.1        ; x86_64         ;
+; Fitter                  ; 156TR4060DS-15   ; Windows Vista ; 6.1        ; x86_64         ;
+; Assembler               ; 156TR4060DS-15   ; Windows Vista ; 6.1        ; x86_64         ;
+; Classic Timing Analyzer ; 156TR4060DS-15   ; Windows Vista ; 6.1        ; x86_64         ;
 +-------------------------+------------------+---------------+------------+----------------+
 
 

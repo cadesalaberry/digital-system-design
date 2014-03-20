@@ -40,11 +40,11 @@ end g23_YMD_counter;
 
 ARCHITECTURE alpha OF g23_YMD_counter IS
 		
-		signal y			: integer range 1 to 4000;
+		signal y			: integer range 0 to 4000;
 		signal m			: integer range 1 to 12;
 		signal d			: integer range 1 to 31;
 		
-		signal years_end	: STD_LOGIC;
+		signal last_year	: STD_LOGIC;
 		signal last_month	: STD_LOGIC;
 		signal last_day		: STD_LOGIC;
 
@@ -60,7 +60,7 @@ BEGIN
   	months	<= STD_LOGIC_VECTOR(TO_UNSIGNED(m, 4));
   	days	<= STD_LOGIC_VECTOR(TO_UNSIGNED(d, 5));
   	
-  	years_end	<= '1' WHEN y = 4000 else '0';
+  	last_year	<= '1' WHEN y = 4000 else '0';
   	last_month	<= '1' WHEN m = 12 else '0';
   	
   	leap_year	<= '1' WHEN ((y mod 4) = 0 AND (y mod 100) /= 0 AND (y mod 400) = 0) else '0';
@@ -142,7 +142,7 @@ BEGIN
  
 		IF reset ='1' THEN
 			
-			y <= 1;
+			y <= 0;
 			
 		ELSIF clock = '1' AND clock'event THEN
   	
@@ -150,8 +150,8 @@ BEGIN
 			
 				IF load_enable = '1' THEN
 					y <= TO_INTEGER(UNSIGNED(Y_set));
-				ELSIF years_end = '1' THEN
-					y <= 1;
+				ELSIF last_year = '1' THEN
+					y <= 0;
 				ELSE
 					y <= y + 1;
 				END IF; --if load
