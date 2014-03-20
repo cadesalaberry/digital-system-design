@@ -118,12 +118,14 @@ BEGIN
 			m <= 1;
 			
 		ELSIF clock = '1' AND clock'event THEN
-
+			
+			IF load_enable = '1' THEN
+				m <= TO_INTEGER(UNSIGNED(M_set));
+			END IF;
+				
 			IF last_day = '1' THEN
 			
-				IF load_enable = '1' THEN
-					m <= TO_INTEGER(UNSIGNED(M_set));
-				ELSIF last_month = '0' THEN
+				IF last_month = '0' THEN
 					m <= m + 1;
 				ELSE
 					m <= 1;
@@ -145,12 +147,14 @@ BEGIN
 			y <= 0;
 			
 		ELSIF clock = '1' AND clock'event THEN
-  	
+			
+			IF load_enable = '1' THEN
+				y <= TO_INTEGER(UNSIGNED(Y_set));
+			END IF;
+			
 			IF last_day = '1' AND last_month = '1' THEN
 			
-				IF load_enable = '1' THEN
-					y <= TO_INTEGER(UNSIGNED(Y_set));
-				ELSIF last_year = '1' THEN
+				IF last_year = '1' THEN
 					y <= 0;
 				ELSE
 					y <= y + 1;

@@ -1,5 +1,5 @@
 Flow report for g23_lab4
-Thu Mar 20 15:57:22 2014
+Thu Mar 20 16:16:59 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 20 15:57:22 2014         ;
+; Flow Status                        ; Successful - Thu Mar 20 16:16:59 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab4                                      ;
 ; Top-level Entity Name              ; g23_YMD_counter                               ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/20/2014 15:57:06 ;
+; Start date & time ; 03/20/2014 16:16:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; g23_lab4            ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------+---------------+-----------------+----------------+
 ; Assignment Name                    ; Value                           ; Default Value ; Entity Name     ; Section Id     ;
 +------------------------------------+---------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 132129495416082.139534542604760 ; --            ; --              ; --             ;
+; COMPILER_SIGNATURE_ID              ; 132129495416082.139534660303320 ; --            ; --              ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --              ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --              ; --             ;
 ; PARTITION_COLOR                    ; 16764057                        ; --            ; g23_YMD_counter ; Top            ;
