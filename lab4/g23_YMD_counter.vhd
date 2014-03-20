@@ -41,12 +41,12 @@ end g23_YMD_counter;
 ARCHITECTURE alpha OF g23_YMD_counter IS
 		
 		signal y			: integer range 1 to 4000;
-		signal m			: integer range 1 to 11;
-		signal d			: integer range 1 to 30;
+		signal m			: integer range 1 to 12;
+		signal d			: integer range 1 to 31;
 		
 		signal years_end	: STD_LOGIC;
-		signal months_end	: STD_LOGIC;
-		signal days_end		: STD_LOGIC;
+		signal last_month	: STD_LOGIC;
+		signal last_day		: STD_LOGIC;
 
 		signal leap_year	: STD_LOGIC;
 		
@@ -61,7 +61,7 @@ BEGIN
   	days	<= STD_LOGIC_VECTOR(TO_UNSIGNED(d, 5));
   	
   	years_end	<= '1' WHEN y = 4000 else '0';
-  	months_end	<= '1' WHEN m = 12 else '0';
+  	last_month	<= '1' WHEN m = 12 else '0';
   	
   	leap_year	<= '1' WHEN ((y mod 4) = 0 AND (y mod 100) /= 0 AND (y mod 400) = 0) else '0';
 
@@ -71,8 +71,8 @@ BEGIN
   	mth_28d		<= '1' WHEN (m=2) AND leap_year = '0' else '0';
 
   	
-  	-- The counters are copycat from slide 43 in the VHDL 3 pdf
-  	-- counts from 0 to 30
+  	-- The counters are copycats from slide 43 in the VHDL 3 pdf
+  	-- counts from 1 to 31
   	day_counter : PROCESS(reset, clock) BEGIN
 		
 		IF reset ='1' THEN
@@ -81,7 +81,7 @@ BEGIN
 			
 		ELSIF clock = '1' AND clock'event THEN
 			
-			days_end <= '0';
+			last_day <= '0';
 			
 			IF day_count_en = '1' THEN
 			
@@ -99,7 +99,7 @@ BEGIN
 					ELSE
 						-- RESET EVERYTHING
 						d			<= 1;
-						days_end	<= '1';
+						last_day	<= '1';
 					END IF;
 				END IF; --if load
 				
@@ -110,8 +110,8 @@ BEGIN
   	END PROCESS day_counter;
 
 
-  	-- counts from 0 to 11
-	month_counter : PROCESS(reset, clock, days_end) BEGIN 
+  	-- counts from 1 to 12
+	month_counter : PROCESS(reset, clock, last_day) BEGIN 
 		
 		IF reset ='1' THEN
 			
@@ -119,14 +119,14 @@ BEGIN
 			
 		ELSIF clock = '1' AND clock'event THEN
 
-			IF days_end = '1' THEN
+			IF last_day = '1' THEN
 			
 				IF load_enable = '1' THEN
 					m <= TO_INTEGER(UNSIGNED(M_set));
-				ELSIF months_end = '1' THEN
-					m <= 1;
-				ELSE
+				ELSIF last_month = '0' THEN
 					m <= m + 1;
+				ELSE
+					m <= 1;
 					
 				END IF; --if load
 				
@@ -138,7 +138,7 @@ BEGIN
   
 
   	-- counts from 0 to 4000
-  	year_counter : PROCESS(reset, clock, months_end, days_end) BEGIN 
+  	year_counter : PROCESS(reset, clock, last_month, last_day) BEGIN 
  
 		IF reset ='1' THEN
 			
@@ -146,7 +146,7 @@ BEGIN
 			
 		ELSIF clock = '1' AND clock'event THEN
   	
-			IF days_end = '1' AND months_end = '1' THEN
+			IF last_day = '1' AND last_month = '1' THEN
 			
 				IF load_enable = '1' THEN
 					y <= TO_INTEGER(UNSIGNED(Y_set));
