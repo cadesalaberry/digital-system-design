@@ -44,9 +44,9 @@ ARCHITECTURE alpha OF g23_basic_timer IS
 BEGIN
 
 	earth	: g23_generic_timer
---	GENERIC MAP (max => 49999999)
+	GENERIC MAP (max => 49999999)
 --	GENERIC MAP (max => 1000)
-	GENERIC MAP (max => 100)
+--	GENERIC MAP (max => 100)
 	PORT MAP (
 		clk => clk,
 		enable => enable,
@@ -55,9 +55,9 @@ BEGIN
 	);
 	
 	mars	: g23_generic_timer
---	GENERIC MAP (max => 51374562)
+	GENERIC MAP (max => 51374562)
 --	GENERIC MAP (max => 1027)
-	GENERIC MAP (max => 102)
+--	GENERIC MAP (max => 102)
 	PORT MAP (
 		clk => clk,
 		enable => enable,

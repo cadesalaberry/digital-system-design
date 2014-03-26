@@ -1,7 +1,13 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="g23_lab4">
-		<CBX_INST_ENTRY INSTANCE_NAME="|g23_YMD_counter|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|g23_YMD_counter|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_YMD_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_YMD_testbed|g23_basic_timer:timer|g23_generic_timer:mars|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_YMD_testbed|g23_binary_to_BCD:year_lower_BCD|LPM_ROM:b2BCD_table|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_3211.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_YMD_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_YMD_testbed|g23_basic_timer:timer|g23_generic_timer:earth|LPM_COUNTER:counter" CBX_FILE_NAME="cntr_8fl.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_YMD_testbed|g23_binary_to_BCD:day_BCD|LPM_ROM:b2BCD_table|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_3211.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_YMD_testbed|g23_binary_to_BCD:month_BCD|LPM_ROM:b2BCD_table|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_3211.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_YMD_testbed|g23_binary_to_BCD:year_upper_BCD|LPM_ROM:b2BCD_table|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_3211.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

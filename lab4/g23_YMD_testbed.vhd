@@ -24,30 +24,60 @@ ENTITY g23_YMD_testbed IS
 		clock 			: in 	STD_LOGIC; -- ASYNC, Should be connected to the master 50MHz clock.
 		reset 			: in 	STD_LOGIC; -- ASYNC, When high the counts are all set to zero.
 		enable			: in	STD_LOGIC; 
-		day_count_en 	: in 	STD_LOGIC; -- SYNC, A pulse with a width of 1 master clock cycle.
 		load_enable 	: in 	STD_LOGIC; -- SYNC, if high sets count values to Y_Set, M_Set, and D_Set inputs
-
+		
+		period_select	: in	STD_LOGIC_VECTOR(1 downto 0);
 		Y_set			: in	STD_LOGIC_VECTOR(11 downto 0);
 		M_set			: in	STD_LOGIC_VECTOR(3 downto 0);
 		D_set			: in	STD_LOGIC_VECTOR(4 downto 0);
 		
+		EPULSE			: out 	STD_LOGIC;
+		
 		years			: out	STD_LOGIC_VECTOR(11 downto 0);
 		months			: out	STD_LOGIC_VECTOR(3 downto 0);
-		days			: out	STD_LOGIC_VECTOR(4 downto 0)
+		days			: out	STD_LOGIC_VECTOR(4 downto 0);
+		
+		digit_3			: out	STD_LOGIC_VECTOR(6 downto 0);
+		digit_2			: out	STD_LOGIC_VECTOR(6 downto 0);
+		digit_1			: out	STD_LOGIC_VECTOR(6 downto 0);
+		digit_0			: out	STD_LOGIC_VECTOR(6 downto 0)
 	);
 	
 end g23_YMD_testbed;
 
 
 ARCHITECTURE alpha OF g23_YMD_testbed IS
+  	signal years_sig	: STD_LOGIC_VECTOR(11 downto 0);
+	signal months_sig	: STD_LOGIC_VECTOR(3 downto 0);
+	signal days_sig		: STD_LOGIC_VECTOR(4 downto 0);
   	
-  	signal EPULSE	: STD_LOGIC;
+  	signal pulse	: STD_LOGIC;
+  	signal RB_Out3	: STD_LOGIC;
+  	signal RB_Out2	: STD_LOGIC;
+  	signal RB_Out1	: STD_LOGIC;
   	signal y		: integer range 0 to 4000;
   	signal y_3		: STD_LOGIC_VECTOR(3 downto 0);
   	signal y_2		: STD_LOGIC_VECTOR(3 downto 0);
   	signal y_1		: STD_LOGIC_VECTOR(3 downto 0);
   	signal y_0		: STD_LOGIC_VECTOR(3 downto 0);
   	
+  	signal d_1		: STD_LOGIC_VECTOR(3 downto 0);
+  	signal d_0		: STD_LOGIC_VECTOR(3 downto 0);
+  	
+  	signal all_digits		: STD_LOGIC_VECTOR(15 downto 0);
+  	signal year_digits		: STD_LOGIC_VECTOR(15 downto 0);
+  	signal year_upper		: STD_LOGIC_VECTOR(7 downto 0);
+  	signal year_lower		: STD_LOGIC_VECTOR(7 downto 0);
+  	
+  	signal month_digits		: STD_LOGIC_VECTOR(15 downto 0);
+  	signal month_upper		: STD_LOGIC_VECTOR(7 downto 0);
+  	signal month_lower		: STD_LOGIC_VECTOR(7 downto 0);
+
+  	signal day_digits		: STD_LOGIC_VECTOR(15 downto 0);
+  	signal day_upper		: STD_LOGIC_VECTOR(7 downto 0);
+  	signal day_lower		: STD_LOGIC_VECTOR(7 downto 0);
+
+	
 	COMPONENT g23_YMD_counter
 		PORT (
 			clock 			: in 	STD_LOGIC; -- ASYNC, Should be connected to the master 50MHz clock.
@@ -65,7 +95,7 @@ ARCHITECTURE alpha OF g23_YMD_testbed IS
 		);
 	END COMPONENT;
 	
-	COMPONENT basic_timer
+	COMPONENT g23_basic_timer
 		PORT (
 			clk		: in	STD_LOGIC;
 			enable	: in	STD_LOGIC;
@@ -75,7 +105,7 @@ ARCHITECTURE alpha OF g23_YMD_testbed IS
 		);
 	END COMPONENT;
 	
-	COMPONENT 7_segment_decoder
+	COMPONENT g23_7_segment_decoder
 		PORT (
 			code			: in	std_logic_vector(3 downto 0);
 			RippleBlank_In	: in	std_logic;
@@ -83,78 +113,118 @@ ARCHITECTURE alpha OF g23_YMD_testbed IS
 			segments		: out	std_logic_vector(6 downto 0)
 		);
 	END COMPONENT;
+	
+	COMPONENT g23_binary_to_BCD
+		PORT (
+			clock	: in	std_logic;	-- to clock the lpm_rom register
+			bin		: in	unsigned(5 downto 0);
+			BCD		: out	std_logic_vector(7 downto 0)
+		);
+  	END COMPONENT;
 		
 BEGIN
-	y <= TO_INTEGER(UNSIGNED(years));
-	y_3	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y/1000, 4));
-	y_2_temp <= y/100 - y_3*10;
-	y_2	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y_2_temp, 4));
-	y_1_temp <= y/10 - y_3*10 - y_2*100;
-	y_1	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y/10, 4));
-	y_0_temp <= y/100 - y_3*10 - y_2*100 - y_1*1000;
-	y_0	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y, 4));
+	EPULSE <= pulse;
+	years <= years_sig;
+	months <= months_sig;
+	days <= days_sig;
 	
-  	digit_3 : 7_segment_decoder
+	--y <= TO_INTEGER(UNSIGNED(years));
+	--y_3	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y/1000, 4));
+	--y_2_temp <= y/100 - y_3*10;
+	--y_2	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y_2_temp, 4));
+	--y_1_temp <= y/10 - y_3*10 - y_2*100;
+	--y_1	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y/10, 4));
+	--y_0_temp <= y/100 - y_3*10 - y_2*100 - y_1*1000;
+	--y_0	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y, 4));
+	
+	with period_select select
+		all_digits <=
+			"00000000" & day_lower 		when "00", -- day select
+			"00000000" & month_lower 	when "01", -- month select
+			year_upper & year_lower 	when "10", -- year select
+			year_upper & year_lower 	when "11"; -- year select
+	
+	year_upper_BCD : g23_binary_to_BCD
+	PORT MAP (
+		clock			=> clock,
+		bin				=> UNSIGNED("0" & days_sig),
+		BCD				=> year_upper
+ 	);
+ 	
+ 	year_lower_BCD : g23_binary_to_BCD
+	PORT MAP (
+		clock			=> clock,
+		bin				=> UNSIGNED("0" & days_sig),
+		BCD				=> year_lower
+ 	);
+	
+	month_BCD : g23_binary_to_BCD
+	PORT MAP (
+		clock			=> clock,
+		bin				=> UNSIGNED("0" & days_sig),
+		BCD				=> month_lower
+ 	);
+ 	
+	day_BCD : g23_binary_to_BCD
+	PORT MAP (
+		clock			=> clock,
+		bin				=> UNSIGNED("0" & days_sig),
+		BCD				=> day_lower
+ 	);
+  	
+  	decode_3 : g23_7_segment_decoder
   	PORT MAP (
-		code			=> ,
-		RippleBlank_In	=> ,
-		RippleBlank_Out	=> ,
-		segments		=> 
+		code			=> all_digits(15 downto 12),
+		RippleBlank_In	=> '1',
+		RippleBlank_Out	=> RB_Out3,
+		segments		=> digit_3
   	);
   	
-  	digit_2 : 7_segment_decoder
+  	decode_2 : g23_7_segment_decoder
   	PORT MAP (
-		code			=> ,
-		RippleBlank_In	=> ,
-		RippleBlank_Out	=> ,
-		segments		=> 
+		code			=> all_digits(11 downto 8),
+		RippleBlank_In	=> RB_Out3,
+		RippleBlank_Out	=> RB_Out2,
+		segments		=> digit_2
   	);
   	
-  	digit_1 : 7_segment_decoder
+  	decode_1 : g23_7_segment_decoder
   	PORT MAP (
-		code			=> ,
-		RippleBlank_In	=> ,
-		RippleBlank_Out	=> ,
-		segments		=> 
+		code			=> all_digits(7 downto 4),
+		RippleBlank_In	=> RB_Out2,
+		RippleBlank_Out	=> RB_Out1,
+		segments		=> digit_1
   	);
   	
-  	digit_0 : 7_segment_decoder
+  	decode_0 : g23_7_segment_decoder
   	PORT MAP (
-		code			=> ,
-		RippleBlank_In	=> ,
-		RippleBlank_Out	=> ,
-		segments		=> 
+		code			=> all_digits(3 downto 0),
+		RippleBlank_In	=> RB_Out1,
+		segments		=> digit_0
   	);
   	
-  	timer : basic_timer
+  	timer : g23_basic_timer
   	PORT MAP (
 		clk		=> clock,
 		enable	=> enable,
 		reset	=> reset,
-		EPULSE	=> EPULSE
+		EPULSE	=> pulse
 	);
   	
   	YMD_counter	: g23_YMD_counter
 	PORT MAP (
 		clock 			=> clock,
 		reset 			=> reset,
-		day_count_en 	=> EPULSE,
+		day_count_en 	=> pulse,
 		load_enable 	=> load_enable,
 
 		Y_set			=> Y_set,
 		M_set			=> M_set,
 		D_set			=> D_set,
 		
-		years			=> years,
-		months			=> months,
-		days			=> days
-	);
-	
-	port (
-		code			: in	std_logic_vector(3 downto 0);
-		RippleBlank_In	: in	std_logic;
-		RippleBlank_Out	: out	std_logic;
-		segments		: out	std_logic_vector(6 downto 0)
+		years			=> years_sig,
+		months			=> months_sig,
+		days			=> days_sig
 	);
   	
 END alpha;
