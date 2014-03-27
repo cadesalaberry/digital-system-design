@@ -61,7 +61,7 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_location_assignment PIN_M22 -to enable
+set_location_assignment PIN_R22 -to enable
 set_location_assignment PIN_V12 -to reset
 set_location_assignment PIN_L22 -to period_select[0]
 set_location_assignment PIN_L21 -to period_select[1]
@@ -94,4 +94,11 @@ set_location_assignment PIN_J4 -to digit_3[3]
 set_location_assignment PIN_L8 -to digit_3[4]
 set_location_assignment PIN_F3 -to digit_3[5]
 set_location_assignment PIN_D4 -to digit_3[6]
+set_location_assignment PIN_M22 -to load_enable
+set_location_assignment PIN_W12 -to load_data[0]
+set_location_assignment PIN_U12 -to load_data[1]
+set_location_assignment PIN_U11 -to load_data[2]
+set_location_assignment PIN_M2 -to load_data[3]
+set_location_assignment PIN_M1 -to load_data[4]
+set_location_assignment PIN_L2 -to load_data[5]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

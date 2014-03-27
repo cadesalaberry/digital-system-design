@@ -25,11 +25,9 @@ ENTITY g23_YMD_testbed IS
 		reset 			: in 	STD_LOGIC; -- ASYNC, When high the counts are all set to zero.
 		enable			: in	STD_LOGIC; 
 		load_enable 	: in 	STD_LOGIC; -- SYNC, if high sets count values to Y_Set, M_Set, and D_Set inputs
+		load_data		: in	STD_LOGIC_VECTOR(5 downto 0);
 		
 		period_select	: in	STD_LOGIC_VECTOR(1 downto 0);
-		Y_set			: in	STD_LOGIC_VECTOR(11 downto 0);
-		M_set			: in	STD_LOGIC_VECTOR(3 downto 0);
-		D_set			: in	STD_LOGIC_VECTOR(4 downto 0);
 		
 		EPULSE			: out 	STD_LOGIC;
 		
@@ -51,11 +49,18 @@ ARCHITECTURE alpha OF g23_YMD_testbed IS
 	signal months_sig	: STD_LOGIC_VECTOR(3 downto 0);
 	signal days_sig		: STD_LOGIC_VECTOR(4 downto 0);
   	
+  	signal Y_set		: STD_LOGIC_VECTOR(11 downto 0);
+	signal M_set		: STD_LOGIC_VECTOR(3 downto 0);
+	signal D_set		: STD_LOGIC_VECTOR(4 downto 0);
+  	
   	signal pulse	: STD_LOGIC;
   	signal RB_Out3	: STD_LOGIC;
   	signal RB_Out2	: STD_LOGIC;
   	signal RB_Out1	: STD_LOGIC;
   	signal y		: integer range 0 to 4000;
+  	signal y_2_temp	: integer range 0 to 4000;
+  	signal y_1_temp	: integer range 0 to 4000;
+  	signal y_0_temp	: integer range 0 to 4000;
   	signal y_3		: STD_LOGIC_VECTOR(3 downto 0);
   	signal y_2		: STD_LOGIC_VECTOR(3 downto 0);
   	signal y_1		: STD_LOGIC_VECTOR(3 downto 0);
@@ -128,40 +133,62 @@ BEGIN
 	months <= months_sig;
 	days <= days_sig;
 	
-	--y <= TO_INTEGER(UNSIGNED(years));
-	--y_3	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y/1000, 4));
-	--y_2_temp <= y/100 - y_3*10;
-	--y_2	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y_2_temp, 4));
-	--y_1_temp <= y/10 - y_3*10 - y_2*100;
-	--y_1	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y/10, 4));
-	--y_0_temp <= y/100 - y_3*10 - y_2*100 - y_1*1000;
-	--y_0	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y, 4));
+	y <= TO_INTEGER(UNSIGNED(years_sig));
+	y_3	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y/1000, 4));
+	y_2_temp <= y/100 - TO_INTEGER(UNSIGNED(y_3))*10;
+	y_2	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y_2_temp, 4));
+	y_1_temp <= y/10 - TO_INTEGER(UNSIGNED(y_3))*10 - TO_INTEGER(UNSIGNED(y_2))*100;
+	y_1	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y/10, 4));
+	y_0_temp <= y - TO_INTEGER(UNSIGNED(y_3))*10 - TO_INTEGER(UNSIGNED(y_2))*100 - TO_INTEGER(UNSIGNED(y_1))*1000;
+	y_0	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y, 4));
 	
 	with period_select select
 		all_digits <=
 			"00000000" & day_lower 		when "00", -- day select
 			"00000000" & month_lower 	when "01", -- month select
-			year_upper & year_lower 	when "10", -- year select
-			year_upper & year_lower 	when "11"; -- year select
+			y_3 & y_2 & y_1 & y_0	 	when "10", -- year lower select
+			y_3 & y_2 & y_1 & y_0 	when "11"; -- year upper select
 	
+	with period_select select
+		Y_Set <=
+			years_sig							when "00", -- day select
+			years_sig							when "01", -- month select
+			years_sig(11 downto 6) & load_data	when "10", -- year lower select
+			load_data & years_sig(5 downto 0)	when "11"; -- year upper select
+			
+	with period_select select
+		M_Set <=
+			months_sig					when "00", -- day select
+			load_data(3 downto 0)		when "01", -- month select
+			months_sig					when "10", -- year lower select
+			months_sig					when "11"; -- year upper select
+			
+	with period_select select
+		D_Set <=
+			load_data(4 downto 0)		when "00", -- day select
+			days_sig					when "01", -- month select
+			days_sig					when "10", -- year lower select
+			days_sig					when "11"; -- year upper select
+			
+		
 	year_upper_BCD : g23_binary_to_BCD
 	PORT MAP (
 		clock			=> clock,
-		bin				=> UNSIGNED("0" & days_sig),
+		bin				=> UNSIGNED(years_sig(11 downto 6)),
 		BCD				=> year_upper
  	);
  	
  	year_lower_BCD : g23_binary_to_BCD
 	PORT MAP (
 		clock			=> clock,
-		bin				=> UNSIGNED("0" & days_sig),
+		bin				=> UNSIGNED(years_sig(5 downto 0)),
 		BCD				=> year_lower
  	);
 	
 	month_BCD : g23_binary_to_BCD
 	PORT MAP (
 		clock			=> clock,
-		bin				=> UNSIGNED("0" & days_sig),
+		bin				=> UNSIGNED("00" & months_sig),
 		BCD				=> month_lower
  	);
  	
