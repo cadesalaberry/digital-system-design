@@ -135,19 +135,19 @@ BEGIN
 	
 	y <= TO_INTEGER(UNSIGNED(years_sig));
 	y_3	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y/1000, 4));
-	y_2_temp <= y/100 - TO_INTEGER(UNSIGNED(y_3))*10;
+	y_2_temp <= (y - TO_INTEGER(UNSIGNED(y_3))*1000)/100;
 	y_2	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y_2_temp, 4));
-	y_1_temp <= y/10 - TO_INTEGER(UNSIGNED(y_3))*10 - TO_INTEGER(UNSIGNED(y_2))*100;
-	y_1	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y/10, 4));
-	y_0_temp <= y - TO_INTEGER(UNSIGNED(y_3))*10 - TO_INTEGER(UNSIGNED(y_2))*100 - TO_INTEGER(UNSIGNED(y_1))*1000;
-	y_0	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y, 4));
+	y_1_temp <= (y - TO_INTEGER(UNSIGNED(y_3))*1000 - TO_INTEGER(UNSIGNED(y_2))*100)/10;
+	y_1	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y_1_temp, 4));
+	y_0_temp <= (y - TO_INTEGER(UNSIGNED(y_3))*1000 - TO_INTEGER(UNSIGNED(y_2))*100 - TO_INTEGER(UNSIGNED(y_1))*10);
+	y_0	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y_0_temp, 4));
 	
 	with period_select select
 		all_digits <=
 			"00000000" & day_lower 		when "00", -- day select
 			"00000000" & month_lower 	when "01", -- month select
 			y_3 & y_2 & y_1 & y_0	 	when "10", -- year lower select
-			y_3 & y_2 & y_1 & y_0 	when "11"; -- year upper select
+			y_3 & y_2 & y_1 & y_0 		when "11"; -- year upper select
 	
 	with period_select select
 		Y_Set <=
