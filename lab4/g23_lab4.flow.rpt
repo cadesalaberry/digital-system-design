@@ -1,6 +1,6 @@
 Flow report for g23_lab4
-Fri Mar 28 17:21:19 2014
-Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+Thu Apr 03 16:35:27 2014
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
 ---------------------
@@ -38,19 +38,19 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Fri Mar 28 17:21:19 2014         ;
-; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
+; Flow Status                        ; Successful - Thu Apr 03 16:35:27 2014         ;
+; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab4                                      ;
-; Top-level Entity Name              ; g23_UTC_to_MTC                                ;
+; Top-level Entity Name              ; g23_YMD_counter                               ;
 ; Family                             ; Cyclone II                                    ;
 ; Device                             ; EP2C20F484C7                                  ;
 ; Timing Models                      ; Final                                         ;
 ; Met timing requirements            ; Yes                                           ;
-; Total logic elements               ; 471 / 18,752 ( 3 % )                          ;
-;     Total combinational functions  ; 468 / 18,752 ( 2 % )                          ;
-;     Dedicated logic registers      ; 72 / 18,752 ( < 1 % )                         ;
-; Total registers                    ; 72                                            ;
-; Total pins                         ; 113 / 315 ( 36 % )                            ;
+; Total logic elements               ; 316 / 18,752 ( 2 % )                          ;
+;     Total combinational functions  ; 316 / 18,752 ( 2 % )                          ;
+;     Dedicated logic registers      ; 22 / 18,752 ( < 1 % )                         ;
+; Total registers                    ; 22                                            ;
+; Total pins                         ; 46 / 315 ( 15 % )                             ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                           ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                ;
@@ -63,25 +63,25 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/28/2014 17:20:46 ;
+; Start date & time ; 04/03/2014 16:35:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; g23_lab4            ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                       ;
-+------------------------------------+---------------------------------+---------------+----------------+----------------+
-; Assignment Name                    ; Value                           ; Default Value ; Entity Name    ; Section Id     ;
-+------------------------------------+---------------------------------+---------------+----------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 132129495421963.139604164603568 ; --            ; --             ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --             ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --             ; --             ;
-; PARTITION_COLOR                    ; 16764057                        ; --            ; g23_UTC_to_MTC ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; g23_UTC_to_MTC ; Top            ;
-; TOP_LEVEL_ENTITY                   ; g23_UTC_to_MTC                  ; g23_lab4      ; --             ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --             ; eda_blast_fpga ;
-+------------------------------------+---------------------------------+---------------+----------------+----------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                        ;
++------------------------------------+---------------------------------+---------------+-----------------+----------------+
+; Assignment Name                    ; Value                           ; Default Value ; Entity Name     ; Section Id     ;
++------------------------------------+---------------------------------+---------------+-----------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 132129496019222.139655730707764 ; --            ; --              ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --              ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --              ; --             ;
+; PARTITION_COLOR                    ; 16764057                        ; --            ; g23_YMD_counter ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; g23_YMD_counter ; Top            ;
+; TOP_LEVEL_ENTITY                   ; g23_YMD_counter                 ; g23_lab4      ; --              ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --              ; eda_blast_fpga ;
++------------------------------------+---------------------------------+---------------+-----------------+----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -89,11 +89,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:07     ; 1.0                     ; 245 MB              ; 00:00:03                           ;
-; Fitter                  ; 00:00:08     ; 1.0                     ; 277 MB              ; 00:00:05                           ;
-; Assembler               ; 00:00:16     ; 1.0                     ; 226 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:04     ; 1.0                     ; 164 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:35     ; --                      ; --                  ; 00:00:09                           ;
+; Analysis & Synthesis    ; 00:00:06     ; 1.0                     ; 321 MB              ; 00:00:02                           ;
+; Fitter                  ; 00:00:07     ; 3.0                     ; 359 MB              ; 00:00:03                           ;
+; Assembler               ; 00:00:04     ; 1.0                     ; 271 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:04     ; 1.0                     ; 201 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:21     ; --                      ; --                  ; 00:00:06                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -102,10 +102,10 @@ applicable agreement for further details.
 +-------------------------+------------------+---------------+------------+----------------+
 ; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; 156TR4060DS-03   ; Windows Vista ; 6.1        ; x86_64         ;
-; Fitter                  ; 156TR4060DS-03   ; Windows Vista ; 6.1        ; x86_64         ;
-; Assembler               ; 156TR4060DS-03   ; Windows Vista ; 6.1        ; x86_64         ;
-; Classic Timing Analyzer ; 156TR4060DS-03   ; Windows Vista ; 6.1        ; x86_64         ;
+; Analysis & Synthesis    ; 156TR4060DS-09   ; Windows Vista ; 6.1        ; x86_64         ;
+; Fitter                  ; 156TR4060DS-09   ; Windows Vista ; 6.1        ; x86_64         ;
+; Assembler               ; 156TR4060DS-09   ; Windows Vista ; 6.1        ; x86_64         ;
+; Classic Timing Analyzer ; 156TR4060DS-09   ; Windows Vista ; 6.1        ; x86_64         ;
 +-------------------------+------------------+---------------+------------+----------------+
 
 

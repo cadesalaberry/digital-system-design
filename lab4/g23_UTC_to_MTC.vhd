@@ -26,20 +26,25 @@ entity g23_UTC_to_MTC is
 		reset 			: in 	STD_LOGIC; -- ASYNC, When high the counts are all set to zero.
 		enable		 	: in 	STD_LOGIC; -- SYNC, A pulse with a width of 1 master clock cycle.
 
+		-- Earth date input
 		Year			: in	STD_LOGIC_VECTOR(11 downto 0);
 		Month			: in	STD_LOGIC_VECTOR(3 downto 0);
 		Day				: in	STD_LOGIC_VECTOR(4 downto 0);
+		
+		-- Earth time input
 		Hour			: in	STD_LOGIC_VECTOR(4 downto 0);
 		Minute			: in	STD_LOGIC_VECTOR(5 downto 0);
 		Second			: in	STD_LOGIC_VECTOR(5 downto 0);
 		
-		Year_out		: out	STD_LOGIC_VECTOR(11 downto 0);
-		Month_out		: out	STD_LOGIC_VECTOR(3 downto 0);
-		Day_out			: out	STD_LOGIC_VECTOR(4 downto 0);
-		
+		-- MTC time on the prime meridian on Mars
 		Mars_hours		: out	STD_LOGIC_VECTOR(4 downto 0);
 		Mars_minutes	: out	STD_LOGIC_VECTOR(5 downto 0);
 		Mars_seconds	: out	STD_LOGIC_VECTOR(5 downto 0);
+		
+		-- Debug
+		Year_out		: out	STD_LOGIC_VECTOR(11 downto 0);
+		Month_out		: out	STD_LOGIC_VECTOR(3 downto 0);
+		Day_out			: out	STD_LOGIC_VECTOR(4 downto 0);
 		
 		Num_days		: out	STD_LOGIC_VECTOR(15 downto 0);
 		Num_secs		: out	STD_LOGIC_VECTOR(16 downto 0);
@@ -109,6 +114,7 @@ architecture cascading of g23_UTC_to_MTC is
 	
 	signal day_frac			: UNSIGNED(39 downto 0);
 	signal JD				: UNSIGNED(55 downto 0);
+	signal JD2000			: UNSIGNED(55 downto 0);
 	signal MTC				: UNSIGNED(55 downto 0);
 
 BEGIN
@@ -130,7 +136,8 @@ BEGIN
 		Nsecs = "00000000000000000" AND Ndays = "0000000000000000"
 	ELSE '0';
 	
-	--JD <= UNSIGNED(Ndays & STD_LOGIC_VECTOR(day_frac))*UNSIGNED("11101000000010100001111000") - UNSIGNED("10101111110010000000");
+	JD2000 <= UNSIGNED(Ndays & STD_LOGIC_VECTOR(day_frac));
+	--JD <= UNSIGNED(JD2000) - UNSIGNED("10101111110010000000");
 	--MTC <= 24 * JD;
 	
 	YMD_counter	: g23_YMD_counter

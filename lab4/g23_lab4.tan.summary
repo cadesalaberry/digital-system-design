@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.657 ns
-From           : Second[0]
-To             : g23_YMD_counter:YMD_counter|d[3]
+Actual Time    : 4.842 ns
+From           : M_set[1]
+To             : m[1]
 From Clock     : --
 To Clock       : clock
 Failed Paths   : 0
@@ -15,29 +15,19 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 20.105 ns
-From           : lpm_counter:days_counter|cntr_uqk:auto_generated|safe_q[7]
-To             : Date_is_reached
+Actual Time    : 9.921 ns
+From           : m[2]
+To             : months[2]
 From Clock     : clock
-To Clock       : --
-Failed Paths   : 0
-
-Type           : Worst-case tpd
-Slack          : N/A
-Required Time  : None
-Actual Time    : 17.984 ns
-From           : Second[0]
-To             : Date_is_reached
-From Clock     : --
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -0.952 ns
-From           : reset
-To             : lpm_counter:days_counter|cntr_uqk:auto_generated|safe_q[11]
+Actual Time    : -0.141 ns
+From           : load_enable
+To             : last_day
 From Clock     : --
 To Clock       : clock
 Failed Paths   : 0
@@ -45,9 +35,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 48.19 MHz ( period = 20.751 ns )
-From           : g23_YMD_counter:YMD_counter|y[7]
-To             : g23_YMD_counter:YMD_counter|d[3]
+Actual Time    : 45.81 MHz ( period = 21.829 ns )
+From           : y[7]
+To             : d[0]
 From Clock     : clock
 To Clock       : clock
 Failed Paths   : 0
