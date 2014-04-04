@@ -1,5 +1,5 @@
 Flow report for g23_lab4
-Thu Apr 03 16:35:27 2014
+Thu Apr 03 20:20:48 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,19 +38,19 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Thu Apr 03 16:35:27 2014         ;
+; Flow Status                        ; Successful - Thu Apr 03 20:20:48 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab4                                      ;
-; Top-level Entity Name              ; g23_YMD_counter                               ;
+; Top-level Entity Name              ; g23_UTC_to_MTC                                ;
 ; Family                             ; Cyclone II                                    ;
 ; Device                             ; EP2C20F484C7                                  ;
 ; Timing Models                      ; Final                                         ;
 ; Met timing requirements            ; Yes                                           ;
-; Total logic elements               ; 316 / 18,752 ( 2 % )                          ;
-;     Total combinational functions  ; 316 / 18,752 ( 2 % )                          ;
-;     Dedicated logic registers      ; 22 / 18,752 ( < 1 % )                         ;
-; Total registers                    ; 22                                            ;
-; Total pins                         ; 46 / 315 ( 15 % )                             ;
+; Total logic elements               ; 473 / 18,752 ( 3 % )                          ;
+;     Total combinational functions  ; 468 / 18,752 ( 2 % )                          ;
+;     Dedicated logic registers      ; 72 / 18,752 ( < 1 % )                         ;
+; Total registers                    ; 72                                            ;
+; Total pins                         ; 113 / 315 ( 36 % )                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                           ;
 ; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                ;
@@ -63,25 +63,25 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/03/2014 16:35:07 ;
+; Start date & time ; 04/03/2014 20:20:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; g23_lab4            ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                        ;
-+------------------------------------+---------------------------------+---------------+-----------------+----------------+
-; Assignment Name                    ; Value                           ; Default Value ; Entity Name     ; Section Id     ;
-+------------------------------------+---------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 132129496019222.139655730707764 ; --            ; --              ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --              ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --              ; --             ;
-; PARTITION_COLOR                    ; 16764057                        ; --            ; g23_YMD_counter ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; g23_YMD_counter ; Top            ;
-; TOP_LEVEL_ENTITY                   ; g23_YMD_counter                 ; g23_lab4      ; --              ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --              ; eda_blast_fpga ;
-+------------------------------------+---------------------------------+---------------+-----------------+----------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                       ;
++------------------------------------+---------------------------------+---------------+----------------+----------------+
+; Assignment Name                    ; Value                           ; Default Value ; Entity Name    ; Section Id     ;
++------------------------------------+---------------------------------+---------------+----------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 132129496019222.139657082507984 ; --            ; --             ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --             ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --             ; --             ;
+; PARTITION_COLOR                    ; 16764057                        ; --            ; g23_UTC_to_MTC ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; g23_UTC_to_MTC ; Top            ;
+; TOP_LEVEL_ENTITY                   ; g23_UTC_to_MTC                  ; g23_lab4      ; --             ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --             ; eda_blast_fpga ;
++------------------------------------+---------------------------------+---------------+----------------+----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -89,11 +89,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:06     ; 1.0                     ; 321 MB              ; 00:00:02                           ;
-; Fitter                  ; 00:00:07     ; 3.0                     ; 359 MB              ; 00:00:03                           ;
-; Assembler               ; 00:00:04     ; 1.0                     ; 271 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:04     ; 1.0                     ; 201 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:21     ; --                      ; --                  ; 00:00:06                           ;
+; Analysis & Synthesis    ; 00:00:07     ; 1.0                     ; 325 MB              ; 00:00:02                           ;
+; Fitter                  ; 00:00:08     ; 2.5                     ; 360 MB              ; 00:00:04                           ;
+; Assembler               ; 00:00:05     ; 1.0                     ; 271 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:04     ; 1.0                     ; 204 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:24     ; --                      ; --                  ; 00:00:07                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
