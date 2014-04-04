@@ -46,7 +46,7 @@ entity g23_UTC_to_MTC is
 		Month_out		: out	STD_LOGIC_VECTOR(3 downto 0);
 		Day_out			: out	STD_LOGIC_VECTOR(4 downto 0);
 		
-		Num_days		: out	STD_LOGIC_VECTOR(15 downto 0);
+		Num_days		: out	STD_LOGIC_VECTOR(13 downto 0);
 		Num_secs		: out	STD_LOGIC_VECTOR(16 downto 0);
 		
 		Date_is_reached	: out	STD_LOGIC
@@ -90,9 +90,23 @@ architecture cascading of g23_UTC_to_MTC is
 	END COMPONENT;
 	
 	COMPONENT g23_Seconds_to_Days
-		port (
+		PORT (
 			seconds			: in	unsigned(16 downto 0);
 			day_fraction	: out	unsigned(39 downto 0)
+		);
+	END COMPONENT;
+	
+	COMPONENT g23_dayfrac_to_MTC
+		PORT (
+			clock		: in STD_LOGIC;
+			enable		: in STD_LOGIC;
+			Ndays		: in STD_LOGIC_VECTOR(13 downto 0);
+			day_frac	: in STD_LOGIC_VECTOR(39 downto 0);
+			
+			-- Time corresponding to the fraction of the day.
+			Hours		: out	STD_LOGIC_VECTOR(4 downto 0);
+			Minutes		: out	STD_LOGIC_VECTOR(5 downto 0);
+			Seconds		: out	STD_LOGIC_VECTOR(5 downto 0)
 		);
 	END COMPONENT;
 	
@@ -106,29 +120,12 @@ architecture cascading of g23_UTC_to_MTC is
 	signal minutes_sig		: STD_LOGIC_VECTOR(5 downto 0);
 	signal seconds_sig		: STD_LOGIC_VECTOR(5 downto 0);
 	
-	signal Ndays			: STD_LOGIC_VECTOR(15 downto 0);
+	signal Ndays			: STD_LOGIC_VECTOR(13 downto 0);
 	signal Nsecs			: STD_LOGIC_VECTOR(16 downto 0);
+	signal day_frac			: UNSIGNED(39 downto 0);
 	
 	signal day_end			: STD_LOGIC;
 	signal circuit_start	: STD_LOGIC;
-	
-	signal day_frac			: UNSIGNED(39 downto 0);
-	signal mult_in_frac		: UNSIGNED(63 downto 0);
-	signal sbct_in_frac		: INTEGER;
-	signal JD2000			: UNSIGNED(31 downto 0);
-	signal frac				: UNSIGNED(31 downto 0);
-	signal MTC				: STD_LOGIC_VECTOR(63 downto 0);
-	signal int_out			: STD_LOGIC_VECTOR(9 downto 0);
-	signal frac_out			: STD_LOGIC_VECTOR(17 downto 0);
-	
-	-- 14 bits for int and 18 bits for fraction = 32 bits
-	constant multiplyConst	: UNSIGNED := "00000000000000111110010010011010"; -- .973244297 in binary
-	-- 28 bits for int 0 and 36 bits for fraction = 64 bits
-	-- 18 bit frac * 18 frac int gives 36 bit frac
-	
-	constant subConst		: UNSIGNED := "0000000000000000000000000000000000000010111100101111100110000000";
-	-- 5 bits to represent 24 and the rest 0's for the frac (32 bits total)
-	constant twentyfour		: UNSIGNED := "11000000000000000000000000000000";
 
 BEGIN
 	Date_is_reached <= date_reached;
@@ -141,56 +138,17 @@ BEGIN
 	Day_out		<= days_sig;
 	
 	date_reached <= '1'
-		WHEN (Year <= years_sig)
-		AND  (Month <= months_sig)
-		AND  (Day <= days_sig)
-		AND  (Hour <= hours_sig)
-		AND  (Minute <= minutes_sig)
-		AND  (Second <= seconds_sig)
+		WHEN (Year = years_sig)
+		AND  (Month = months_sig)
+		AND  (Day = days_sig)
+		AND  (Hour = hours_sig)
+		AND  (Minute = minutes_sig)
+		AND  (Second = seconds_sig)
 	ELSE '0';
 	
 	circuit_start <= '1' WHEN
-		Nsecs = "00000000000000000" AND Ndays = "0000000000000000"
+		Nsecs = "00000000000000000" AND Ndays = "00000000000000"
 	ELSE '0';
-	
-	-- Trying to compute
-	-- MTC = 24 * Frac[JD2000 * 0.973244297 - 0.00072]
-	--                 |___mult_in_frac___|
-	--                    |________sbct_in_frac______|
-	-- with JD2000 = NDays.day_frac
-	-- 973244297 = "111010000000101000011110001001"
-	--        72 = "1001000"
-	--
-	-- Notice that for the precision we just need 60*60=3600
-	-- to fit in the decimal part of the number. let's add 4 to be safe:
-	-- 3600_2 = "1110 0001 0000" & "0000"
-	
-	-- JD2000 = NDays.day_frac
-	-- size =   16   +(39-23)  = 32 = 16.16
-	-- JD2000 <= UNSIGNED(Ndays & STD_LOGIC_VECTOR(day_frac(39 downto 23))); 
-	JD2000 <= UNSIGNED(Ndays(13 downto 0) & STD_LOGIC_VECTOR(day_frac(39 downto 22)));
-	
-	-- mult_in_frac = JD2000 * 0.973244297
-	--         size =  16.16 + 1.9 = 16.(16+9) = 16.25
-	-- mult_in_frac <= TO_INTEGER(JD2000) * 973244297; 
-	mult_in_frac <= JD2000 * multiplyConst - subConst;
-	
-	-- sbct_in_frac = mult_in_frac - 0.00072
-	-- sbct_in_frac <= mult_in_frac - 72;
-	frac <= "00000" & mult_in_frac(35 downto 9);
-	
-	-- MTC = 24 * sbct_in_frac
-	-- MTC <= TO_UNSIGNED(24 * sbct_in_frac, 61);
-	-- upper 10 bits are integer, bottom 54 are decimal
-	
-	MTC <= STD_LOGIC_VECTOR(frac * twentyfour);
-	
-	int_out <= MTC(63 downto 54);
-	frac_out <= MTC(53 downto 36);
-	
-	
-	
-	
 	
 	YMD_counter	: g23_YMD_counter
 	PORT MAP (
@@ -241,7 +199,7 @@ BEGIN
 	
 	days_counter : lpm_counter
 	GENERIC MAP (
-		lpm_width		=> 16,
+		lpm_width		=> 14,
 		lpm_direction	=> "up"
 	)
 	PORT MAP (
@@ -252,6 +210,17 @@ BEGIN
 		q		=> Ndays
 	);
 	
+	day_fraction_to_MTC : g23_dayfrac_to_MTC
+	PORT MAP (
+		clock		=> clock,
+		enable		=> date_reached,
+		Ndays		=> Ndays,
+		day_frac	=> STD_LOGIC_VECTOR(day_frac),
+		Hours		=> Mars_hours,
+		Minutes		=> Mars_minutes,
+		Seconds		=> Mars_seconds
+	);
+		
 	seconds_to_days : g23_Seconds_to_Days
 	PORT MAP (
 		seconds			=> UNSIGNED(Nsecs),

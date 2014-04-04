@@ -83,25 +83,25 @@ BEGIN
 			
 			last_day <= '0';
 			
+			IF load_enable = '1' THEN
+					d <= TO_INTEGER(UNSIGNED(D_set));
+			END IF;
+			
 			IF day_count_en = '1' THEN
 			
-				if load_enable = '1' THEN
-					d <= TO_INTEGER(UNSIGNED(D_set));
+				IF mth_31d = '1' AND d < 31 THEN
+					d <= d + 1;
+				ELSIF mth_30d = '1' AND d < 30 THEN
+					d <= d + 1;
+				ELSIF mth_29d = '1' AND d < 29 THEN
+					d <= d + 1;
+				ELSIF mth_28d = '1' AND d < 28 THEN
+					d <= d + 1;
 				ELSE
-					IF mth_31d = '1' AND d < 31 THEN
-						d <= d + 1;
-					ELSIF mth_30d = '1' AND d < 30 THEN
-						d <= d + 1;
-					ELSIF mth_29d = '1' AND d < 29 THEN
-						d <= d + 1;
-					ELSIF mth_28d = '1' AND d < 28 THEN
-						d <= d + 1;
-					ELSE
-						-- RESET EVERYTHING
-						d			<= 1;
-						last_day	<= '1';
-					END IF;
-				END IF; --if load
+					-- RESET EVERYTHING
+					d			<= 1;
+					last_day	<= '1';
+				END IF;
 				
 			END IF; --if enable
 			

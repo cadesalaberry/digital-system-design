@@ -1,8 +1,9 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="g23_lab4">
-		<CBX_INST_ENTRY INSTANCE_NAME="|g23_UTC_to_MTC|LPM_COUNTER:days_counter" CBX_FILE_NAME="cntr_uqk.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_UTC_to_MTC|LPM_COUNTER:days_counter" CBX_FILE_NAME="cntr_sqk.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g23_UTC_to_MTC|g23_YMD_counter:YMD_counter|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_u7m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g23_UTC_to_MTC|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0" CBX_FILE_NAME="mult_8ct.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g23_UTC_to_MTC|LPM_COUNTER:secs_counter" CBX_FILE_NAME="cntr_vqk.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g23_UTC_to_MTC|g23_HMS_counter:HMS_counter|LPM_COUNTER:hours_counter" CBX_FILE_NAME="cntr_12l.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g23_UTC_to_MTC|g23_HMS_counter:HMS_counter|LPM_COUNTER:minutes_counter" CBX_FILE_NAME="cntr_22l.tdf"/>
