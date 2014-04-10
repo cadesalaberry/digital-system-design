@@ -3,8 +3,8 @@ JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
-	P ActionCode(Ign)
-		Device PartName(EP2C15) MfrSpec(OpMask(0));
+	P ActionCode(Cfg)
+		Device PartName(EP2C20F484) Path("C:/Users/gludwi/digital-system-design/lab5/") File("g23_lab5.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

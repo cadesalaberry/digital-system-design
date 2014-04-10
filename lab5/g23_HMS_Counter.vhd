@@ -93,7 +93,7 @@ BEGIN
 		aclr => reset,
 		clock => clk,
 		data => s_set,
-		cnt_en => count_enable OR m_inc,
+		cnt_en => count_enable OR s_inc,
 		q => s
 	);
 	
@@ -127,7 +127,7 @@ BEGIN
 		aclr => reset,
 		clock => clk,
 		data => h_set,
-		cnt_en => (count_enable AND m_maxed AND s_maxed) OR m_inc,
+		cnt_en => (count_enable AND m_maxed AND s_maxed) OR h_inc,
 		q => h
 	);
 	

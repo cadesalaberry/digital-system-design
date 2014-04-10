@@ -1,6 +1,6 @@
--- A Year Month Day counter
+-- Converts a 4 digit number to its BCD equivalent.
 --
--- entity name: g23_12_to_BCD
+-- entity name: g23_14_to_BCD
 --
 -- Copyright (C) 2014 cadesalaberry, grahamludwinski
 --
@@ -18,28 +18,27 @@ USE ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 
-ENTITY g23_12_to_BCD IS
+ENTITY g23_14_to_BCD IS
 
 	PORT (
-		input			: in	STD_LOGIC_VECTOR(11 downto 0);
-
+		input			: in	STD_LOGIC_VECTOR(13 downto 0);
 		output			: out	STD_LOGIC_VECTOR(15 downto 0)
 	);
 	
-end g23_12_to_BCD;
+end g23_14_to_BCD;
 
 
-ARCHITECTURE alpha OF g23_12_to_BCD IS
-  	signal y		: integer range 0 to 4000;
+ARCHITECTURE alpha OF g23_14_to_BCD IS
+  	signal y		: integer range 0 to 9999;
   	
 	signal y_3		: STD_LOGIC_VECTOR(3 downto 0);
   	signal y_2		: STD_LOGIC_VECTOR(3 downto 0);
   	signal y_1		: STD_LOGIC_VECTOR(3 downto 0);
   	signal y_0		: STD_LOGIC_VECTOR(3 downto 0);
   	
-  	signal y_2_temp	: integer range 0 to 4000;
-  	signal y_1_temp	: integer range 0 to 4000;
-  	signal y_0_temp	: integer range 0 to 4000;
+  	signal y_2_temp	: integer range 0 to 9999;
+  	signal y_1_temp	: integer range 0 to 9999;
+  	signal y_0_temp	: integer range 0 to 9999;
 BEGIN
   	
   	y <= TO_INTEGER(UNSIGNED(input));

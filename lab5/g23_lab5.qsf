@@ -43,10 +43,54 @@ set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:05:57  APRIL 09, 2014"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE ANY
+set_global_assignment -name MISC_FILE "C:/Users/gludwi/digital-system-design/lab5/g23_lab5.dpf"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_location_assignment PIN_M1 -to reset
+set_location_assignment PIN_E2 -to digit_0[6]
+set_location_assignment PIN_F1 -to digit_0[5]
+set_location_assignment PIN_F2 -to digit_0[4]
+set_location_assignment PIN_H1 -to digit_0[3]
+set_location_assignment PIN_H2 -to digit_0[2]
+set_location_assignment PIN_J1 -to digit_0[1]
+set_location_assignment PIN_J2 -to digit_0[0]
+set_location_assignment PIN_L1 -to clock
+set_location_assignment PIN_E1 -to digit_1[0]
+set_location_assignment PIN_H6 -to digit_1[1]
+set_location_assignment PIN_H5 -to digit_1[2]
+set_location_assignment PIN_H4 -to digit_1[3]
+set_location_assignment PIN_G3 -to digit_1[4]
+set_location_assignment PIN_D2 -to digit_1[5]
+set_location_assignment PIN_D1 -to digit_1[6]
+set_location_assignment PIN_G5 -to digit_2[0]
+set_location_assignment PIN_G6 -to digit_2[1]
+set_location_assignment PIN_C2 -to digit_2[2]
+set_location_assignment PIN_C1 -to digit_2[3]
+set_location_assignment PIN_E3 -to digit_2[4]
+set_location_assignment PIN_E4 -to digit_2[5]
+set_location_assignment PIN_D3 -to digit_2[6]
+set_location_assignment PIN_F4 -to digit_3[0]
+set_location_assignment PIN_D5 -to digit_3[1]
+set_location_assignment PIN_D6 -to digit_3[2]
+set_location_assignment PIN_J4 -to digit_3[3]
+set_location_assignment PIN_L8 -to digit_3[4]
+set_location_assignment PIN_F3 -to digit_3[5]
+set_location_assignment PIN_D4 -to digit_3[6]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity g23_UTC_to_MTC -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity g23_UTC_to_MTC -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -entity g23_UTC_to_MTC -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -entity g23_UTC_to_MTC -section_id "Root Region"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity g23_UTC_to_MTC -section_id Top
+set_location_assignment PIN_M22 -to mode[0]
+set_location_assignment PIN_V12 -to mode[1]
+set_location_assignment PIN_L22 -to mode2[0]
+set_location_assignment PIN_L21 -to mode2[1]
+set_location_assignment PIN_M2 -to dst_set
+set_location_assignment PIN_R17 -to dst_out
+set_location_assignment PIN_T22 -to increment
+set_location_assignment PIN_R22 -to sync_mars
 set_global_assignment -name VHDL_FILE g23_7_segment_decoder.vhd
 set_global_assignment -name VHDL_FILE g23_binary_to_BCD.vhd
 set_global_assignment -name VHDL_FILE g23_dayfrac_to_MTC.vhd
@@ -56,12 +100,17 @@ set_global_assignment -name VHDL_FILE g23_Seconds_to_Days.vhd
 set_global_assignment -name VHDL_FILE g23_UTC_to_MTC.vhd
 set_global_assignment -name VHDL_FILE g23_YMD_testbed.vhd
 set_global_assignment -name VHDL_FILE g23_lab5_testbed.vhd
-set_global_assignment -name VHDL_FILE g23_12_to_BCD.vhd
 set_global_assignment -name VHDL_FILE g23_up_down.vhd
 set_global_assignment -name VHDL_FILE g23_HMS_counter.vhd
 set_global_assignment -name VHDL_FILE g23_YMD_counter.vhd
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE g23_12_to_bcd.cvwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_location_assignment PIN_Y21 -to epulse_out
+set_location_assignment PIN_R20 -to mpulse_out
+set_location_assignment PIN_L2 -to enable
+set_global_assignment -name VHDL_FILE g23_14_to_BCD.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name MISC_FILE "C:/Users/gludwi/digital-system-design/lab5/g23_lab5.dpf"
-set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
-set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name USE_CONFIGURATION_DEVICE ON
