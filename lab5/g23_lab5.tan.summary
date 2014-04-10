@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 11.688 ns
+Actual Time    : 12.888 ns
 From           : reset
-To             : g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_hazard[1]
+To             : g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|pre_hazard[0]
 From Clock     : --
 To Clock       : clock
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 172.926 ns
-From           : g23_UTC_to_MTC:utc_mtc|lpm_counter:secs_counter|cntr_vqk:auto_generated|safe_q[3]
-To             : digit_0[4]
+Actual Time    : 166.520 ns
+From           : g23_UTC_to_MTC:utc_mtc|lpm_counter:secs_counter|cntr_vqk:auto_generated|safe_q[0]
+To             : digit_0[5]
 From Clock     : clock
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 139.801 ns
+Actual Time    : 133.232 ns
 From           : reset
-To             : digit_0[4]
+To             : digit_0[5]
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -0.237 ns
-From           : reset
-To             : g23_YMD_counter:YMD_counter|last_day
+Actual Time    : 0.438 ns
+From           : dst_set
+To             : last_dst_state
 From Clock     : --
 To Clock       : clock
 Failed Paths   : 0
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 22.13 MHz ( period = 45.185 ns )
-From           : g23_UTC_to_MTC:utc_mtc|lpm_counter:secs_counter|cntr_vqk:auto_generated|safe_q[3]
-To             : g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_hazard[1]
+Actual Time    : 21.58 MHz ( period = 46.336 ns )
+From           : g23_UTC_to_MTC:utc_mtc|lpm_counter:secs_counter|cntr_vqk:auto_generated|safe_q[0]
+To             : g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|pre_hazard[2]
 From Clock     : clock
 To Clock       : clock
 Failed Paths   : 0

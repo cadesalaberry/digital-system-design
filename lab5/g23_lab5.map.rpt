@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g23_lab5
-Thu Apr 10 15:25:29 2014
+Thu Apr 10 18:46:31 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -53,26 +53,27 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
  45. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter
  46. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:mars
  47. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter
- 48. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_divide:Div0
- 49. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_divide:Div1
- 50. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_divide:Div2
+ 48. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_4_BCD|lpm_divide:Div0
+ 49. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_4_BCD|lpm_divide:Div1
+ 50. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_4_BCD|lpm_divide:Div2
  51. Parameter Settings for Inferred Entity Instance: g23_YMD_counter:YMD_counter|lpm_divide:Mod1
  52. Parameter Settings for Inferred Entity Instance: g23_YMD_counter:YMD_counter|lpm_divide:Mod0
  53. Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1
  54. Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0
- 55. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_mult:Mult0
- 56. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_mult:Mult1
+ 55. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_4_BCD|lpm_mult:Mult0
+ 56. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_4_BCD|lpm_mult:Mult1
  57. Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0
  58. Partition Dependent Files
  59. Port Connectivity Checks: "g23_7_segment_decoder:decode_0"
- 60. Port Connectivity Checks: "g23_7_segment_decoder:decode_3"
- 61. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter"
- 62. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter"
- 63. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc"
- 64. Port Connectivity Checks: "g23_HMS_counter:mars_hms"
- 65. Port Connectivity Checks: "g23_HMS_counter:earth_hms"
- 66. Port Connectivity Checks: "g23_YMD_counter:YMD_counter"
- 67. Analysis & Synthesis Messages
+ 60. Port Connectivity Checks: "g23_7_segment_decoder:decode_1"
+ 61. Port Connectivity Checks: "g23_7_segment_decoder:decode_3"
+ 62. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter"
+ 63. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter"
+ 64. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc"
+ 65. Port Connectivity Checks: "g23_HMS_counter:mars_hms"
+ 66. Port Connectivity Checks: "g23_HMS_counter:earth_hms"
+ 67. Port Connectivity Checks: "g23_YMD_counter:YMD_counter"
+ 68. Analysis & Synthesis Messages
 
 
 
@@ -98,7 +99,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 10 15:25:29 2014         ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 10 18:46:31 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab5                                      ;
 ; Top-level Entity Name              ; g23_lab5_testbed                              ;
@@ -270,13 +271,16 @@ applicable agreement for further details.
 +----------------+-------------+-------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Dependent File Changes for Partition Top                                                                                              ;
-+-----------+----------------------+-------------------+----------+----------------------------------+----------------------------------+
-; Hierarchy ; File Name            ; Relative Location ; Change   ; Old                              ; New                              ;
-+-----------+----------------------+-------------------+----------+----------------------------------+----------------------------------+
-; |         ; g23_lab5_testbed.vhd ; Project Directory ; Checksum ; 2f72f53027162641b931cda6e29012ba ; 9427a18685d4cd31838a6a847dcf63e8 ;
-+-----------+----------------------+-------------------+----------+----------------------------------+----------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Dependent File Changes for Partition Top                                                                                                                                      ;
++----------------------------------------------------+----------------------+-------------------+----------+----------------------------------+---------------------------------+
+; Hierarchy                                          ; File Name            ; Relative Location ; Change   ; Old                              ; New                             ;
++----------------------------------------------------+----------------------+-------------------+----------+----------------------------------+---------------------------------+
+; g23_hms_counter:earth_hms                          ; g23_HMS_counter.vhd  ; Project Directory ; Checksum ; 9eec9a57a7d85a769f7bed12d69e219  ; 9d3eb218cb7a9bcbe319925b98a277c ;
+; g23_hms_counter:mars_hms                           ; g23_HMS_counter.vhd  ; Project Directory ; Checksum ; 9eec9a57a7d85a769f7bed12d69e219  ; 9d3eb218cb7a9bcbe319925b98a277c ;
+; g23_utc_to_mtc:utc_mtc|g23_hms_counter:hms_counter ; g23_HMS_counter.vhd  ; Project Directory ; Checksum ; 9eec9a57a7d85a769f7bed12d69e219  ; 9d3eb218cb7a9bcbe319925b98a277c ;
+; |                                                  ; g23_lab5_testbed.vhd ; Project Directory ; Checksum ; e548f8ce809985b1885c18c868396698 ; aa11957ac3b3e3579864ad459ebcc0  ;
++----------------------------------------------------+----------------------+-------------------+----------+----------------------------------+---------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -284,51 +288,49 @@ applicable agreement for further details.
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                  ; Library Name ;
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |g23_lab5_testbed                              ; 2059 (114)        ; 212 (6)      ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed                                                                                                                                                    ; work         ;
-;    |g23_14_to_BCD:to_BCD|                      ; 548 (33)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD                                                                                                                               ; work         ;
-;       |lpm_divide:Div0|                        ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div0                                                                                                               ; work         ;
-;          |lpm_divide_rfm:auto_generated|       ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated                                                                                 ; work         ;
-;             |sign_div_unsign_6nh:divider|      ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated|sign_div_unsign_6nh:divider                                                     ; work         ;
-;                |alt_u_div_c5f:divider|         ; 59 (59)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated|sign_div_unsign_6nh:divider|alt_u_div_c5f:divider                               ; work         ;
-;       |lpm_divide:Div1|                        ; 206 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div1                                                                                                               ; work         ;
-;          |lpm_divide_cso:auto_generated|       ; 206 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated                                                                                 ; work         ;
-;             |abs_divider_pbg:divider|          ; 206 (8)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated|abs_divider_pbg:divider                                                         ; work         ;
-;                |alt_u_div_04f:divider|         ; 182 (182)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated|abs_divider_pbg:divider|alt_u_div_04f:divider                                   ; work         ;
-;                |lpm_abs_4t9:my_abs_num|        ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated|abs_divider_pbg:divider|lpm_abs_4t9:my_abs_num                                  ; work         ;
-;       |lpm_divide:Div2|                        ; 235 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div2                                                                                                               ; work         ;
-;          |lpm_divide_aso:auto_generated|       ; 235 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated                                                                                 ; work         ;
-;             |abs_divider_nbg:divider|          ; 235 (8)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated|abs_divider_nbg:divider                                                         ; work         ;
-;                |alt_u_div_s3f:divider|         ; 209 (209)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated|abs_divider_nbg:divider|alt_u_div_s3f:divider                                   ; work         ;
-;                |lpm_abs_5t9:my_abs_num|        ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated|abs_divider_nbg:divider|lpm_abs_5t9:my_abs_num                                  ; work         ;
-;       |lpm_mult:Mult0|                         ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_mult:Mult0                                                                                                                ; work         ;
-;          |multcore:mult_core|                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_mult:Mult0|multcore:mult_core                                                                                             ; work         ;
-;       |lpm_mult:Mult1|                         ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_mult:Mult1                                                                                                                ; work         ;
-;          |multcore:mult_core|                  ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_mult:Mult1|multcore:mult_core                                                                                             ; work         ;
-;    |g23_7_segment_decoder:decode_0|            ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_0                                                                                                                     ; work         ;
-;    |g23_7_segment_decoder:decode_1|            ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_1                                                                                                                     ; work         ;
+; |g23_lab5_testbed                              ; 1988 (74)         ; 214 (8)      ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed                                                                                                                                                    ; work         ;
+;    |g23_14_to_BCD:to_4_BCD|                    ; 547 (31)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD                                                                                                                             ; work         ;
+;       |lpm_divide:Div0|                        ; 62 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_divide:Div0                                                                                                             ; work         ;
+;          |lpm_divide_rfm:auto_generated|       ; 62 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated                                                                               ; work         ;
+;             |sign_div_unsign_6nh:divider|      ; 62 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated|sign_div_unsign_6nh:divider                                                   ; work         ;
+;                |alt_u_div_c5f:divider|         ; 62 (62)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated|sign_div_unsign_6nh:divider|alt_u_div_c5f:divider                             ; work         ;
+;       |lpm_divide:Div1|                        ; 206 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_divide:Div1                                                                                                             ; work         ;
+;          |lpm_divide_cso:auto_generated|       ; 206 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated                                                                               ; work         ;
+;             |abs_divider_pbg:divider|          ; 206 (8)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated|abs_divider_pbg:divider                                                       ; work         ;
+;                |alt_u_div_04f:divider|         ; 182 (182)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated|abs_divider_pbg:divider|alt_u_div_04f:divider                                 ; work         ;
+;                |lpm_abs_4t9:my_abs_num|        ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated|abs_divider_pbg:divider|lpm_abs_4t9:my_abs_num                                ; work         ;
+;       |lpm_divide:Div2|                        ; 235 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_divide:Div2                                                                                                             ; work         ;
+;          |lpm_divide_aso:auto_generated|       ; 235 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated                                                                               ; work         ;
+;             |abs_divider_nbg:divider|          ; 235 (8)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated|abs_divider_nbg:divider                                                       ; work         ;
+;                |alt_u_div_s3f:divider|         ; 209 (209)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated|abs_divider_nbg:divider|alt_u_div_s3f:divider                                 ; work         ;
+;                |lpm_abs_5t9:my_abs_num|        ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated|abs_divider_nbg:divider|lpm_abs_5t9:my_abs_num                                ; work         ;
+;       |lpm_mult:Mult0|                         ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_mult:Mult0                                                                                                              ; work         ;
+;          |multcore:mult_core|                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_mult:Mult0|multcore:mult_core                                                                                           ; work         ;
+;       |lpm_mult:Mult1|                         ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_mult:Mult1                                                                                                              ; work         ;
+;          |multcore:mult_core|                  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_4_BCD|lpm_mult:Mult1|multcore:mult_core                                                                                           ; work         ;
+;    |g23_7_segment_decoder:decode_0|            ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_0                                                                                                                     ; work         ;
+;    |g23_7_segment_decoder:decode_1|            ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_1                                                                                                                     ; work         ;
 ;    |g23_7_segment_decoder:decode_2|            ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_2                                                                                                                     ; work         ;
 ;    |g23_7_segment_decoder:decode_3|            ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_3                                                                                                                     ; work         ;
-;    |g23_HMS_counter:earth_hms|                 ; 56 (11)           ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms                                                                                                                          ; work         ;
-;       |lpm_counter:hours_counter|              ; 13 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:hours_counter                                                                                                ; work         ;
-;          |cntr_12l:auto_generated|             ; 13 (12)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:hours_counter|cntr_12l:auto_generated                                                                        ; work         ;
-;             |cmpr_9cc:cmpr2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2                                                         ; work         ;
-;       |lpm_counter:minutes_counter|            ; 16 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:minutes_counter                                                                                              ; work         ;
-;          |cntr_22l:auto_generated|             ; 16 (14)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated                                                                      ; work         ;
+;    |g23_HMS_counter:earth_hms|                 ; 39 (11)           ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms                                                                                                                          ; work         ;
+;       |lpm_counter:hours_counter|              ; 8 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:hours_counter                                                                                                ; work         ;
+;          |cntr_12l:auto_generated|             ; 8 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:hours_counter|cntr_12l:auto_generated                                                                        ; work         ;
+;       |lpm_counter:minutes_counter|            ; 10 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:minutes_counter                                                                                              ; work         ;
+;          |cntr_22l:auto_generated|             ; 10 (8)            ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated                                                                      ; work         ;
 ;             |cmpr_acc:cmpr2|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                                                       ; work         ;
-;       |lpm_counter:seconds_counter|            ; 16 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:seconds_counter                                                                                              ; work         ;
-;          |cntr_22l:auto_generated|             ; 16 (14)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated                                                                      ; work         ;
+;       |lpm_counter:seconds_counter|            ; 10 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:seconds_counter                                                                                              ; work         ;
+;          |cntr_22l:auto_generated|             ; 10 (8)            ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated                                                                      ; work         ;
 ;             |cmpr_acc:cmpr2|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                                                       ; work         ;
-;    |g23_HMS_counter:mars_hms|                  ; 127 (9)           ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms                                                                                                                           ; work         ;
+;    |g23_HMS_counter:mars_hms|                  ; 117 (8)           ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms                                                                                                                           ; work         ;
 ;       |lpm_counter:hours_counter|              ; 33 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:hours_counter                                                                                                 ; work         ;
-;          |cntr_12l:auto_generated|             ; 33 (32)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated                                                                         ; work         ;
-;             |cmpr_9cc:cmpr2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2                                                          ; work         ;
-;       |lpm_counter:minutes_counter|            ; 43 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:minutes_counter                                                                                               ; work         ;
-;          |cntr_22l:auto_generated|             ; 43 (42)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated                                                                       ; work         ;
+;          |cntr_12l:auto_generated|             ; 33 (33)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated                                                                         ; work         ;
+;       |lpm_counter:minutes_counter|            ; 36 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:minutes_counter                                                                                               ; work         ;
+;          |cntr_22l:auto_generated|             ; 36 (35)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated                                                                       ; work         ;
 ;             |cmpr_acc:cmpr2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                                                        ; work         ;
-;       |lpm_counter:seconds_counter|            ; 42 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:seconds_counter                                                                                               ; work         ;
-;          |cntr_22l:auto_generated|             ; 42 (40)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated                                                                       ; work         ;
+;       |lpm_counter:seconds_counter|            ; 40 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:seconds_counter                                                                                               ; work         ;
+;          |cntr_22l:auto_generated|             ; 40 (38)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated                                                                       ; work         ;
 ;             |cmpr_acc:cmpr2|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                                                        ; work         ;
-;    |g23_UTC_to_MTC:utc_mtc|                    ; 719 (48)          ; 70 (0)       ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc                                                                                                                             ; work         ;
+;    |g23_UTC_to_MTC:utc_mtc|                    ; 725 (50)          ; 70 (0)       ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc                                                                                                                             ; work         ;
 ;       |g23_HMS_counter:HMS_counter|            ; 39 (9)            ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter                                                                                                 ; work         ;
 ;          |lpm_counter:hours_counter|           ; 11 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:hours_counter                                                                       ; work         ;
 ;             |cntr_12l:auto_generated|          ; 11 (8)            ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated                                               ; work         ;
@@ -349,7 +351,7 @@ applicable agreement for further details.
 ;             |lpm_divide_u7m:auto_generated|    ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated                                                   ; work         ;
 ;                |sign_div_unsign_5nh:divider|   ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ; work         ;
 ;                   |alt_u_div_e6f:divider|      ; 101 (101)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider ; work         ;
-;       |g23_dayfrac_to_MTC:day_fraction_to_MTC| ; 119 (101)         ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC                                                                                      ; work         ;
+;       |g23_dayfrac_to_MTC:day_fraction_to_MTC| ; 123 (105)         ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC                                                                                      ; work         ;
 ;          |lpm_mult:Mult0|                      ; 18 (0)            ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0                                                                       ; work         ;
 ;             |mult_8ct:auto_generated|          ; 18 (18)           ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0|mult_8ct:auto_generated                                               ; work         ;
 ;       |lpm_counter:days_counter|               ; 15 (0)            ; 14 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|lpm_counter:days_counter                                                                                                    ; work         ;
@@ -382,22 +384,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Logic Cell Name                                                                                ;    ;
 +------------------------------------------------------------------------------------------------+----+
 ; g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[5]~0 ;    ;
-; g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[4]~1 ;    ;
-; g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[3]~2 ;    ;
-; g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[2]~3 ;    ;
-; g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[1]~4 ;    ;
-; g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[0]~5 ;    ;
 ; g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[5]~0 ;    ;
+; g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[4]~0   ;    ;
+; g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[4]~1 ;    ;
 ; g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[4]~1 ;    ;
 ; g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[3]~2 ;    ;
-; g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[2]~3 ;    ;
-; g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[4]~0   ;    ;
 ; g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[3]~1   ;    ;
+; g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[3]~2 ;    ;
+; g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[2]~3 ;    ;
 ; g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[2]~2   ;    ;
-; g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[0]~4   ;    ;
+; g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[2]~3 ;    ;
 ; g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[0]~5 ;    ;
-; g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[1]~3   ;    ;
+; g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[0]~4   ;    ;
+; g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[0]~5 ;    ;
 ; g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated|latch_signal[1]~4 ;    ;
+; g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|latch_signal[1]~3   ;    ;
+; g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|latch_signal[1]~4 ;    ;
 ; Number of logic cells representing combinational loops                                         ; 17 ;
 +------------------------------------------------------------------------------------------------+----+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -408,14 +410,13 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|m[1] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|m[3] ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[0] ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|d[1]                        ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|d[2] ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[9] ;
-; 11:1               ; 6 bits    ; 42 LEs        ; 24 LEs               ; 18 LEs                 ; No         ; |g23_lab5_testbed|Mux5                                                    ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 14 LEs               ; 6 LEs                  ; No         ; |g23_lab5_testbed|Mux10                                                   ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |g23_lab5_testbed|Mux12                                                   ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|d[4] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[6] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |g23_lab5_testbed|Mux2                                                    ;
+; 13:1               ; 4 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |g23_lab5_testbed|Mux13                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 
 
@@ -1032,72 +1033,72 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_divide:Div0 ;
-+------------------------+----------------+---------------------------------------------+
-; Parameter Name         ; Value          ; Type                                        ;
-+------------------------+----------------+---------------------------------------------+
-; LPM_WIDTHN             ; 14             ; Untyped                                     ;
-; LPM_WIDTHD             ; 10             ; Untyped                                     ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                     ;
-; LPM_PIPELINE           ; 0              ; Untyped                                     ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                     ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
-; CBXI_PARAMETER         ; lpm_divide_rfm ; Untyped                                     ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
-+------------------------+----------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_4_BCD|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                                       ;
+; LPM_WIDTHD             ; 10             ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_rfm ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_divide:Div1 ;
-+------------------------+----------------+---------------------------------------------+
-; Parameter Name         ; Value          ; Type                                        ;
-+------------------------+----------------+---------------------------------------------+
-; LPM_WIDTHN             ; 16             ; Untyped                                     ;
-; LPM_WIDTHD             ; 8              ; Untyped                                     ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                     ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                     ;
-; LPM_PIPELINE           ; 0              ; Untyped                                     ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                     ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
-; CBXI_PARAMETER         ; lpm_divide_cso ; Untyped                                     ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
-+------------------------+----------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_4_BCD|lpm_divide:Div1 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 16             ; Untyped                                       ;
+; LPM_WIDTHD             ; 8              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_cso ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_divide:Div2 ;
-+------------------------+----------------+---------------------------------------------+
-; Parameter Name         ; Value          ; Type                                        ;
-+------------------------+----------------+---------------------------------------------+
-; LPM_WIDTHN             ; 17             ; Untyped                                     ;
-; LPM_WIDTHD             ; 5              ; Untyped                                     ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                     ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                     ;
-; LPM_PIPELINE           ; 0              ; Untyped                                     ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                     ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                     ;
-; CBXI_PARAMETER         ; lpm_divide_aso ; Untyped                                     ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                     ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                              ;
-+------------------------+----------------+---------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_4_BCD|lpm_divide:Div2 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                                       ;
+; LPM_WIDTHD             ; 5              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_aso ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1193,73 +1194,73 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_mult:Mult0 ;
-+------------------------------------------------+------------+------------------------+
-; Parameter Name                                 ; Value      ; Type                   ;
-+------------------------------------------------+------------+------------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE         ;
-; LPM_WIDTHA                                     ; 4          ; Untyped                ;
-; LPM_WIDTHB                                     ; 10         ; Untyped                ;
-; LPM_WIDTHP                                     ; 14         ; Untyped                ;
-; LPM_WIDTHR                                     ; 14         ; Untyped                ;
-; LPM_WIDTHS                                     ; 1          ; Untyped                ;
-; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped                ;
-; LPM_PIPELINE                                   ; 0          ; Untyped                ;
-; LATENCY                                        ; 0          ; Untyped                ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                ;
-; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped                ;
-; USE_EAB                                        ; OFF        ; Untyped                ;
-; MAXIMIZE_SPEED                                 ; 6          ; Untyped                ;
-; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped                ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K    ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                ;
-; CBXI_PARAMETER                                 ; NOTHING    ; Untyped                ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                ;
-+------------------------------------------------+------------+------------------------+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_4_BCD|lpm_mult:Mult0 ;
++------------------------------------------------+------------+--------------------------+
+; Parameter Name                                 ; Value      ; Type                     ;
++------------------------------------------------+------------+--------------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE           ;
+; LPM_WIDTHA                                     ; 4          ; Untyped                  ;
+; LPM_WIDTHB                                     ; 10         ; Untyped                  ;
+; LPM_WIDTHP                                     ; 14         ; Untyped                  ;
+; LPM_WIDTHR                                     ; 14         ; Untyped                  ;
+; LPM_WIDTHS                                     ; 1          ; Untyped                  ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped                  ;
+; LPM_PIPELINE                                   ; 0          ; Untyped                  ;
+; LATENCY                                        ; 0          ; Untyped                  ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                  ;
+; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped                  ;
+; USE_EAB                                        ; OFF        ; Untyped                  ;
+; MAXIMIZE_SPEED                                 ; 6          ; Untyped                  ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                  ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                  ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                  ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                  ;
++------------------------------------------------+------------+--------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_mult:Mult1 ;
-+------------------------------------------------+------------+------------------------+
-; Parameter Name                                 ; Value      ; Type                   ;
-+------------------------------------------------+------------+------------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE         ;
-; LPM_WIDTHA                                     ; 4          ; Untyped                ;
-; LPM_WIDTHB                                     ; 7          ; Untyped                ;
-; LPM_WIDTHP                                     ; 11         ; Untyped                ;
-; LPM_WIDTHR                                     ; 11         ; Untyped                ;
-; LPM_WIDTHS                                     ; 1          ; Untyped                ;
-; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped                ;
-; LPM_PIPELINE                                   ; 0          ; Untyped                ;
-; LATENCY                                        ; 0          ; Untyped                ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                ;
-; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped                ;
-; USE_EAB                                        ; OFF        ; Untyped                ;
-; MAXIMIZE_SPEED                                 ; 5          ; Untyped                ;
-; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped                ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K    ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                ;
-; CBXI_PARAMETER                                 ; NOTHING    ; Untyped                ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                ;
-+------------------------------------------------+------------+------------------------+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_4_BCD|lpm_mult:Mult1 ;
++------------------------------------------------+------------+--------------------------+
+; Parameter Name                                 ; Value      ; Type                     ;
++------------------------------------------------+------------+--------------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE           ;
+; LPM_WIDTHA                                     ; 4          ; Untyped                  ;
+; LPM_WIDTHB                                     ; 7          ; Untyped                  ;
+; LPM_WIDTHP                                     ; 11         ; Untyped                  ;
+; LPM_WIDTHR                                     ; 11         ; Untyped                  ;
+; LPM_WIDTHS                                     ; 1          ; Untyped                  ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped                  ;
+; LPM_PIPELINE                                   ; 0          ; Untyped                  ;
+; LATENCY                                        ; 0          ; Untyped                  ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                  ;
+; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped                  ;
+; USE_EAB                                        ; OFF        ; Untyped                  ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped                  ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped                  ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                  ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                  ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                  ;
++------------------------------------------------+------------+--------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1317,8 +1318,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; g23_basic_timer.vhd                     ; Project Directory  ; work    ; b887d4ce1485dea47bacd7837d369f9  ;
 ; g23_dayfrac_to_MTC.vhd                  ; Project Directory  ; work    ; 3da0e9b3fb3be89fb942e7efe4673d   ;
 ; g23_generic_timer.vhd                   ; Project Directory  ; work    ; f1f6d0f0a842c8c445849f23c2db4f   ;
-; g23_HMS_counter.vhd                     ; Project Directory  ; work    ; 9eec9a57a7d85a769f7bed12d69e219  ;
-; g23_lab5_testbed.vhd                    ; Project Directory  ; work    ; 9427a18685d4cd31838a6a847dcf63e8 ;
+; g23_HMS_counter.vhd                     ; Project Directory  ; work    ; 9d3eb218cb7a9bcbe319925b98a277c  ;
+; g23_lab5_testbed.vhd                    ; Project Directory  ; work    ; aa11957ac3b3e3579864ad459ebcc0   ;
 ; g23_Seconds_to_Days.vhd                 ; Project Directory  ; work    ; d7eff5507ce7d814c92f567050df92cc ;
 ; g23_UTC_to_MTC.vhd                      ; Project Directory  ; work    ; e8116066a330dabf7f536ca7c55f222  ;
 ; g23_YMD_counter.vhd                     ; Project Directory  ; work    ; 994128d5285cec8f4976b5918cff8c40 ;
@@ -1327,6 +1328,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "g23_7_segment_decoder:decode_0"                                                                ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; rippleblank_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rippleblank_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g23_7_segment_decoder:decode_1"                                                                ;
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port            ; Type   ; Severity ; Details                                                                             ;
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1354,6 +1365,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; h_inc ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 ; m_inc ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 ; s_inc ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; dst   ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 +-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1378,18 +1390,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc"                                                                        ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; year_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; month_out       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; day_out         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; num_days        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; num_secs        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; date_is_reached ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc"                                                                  ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; year_out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; month_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; day_out   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; num_days  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; num_secs  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -1397,6 +1408,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port       ; Type   ; Severity ; Details                                                                             ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
+; dst        ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; end_of_day ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -1431,7 +1443,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Thu Apr 10 15:25:22 2014
+    Info: Processing started: Thu Apr 10 18:46:25 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g23_lab5 -c g23_lab5
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file g23_7_segment_decoder.vhd
@@ -1474,7 +1486,8 @@ Info: Found 2 design units, including 1 entities, in source file g23_14_to_bcd.v
     Info: Found design unit 1: g23_14_to_BCD-alpha
     Info: Found entity 1: g23_14_to_BCD
 Info: Elaborating entity "g23_lab5_testbed" for the top level hierarchy
-Warning (10873): Using initial value X (don't care) for net "earth_year_sig[13..12]" at g23_lab5_testbed.vhd(170)
+Warning (10873): Using initial value X (don't care) for net "earth_year_sig[13..12]" at g23_lab5_testbed.vhd(186)
+Info: Elaborating entity "g23_14_to_BCD" for hierarchy "g23_14_to_BCD:to_4_BCD"
 Info: Elaborating entity "g23_YMD_counter" for hierarchy "g23_YMD_counter:YMD_counter"
 Info: Elaborating entity "g23_HMS_counter" for hierarchy "g23_HMS_counter:earth_hms"
 Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter"
@@ -1582,24 +1595,23 @@ Info: Instantiated megafunction "g23_basic_timer:basic_timer|g23_generic_timer:m
     Info: Parameter "LPM_PVALUE" = "UNUSED"
     Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
     Info: Parameter "LPM_HINT" = "UNUSED"
-Info: Elaborating entity "g23_14_to_BCD" for hierarchy "g23_14_to_BCD:to_BCD"
 Info: Elaborating entity "g23_7_segment_decoder" for hierarchy "g23_7_segment_decoder:decode_3"
 Info: 1 design partition requires Analysis and Synthesis
     Info: Partition "Top" requires synthesis because there were changes to its dependent source files
 Info: No design partitions will skip synthesis in the current incremental compilation
 Info: Inferred 10 megafunctions from design logic
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_14_to_BCD:to_BCD|Div0"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_14_to_BCD:to_BCD|Div1"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_14_to_BCD:to_BCD|Div2"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_14_to_BCD:to_4_BCD|Div0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_14_to_BCD:to_4_BCD|Div1"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_14_to_BCD:to_4_BCD|Div2"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_YMD_counter:YMD_counter|Mod1"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_YMD_counter:YMD_counter|Mod0"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|Mod1"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|Mod0"
-    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "g23_14_to_BCD:to_BCD|Mult0"
-    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "g23_14_to_BCD:to_BCD|Mult1"
+    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "g23_14_to_BCD:to_4_BCD|Mult0"
+    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "g23_14_to_BCD:to_4_BCD|Mult1"
     Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|Mult0"
-Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_divide:Div0"
-Info: Instantiated megafunction "g23_14_to_BCD:to_BCD|lpm_divide:Div0" with the following parameter:
+Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_divide:Div0"
+Info: Instantiated megafunction "g23_14_to_BCD:to_4_BCD|lpm_divide:Div0" with the following parameter:
     Info: Parameter "LPM_WIDTHN" = "14"
     Info: Parameter "LPM_WIDTHD" = "10"
     Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1614,8 +1626,8 @@ Info: Found 1 design units, including 1 entities, in source file db/add_sub_lkc.
     Info: Found entity 1: add_sub_lkc
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
     Info: Found entity 1: add_sub_mkc
-Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_divide:Div1"
-Info: Instantiated megafunction "g23_14_to_BCD:to_BCD|lpm_divide:Div1" with the following parameter:
+Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_divide:Div1"
+Info: Instantiated megafunction "g23_14_to_BCD:to_4_BCD|lpm_divide:Div1" with the following parameter:
     Info: Parameter "LPM_WIDTHN" = "16"
     Info: Parameter "LPM_WIDTHD" = "8"
     Info: Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -1631,8 +1643,8 @@ Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_lr9.
     Info: Found entity 1: lpm_abs_lr9
 Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_4t9.tdf
     Info: Found entity 1: lpm_abs_4t9
-Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_divide:Div2"
-Info: Instantiated megafunction "g23_14_to_BCD:to_BCD|lpm_divide:Div2" with the following parameter:
+Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_divide:Div2"
+Info: Instantiated megafunction "g23_14_to_BCD:to_4_BCD|lpm_divide:Div2" with the following parameter:
     Info: Parameter "LPM_WIDTHN" = "17"
     Info: Parameter "LPM_WIDTHD" = "5"
     Info: Parameter "LPM_NREPRESENTATION" = "SIGNED"
@@ -1666,8 +1678,8 @@ Info: Instantiated megafunction "g23_YMD_counter:YMD_counter|lpm_divide:Mod0" wi
     Info: Parameter "LPM_WIDTHD" = "12"
     Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_mult:Mult0"
-Info: Instantiated megafunction "g23_14_to_BCD:to_BCD|lpm_mult:Mult0" with the following parameter:
+Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult0"
+Info: Instantiated megafunction "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult0" with the following parameter:
     Info: Parameter "LPM_WIDTHA" = "4"
     Info: Parameter "LPM_WIDTHB" = "10"
     Info: Parameter "LPM_WIDTHP" = "14"
@@ -1677,11 +1689,11 @@ Info: Instantiated megafunction "g23_14_to_BCD:to_BCD|lpm_mult:Mult0" with the f
     Info: Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info: Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info: Parameter "MAXIMIZE_SPEED" = "6"
-Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_mult:Mult0"
-Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_mult:Mult0"
-Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_mult:Mult0"
-Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_mult:Mult1"
-Info: Instantiated megafunction "g23_14_to_BCD:to_BCD|lpm_mult:Mult1" with the following parameter:
+Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult0"
+Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult0"
+Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult0"
+Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult1"
+Info: Instantiated megafunction "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult1" with the following parameter:
     Info: Parameter "LPM_WIDTHA" = "4"
     Info: Parameter "LPM_WIDTHB" = "7"
     Info: Parameter "LPM_WIDTHP" = "11"
@@ -1691,9 +1703,9 @@ Info: Instantiated megafunction "g23_14_to_BCD:to_BCD|lpm_mult:Mult1" with the f
     Info: Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info: Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info: Parameter "MAXIMIZE_SPEED" = "5"
-Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_mult:Mult1|multcore:mult_core", which is child of megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_mult:Mult1"
-Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_mult:Mult1"
-Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_mult:Mult1|altshift:external_latency_ffs", which is child of megafunction instantiation "g23_14_to_BCD:to_BCD|lpm_mult:Mult1"
+Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult1|multcore:mult_core", which is child of megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult1"
+Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult1"
+Info: Elaborated megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult1|altshift:external_latency_ffs", which is child of megafunction instantiation "g23_14_to_BCD:to_4_BCD|lpm_mult:Mult1"
 Info: Elaborated megafunction instantiation "g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0"
 Info: Instantiated megafunction "g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0" with the following parameter:
     Info: Parameter "LPM_WIDTHA" = "32"
@@ -1714,9 +1726,10 @@ Info: Ignored 54 buffer(s)
 Info: Registers with preset signals will power-up high
 Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info: Found the following redundant logic cells in design
-    Info (17048): Logic cell "g23_14_to_BCD:to_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated|sign_div_unsign_6nh:divider|alt_u_div_c5f:divider|add_sub_11_result_int[1]~18"
-    Info (17048): Logic cell "g23_14_to_BCD:to_BCD|Add1~30"
-    Info (17048): Logic cell "g23_14_to_BCD:to_BCD|output[0]~0"
+    Info (17048): Logic cell "g23_14_to_BCD:to_4_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated|sign_div_unsign_6nh:divider|alt_u_div_c5f:divider|add_sub_11_result_int[2]~18"
+    Info (17048): Logic cell "g23_14_to_BCD:to_4_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated|sign_div_unsign_6nh:divider|alt_u_div_c5f:divider|add_sub_11_result_int[1]~20"
+    Info (17048): Logic cell "g23_14_to_BCD:to_4_BCD|Add1~30"
+    Info (17048): Logic cell "g23_14_to_BCD:to_4_BCD|output[0]~0"
     Info (17048): Logic cell "g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider|add_sub_8_result_int[3]~12"
     Info (17048): Logic cell "g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider|add_sub_8_result_int[1]~14"
     Info (17048): Logic cell "g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider|add_sub_6_result_int[1]~12"
@@ -1725,14 +1738,14 @@ Info: Found the following redundant logic cells in design
     Info (17048): Logic cell "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider|add_sub_8_result_int[1]~14"
     Info (17048): Logic cell "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider|add_sub_6_result_int[1]~12"
     Info (17048): Logic cell "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider|add_sub_7_result_int[0]~16"
-Info: Implemented 2111 device resources after synthesis - the final resource count might be different
-    Info: Implemented 11 input pins
-    Info: Implemented 31 output pins
-    Info: Implemented 2065 logic cells
+Info: Implemented 2045 device resources after synthesis - the final resource count might be different
+    Info: Implemented 10 input pins
+    Info: Implemented 35 output pins
+    Info: Implemented 1996 logic cells
     Info: Implemented 4 DSP elements
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 352 megabytes
-    Info: Processing ended: Thu Apr 10 15:25:29 2014
+    Info: Processing ended: Thu Apr 10 18:46:32 2014
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:06
 

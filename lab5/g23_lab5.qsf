@@ -114,4 +114,9 @@ set_location_assignment PIN_R20 -to mpulse_out
 set_location_assignment PIN_L2 -to enable
 set_global_assignment -name VHDL_FILE g23_14_to_BCD.vhd
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_location_assignment PIN_U21 -to Date_is_reached
+set_global_assignment -name ZIP_VECTOR_WAVEFORM_FILE g23_UTC_to_MTC.cvwf
+set_location_assignment PIN_Y22 -to earth_active
+set_location_assignment PIN_Y19 -to mars_active
+set_location_assignment PIN_V22 -to syncing
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -7212,7 +7212,7 @@ PARAMETER_STRING
 USR
 }
 # hierarchies {
-g23_14_to_BCD:to_BCD
+g23_14_to_BCD:to_4_BCD
 }
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -8075,6 +8075,39 @@ datab2
 
 # end
 # entity
+g23_lab5_testbed
+# storage
+db|g23_lab5.(0).cnf
+db|g23_lab5.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+g23_lab5_testbed.vhd
+aa11957ac3b3e3579864ad459ebcc0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
 g23_HMS_counter
 # storage
 db|g23_lab5.(2).cnf
@@ -8086,7 +8119,7 @@ ON
 # case_insensitive
 # source_file
 g23_hms_counter.vhd
-9eec9a57a7d85a769f7bed12d69e219
+9d3eb218cb7a9bcbe319925b98a277c
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -8128,39 +8161,6 @@ USR
 g23_HMS_counter:earth_hms
 g23_HMS_counter:mars_hms
 g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-g23_lab5_testbed
-# storage
-db|g23_lab5.(0).cnf
-db|g23_lab5.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-g23_lab5_testbed.vhd
-9427a18685d4cd31838a6a847dcf63e8
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-|
 }
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf

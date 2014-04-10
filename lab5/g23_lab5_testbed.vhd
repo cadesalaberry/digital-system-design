@@ -28,8 +28,8 @@ ENTITY g23_lab5_testbed IS
 		increment	 	: in 	STD_LOGIC; -- increase the current value
 		
 		dst_set			: in 	STD_LOGIC;
-		sync_mars		: in	STD_LOGIC; 
-		edit_mode		: in	STD_LOGIC;
+		sync_mars		: in	STD_LOGIC;
+		syncing			: out	STD_LOGIC;
 		
 		mode			: in	STD_LOGIC_VECTOR(1 downto 0);
 		mode2			: in	STD_LOGIC_VECTOR(1 downto 0);
@@ -42,7 +42,12 @@ ENTITY g23_lab5_testbed IS
 		epulse_out		: out	STD_LOGIC; 
 		mpulse_out		: out	STD_LOGIC;
 		
-		dst_out			: out	STD_LOGIC
+		dst_out			: out	STD_LOGIC;
+		
+		Date_is_reached	: out	STD_LOGIC;
+		
+		earth_active	: out	STD_LOGIC;
+		mars_active		: out	STD_LOGIC
 	);
 	
 end g23_lab5_testbed;
@@ -94,6 +99,8 @@ ARCHITECTURE alpha OF g23_lab5_testbed IS
 			
 			load_enable	: IN STD_LOGIC;
 			count_enable: IN STD_LOGIC;
+			
+			dst			: IN STD_LOGIC;
 			
 			h_set		: IN STD_LOGIC_VECTOR(4 downto 0);
 			m_set		: IN STD_LOGIC_VECTOR(5 downto 0);
@@ -153,16 +160,25 @@ ARCHITECTURE alpha OF g23_lab5_testbed IS
 		);
   	END COMPONENT;
 	
+	COMPONENT g23_binary_to_BCD
+		PORT (
+			clock	: in	std_logic;	-- to clock the lpm_rom register
+			bin		: in	unsigned(5 downto 0);
+			BCD		: out	std_logic_vector(7 downto 0)
+		);
+	END COMPONENT;
+	
 	signal RB_Out3	: STD_LOGIC;
   	signal RB_Out2	: STD_LOGIC;
-  	signal RB_Out1	: STD_LOGIC;
   	
   	signal all_digits		: STD_LOGIC_VECTOR(13 downto 0);
   	signal bcd_digits		: STD_LOGIC_VECTOR(15 downto 0);
   	
   	signal earth_min_sec, mars_min_sec	: STD_LOGIC_VECTOR(13 downto 0);
-  	
-  	signal earth_time_sig	: STD_LOGIC_VECTOR(13 downto 0);
+    signal earth_min_bcd, mars_min_bcd	: STD_LOGIC_VECTOR(7 downto 0);
+    signal earth_sec_bcd, mars_sec_bcd	: STD_LOGIC_VECTOR(7 downto 0);
+    
+    signal earth_time_sig	: STD_LOGIC_VECTOR(13 downto 0);
   	signal earth_date_sig	: STD_LOGIC_VECTOR(13 downto 0);
   	signal mars_time_sig	: STD_LOGIC_VECTOR(13 downto 0);
 	signal time_zone_sig	: STD_LOGIC_VECTOR(13 downto 0);
@@ -194,15 +210,18 @@ ARCHITECTURE alpha OF g23_lab5_testbed IS
 	signal last_increment_state		: STD_LOGIC;
 	signal inc_pulse				: STD_LOGIC;
 	
+	signal date_reached_sig			: STD_LOGIC;
+	
+	signal dst_pulse				: STD_LOGIC;
+	
 BEGIN
-  	
-  	-- Turns 12h45m into the number one thousand two hundreds and forty five
-  	earth_min_sec	<= STD_LOGIC_VECTOR("00" & UNSIGNED(earth_min_sig) * 100 + UNSIGNED(earth_sec_sig));
-  	mars_min_sec	<= STD_LOGIC_VECTOR("00" & UNSIGNED( mars_min_sig) * 100 + UNSIGNED(mars_sec_sig));
-  	
+	syncing <= NOT sync_mars;
+	
 	process(clock)
 		variable e_blinker : STD_LOGIC := '0';
 		variable m_blinker : STD_LOGIC := '0';
+		
+		variable last_dst_state : STD_LOGIC := '0';
   	begin
 		if(rising_edge(clock)) then
 			
@@ -221,6 +240,15 @@ BEGIN
 				inc_pulse <= '0';
 			end if;
 			
+			if(dst_pulse = '1') then
+				dst_pulse <= '0';
+			end if;
+			
+			if(dst_set = '1' AND last_dst_state = '0') then
+				dst_pulse <= '1';
+			end if;
+			last_dst_state := dst_set;
+			
 			if(increment = '1' AND last_increment_state = '0') then
 				inc_pulse <= '1';
 			end if;
@@ -229,7 +257,14 @@ BEGIN
 		end if;
 	end process;
 	
-
+	to_4_BCD : g23_14_to_BCD
+  	PORT MAP (
+		input	=> all_digits,
+		output	=> bcd_digits
+  	);
+	
+	earth_active <= NOT mode(1);
+	mars_active <= mode(1);
 	
 	--mode
 	with mode select
@@ -243,8 +278,8 @@ BEGIN
 	with mode2 select
 		earth_time_sig <=
 			"000000000" & earth_hour_sig	when "00",
-			earth_min_sec					when "01",
-			earth_min_sec					when "10",
+			"00000000" & earth_min_sig		when "01",
+			"00000000" & earth_sec_sig		when "10",
 			"00000000000000"		 		when "11";
 	with mode2 select
 		earth_date_sig <=
@@ -255,14 +290,14 @@ BEGIN
 	with mode2 select
 		mars_time_sig <=
 			"000000000" & mars_hour_sig		when "00",
-			mars_min_sec					when "01",
-			mars_min_sec					when "10",
+			"00000000" & mars_min_sig		when "01",
+			"00000000" & mars_sec_sig		when "10",
 			"00000000000000"	 			when "11";
 	with mode2 select
 		time_zone_sig <=
-			"000000000" & mars_hour_sig		when "00",
-			"00000000" & mars_min_sig		when "01",
-			"00000000" & mars_sec_sig	 	when "10",
+			"00000000000000"				when "00",
+			"00000000000000"				when "01",
+			"00000000000000"	 			when "10",
 			"00000000000000"		 		when "11";
 	
 	
@@ -290,7 +325,7 @@ BEGIN
 		reset 			=> reset,
 		count_enable 	=> eod,
 		load_enable		=> '0',
-
+		
 		y_inc			=> earth_y_inc,
 		m_inc			=> earth_mo_inc,
 		d_inc			=> earth_d_inc,
@@ -311,6 +346,8 @@ BEGIN
 		reset			=> reset,
 		load_enable		=> '0',
 		count_enable	=> epulse,
+		
+		dst				=> dst_pulse,
 		
 		h_inc			=> earth_h_inc,
 		m_inc			=> earth_mi_inc,
@@ -333,8 +370,10 @@ BEGIN
 		clk				=> clock,
 		reset			=> reset,
 		
-		load_enable		=> NOT sync_mars,
+		load_enable		=> NOT sync_mars OR date_reached_sig,
 		count_enable	=> mpulse,
+		
+		dst				=> '0',
 		
 		h_set			=> mars_hour_set,
 		m_set			=> mars_min_set,
@@ -350,12 +389,12 @@ BEGIN
 	);
 
 	
-	-- Mars HMS counter
+	-- UTC to MTC
 	utc_mtc	: g23_UTC_to_MTC
 	PORT MAP (
 		clock 			=> clock,
 		reset 			=> reset,
-		enable		 	=> enable,
+		enable		 	=> NOT sync_mars,
 
 		Year			=> earth_year_sig(11 downto 0),
 		Month			=> earth_month_sig,
@@ -365,11 +404,14 @@ BEGIN
 		Minute			=> earth_min_sig,
 		Second			=> earth_sec_sig,
 		
-		-- MTC time on the prime meridian on Mars
 		Mars_hours		=> mars_hour_set,
 		Mars_minutes	=> mars_min_set,
-		Mars_seconds	=> mars_sec_set
+		Mars_seconds	=> mars_sec_set,
+		
+		Date_is_reached	=> date_reached_sig
 	);
+	
+	Date_is_reached <= date_reached_sig;
 	
 	basic_timer : g23_basic_timer
 	PORT MAP (
@@ -378,12 +420,6 @@ BEGIN
 		reset	=> reset,
 		EPULSE	=> epulse,
 		MPULSE	=> mpulse
-  	);
-  	
-  	to_BCD : g23_14_to_BCD
-  	PORT MAP (
-		input	=> all_digits,
-		output	=> bcd_digits
   	);
 	
 	--LCD outputs
@@ -405,13 +441,12 @@ BEGIN
   	PORT MAP (
 		code			=> bcd_digits(7 downto 4),
 		RippleBlank_In	=> RB_Out2,
-		RippleBlank_Out	=> RB_Out1,
 		segments		=> digit_1
   	);
   	decode_0 : g23_7_segment_decoder
   	PORT MAP (
 		code			=> bcd_digits(3 downto 0),
-		RippleBlank_In	=> RB_Out1,
+		RippleBlank_In	=> '0',
 		segments		=> digit_0
   	);
   	

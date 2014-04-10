@@ -3,6 +3,8 @@ JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
+	P ActionCode(Cfg)
+		Device PartName(EP2C20F484) File("g23_lab5.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

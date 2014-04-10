@@ -1,5 +1,5 @@
 Partition Merge report for g23_lab5
-Thu Apr 10 15:25:34 2014
+Thu Apr 10 18:46:36 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,16 +38,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Partition Merge Summary                                                            ;
 +------------------------------------+-----------------------------------------------+
-; Partition Merge Status             ; Successful - Thu Apr 10 15:25:34 2014         ;
+; Partition Merge Status             ; Successful - Thu Apr 10 18:46:36 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab5                                      ;
 ; Top-level Entity Name              ; g23_lab5_testbed                              ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 2,053                                         ;
-;     Total combinational functions  ; 2,050                                         ;
-;     Dedicated logic registers      ; 212                                           ;
-; Total registers                    ; 212                                           ;
-; Total pins                         ; 42                                            ;
+; Total logic elements               ; 1,981                                         ;
+;     Total combinational functions  ; 1,977                                         ;
+;     Dedicated logic registers      ; 214                                           ;
+; Total registers                    ; 214                                           ;
+; Total pins                         ; 45                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
 ; Embedded Multiplier 9-bit elements ; 4                                             ;
@@ -69,24 +69,24 @@ applicable agreement for further details.
 +---------------------------------------------+------+
 ; Statistic                                   ; Top  ;
 +---------------------------------------------+------+
-; Estimated Total logic elements              ; 2053 ;
+; Estimated Total logic elements              ; 1981 ;
 ;                                             ;      ;
-; Total combinational functions               ; 2050 ;
+; Total combinational functions               ; 1977 ;
 ; Logic element usage by number of LUT inputs ;      ;
-;     -- 4 input functions                    ; 513  ;
-;     -- 3 input functions                    ; 662  ;
-;     -- <=2 input functions                  ; 875  ;
+;     -- 4 input functions                    ; 508  ;
+;     -- 3 input functions                    ; 605  ;
+;     -- <=2 input functions                  ; 864  ;
 ;                                             ;      ;
 ; Logic elements by mode                      ;      ;
-;     -- normal mode                          ; 1220 ;
-;     -- arithmetic mode                      ; 830  ;
+;     -- normal mode                          ; 1177 ;
+;     -- arithmetic mode                      ; 800  ;
 ;                                             ;      ;
-; Total registers                             ; 212  ;
-;     -- Dedicated logic registers            ; 212  ;
+; Total registers                             ; 214  ;
+;     -- Dedicated logic registers            ; 214  ;
 ;     -- I/O registers                        ; 0    ;
 ;                                             ;      ;
 ; Virtual pins                                ; 0    ;
-; I/O pins                                    ; 42   ;
+; I/O pins                                    ; 45   ;
 ; Embedded Multiplier 9-bit elements          ; 4    ;
 ; Total memory bits                           ; 0    ;
 ; Total RAM block bits                        ; 0    ;
@@ -98,15 +98,15 @@ applicable agreement for further details.
 ;     -- Registered Output Connections        ; 0    ;
 ;                                             ;      ;
 ; Internal Connections                        ;      ;
-;     -- Total Connections                    ; 6805 ;
-;     -- Registered Connections               ; 953  ;
+;     -- Total Connections                    ; 6607 ;
+;     -- Registered Connections               ; 964  ;
 ;                                             ;      ;
 ; External Connections                        ;      ;
 ;     -- Top                                  ; 0    ;
 ;                                             ;      ;
 ; Partition Interface                         ;      ;
-;     -- Input Ports                          ; 11   ;
-;     -- Output Ports                         ; 31   ;
+;     -- Input Ports                          ; 10   ;
+;     -- Output Ports                         ; 35   ;
 ;     -- Bidir Ports                          ; 0    ;
 ;                                             ;      ;
 ; Registered Ports                            ;      ;
@@ -131,27 +131,27 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 2,053 ;
+; Estimated Total logic elements              ; 1,981 ;
 ;                                             ;       ;
-; Total combinational functions               ; 2050  ;
+; Total combinational functions               ; 1977  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 513   ;
-;     -- 3 input functions                    ; 662   ;
-;     -- <=2 input functions                  ; 875   ;
+;     -- 4 input functions                    ; 508   ;
+;     -- 3 input functions                    ; 605   ;
+;     -- <=2 input functions                  ; 864   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1220  ;
-;     -- arithmetic mode                      ; 830   ;
+;     -- normal mode                          ; 1177  ;
+;     -- arithmetic mode                      ; 800   ;
 ;                                             ;       ;
-; Total registers                             ; 212   ;
-;     -- Dedicated logic registers            ; 212   ;
+; Total registers                             ; 214   ;
+;     -- Dedicated logic registers            ; 214   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 42    ;
+; I/O pins                                    ; 45    ;
 ; Embedded Multiplier 9-bit elements          ; 4     ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 215   ;
-; Total fan-out                               ; 6736  ;
+; Maximum fan-out                             ; 216   ;
+; Total fan-out                               ; 6538  ;
 ; Average fan-out                             ; 2.91  ;
 +---------------------------------------------+-------+
 
@@ -180,22 +180,20 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Partition Merge
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Thu Apr 10 15:25:33 2014
+    Info: Processing started: Thu Apr 10 18:46:35 2014
 Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off g23_lab5 -c g23_lab5 --merge=on
 Warning: Previously generated Fitter netlist for partition "Top" is older than current Synthesis netlist -- using the current Synthesis netlist instead to ensure that the latest source changes are included
     Info: Forcing the Quartus II software to use the previously generated Fitter netlist is allowed by setting the Netlist Type to Post-Fit (Strict)
 Info: Using synthesis netlist for partition "Top"
 Info: Resolved and merged 1 partition(s)
-Warning: Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "edit_mode"
-Info: Implemented 2102 device resources after synthesis - the final resource count might be different
-    Info: Implemented 11 input pins
-    Info: Implemented 31 output pins
-    Info: Implemented 2056 logic cells
+Info: Implemented 2034 device resources after synthesis - the final resource count might be different
+    Info: Implemented 10 input pins
+    Info: Implemented 35 output pins
+    Info: Implemented 1985 logic cells
     Info: Implemented 4 DSP elements
-Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 3 warnings
+Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 283 megabytes
-    Info: Processing ended: Thu Apr 10 15:25:34 2014
+    Info: Processing ended: Thu Apr 10 18:46:36 2014
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

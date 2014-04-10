@@ -37,6 +37,8 @@ ENTITY g23_HMS_counter IS
 		m_inc		: IN STD_LOGIC;
 		s_inc		: IN STD_LOGIC;
 		
+		dst			: IN STD_LOGIC;
+		
 		hours		: OUT STD_LOGIC_VECTOR(4 downto 0);
 		minutes		: OUT STD_LOGIC_VECTOR(5 downto 0);
 		seconds		: OUT STD_LOGIC_VECTOR(5 downto 0);
@@ -127,7 +129,7 @@ BEGIN
 		aclr => reset,
 		clock => clk,
 		data => h_set,
-		cnt_en => (count_enable AND m_maxed AND s_maxed) OR h_inc,
+		cnt_en => (count_enable AND m_maxed AND s_maxed) OR h_inc OR dst,
 		q => h
 	);
 	
