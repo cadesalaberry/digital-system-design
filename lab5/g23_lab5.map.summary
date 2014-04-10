@@ -1,15 +1,15 @@
-Analysis & Synthesis Status : Successful - Wed Apr 09 14:10:30 2014
+Analysis & Synthesis Status : Successful - Wed Apr 09 22:10:57 2014
 Quartus II 64-Bit Version : 9.1 Build 350 03/24/2010 SP 2 SJ Full Version
 Revision Name : g23_lab5
-Top-level Entity Name : g23_12_to_BCD
+Top-level Entity Name : g23_lab5_testbed
 Family : Stratix II
 Logic utilization : N/A
-    Combinational ALUTs : 551
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 28
+    Combinational ALUTs : 1,204
+    Dedicated logic registers : 208
+Total registers : 208
+Total pins : 43
 Total virtual pins : 0
 Total block memory bits : 0
-DSP block 9-bit elements : 0
+DSP block 9-bit elements : 8
 Total PLLs : 0
 Total DLLs : 0

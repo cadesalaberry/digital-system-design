@@ -22,18 +22,25 @@ USE lpm.lpm_components.all;
 
 ENTITY g23_HMS_counter IS
 
-	PORT ( 
+	PORT (
+		clk			: IN STD_LOGIC;
+		reset		: IN STD_LOGIC;
+		
+		load_enable	: IN STD_LOGIC;
+		count_enable: IN STD_LOGIC;
+		
 		h_set		: IN STD_LOGIC_VECTOR(4 downto 0);
 		m_set		: IN STD_LOGIC_VECTOR(5 downto 0);
 		s_set		: IN STD_LOGIC_VECTOR(5 downto 0);
-		load_enable	: IN STD_LOGIC;
-		count_enable: IN STD_LOGIC;
-		sec_clock	: IN STD_LOGIC;
-		reset		: IN STD_LOGIC;
-		clk			: IN STD_LOGIC;
+		
+		h_inc		: IN STD_LOGIC;
+		m_inc		: IN STD_LOGIC;
+		s_inc		: IN STD_LOGIC;
+		
 		hours		: OUT STD_LOGIC_VECTOR(4 downto 0);
 		minutes		: OUT STD_LOGIC_VECTOR(5 downto 0);
 		seconds		: OUT STD_LOGIC_VECTOR(5 downto 0);
+		
 		end_of_day	: OUT STD_LOGIC
 	);
 	
@@ -50,8 +57,7 @@ ARCHITECTURE alpha OF g23_HMS_counter IS
 	signal m_maxed	: STD_LOGIC;	
 	signal s_maxed	: STD_LOGIC;
 	
-	signal earth_clk	: STD_LOGIC;
-	signal reset_inv	: STD_LOGIC;
+	signal earth_clk: STD_LOGIC;
 	
 	COMPONENT g23_earth_timer
 		PORT (
@@ -64,10 +70,9 @@ ARCHITECTURE alpha OF g23_HMS_counter IS
 
 BEGIN
 
-	reset_inv	<= reset;
 	end_of_day	<= h_maxed AND m_maxed AND s_maxed;
 	
-	hours <= h;
+	hours	<= h;
 	minutes <= m;
 	seconds <= s;
 	
@@ -85,10 +90,10 @@ BEGIN
 	)
 	PORT MAP (
 		aload => load_enable,
-		aclr => reset_inv,
+		aclr => reset,
 		clock => clk,
 		data => s_set,
-		cnt_en => sec_clock,
+		cnt_en => count_enable OR m_inc,
 		q => s
 	);
 	
@@ -102,10 +107,10 @@ BEGIN
 	)
 	PORT MAP (
 		aload => load_enable,
-		aclr => reset_inv,
+		aclr => reset,
 		clock => clk,
 		data => m_set,
-		cnt_en => sec_clock AND s_maxed,
+		cnt_en => (count_enable AND s_maxed) OR m_inc,
 		q => m
 	);
 	
@@ -119,14 +124,11 @@ BEGIN
 	)
 	PORT MAP (
 		aload => load_enable,
-		aclr => reset_inv,
+		aclr => reset,
 		clock => clk,
 		data => h_set,
-		cnt_en => sec_clock AND m_maxed AND s_maxed,
+		cnt_en => (count_enable AND m_maxed AND s_maxed) OR m_inc,
 		q => h
 	);
 	
-	
-
-		
 END alpha;

@@ -1,0 +1,17 @@
+Fitter Status : Successful - Wed Apr 09 22:11:06 2014
+Quartus II 64-Bit Version : 9.1 Build 350 03/24/2010 SP 2 SJ Full Version
+Revision Name : g23_lab5
+Top-level Entity Name : g23_lab5_testbed
+Family : Stratix II
+Device : EP2S15F484C3
+Timing Models : Final
+Logic utilization : 10 %
+    Combinational ALUTs : 1,207 / 12,480 ( 10 % )
+    Dedicated logic registers : 208 / 12,480 ( 2 % )
+Total registers : 208
+Total pins : 43 / 343 ( 13 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 419,328 ( 0 % )
+DSP block 9-bit elements : 8 / 96 ( 8 % )
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

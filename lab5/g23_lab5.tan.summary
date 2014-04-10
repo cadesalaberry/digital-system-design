@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.119 ns
+From           : reset
+To             : g23_UTC_to_MTC:utc_mtc|lpm_counter:secs_counter|cntr_1sk:auto_generated|safe_q[7]
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.910 ns
+From           : g23_HMS_counter:earth_hms|lpm_counter:seconds_counter|cntr_43l:auto_generated|safe_q[4]
+To             : digit_0[4]
+From Clock     : clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.571 ns
+From           : mode[0]
+To             : digit_0[4]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -2.462 ns
+From           : increment
+To             : last_increment_state
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clock'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 89.38 MHz ( period = 11.188 ns )
+From           : g23_YMD_counter:YMD_counter|y[11]
+To             : g23_YMD_counter:YMD_counter|d[2]
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

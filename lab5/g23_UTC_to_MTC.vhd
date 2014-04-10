@@ -59,12 +59,13 @@ architecture cascading of g23_UTC_to_MTC is
 		PORT (
 			clock 			: in 	STD_LOGIC; -- ASYNC, Should be connected to the master 50MHz clock.
 			reset 			: in 	STD_LOGIC; -- ASYNC, When high the counts are all set to zero.
-			day_count_en 	: in 	STD_LOGIC; -- SYNC, A pulse with a width of 1 master clock cycle.
+			
+			count_enable 	: in 	STD_LOGIC; -- SYNC, A pulse with a width of 1 master clock cycle.
 			load_enable 	: in 	STD_LOGIC; -- SYNC, if high sets count values to Y_Set, M_Set, and D_Set inputs
 
-			Y_set			: in	STD_LOGIC_VECTOR(11 downto 0);
-			M_set			: in	STD_LOGIC_VECTOR(3 downto 0);
-			D_set			: in	STD_LOGIC_VECTOR(4 downto 0);
+			y_set			: in	STD_LOGIC_VECTOR(11 downto 0);
+			m_set			: in	STD_LOGIC_VECTOR(3 downto 0);
+			d_set			: in	STD_LOGIC_VECTOR(4 downto 0);
 			
 			years			: out	STD_LOGIC_VECTOR(11 downto 0);
 			months			: out	STD_LOGIC_VECTOR(3 downto 0);
@@ -72,19 +73,22 @@ architecture cascading of g23_UTC_to_MTC is
 		);
 	END COMPONENT;
 	
-	COMPONENT g23_HMS_Counter
+	COMPONENT g23_HMS_counter
 		PORT ( 
+			reset		: in STD_LOGIC;
+			clk			: in STD_LOGIC;
+			
+			load_enable	: in STD_LOGIC;
+			count_enable: in STD_LOGIC;
+			
 			h_set		: in STD_LOGIC_VECTOR(4 downto 0);
 			m_set		: in STD_LOGIC_VECTOR(5 downto 0);
 			s_set		: in STD_LOGIC_VECTOR(5 downto 0);
-			load_enable	: in STD_LOGIC;
-			count_enable: in STD_LOGIC;
-			sec_clock	: in STD_LOGIC;
-			reset		: in STD_LOGIC;
-			clk			: in STD_LOGIC;
+			
 			hours		: out STD_LOGIC_VECTOR(4 downto 0);
 			minutes		: out STD_LOGIC_VECTOR(5 downto 0);
 			seconds		: out STD_LOGIC_VECTOR(5 downto 0);
+			
 			end_of_day	: out STD_LOGIC
 		);
 	END COMPONENT;
@@ -154,7 +158,7 @@ BEGIN
 	PORT MAP (
 		clock 			=> clock,
 		reset 			=> reset,
-		day_count_en 	=> enable AND eod AND (NOT date_reached),
+		count_enable 	=> enable AND eod AND (NOT date_reached),
 		load_enable 	=> reset OR circuit_start,
 
 		Y_set			=> "011111010000",
@@ -166,13 +170,12 @@ BEGIN
 		days			=> days_sig
 	);
 			
-	HMS_counter : g23_HMS_Counter
+	HMS_counter : g23_HMS_counter
 	PORT MAP (
 		clk 			=> clock,
 		reset 			=> reset,
-		count_enable 	=> enable AND NOT date_reached,
+		count_enable 	=> enable AND NOT date_reached AND clock,
 		load_enable 	=> reset OR circuit_start,
-		sec_clock		=> clock AND NOT date_reached,
 		
 		h_set			=> (others => '0'),
 		m_set			=> (others => '0'),

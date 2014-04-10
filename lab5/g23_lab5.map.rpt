@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g23_lab5
-Wed Apr 09 14:10:30 2014
+Wed Apr 09 22:10:57 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -13,14 +13,53 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
- 10. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
- 12. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
- 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Div2
- 14. lpm_mult Parameter Settings by Entity Instance
- 15. Analysis & Synthesis Messages
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter
+ 13. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:minutes_counter
+ 14. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter
+ 15. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:seconds_counter
+ 16. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:minutes_counter
+ 17. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:hours_counter
+ 18. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:seconds_counter
+ 19. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:minutes_counter
+ 20. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:hours_counter
+ 21. Source assignments for g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:secs_counter
+ 22. Source assignments for g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:days_counter
+ 23. Source assignments for g23_basic_timer:basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter
+ 24. Source assignments for g23_basic_timer:basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter
+ 25. Parameter Settings for User Entity Instance: g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter
+ 26. Parameter Settings for User Entity Instance: g23_HMS_counter:earth_hms|LPM_COUNTER:minutes_counter
+ 27. Parameter Settings for User Entity Instance: g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter
+ 28. Parameter Settings for User Entity Instance: g23_HMS_counter:mars_hms|LPM_COUNTER:seconds_counter
+ 29. Parameter Settings for User Entity Instance: g23_HMS_counter:mars_hms|LPM_COUNTER:minutes_counter
+ 30. Parameter Settings for User Entity Instance: g23_HMS_counter:mars_hms|LPM_COUNTER:hours_counter
+ 31. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:seconds_counter
+ 32. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:minutes_counter
+ 33. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:hours_counter
+ 34. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:secs_counter
+ 35. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:days_counter
+ 36. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:earth
+ 37. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter
+ 38. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:mars
+ 39. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter
+ 40. Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0
+ 41. Parameter Settings for Inferred Entity Instance: g23_YMD_counter:YMD_counter|lpm_divide:Mod1
+ 42. Parameter Settings for Inferred Entity Instance: g23_YMD_counter:YMD_counter|lpm_divide:Mod0
+ 43. Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1
+ 44. Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0
+ 45. lpm_mult Parameter Settings by Entity Instance
+ 46. Port Connectivity Checks: "g23_7_segment_decoder:decode_0"
+ 47. Port Connectivity Checks: "g23_7_segment_decoder:decode_3"
+ 48. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter"
+ 49. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter"
+ 50. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc"
+ 51. Port Connectivity Checks: "g23_HMS_counter:mars_hms"
+ 52. Port Connectivity Checks: "g23_HMS_counter:earth_hms"
+ 53. Port Connectivity Checks: "g23_YMD_counter:YMD_counter"
+ 54. Analysis & Synthesis Messages
 
 
 
@@ -46,19 +85,19 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Wed Apr 09 14:10:30 2014         ;
+; Analysis & Synthesis Status   ; Successful - Wed Apr 09 22:10:57 2014         ;
 ; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                 ; g23_lab5                                      ;
-; Top-level Entity Name         ; g23_12_to_BCD                                 ;
+; Top-level Entity Name         ; g23_lab5_testbed                              ;
 ; Family                        ; Stratix II                                    ;
 ; Logic utilization             ; N/A                                           ;
-;     Combinational ALUTs       ; 551                                           ;
-;     Dedicated logic registers ; 0                                             ;
-; Total registers               ; 0                                             ;
-; Total pins                    ; 28                                            ;
+;     Combinational ALUTs       ; 1,204                                         ;
+;     Dedicated logic registers ; 208                                           ;
+; Total registers               ; 208                                           ;
+; Total pins                    ; 43                                            ;
 ; Total virtual pins            ; 0                                             ;
 ; Total block memory bits       ; 0                                             ;
-; DSP block 9-bit elements      ; 0                                             ;
+; DSP block 9-bit elements      ; 8                                             ;
 ; Total PLLs                    ; 0                                             ;
 ; Total DLLs                    ; 0                                             ;
 +-------------------------------+-----------------------------------------------+
@@ -69,7 +108,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; g23_12_to_BCD      ; g23_lab5           ;
+; Top-level entity name                                                      ; g23_lab5_testbed   ; g23_lab5           ;
 ; Family name                                                                ; Stratix II         ; Stratix II         ;
 ; Use Generated Physical Constraints File                                    ; Off                ;                    ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -166,94 +205,165 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
-; g23_12_to_BCD.vhd                ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_12_to_BCD.vhd          ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_divide.tdf        ;
-; db/lpm_divide_rgm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_divide_rgm.tdf      ;
-; db/sign_div_unsign_3nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/sign_div_unsign_3nh.tdf ;
-; db/alt_u_div_a6f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/alt_u_div_a6f.tdf       ;
+; g23_7_segment_decoder.vhd        ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_7_segment_decoder.vhd  ;
+; g23_dayfrac_to_MTC.vhd           ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_dayfrac_to_MTC.vhd     ;
+; g23_generic_timer.vhd            ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_generic_timer.vhd      ;
+; g23_basic_timer.vhd              ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_basic_timer.vhd        ;
+; g23_Seconds_to_Days.vhd          ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_Seconds_to_Days.vhd    ;
+; g23_UTC_to_MTC.vhd               ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_UTC_to_MTC.vhd         ;
+; g23_lab5_testbed.vhd             ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_lab5_testbed.vhd       ;
+; g23_HMS_counter.vhd              ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_HMS_counter.vhd        ;
+; g23_YMD_counter.vhd              ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_YMD_counter.vhd        ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf       ;
+; db/cntr_43l.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/cntr_43l.tdf            ;
+; db/cmpr_cdc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/cmpr_cdc.tdf            ;
+; db/cntr_33l.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/cntr_33l.tdf            ;
+; db/cmpr_bdc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/cmpr_bdc.tdf            ;
+; db/cntr_1sk.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/cntr_1sk.tdf            ;
+; db/cntr_urk.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/cntr_urk.tdf            ;
+; db/cntr_agl.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/cntr_agl.tdf            ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_mult.tdf          ;
-; multcore.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/multcore.tdf          ;
-; mpar_add.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/mpar_add.tdf          ;
-; altshift.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/altshift.tdf          ;
-; db/lpm_divide_eto.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_divide_eto.tdf      ;
-; db/abs_divider_pbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/abs_divider_pbg.tdf     ;
-; db/alt_u_div_04f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/alt_u_div_04f.tdf       ;
-; db/lpm_abs_lr9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_abs_lr9.tdf         ;
-; db/lpm_abs_4t9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_abs_4t9.tdf         ;
-; db/lpm_divide_cto.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_divide_cto.tdf      ;
-; db/abs_divider_nbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/abs_divider_nbg.tdf     ;
-; db/alt_u_div_s3f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/alt_u_div_s3f.tdf       ;
-; db/lpm_abs_ir9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_abs_ir9.tdf         ;
-; db/lpm_abs_5t9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_abs_5t9.tdf         ;
+; db/mult_adt.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/mult_adt.tdf            ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_divide.tdf        ;
+; db/lpm_divide_09m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_divide_09m.tdf      ;
+; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/sign_div_unsign_5nh.tdf ;
+; db/alt_u_div_e6f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/alt_u_div_e6f.tdf       ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                                                                                 ;
-+-----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
-; Resource                                      ; Usage                                                                                                                       ;
-+-----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
-; Estimated ALUTs Used                          ; 551                                                                                                                         ;
-; Dedicated logic registers                     ; 0                                                                                                                           ;
-;                                               ;                                                                                                                             ;
-; Estimated ALUTs Unavailable                   ; 2                                                                                                                           ;
-;                                               ;                                                                                                                             ;
-; Total combinational functions                 ; 551                                                                                                                         ;
-; Combinational ALUT usage by number of inputs  ;                                                                                                                             ;
-;     -- 7 input functions                      ; 1                                                                                                                           ;
-;     -- 6 input functions                      ; 1                                                                                                                           ;
-;     -- 5 input functions                      ; 1                                                                                                                           ;
-;     -- 4 input functions                      ; 110                                                                                                                         ;
-;     -- <=3 input functions                    ; 438                                                                                                                         ;
-;                                               ;                                                                                                                             ;
-; Combinational ALUTs by mode                   ;                                                                                                                             ;
-;     -- normal mode                            ; 224                                                                                                                         ;
-;     -- extended LUT mode                      ; 1                                                                                                                           ;
-;     -- arithmetic mode                        ; 267                                                                                                                         ;
-;     -- shared arithmetic mode                 ; 59                                                                                                                          ;
-;                                               ;                                                                                                                             ;
-; Estimated ALUT/register pairs used            ; 553                                                                                                                         ;
-;                                               ;                                                                                                                             ;
-; Total registers                               ; 0                                                                                                                           ;
-;     -- Dedicated logic registers              ; 0                                                                                                                           ;
-;     -- I/O registers                          ; 0                                                                                                                           ;
-;                                               ;                                                                                                                             ;
-; Estimated ALMs:  partially or completely used ; 277                                                                                                                         ;
-;                                               ;                                                                                                                             ;
-; I/O pins                                      ; 28                                                                                                                          ;
-; Maximum fan-out node                          ; lpm_divide:Div0|lpm_divide_rgm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_a6f:divider|add_sub_9_result_int[10]~41 ;
-; Maximum fan-out                               ; 36                                                                                                                          ;
-; Total fan-out                                 ; 1571                                                                                                                        ;
-; Average fan-out                               ; 2.71                                                                                                                        ;
-+-----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++-----------------------------------------------+-------+
+; Resource                                      ; Usage ;
++-----------------------------------------------+-------+
+; Estimated ALUTs Used                          ; 1204  ;
+; Dedicated logic registers                     ; 208   ;
+;                                               ;       ;
+; Estimated ALUTs Unavailable                   ; 70    ;
+;                                               ;       ;
+; Total combinational functions                 ; 1204  ;
+; Combinational ALUT usage by number of inputs  ;       ;
+;     -- 7 input functions                      ; 2     ;
+;     -- 6 input functions                      ; 68    ;
+;     -- 5 input functions                      ; 103   ;
+;     -- 4 input functions                      ; 135   ;
+;     -- <=3 input functions                    ; 896   ;
+;                                               ;       ;
+; Combinational ALUTs by mode                   ;       ;
+;     -- normal mode                            ; 509   ;
+;     -- extended LUT mode                      ; 2     ;
+;     -- arithmetic mode                        ; 657   ;
+;     -- shared arithmetic mode                 ; 36    ;
+;                                               ;       ;
+; Estimated ALUT/register pairs used            ; 1275  ;
+;                                               ;       ;
+; Total registers                               ; 208   ;
+;     -- Dedicated logic registers              ; 208   ;
+;     -- I/O registers                          ; 0     ;
+;                                               ;       ;
+; Estimated ALMs:  partially or completely used ; 638   ;
+;                                               ;       ;
+; I/O pins                                      ; 43    ;
+; DSP block 9-bit elements                      ; 8     ;
+; Maximum fan-out node                          ; clock ;
+; Maximum fan-out                               ; 210   ;
+; Total fan-out                                 ; 4735  ;
+; Average fan-out                               ; 3.24  ;
++-----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                  ;
-+----------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                            ; Library Name ;
-+----------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
-; |g23_12_to_BCD                         ; 551 (35)          ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 28   ; 0            ; |g23_12_to_BCD                                                                                                 ; work         ;
-;    |lpm_divide:Div0|                   ; 60 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_divide:Div0                                                                                 ;              ;
-;       |lpm_divide_rgm:auto_generated|  ; 60 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_divide:Div0|lpm_divide_rgm:auto_generated                                                   ;              ;
-;          |sign_div_unsign_3nh:divider| ; 60 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_divide:Div0|lpm_divide_rgm:auto_generated|sign_div_unsign_3nh:divider                       ;              ;
-;             |alt_u_div_a6f:divider|    ; 60 (60)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_divide:Div0|lpm_divide_rgm:auto_generated|sign_div_unsign_3nh:divider|alt_u_div_a6f:divider ; work         ;
-;    |lpm_divide:Div1|                   ; 221 (0)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_divide:Div1                                                                                 ;              ;
-;       |lpm_divide_eto:auto_generated|  ; 221 (0)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_divide:Div1|lpm_divide_eto:auto_generated                                                   ; work         ;
-;          |abs_divider_pbg:divider|     ; 221 (8)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_divide:Div1|lpm_divide_eto:auto_generated|abs_divider_pbg:divider                           ;              ;
-;             |alt_u_div_04f:divider|    ; 198 (198)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_divide:Div1|lpm_divide_eto:auto_generated|abs_divider_pbg:divider|alt_u_div_04f:divider     ; work         ;
-;             |lpm_abs_4t9:my_abs_num|   ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_divide:Div1|lpm_divide_eto:auto_generated|abs_divider_pbg:divider|lpm_abs_4t9:my_abs_num    ;              ;
-;    |lpm_divide:Div2|                   ; 221 (0)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_divide:Div2                                                                                 ;              ;
-;       |lpm_divide_cto:auto_generated|  ; 221 (0)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_divide:Div2|lpm_divide_cto:auto_generated                                                   ; work         ;
-;          |abs_divider_nbg:divider|     ; 221 (10)          ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_divide:Div2|lpm_divide_cto:auto_generated|abs_divider_nbg:divider                           ;              ;
-;             |alt_u_div_s3f:divider|    ; 194 (194)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_divide:Div2|lpm_divide_cto:auto_generated|abs_divider_nbg:divider|alt_u_div_s3f:divider     ; work         ;
-;             |lpm_abs_5t9:my_abs_num|   ; 17 (17)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_divide:Div2|lpm_divide_cto:auto_generated|abs_divider_nbg:divider|lpm_abs_5t9:my_abs_num    ;              ;
-;    |lpm_mult:Mult0|                    ; 7 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_mult:Mult0                                                                                  ;              ;
-;       |multcore:mult_core|             ; 7 (7)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_mult:Mult0|multcore:mult_core                                                               ; work         ;
-;    |lpm_mult:Mult1|                    ; 7 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_mult:Mult1                                                                                  ;              ;
-;       |multcore:mult_core|             ; 7 (7)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_12_to_BCD|lpm_mult:Mult1|multcore:mult_core                                                               ;              ;
-+----------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                ;
++------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                  ; Library Name ;
++------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |g23_lab5_testbed                              ; 1204 (36)         ; 208 (2)      ; 0                 ; 8            ; 0       ; 0         ; 1         ; 43   ; 0            ; |g23_lab5_testbed                                                                                                                                                    ; work         ;
+;    |g23_7_segment_decoder:decode_0|            ; 7 (7)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_0                                                                                                                     ; work         ;
+;    |g23_7_segment_decoder:decode_1|            ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_1                                                                                                                     ; work         ;
+;    |g23_7_segment_decoder:decode_2|            ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_2                                                                                                                     ; work         ;
+;    |g23_HMS_counter:earth_hms|                 ; 43 (5)            ; 17 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms                                                                                                                          ; work         ;
+;       |lpm_counter:hours_counter|              ; 11 (0)            ; 5 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:hours_counter                                                                                                ; work         ;
+;          |cntr_33l:auto_generated|             ; 11 (11)           ; 5 (5)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:hours_counter|cntr_33l:auto_generated                                                                        ; work         ;
+;       |lpm_counter:minutes_counter|            ; 14 (0)            ; 6 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:minutes_counter                                                                                              ; work         ;
+;          |cntr_43l:auto_generated|             ; 14 (13)           ; 6 (6)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:minutes_counter|cntr_43l:auto_generated                                                                      ; work         ;
+;             |cmpr_cdc:cmpr2|                   ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:minutes_counter|cntr_43l:auto_generated|cmpr_cdc:cmpr2                                                       ; work         ;
+;       |lpm_counter:seconds_counter|            ; 13 (0)            ; 6 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:seconds_counter                                                                                              ; work         ;
+;          |cntr_43l:auto_generated|             ; 13 (13)           ; 6 (6)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:seconds_counter|cntr_43l:auto_generated                                                                      ; work         ;
+;    |g23_HMS_counter:mars_hms|                  ; 45 (7)            ; 17 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms                                                                                                                           ; work         ;
+;       |lpm_counter:hours_counter|              ; 12 (0)            ; 5 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:hours_counter                                                                                                 ; work         ;
+;          |cntr_33l:auto_generated|             ; 12 (12)           ; 5 (5)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_33l:auto_generated                                                                         ; work         ;
+;       |lpm_counter:minutes_counter|            ; 13 (0)            ; 6 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:minutes_counter                                                                                               ; work         ;
+;          |cntr_43l:auto_generated|             ; 13 (13)           ; 6 (6)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_43l:auto_generated                                                                       ; work         ;
+;       |lpm_counter:seconds_counter|            ; 13 (0)            ; 6 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:seconds_counter                                                                                               ; work         ;
+;          |cntr_43l:auto_generated|             ; 13 (13)           ; 6 (6)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_43l:auto_generated                                                                       ; work         ;
+;    |g23_UTC_to_MTC:utc_mtc|                    ; 666 (29)          ; 70 (0)       ; 0                 ; 8            ; 0       ; 0         ; 1         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc                                                                                                                             ; work         ;
+;       |g23_HMS_counter:HMS_counter|            ; 43 (6)            ; 17 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter                                                                                                 ; work         ;
+;          |lpm_counter:hours_counter|           ; 11 (0)            ; 5 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:hours_counter                                                                       ; work         ;
+;             |cntr_33l:auto_generated|          ; 11 (11)           ; 5 (5)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:hours_counter|cntr_33l:auto_generated                                               ; work         ;
+;          |lpm_counter:minutes_counter|         ; 13 (0)            ; 6 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:minutes_counter                                                                     ; work         ;
+;             |cntr_43l:auto_generated|          ; 13 (13)           ; 6 (6)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:minutes_counter|cntr_43l:auto_generated                                             ; work         ;
+;          |lpm_counter:seconds_counter|         ; 13 (0)            ; 6 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:seconds_counter                                                                     ; work         ;
+;             |cntr_43l:auto_generated|          ; 13 (13)           ; 6 (6)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:seconds_counter|cntr_43l:auto_generated                                             ; work         ;
+;       |g23_Seconds_to_Days:seconds_to_days|    ; 153 (153)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_Seconds_to_Days:seconds_to_days                                                                                         ; work         ;
+;       |g23_YMD_counter:YMD_counter|            ; 290 (78)          ; 22 (22)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter                                                                                                 ; work         ;
+;          |lpm_divide:Mod0|                     ; 126 (0)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0                                                                                 ;              ;
+;             |lpm_divide_09m:auto_generated|    ; 126 (0)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_09m:auto_generated                                                   ;              ;
+;                |sign_div_unsign_5nh:divider|   ; 126 (0)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_09m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
+;                   |alt_u_div_e6f:divider|      ; 126 (126)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_09m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider ;              ;
+;          |lpm_divide:Mod1|                     ; 86 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1                                                                                 ;              ;
+;             |lpm_divide_09m:auto_generated|    ; 86 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_09m:auto_generated                                                   ;              ;
+;                |sign_div_unsign_5nh:divider|   ; 86 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_09m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
+;                   |alt_u_div_e6f:divider|      ; 86 (86)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_09m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider ;              ;
+;       |g23_dayfrac_to_MTC:day_fraction_to_MTC| ; 118 (118)         ; 0 (0)        ; 0                 ; 8            ; 0       ; 0         ; 1         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC                                                                                      ; work         ;
+;          |lpm_mult:Mult0|                      ; 0 (0)             ; 0 (0)        ; 0                 ; 8            ; 0       ; 0         ; 1         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0                                                                       ;              ;
+;             |mult_adt:auto_generated|          ; 0 (0)             ; 0 (0)        ; 0                 ; 8            ; 0       ; 0         ; 1         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0|mult_adt:auto_generated                                               ;              ;
+;       |lpm_counter:days_counter|               ; 15 (0)            ; 14 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|lpm_counter:days_counter                                                                                                    ; work         ;
+;          |cntr_urk:auto_generated|             ; 15 (15)           ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|lpm_counter:days_counter|cntr_urk:auto_generated                                                                            ; work         ;
+;       |lpm_counter:secs_counter|               ; 18 (0)            ; 17 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|lpm_counter:secs_counter                                                                                                    ; work         ;
+;          |cntr_1sk:auto_generated|             ; 18 (18)           ; 17 (17)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|lpm_counter:secs_counter|cntr_1sk:auto_generated                                                                            ; work         ;
+;    |g23_YMD_counter:YMD_counter|               ; 287 (75)          ; 22 (22)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter                                                                                                                        ;              ;
+;       |lpm_divide:Mod0|                        ; 126 (0)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod0                                                                                                        ;              ;
+;          |lpm_divide_09m:auto_generated|       ; 126 (0)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_09m:auto_generated                                                                          ;              ;
+;             |sign_div_unsign_5nh:divider|      ; 126 (0)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_09m:auto_generated|sign_div_unsign_5nh:divider                                              ;              ;
+;                |alt_u_div_e6f:divider|         ; 126 (126)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_09m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider                        ;              ;
+;       |lpm_divide:Mod1|                        ; 86 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod1                                                                                                        ;              ;
+;          |lpm_divide_09m:auto_generated|       ; 86 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_09m:auto_generated                                                                          ;              ;
+;             |sign_div_unsign_5nh:divider|      ; 86 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_09m:auto_generated|sign_div_unsign_5nh:divider                                              ;              ;
+;                |alt_u_div_e6f:divider|         ; 86 (86)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_09m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider                        ;              ;
+;    |g23_basic_timer:basic_timer|               ; 104 (0)           ; 80 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer                                                                                                                        ; work         ;
+;       |g23_generic_timer:earth|                ; 52 (11)           ; 40 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:earth                                                                                                ; work         ;
+;          |lpm_counter:counter|                 ; 41 (0)            ; 40 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:earth|lpm_counter:counter                                                                            ; work         ;
+;             |cntr_agl:auto_generated|          ; 41 (41)           ; 40 (40)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:earth|lpm_counter:counter|cntr_agl:auto_generated                                                    ; work         ;
+;       |g23_generic_timer:mars|                 ; 52 (11)           ; 40 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:mars                                                                                                 ; work         ;
+;          |lpm_counter:counter|                 ; 41 (0)            ; 40 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:mars|lpm_counter:counter                                                                             ; work         ;
+;             |cntr_agl:auto_generated|          ; 41 (41)           ; 40 (40)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:mars|lpm_counter:counter|cntr_agl:auto_generated                                                     ; work         ;
++------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary   ;
++----------------------------------+-------------+
+; Statistic                        ; Number Used ;
++----------------------------------+-------------+
+; Simple Multipliers (9-bit)       ; 0           ;
+; Simple Multipliers (18-bit)      ; 0           ;
+; Simple Multipliers (36-bit)      ; 1           ;
+; Multiply Accumulators (18-bit)   ; 0           ;
+; Two-Multipliers Adders (9-bit)   ; 0           ;
+; Two-Multipliers Adders (18-bit)  ; 0           ;
+; Four-Multipliers Adders (9-bit)  ; 0           ;
+; Four-Multipliers Adders (18-bit) ; 0           ;
+; Dynamic DSP Blocks               ; 0           ;
+; DSP Blocks                       ; --          ;
+; DSP Block 9-bit Elements         ; 8           ;
+; Signed Multipliers               ; 0           ;
+; Unsigned Multipliers             ; 1           ;
+; Mixed Sign Multipliers           ; 0           ;
+; Variable Sign Multipliers        ; 0           ;
+; Dedicated Shift Register Chains  ; 0           ;
++----------------------------------+-------------+
+Note: number of DSP Blocks used is only available after a successful fit.
 
 
 +------------------------------------------------------+
@@ -261,184 +371,816 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Total registers                              ; 208   ;
+; Number of registers using Synchronous Clear  ; 4     ;
+; Number of registers using Synchronous Load   ; 111   ;
+; Number of registers using Asynchronous Clear ; 93    ;
+; Number of registers using Asynchronous Load  ; 34    ;
+; Number of registers using Clock Enable       ; 201   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 12             ; Untyped                ;
-; LPM_WIDTHD             ; 10             ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_rgm ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
++--------------------------------------------------------------------+
+; Inverted Register Statistics                                       ;
++----------------------------------------------------------+---------+
+; Inverted Register                                        ; Fan out ;
++----------------------------------------------------------+---------+
+; g23_YMD_counter:YMD_counter|y[8]                         ; 11      ;
+; g23_YMD_counter:YMD_counter|y[9]                         ; 11      ;
+; g23_YMD_counter:YMD_counter|y[10]                        ; 11      ;
+; g23_YMD_counter:YMD_counter|y[4]                         ; 10      ;
+; g23_YMD_counter:YMD_counter|y[7]                         ; 11      ;
+; g23_YMD_counter:YMD_counter|y[6]                         ; 22      ;
+; g23_YMD_counter:YMD_counter|m[0]                         ; 9       ;
+; g23_YMD_counter:YMD_counter|d[0]                         ; 6       ;
+; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|d[0]  ; 5       ;
+; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|m[0]  ; 8       ;
+; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[9]  ; 9       ;
+; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[10] ; 9       ;
+; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[8]  ; 9       ;
+; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[6]  ; 9       ;
+; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[7]  ; 9       ;
+; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[4]  ; 9       ;
+; Total number of inverted registers = 16                  ;         ;
++----------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
+; 4:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; Yes        ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|m[2] ;
+; 4:1                ; 6 bits    ; 12 ALUTs      ; 12 ALUTs             ; 0 ALUTs                ; Yes        ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[0] ;
+; 5:1                ; 4 bits    ; 12 ALUTs      ; 4 ALUTs              ; 8 ALUTs                ; Yes        ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|d[4]                        ;
+; 7:1                ; 4 bits    ; 16 ALUTs      ; 8 ALUTs              ; 8 ALUTs                ; Yes        ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|d[1] ;
+; 4:1                ; 6 bits    ; 12 ALUTs      ; 12 ALUTs             ; 0 ALUTs                ; Yes        ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[6] ;
+; 3:1                ; 6 bits    ; 12 ALUTs      ; 12 ALUTs             ; 0 ALUTs                ; No         ; |g23_lab5_testbed|Mux3                                                    ;
+; 12:1               ; 4 bits    ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |g23_lab5_testbed|Mux11                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter ;
++---------------------------+-------+------+-----------------------------------+
+; Assignment                ; Value ; From ; To                                ;
++---------------------------+-------+------+-----------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                 ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                 ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                 ;
++---------------------------+-------+------+-----------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:minutes_counter ;
++---------------------------+-------+------+-----------------------------------+
+; Assignment                ; Value ; From ; To                                ;
++---------------------------+-------+------+-----------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                 ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                 ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                 ;
++---------------------------+-------+------+-----------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter ;
++---------------------------+-------+------+---------------------------------+
+; Assignment                ; Value ; From ; To                              ;
++---------------------------+-------+------+---------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                               ;
++---------------------------+-------+------+---------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:seconds_counter ;
++---------------------------+-------+------+----------------------------------+
+; Assignment                ; Value ; From ; To                               ;
++---------------------------+-------+------+----------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                ;
++---------------------------+-------+------+----------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:minutes_counter ;
++---------------------------+-------+------+----------------------------------+
+; Assignment                ; Value ; From ; To                               ;
++---------------------------+-------+------+----------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                ;
++---------------------------+-------+------+----------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:hours_counter ;
++---------------------------+-------+------+--------------------------------+
+; Assignment                ; Value ; From ; To                             ;
++---------------------------+-------+------+--------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                              ;
++---------------------------+-------+------+--------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:seconds_counter ;
++---------------------------+-------+------+------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                         ;
++---------------------------+-------+------+------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                          ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                          ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                          ;
++---------------------------+-------+------+------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:minutes_counter ;
++---------------------------+-------+------+------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                         ;
++---------------------------+-------+------+------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                          ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                          ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                          ;
++---------------------------+-------+------+------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:hours_counter ;
++---------------------------+-------+------+----------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                       ;
++---------------------------+-------+------+----------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                        ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                        ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                        ;
++---------------------------+-------+------+----------------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Source assignments for g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:secs_counter ;
++---------------------------+-------+------+-----------------------------+
+; Assignment                ; Value ; From ; To                          ;
++---------------------------+-------+------+-----------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                           ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                           ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                           ;
++---------------------------+-------+------+-----------------------------+
+
+
++------------------------------------------------------------------------+
+; Source assignments for g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:days_counter ;
++---------------------------+-------+------+-----------------------------+
+; Assignment                ; Value ; From ; To                          ;
++---------------------------+-------+------+-----------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                           ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                           ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                           ;
++---------------------------+-------+------+-----------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Source assignments for g23_basic_timer:basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter ;
++---------------------------+-------+------+-----------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                  ;
++---------------------------+-------+------+-----------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                   ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                   ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                   ;
++---------------------------+-------+------+-----------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Source assignments for g23_basic_timer:basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter ;
++---------------------------+-------+------+----------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                 ;
++---------------------------+-------+------+----------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                  ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                  ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                  ;
++---------------------------+-------+------+----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter ;
++------------------------+-------------+-------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                        ;
++------------------------+-------------+-------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                              ;
+; LPM_WIDTH              ; 6           ; Signed Integer                                              ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                     ;
+; LPM_MODULUS            ; 60          ; Signed Integer                                              ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                     ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                     ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                     ;
+; DEVICE_FAMILY          ; Stratix II  ; Untyped                                                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                          ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                          ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                     ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                     ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                     ;
+; CBXI_PARAMETER         ; cntr_43l    ; Untyped                                                     ;
++------------------------+-------------+-------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                   ;
-+------------------------------------------------+------------+---------------------+
-; Parameter Name                                 ; Value      ; Type                ;
-+------------------------------------------------+------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 4          ; Untyped             ;
-; LPM_WIDTHB                                     ; 10         ; Untyped             ;
-; LPM_WIDTHP                                     ; 14         ; Untyped             ;
-; LPM_WIDTHR                                     ; 14         ; Untyped             ;
-; LPM_WIDTHS                                     ; 1          ; Untyped             ;
-; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped             ;
-; LPM_PIPELINE                                   ; 0          ; Untyped             ;
-; LATENCY                                        ; 0          ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped             ;
-; USE_EAB                                        ; OFF        ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 6          ; Untyped             ;
-; DEVICE_FAMILY                                  ; Stratix II ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
-; CBXI_PARAMETER                                 ; NOTHING    ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
-+------------------------------------------------+------------+---------------------+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_HMS_counter:earth_hms|LPM_COUNTER:minutes_counter ;
++------------------------+-------------+-------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                        ;
++------------------------+-------------+-------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                              ;
+; LPM_WIDTH              ; 6           ; Signed Integer                                              ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                     ;
+; LPM_MODULUS            ; 60          ; Signed Integer                                              ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                     ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                     ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                     ;
+; DEVICE_FAMILY          ; Stratix II  ; Untyped                                                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                          ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                          ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                     ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                     ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                     ;
+; CBXI_PARAMETER         ; cntr_43l    ; Untyped                                                     ;
++------------------------+-------------+-------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div1 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 16             ; Untyped                ;
-; LPM_WIDTHD             ; 8              ; Untyped                ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_eto ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter ;
++------------------------+-------------+-----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                      ;
++------------------------+-------------+-----------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                            ;
+; LPM_WIDTH              ; 5           ; Signed Integer                                            ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                   ;
+; LPM_MODULUS            ; 24          ; Signed Integer                                            ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                   ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                   ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                   ;
+; DEVICE_FAMILY          ; Stratix II  ; Untyped                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                        ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                        ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                   ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                   ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                   ;
+; CBXI_PARAMETER         ; cntr_33l    ; Untyped                                                   ;
++------------------------+-------------+-----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1                   ;
-+------------------------------------------------+------------+---------------------+
-; Parameter Name                                 ; Value      ; Type                ;
-+------------------------------------------------+------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 4          ; Untyped             ;
-; LPM_WIDTHB                                     ; 7          ; Untyped             ;
-; LPM_WIDTHP                                     ; 11         ; Untyped             ;
-; LPM_WIDTHR                                     ; 11         ; Untyped             ;
-; LPM_WIDTHS                                     ; 1          ; Untyped             ;
-; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped             ;
-; LPM_PIPELINE                                   ; 0          ; Untyped             ;
-; LATENCY                                        ; 0          ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped             ;
-; USE_EAB                                        ; OFF        ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5          ; Untyped             ;
-; DEVICE_FAMILY                                  ; Stratix II ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
-; CBXI_PARAMETER                                 ; NOTHING    ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
-+------------------------------------------------+------------+---------------------+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_HMS_counter:mars_hms|LPM_COUNTER:seconds_counter ;
++------------------------+-------------+------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                       ;
++------------------------+-------------+------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                             ;
+; LPM_WIDTH              ; 6           ; Signed Integer                                             ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                    ;
+; LPM_MODULUS            ; 60          ; Signed Integer                                             ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                    ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                    ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                    ;
+; DEVICE_FAMILY          ; Stratix II  ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                         ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                         ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                    ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                    ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                    ;
+; CBXI_PARAMETER         ; cntr_43l    ; Untyped                                                    ;
++------------------------+-------------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div2 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 17             ; Untyped                ;
-; LPM_WIDTHD             ; 5              ; Untyped                ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_cto ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_HMS_counter:mars_hms|LPM_COUNTER:minutes_counter ;
++------------------------+-------------+------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                       ;
++------------------------+-------------+------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                             ;
+; LPM_WIDTH              ; 6           ; Signed Integer                                             ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                    ;
+; LPM_MODULUS            ; 60          ; Signed Integer                                             ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                    ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                    ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                    ;
+; DEVICE_FAMILY          ; Stratix II  ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                         ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                         ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                    ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                    ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                    ;
+; CBXI_PARAMETER         ; cntr_43l    ; Untyped                                                    ;
++------------------------+-------------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance         ;
-+---------------------------------------+----------------+
-; Name                                  ; Value          ;
-+---------------------------------------+----------------+
-; Number of entity instances            ; 2              ;
-; Entity Instance                       ; lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 4              ;
-;     -- LPM_WIDTHB                     ; 10             ;
-;     -- LPM_WIDTHP                     ; 14             ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; YES            ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-; Entity Instance                       ; lpm_mult:Mult1 ;
-;     -- LPM_WIDTHA                     ; 4              ;
-;     -- LPM_WIDTHB                     ; 7              ;
-;     -- LPM_WIDTHP                     ; 11             ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; YES            ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-+---------------------------------------+----------------+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_HMS_counter:mars_hms|LPM_COUNTER:hours_counter ;
++------------------------+-------------+----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                     ;
++------------------------+-------------+----------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                           ;
+; LPM_WIDTH              ; 5           ; Signed Integer                                           ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                  ;
+; LPM_MODULUS            ; 24          ; Signed Integer                                           ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                  ;
+; DEVICE_FAMILY          ; Stratix II  ; Untyped                                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                       ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                       ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                  ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                  ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                  ;
+; CBXI_PARAMETER         ; cntr_33l    ; Untyped                                                  ;
++------------------------+-------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:seconds_counter ;
++------------------------+-------------+--------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                 ;
++------------------------+-------------+--------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                       ;
+; LPM_WIDTH              ; 6           ; Signed Integer                                                                       ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                                              ;
+; LPM_MODULUS            ; 60          ; Signed Integer                                                                       ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                                              ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                                              ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                                              ;
+; DEVICE_FAMILY          ; Stratix II  ; Untyped                                                                              ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                              ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                   ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                                                   ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                                              ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                                              ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                              ;
+; CBXI_PARAMETER         ; cntr_43l    ; Untyped                                                                              ;
++------------------------+-------------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:minutes_counter ;
++------------------------+-------------+--------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                 ;
++------------------------+-------------+--------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                       ;
+; LPM_WIDTH              ; 6           ; Signed Integer                                                                       ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                                              ;
+; LPM_MODULUS            ; 60          ; Signed Integer                                                                       ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                                              ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                                              ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                                              ;
+; DEVICE_FAMILY          ; Stratix II  ; Untyped                                                                              ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                              ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                   ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                                                   ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                                              ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                                              ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                              ;
+; CBXI_PARAMETER         ; cntr_43l    ; Untyped                                                                              ;
++------------------------+-------------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:hours_counter ;
++------------------------+-------------+------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                               ;
++------------------------+-------------+------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                       ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                     ;
+; LPM_WIDTH              ; 5           ; Signed Integer                                                                     ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                                            ;
+; LPM_MODULUS            ; 24          ; Signed Integer                                                                     ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                                            ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                                            ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                                            ;
+; DEVICE_FAMILY          ; Stratix II  ; Untyped                                                                            ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                            ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                 ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                                                 ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                                            ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                                            ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                            ;
+; CBXI_PARAMETER         ; cntr_33l    ; Untyped                                                                            ;
++------------------------+-------------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:secs_counter ;
++------------------------+-------------------+-------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                            ;
++------------------------+-------------------+-------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                  ;
+; LPM_WIDTH              ; 17                ; Signed Integer                                  ;
+; LPM_DIRECTION          ; up                ; Untyped                                         ;
+; LPM_MODULUS            ; 0                 ; Signed Integer                                  ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                         ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                         ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                         ;
+; DEVICE_FAMILY          ; Stratix II        ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                         ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                              ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                              ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                         ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                         ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                         ;
+; CBXI_PARAMETER         ; cntr_1sk          ; Untyped                                         ;
++------------------------+-------------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:days_counter ;
++------------------------+-------------------+-------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                            ;
++------------------------+-------------------+-------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                  ;
+; LPM_WIDTH              ; 14                ; Signed Integer                                  ;
+; LPM_DIRECTION          ; up                ; Untyped                                         ;
+; LPM_MODULUS            ; 0                 ; Signed Integer                                  ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                         ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                         ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                         ;
+; DEVICE_FAMILY          ; Stratix II        ; Untyped                                         ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                         ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                              ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                              ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                         ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                         ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                         ;
+; CBXI_PARAMETER         ; cntr_urk          ; Untyped                                         ;
++------------------------+-------------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:earth ;
++----------------+----------+----------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                 ;
++----------------+----------+----------------------------------------------------------------------+
+; max            ; 49999999 ; Signed Integer                                                       ;
++----------------+----------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter ;
++------------------------+-------------------+-------------------------------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                                                    ;
++------------------------+-------------------+-------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                                            ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                                          ;
+; LPM_WIDTH              ; 40                ; Signed Integer                                                          ;
+; LPM_DIRECTION          ; down              ; Untyped                                                                 ;
+; LPM_MODULUS            ; 0                 ; Signed Integer                                                          ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                                                 ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                                                 ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                                                 ;
+; DEVICE_FAMILY          ; Stratix II        ; Untyped                                                                 ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                                                 ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                                      ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                                      ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                                                 ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                                                 ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                                                 ;
+; CBXI_PARAMETER         ; cntr_agl          ; Untyped                                                                 ;
++------------------------+-------------------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:mars ;
++----------------+----------+---------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                ;
++----------------+----------+---------------------------------------------------------------------+
+; max            ; 51374562 ; Signed Integer                                                      ;
++----------------+----------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter ;
++------------------------+-------------------+------------------------------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                                                   ;
++------------------------+-------------------+------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                                         ;
+; LPM_WIDTH              ; 40                ; Signed Integer                                                         ;
+; LPM_DIRECTION          ; down              ; Untyped                                                                ;
+; LPM_MODULUS            ; 0                 ; Signed Integer                                                         ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                                                ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                                                ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                                                ;
+; DEVICE_FAMILY          ; Stratix II        ; Untyped                                                                ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                                                ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                                                     ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                                                     ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                                                ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                                                ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                                                ;
+; CBXI_PARAMETER         ; cntr_agl          ; Untyped                                                                ;
++------------------------+-------------------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0 ;
++------------------------------------------------+------------+-----------------------------------------------------------------+
+; Parameter Name                                 ; Value      ; Type                                                            ;
++------------------------------------------------+------------+-----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE                                                  ;
+; LPM_WIDTHA                                     ; 32         ; Untyped                                                         ;
+; LPM_WIDTHB                                     ; 18         ; Untyped                                                         ;
+; LPM_WIDTHP                                     ; 50         ; Untyped                                                         ;
+; LPM_WIDTHR                                     ; 50         ; Untyped                                                         ;
+; LPM_WIDTHS                                     ; 1          ; Untyped                                                         ;
+; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped                                                         ;
+; LPM_PIPELINE                                   ; 0          ; Untyped                                                         ;
+; LATENCY                                        ; 0          ; Untyped                                                         ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped                                                         ;
+; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped                                                         ;
+; USE_EAB                                        ; OFF        ; Untyped                                                         ;
+; MAXIMIZE_SPEED                                 ; 5          ; Untyped                                                         ;
+; DEVICE_FAMILY                                  ; Stratix II ; Untyped                                                         ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped                                                         ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K                                             ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped                                                         ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped                                                         ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped                                                         ;
+; CBXI_PARAMETER                                 ; mult_adt   ; Untyped                                                         ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped                                                         ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped                                                         ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped                                                         ;
++------------------------------------------------+------------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: g23_YMD_counter:YMD_counter|lpm_divide:Mod1 ;
++------------------------+----------------+----------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                               ;
++------------------------+----------------+----------------------------------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                                            ;
+; LPM_WIDTHD             ; 12             ; Untyped                                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                            ;
+; CBXI_PARAMETER         ; lpm_divide_09m ; Untyped                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                     ;
++------------------------+----------------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: g23_YMD_counter:YMD_counter|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                               ;
++------------------------+----------------+----------------------------------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                                            ;
+; LPM_WIDTHD             ; 12             ; Untyped                                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                            ;
+; CBXI_PARAMETER         ; lpm_divide_09m ; Untyped                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                     ;
++------------------------+----------------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1 ;
++------------------------+----------------+---------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                      ;
++------------------------+----------------+---------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                                                                   ;
+; LPM_WIDTHD             ; 12             ; Untyped                                                                   ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                   ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                   ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                   ;
+; CBXI_PARAMETER         ; lpm_divide_09m ; Untyped                                                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                            ;
++------------------------+----------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                      ;
++------------------------+----------------+---------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 12             ; Untyped                                                                   ;
+; LPM_WIDTHD             ; 12             ; Untyped                                                                   ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                   ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                   ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                   ;
+; CBXI_PARAMETER         ; lpm_divide_09m ; Untyped                                                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                            ;
++------------------------+----------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                                                       ;
++---------------------------------------+------------------------------------------------------------------------------+
+; Name                                  ; Value                                                                        ;
++---------------------------------------+------------------------------------------------------------------------------+
+; Number of entity instances            ; 1                                                                            ;
+; Entity Instance                       ; g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 32                                                                           ;
+;     -- LPM_WIDTHB                     ; 18                                                                           ;
+;     -- LPM_WIDTHP                     ; 50                                                                           ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                     ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                           ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                                          ;
+;     -- USE_EAB                        ; OFF                                                                          ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                         ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                           ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                           ;
++---------------------------------------+------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g23_7_segment_decoder:decode_0"                                                                ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; rippleblank_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "g23_7_segment_decoder:decode_3" ;
++----------------+-------+----------+------------------------+
+; Port           ; Type  ; Severity ; Details                ;
++----------------+-------+----------+------------------------+
+; code           ; Input ; Info     ; Stuck at GND           ;
+; rippleblank_in ; Input ; Info     ; Stuck at VCC           ;
++----------------+-------+----------+------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter"                                                                                          ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; h_set ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; m_set ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; s_set ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; h_inc ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; m_inc ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; s_inc ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter"                                                                                                 ;
++--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                                                                                                                      ;
++--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; y_set[10..6] ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; y_set[3..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; y_set[11]    ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; y_set[5]     ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; y_set[4]     ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; m_set[3..1]  ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; m_set[0]     ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; d_set[2..1]  ; Input ; Info     ; Stuck at VCC                                                                                                                                 ;
+; d_set[4..3]  ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; d_set[0]     ; Input ; Info     ; Stuck at GND                                                                                                                                 ;
+; y_inc        ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; m_inc        ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; d_inc        ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc"                                                                        ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; year_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; month_out       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; day_out         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; num_days        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; num_secs        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; date_is_reached ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g23_HMS_counter:mars_hms"                                                                 ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; end_of_day ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "g23_HMS_counter:earth_hms" ;
++-------------+-------+----------+----------------------+
+; Port        ; Type  ; Severity ; Details              ;
++-------------+-------+----------+----------------------+
+; load_enable ; Input ; Info     ; Stuck at GND         ;
+; h_set       ; Input ; Info     ; Stuck at GND         ;
+; m_set       ; Input ; Info     ; Stuck at GND         ;
+; s_set       ; Input ; Info     ; Stuck at GND         ;
++-------------+-------+----------+----------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "g23_YMD_counter:YMD_counter" ;
++-------------+-------+----------+------------------------+
+; Port        ; Type  ; Severity ; Details                ;
++-------------+-------+----------+------------------------+
+; load_enable ; Input ; Info     ; Stuck at GND           ;
+; y_set       ; Input ; Info     ; Stuck at GND           ;
+; m_set       ; Input ; Info     ; Stuck at GND           ;
+; d_set       ; Input ; Info     ; Stuck at GND           ;
++-------------+-------+----------+------------------------+
 
 
 +-------------------------------+
@@ -447,7 +1189,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Wed Apr 09 14:10:25 2014
+    Info: Processing started: Wed Apr 09 22:10:52 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g23_lab5 -c g23_lab5
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file g23_7_segment_decoder.vhd
@@ -462,18 +1204,15 @@ Info: Found 2 design units, including 1 entities, in source file g23_dayfrac_to_
 Info: Found 2 design units, including 1 entities, in source file g23_generic_timer.vhd
     Info: Found design unit 1: g23_generic_timer-alpha
     Info: Found entity 1: g23_generic_timer
-Info: Found 2 design units, including 1 entities, in source file g23_hms_counter.vhd
-    Info: Found design unit 1: g23_HMS_counter-alpha
-    Info: Found entity 1: g23_HMS_counter
+Info: Found 2 design units, including 1 entities, in source file g23_basic_timer.vhd
+    Info: Found design unit 1: g23_basic_timer-alpha
+    Info: Found entity 1: g23_basic_timer
 Info: Found 2 design units, including 1 entities, in source file g23_seconds_to_days.vhd
     Info: Found design unit 1: g23_Seconds_to_Days-cascading
     Info: Found entity 1: g23_Seconds_to_Days
 Info: Found 2 design units, including 1 entities, in source file g23_utc_to_mtc.vhd
     Info: Found design unit 1: g23_UTC_to_MTC-cascading
     Info: Found entity 1: g23_UTC_to_MTC
-Info: Found 2 design units, including 1 entities, in source file g23_ymd_counter.vhd
-    Info: Found design unit 1: g23_YMD_counter-alpha
-    Info: Found entity 1: g23_YMD_counter
 Info: Found 2 design units, including 1 entities, in source file g23_ymd_testbed.vhd
     Info: Found design unit 1: g23_YMD_testbed-alpha
     Info: Found entity 1: g23_YMD_testbed
@@ -483,96 +1222,182 @@ Info: Found 2 design units, including 1 entities, in source file g23_lab5_testbe
 Info: Found 2 design units, including 1 entities, in source file g23_12_to_bcd.vhd
     Info: Found design unit 1: g23_12_to_BCD-alpha
     Info: Found entity 1: g23_12_to_BCD
-Info: Elaborating entity "g23_12_to_BCD" for the top level hierarchy
+Info: Found 2 design units, including 1 entities, in source file g23_up_down.vhd
+    Info: Found design unit 1: g23_up_down-alpha
+    Info: Found entity 1: g23_up_down
+Info: Found 2 design units, including 1 entities, in source file g23_hms_counter.vhd
+    Info: Found design unit 1: g23_HMS_counter-alpha
+    Info: Found entity 1: g23_HMS_counter
+Info: Found 2 design units, including 1 entities, in source file g23_ymd_counter.vhd
+    Info: Found design unit 1: g23_YMD_counter-alpha
+    Info: Found entity 1: g23_YMD_counter
+Info: Elaborating entity "g23_lab5_testbed" for the top level hierarchy
+Info: Elaborating entity "g23_YMD_counter" for hierarchy "g23_YMD_counter:YMD_counter"
+Info: Elaborating entity "g23_HMS_counter" for hierarchy "g23_HMS_counter:earth_hms"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter"
+Info: Elaborated megafunction instantiation "g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter"
+Info: Instantiated megafunction "g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "6"
+    Info: Parameter "LPM_MODULUS" = "60"
+    Info: Parameter "LPM_DIRECTION" = "UP"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_UNUSED"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_43l.tdf
+    Info: Found entity 1: cntr_43l
+Info: Elaborating entity "cntr_43l" for hierarchy "g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter|cntr_43l:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_cdc.tdf
+    Info: Found entity 1: cmpr_cdc
+Info: Elaborating entity "cmpr_cdc" for hierarchy "g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter|cntr_43l:auto_generated|cmpr_cdc:cmpr2"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter"
+Info: Elaborated megafunction instantiation "g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter"
+Info: Instantiated megafunction "g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "5"
+    Info: Parameter "LPM_MODULUS" = "24"
+    Info: Parameter "LPM_DIRECTION" = "UP"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_UNUSED"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_33l.tdf
+    Info: Found entity 1: cntr_33l
+Info: Elaborating entity "cntr_33l" for hierarchy "g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter|cntr_33l:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_bdc.tdf
+    Info: Found entity 1: cmpr_bdc
+Info: Elaborating entity "cmpr_bdc" for hierarchy "g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter|cntr_33l:auto_generated|cmpr_bdc:cmpr2"
+Info: Elaborating entity "g23_UTC_to_MTC" for hierarchy "g23_UTC_to_MTC:utc_mtc"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:secs_counter"
+Warning: Assertion warning: Either aload or sload is used without the data[] port connected or the data[] port is connected to ground
+Info: Elaborated megafunction instantiation "g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:secs_counter"
+Info: Instantiated megafunction "g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:secs_counter" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "17"
+    Info: Parameter "LPM_MODULUS" = "0"
+    Info: Parameter "LPM_DIRECTION" = "up"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Warning: Assertion warning: The data port is not connected or grounded when SLOAD is used
+Info: Found 1 design units, including 1 entities, in source file db/cntr_1sk.tdf
+    Info: Found entity 1: cntr_1sk
+Info: Elaborating entity "cntr_1sk" for hierarchy "g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:secs_counter|cntr_1sk:auto_generated"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:days_counter"
+Warning: Assertion warning: Either aload or sload is used without the data[] port connected or the data[] port is connected to ground
+Info: Elaborated megafunction instantiation "g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:days_counter"
+Info: Instantiated megafunction "g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:days_counter" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "14"
+    Info: Parameter "LPM_MODULUS" = "0"
+    Info: Parameter "LPM_DIRECTION" = "up"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Warning: Assertion warning: The data port is not connected or grounded when SLOAD is used
+Info: Found 1 design units, including 1 entities, in source file db/cntr_urk.tdf
+    Info: Found entity 1: cntr_urk
+Info: Elaborating entity "cntr_urk" for hierarchy "g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:days_counter|cntr_urk:auto_generated"
+Info: Elaborating entity "g23_dayfrac_to_MTC" for hierarchy "g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC"
+Info: Elaborating entity "g23_Seconds_to_Days" for hierarchy "g23_UTC_to_MTC:utc_mtc|g23_Seconds_to_Days:seconds_to_days"
+Info: Elaborating entity "g23_basic_timer" for hierarchy "g23_basic_timer:basic_timer"
+Info: Elaborating entity "g23_generic_timer" for hierarchy "g23_basic_timer:basic_timer|g23_generic_timer:earth"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_basic_timer:basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter"
+Info: Elaborated megafunction instantiation "g23_basic_timer:basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter"
+Info: Instantiated megafunction "g23_basic_timer:basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "40"
+    Info: Parameter "LPM_MODULUS" = "0"
+    Info: Parameter "LPM_DIRECTION" = "down"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_agl.tdf
+    Info: Found entity 1: cntr_agl
+Info: Elaborating entity "cntr_agl" for hierarchy "g23_basic_timer:basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter|cntr_agl:auto_generated"
+Info: Elaborating entity "g23_generic_timer" for hierarchy "g23_basic_timer:basic_timer|g23_generic_timer:mars"
+Info: Elaborating entity "LPM_COUNTER" for hierarchy "g23_basic_timer:basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter"
+Info: Elaborated megafunction instantiation "g23_basic_timer:basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter"
+Info: Instantiated megafunction "g23_basic_timer:basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "40"
+    Info: Parameter "LPM_MODULUS" = "0"
+    Info: Parameter "LPM_DIRECTION" = "down"
+    Info: Parameter "LPM_AVALUE" = "UNUSED"
+    Info: Parameter "LPM_SVALUE" = "UNUSED"
+    Info: Parameter "LPM_PORT_UPDOWN" = "PORT_CONNECTIVITY"
+    Info: Parameter "LPM_PVALUE" = "UNUSED"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Elaborating entity "g23_7_segment_decoder" for hierarchy "g23_7_segment_decoder:decode_3"
 Info: Inferred 5 megafunctions from design logic
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0"
-    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1"
-    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2"
-Info: Elaborated megafunction instantiation "lpm_divide:Div0"
-Info: Instantiated megafunction "lpm_divide:Div0" with the following parameter:
-    Info: Parameter "LPM_WIDTHN" = "12"
-    Info: Parameter "LPM_WIDTHD" = "10"
-    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_rgm.tdf
-    Info: Found entity 1: lpm_divide_rgm
-Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_3nh.tdf
-    Info: Found entity 1: sign_div_unsign_3nh
-Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_a6f.tdf
-    Info: Found entity 1: alt_u_div_a6f
-Info: Elaborated megafunction instantiation "lpm_mult:Mult0"
-Info: Instantiated megafunction "lpm_mult:Mult0" with the following parameter:
-    Info: Parameter "LPM_WIDTHA" = "4"
-    Info: Parameter "LPM_WIDTHB" = "10"
-    Info: Parameter "LPM_WIDTHP" = "14"
-    Info: Parameter "LPM_WIDTHR" = "14"
-    Info: Parameter "LPM_WIDTHS" = "1"
-    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info: Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info: Parameter "INPUT_B_IS_CONSTANT" = "YES"
-    Info: Parameter "MAXIMIZE_SPEED" = "6"
-Info: Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "lpm_mult:Mult0"
-Info: Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult0"
-Info: Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult0"
-Info: Elaborated megafunction instantiation "lpm_divide:Div1"
-Info: Instantiated megafunction "lpm_divide:Div1" with the following parameter:
-    Info: Parameter "LPM_WIDTHN" = "16"
-    Info: Parameter "LPM_WIDTHD" = "8"
-    Info: Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info: Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info: Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_eto.tdf
-    Info: Found entity 1: lpm_divide_eto
-Info: Found 1 design units, including 1 entities, in source file db/abs_divider_pbg.tdf
-    Info: Found entity 1: abs_divider_pbg
-Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_04f.tdf
-    Info: Found entity 1: alt_u_div_04f
-Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_lr9.tdf
-    Info: Found entity 1: lpm_abs_lr9
-Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_4t9.tdf
-    Info: Found entity 1: lpm_abs_4t9
-Info: Elaborated megafunction instantiation "lpm_mult:Mult1"
-Info: Instantiated megafunction "lpm_mult:Mult1" with the following parameter:
-    Info: Parameter "LPM_WIDTHA" = "4"
-    Info: Parameter "LPM_WIDTHB" = "7"
-    Info: Parameter "LPM_WIDTHP" = "11"
-    Info: Parameter "LPM_WIDTHR" = "11"
+    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|Mult0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_YMD_counter:YMD_counter|Mod1"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_YMD_counter:YMD_counter|Mod0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|Mod1"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|Mod0"
+Info: Elaborated megafunction instantiation "g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0"
+Info: Instantiated megafunction "g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0" with the following parameter:
+    Info: Parameter "LPM_WIDTHA" = "32"
+    Info: Parameter "LPM_WIDTHB" = "18"
+    Info: Parameter "LPM_WIDTHP" = "50"
+    Info: Parameter "LPM_WIDTHR" = "50"
     Info: Parameter "LPM_WIDTHS" = "1"
     Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
     Info: Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info: Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info: Parameter "MAXIMIZE_SPEED" = "5"
-Info: Elaborated megafunction instantiation "lpm_mult:Mult1|multcore:mult_core", which is child of megafunction instantiation "lpm_mult:Mult1"
-Info: Elaborated megafunction instantiation "lpm_mult:Mult1|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult1"
-Info: Elaborated megafunction instantiation "lpm_mult:Mult1|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult1"
-Info: Elaborated megafunction instantiation "lpm_divide:Div2"
-Info: Instantiated megafunction "lpm_divide:Div2" with the following parameter:
-    Info: Parameter "LPM_WIDTHN" = "17"
-    Info: Parameter "LPM_WIDTHD" = "5"
-    Info: Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info: Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info: Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_cto.tdf
-    Info: Found entity 1: lpm_divide_cto
-Info: Found 1 design units, including 1 entities, in source file db/abs_divider_nbg.tdf
-    Info: Found entity 1: abs_divider_nbg
-Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_s3f.tdf
-    Info: Found entity 1: alt_u_div_s3f
-Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_ir9.tdf
-    Info: Found entity 1: lpm_abs_ir9
-Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_5t9.tdf
-    Info: Found entity 1: lpm_abs_5t9
+Info: Found 1 design units, including 1 entities, in source file db/mult_adt.tdf
+    Info: Found entity 1: mult_adt
+Info: Elaborated megafunction instantiation "g23_YMD_counter:YMD_counter|lpm_divide:Mod1"
+Info: Instantiated megafunction "g23_YMD_counter:YMD_counter|lpm_divide:Mod1" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "12"
+    Info: Parameter "LPM_WIDTHD" = "12"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_09m.tdf
+    Info: Found entity 1: lpm_divide_09m
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_5nh.tdf
+    Info: Found entity 1: sign_div_unsign_5nh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_e6f.tdf
+    Info: Found entity 1: alt_u_div_e6f
+Info: Elaborated megafunction instantiation "g23_YMD_counter:YMD_counter|lpm_divide:Mod0"
+Info: Instantiated megafunction "g23_YMD_counter:YMD_counter|lpm_divide:Mod0" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "12"
+    Info: Parameter "LPM_WIDTHD" = "12"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Warning: 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "output[15]" is stuck at GND
-Info: Implemented 579 device resources after synthesis - the final resource count might be different
-    Info: Implemented 12 input pins
-    Info: Implemented 16 output pins
-    Info: Implemented 551 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 335 megabytes
-    Info: Processing ended: Wed Apr 09 14:10:30 2014
+    Warning (13410): Pin "digit_3[0]" is stuck at VCC
+    Warning (13410): Pin "digit_3[1]" is stuck at VCC
+    Warning (13410): Pin "digit_3[2]" is stuck at VCC
+    Warning (13410): Pin "digit_3[3]" is stuck at VCC
+    Warning (13410): Pin "digit_3[4]" is stuck at VCC
+    Warning (13410): Pin "digit_3[5]" is stuck at VCC
+    Warning (13410): Pin "digit_3[6]" is stuck at VCC
+Info: Registers with preset signals will power-up high
+Warning: Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "decrement"
+    Warning (15610): No output dependent on input pin "edit_mode"
+    Warning (15610): No output dependent on input pin "period_select[0]"
+    Warning (15610): No output dependent on input pin "period_select[1]"
+Info: Implemented 1256 device resources after synthesis - the final resource count might be different
+    Info: Implemented 14 input pins
+    Info: Implemented 29 output pins
+    Info: Implemented 1205 logic cells
+    Info: Implemented 8 DSP elements
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 333 megabytes
+    Info: Processing ended: Wed Apr 09 22:10:57 2014
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 

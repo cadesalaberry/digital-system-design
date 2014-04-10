@@ -23,16 +23,21 @@ ENTITY g23_YMD_counter IS
 	PORT (
 		clock 			: in 	STD_LOGIC; -- ASYNC, Should be connected to the master 50MHz clock.
 		reset 			: in 	STD_LOGIC; -- ASYNC, When high the counts are all set to zero.
-		day_count_en 	: in 	STD_LOGIC; -- SYNC, A pulse with a width of 1 master clock cycle.
+		count_enable 	: in 	STD_LOGIC; -- SYNC, A pulse with a width of 1 master clock cycle.
 		load_enable 	: in 	STD_LOGIC; -- SYNC, if high sets count values to Y_Set, M_Set, and D_Set inputs
 
-		Y_set			: in	STD_LOGIC_VECTOR(11 downto 0);
-		M_set			: in	STD_LOGIC_VECTOR(3 downto 0);
-		D_set			: in	STD_LOGIC_VECTOR(4 downto 0);
+		y_set			: in	STD_LOGIC_VECTOR(11 downto 0);
+		m_set			: in	STD_LOGIC_VECTOR(3 downto 0);
+		d_set			: in	STD_LOGIC_VECTOR(4 downto 0);
+		
+		y_inc			: in	STD_LOGIC;
+		m_inc			: in	STD_LOGIC;
+		d_inc			: in	STD_LOGIC;
 		
 		years			: out	STD_LOGIC_VECTOR(11 downto 0);
 		months			: out	STD_LOGIC_VECTOR(3 downto 0);
 		days			: out	STD_LOGIC_VECTOR(4 downto 0)
+
 	);
 	
 end g23_YMD_counter;
@@ -40,7 +45,7 @@ end g23_YMD_counter;
 
 ARCHITECTURE alpha OF g23_YMD_counter IS
 		
-		signal y			: integer range 0 to 4000;
+		signal y			: integer range 2000 to 2100;
 		signal m			: integer range 1 to 12;
 		signal d			: integer range 1 to 31;
 		
@@ -55,13 +60,13 @@ ARCHITECTURE alpha OF g23_YMD_counter IS
 		signal mth_29d		: STD_LOGIC;
 		signal mth_28d		: STD_LOGIC;
 BEGIN
-  	
+
   	years	<= STD_LOGIC_VECTOR(TO_UNSIGNED(y, 12));
   	months	<= STD_LOGIC_VECTOR(TO_UNSIGNED(m, 4));
   	days	<= STD_LOGIC_VECTOR(TO_UNSIGNED(d, 5));
   	
-  	last_year	<= '1' WHEN y = 4000 else '0';
-  	last_month	<= '1' WHEN m = 12 else '0';
+  	last_year	<= '1' WHEN y >= 2100 ELSE '0';
+  	last_month	<= '1' WHEN m >= 12 ELSE '0' OR y_inc;
   	
   	leap_year	<= '1' WHEN ((y mod 4) = 0 AND (y mod 100) /= 0 AND (y mod 400) = 0) else '0';
 
@@ -87,7 +92,7 @@ BEGIN
 					d <= TO_INTEGER(UNSIGNED(D_set));
 			END IF;
 			
-			IF day_count_en = '1' THEN
+			IF count_enable = '1' OR d_inc = '1' THEN
 			
 				IF mth_31d = '1' AND d < 31 THEN
 					d <= d + 1;
@@ -123,7 +128,7 @@ BEGIN
 				m <= TO_INTEGER(UNSIGNED(M_set));
 			END IF;
 				
-			IF last_day = '1' THEN
+			IF last_day = '1' OR m_inc = '1' THEN
 			
 				IF last_month = '0' THEN
 					m <= m + 1;
@@ -144,7 +149,7 @@ BEGIN
  
 		IF reset ='1' THEN
 			
-			y <= 0;
+			y <= 2000;
 			
 		ELSIF clock = '1' AND clock'event THEN
 			
@@ -152,10 +157,10 @@ BEGIN
 				y <= TO_INTEGER(UNSIGNED(Y_set));
 			END IF;
 			
-			IF last_day = '1' AND last_month = '1' THEN
+			IF (last_day = '1' AND last_month = '1') OR y_inc = '1' THEN
 			
 				IF last_year = '1' THEN
-					y <= 0;
+					y <= 2000;
 				ELSE
 					y <= y + 1;
 				END IF; --if load

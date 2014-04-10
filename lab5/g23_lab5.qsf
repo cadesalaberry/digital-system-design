@@ -38,25 +38,27 @@
 
 set_global_assignment -name FAMILY "Stratix II"
 set_global_assignment -name DEVICE AUTO
-set_global_assignment -name TOP_LEVEL_ENTITY g23_12_to_BCD
+set_global_assignment -name TOP_LEVEL_ENTITY g23_lab5_testbed
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:05:57  APRIL 09, 2014"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE FASTEST
-set_global_assignment -name VHDL_FILE g23_7_segment_decoder.vhd
-set_global_assignment -name VHDL_FILE g23_binary_to_BCD.vhd
-set_global_assignment -name VHDL_FILE g23_dayfrac_to_MTC.vhd
-set_global_assignment -name VHDL_FILE g23_generic_timer.vhd
-set_global_assignment -name VHDL_FILE g23_HMS_Counter.vhd
-set_global_assignment -name VHDL_FILE g23_Seconds_to_Days.vhd
-set_global_assignment -name VHDL_FILE g23_UTC_to_MTC.vhd
-set_global_assignment -name VHDL_FILE g23_YMD_counter.vhd
-set_global_assignment -name VHDL_FILE g23_YMD_testbed.vhd
-set_global_assignment -name VHDL_FILE g23_lab5_testbed.vhd
-set_global_assignment -name VHDL_FILE g23_12_to_BCD.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name VHDL_FILE g23_7_segment_decoder.vhd
+set_global_assignment -name VHDL_FILE g23_binary_to_BCD.vhd
+set_global_assignment -name VHDL_FILE g23_dayfrac_to_MTC.vhd
+set_global_assignment -name VHDL_FILE g23_generic_timer.vhd
+set_global_assignment -name VHDL_FILE g23_basic_timer.vhd
+set_global_assignment -name VHDL_FILE g23_Seconds_to_Days.vhd
+set_global_assignment -name VHDL_FILE g23_UTC_to_MTC.vhd
+set_global_assignment -name VHDL_FILE g23_YMD_testbed.vhd
+set_global_assignment -name VHDL_FILE g23_lab5_testbed.vhd
+set_global_assignment -name VHDL_FILE g23_12_to_BCD.vhd
+set_global_assignment -name VHDL_FILE g23_up_down.vhd
+set_global_assignment -name VHDL_FILE g23_HMS_counter.vhd
+set_global_assignment -name VHDL_FILE g23_YMD_counter.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

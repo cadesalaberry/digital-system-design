@@ -34,15 +34,7 @@ end g23_dayfrac_to_MTC;
 
 architecture cascading of g23_dayfrac_to_MTC is
 
-	signal mult_in_frac		: UNSIGNED(63 downto 0);
-	signal sbct_in_frac		: INTEGER;
-	signal JD2000			: UNSIGNED(31 downto 0);
-	signal frac				: UNSIGNED(31 downto 0);
-	signal MTC				: STD_LOGIC_VECTOR(63 downto 0);
-	signal int_out			: STD_LOGIC_VECTOR(9 downto 0);
-	signal frac_part		: STD_LOGIC_VECTOR(11 downto 0);
-	signal full_minutes		: UNSIGNED(35 downto 0);
-	signal full_seconds		: UNSIGNED(35 downto 0);
+	
 	
 	-- 14 bits for int and 18 bits for fraction = 32 bits
 	constant multiplyConst	: UNSIGNED := "00000000000000111110010010011010"; -- .973244297 in binary
@@ -57,7 +49,19 @@ architecture cascading of g23_dayfrac_to_MTC is
 	constant sixty			: UNSIGNED := "111100000000000000";
 
 BEGIN
-	day_frac_to_MTC : PROCESS(enable, clock) BEGIN
+	day_frac_to_MTC : PROCESS(clock, enable, Ndays, day_frac)
+	
+		variable mult_in_frac		: UNSIGNED(63 downto 0);
+		variable sbct_in_frac		: INTEGER;
+		variable JD2000				: UNSIGNED(31 downto 0);
+		variable frac				: UNSIGNED(31 downto 0);
+		variable MTC				: STD_LOGIC_VECTOR(63 downto 0);
+		variable int_out			: STD_LOGIC_VECTOR(9 downto 0);
+		variable frac_part			: STD_LOGIC_VECTOR(11 downto 0);
+		variable full_minutes		: UNSIGNED(35 downto 0);
+		variable full_seconds		: UNSIGNED(35 downto 0);
+	
+	BEGIN
 		
 		IF enable = '0' THEN
 			Hours 	<= "00000";
@@ -69,25 +73,25 @@ BEGIN
 			-- JD2000 = NDays.day_frac
 			-- size =   16   +(39-23)  = 32 = 16.16
 			-- JD2000 <= UNSIGNED(Ndays & STD_LOGIC_VECTOR(day_frac(39 downto 23))); 
-			JD2000 <= UNSIGNED(Ndays(13 downto 0) & STD_LOGIC_VECTOR(day_frac(39 downto 22)));
+			JD2000 := UNSIGNED(Ndays(13 downto 0) & STD_LOGIC_VECTOR(day_frac(39 downto 22)));
 			
-			mult_in_frac <= JD2000 * multiplyConst - subConst;
+			mult_in_frac := JD2000 * multiplyConst - subConst;
 			
-			frac <= "00000" & mult_in_frac(35 downto 9);
+			frac := "00000" & mult_in_frac(35 downto 9);
 			
 			-- upper 10 bits are integer, bottom 54 are decimal
-			MTC <= STD_LOGIC_VECTOR(frac * twentyfour);
+			MTC := STD_LOGIC_VECTOR(frac * twentyfour);
 			
 			-- Ignores the first 5 bits, and takes the 5 following as hour.
 			Hours			<= MTC(58 downto 54);
 			
-			frac_part		<= MTC(53 downto 42);
+			frac_part		:= MTC(53 downto 42);
 			
-			full_minutes	<= sixty * UNSIGNED("000000" & frac_part);
+			full_minutes	:= sixty * UNSIGNED("000000" & frac_part);
 			
 			Minutes			<= STD_LOGIC_VECTOR(full_minutes(29 downto 24));
 			
-			full_seconds	<= sixty * ("000000" & full_minutes(23 downto 12));
+			full_seconds	:= sixty * ("000000" & full_minutes(23 downto 12));
 			
 			Seconds			<= STD_LOGIC_VECTOR(full_seconds(29 downto 24));
 		
