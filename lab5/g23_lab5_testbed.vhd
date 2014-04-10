@@ -196,9 +196,9 @@ ARCHITECTURE alpha OF g23_lab5_testbed IS
 	
 BEGIN
   	
-  	-- Turns 12h45m into the number 1 thousand 2 hundreds and forty five
-  	earth_min_sec	<= "00" & STD_LOGIC_VECTOR(UNSIGNED(earth_min_sig) * 100 + UNSIGNED(earth_sec_sig));
-  	mars_min_sec	<= "00" & STD_LOGIC_VECTOR(UNSIGNED( mars_min_sig) * 100 + UNSIGNED(mars_sec_sig));
+  	-- Turns 12h45m into the number one thousand two hundreds and forty five
+  	earth_min_sec	<= STD_LOGIC_VECTOR("00" & UNSIGNED(earth_min_sig) * 100 + UNSIGNED(earth_sec_sig));
+  	mars_min_sec	<= STD_LOGIC_VECTOR("00" & UNSIGNED( mars_min_sig) * 100 + UNSIGNED(mars_sec_sig));
   	
 	process(clock)
 		variable e_blinker : STD_LOGIC := '0';

@@ -105,7 +105,7 @@ set_global_assignment -name VHDL_FILE g23_HMS_counter.vhd
 set_global_assignment -name VHDL_FILE g23_YMD_counter.vhd
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE g23_12_to_bcd.cvwf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
@@ -113,4 +113,5 @@ set_location_assignment PIN_Y21 -to epulse_out
 set_location_assignment PIN_R20 -to mpulse_out
 set_location_assignment PIN_L2 -to enable
 set_global_assignment -name VHDL_FILE g23_14_to_BCD.vhd
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

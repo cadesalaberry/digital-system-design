@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g23_lab5
-Thu Apr 10 01:27:31 2014
+Thu Apr 10 15:25:29 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -11,70 +11,68 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
   5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
+  6. Partition Status Summary
+  7. Dependent File Changes for Partition Top
+  8. Partition for Top-Level Resource Utilization by Entity
   9. Logic Cells Representing Combinational Loops
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter
- 14. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter|cntr_22l:auto_generated
- 15. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:minutes_counter
- 16. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:minutes_counter|cntr_22l:auto_generated
- 17. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter
- 18. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter|cntr_12l:auto_generated
- 19. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:seconds_counter
- 20. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:seconds_counter|cntr_22l:auto_generated
- 21. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:minutes_counter
- 22. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:minutes_counter|cntr_22l:auto_generated
- 23. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:hours_counter
- 24. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:hours_counter|cntr_12l:auto_generated
- 25. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:seconds_counter
- 26. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:seconds_counter|cntr_22l:auto_generated
- 27. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:minutes_counter
- 28. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:minutes_counter|cntr_22l:auto_generated
- 29. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:hours_counter
- 30. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:hours_counter|cntr_12l:auto_generated
- 31. Source assignments for g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:secs_counter
- 32. Source assignments for g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:days_counter
- 33. Source assignments for g23_basic_timer:basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter
- 34. Source assignments for g23_basic_timer:basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter
- 35. Parameter Settings for User Entity Instance: g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter
- 36. Parameter Settings for User Entity Instance: g23_HMS_counter:earth_hms|LPM_COUNTER:minutes_counter
- 37. Parameter Settings for User Entity Instance: g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter
- 38. Parameter Settings for User Entity Instance: g23_HMS_counter:mars_hms|LPM_COUNTER:seconds_counter
- 39. Parameter Settings for User Entity Instance: g23_HMS_counter:mars_hms|LPM_COUNTER:minutes_counter
- 40. Parameter Settings for User Entity Instance: g23_HMS_counter:mars_hms|LPM_COUNTER:hours_counter
- 41. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:seconds_counter
- 42. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:minutes_counter
- 43. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:hours_counter
- 44. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:secs_counter
- 45. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:days_counter
- 46. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:earth
- 47. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter
- 48. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:mars
- 49. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter
- 50. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_divide:Div0
- 51. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_divide:Div1
- 52. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_divide:Div2
- 53. Parameter Settings for Inferred Entity Instance: g23_YMD_counter:YMD_counter|lpm_divide:Mod1
- 54. Parameter Settings for Inferred Entity Instance: g23_YMD_counter:YMD_counter|lpm_divide:Mod0
- 55. Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1
- 56. Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0
- 57. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_mult:Mult0
- 58. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_mult:Mult1
- 59. Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0
- 60. lpm_mult Parameter Settings by Entity Instance
- 61. Port Connectivity Checks: "g23_7_segment_decoder:decode_0"
- 62. Port Connectivity Checks: "g23_7_segment_decoder:decode_3"
- 63. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter"
- 64. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter"
- 65. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc"
- 66. Port Connectivity Checks: "g23_HMS_counter:mars_hms"
- 67. Port Connectivity Checks: "g23_HMS_counter:earth_hms"
- 68. Port Connectivity Checks: "g23_YMD_counter:YMD_counter"
- 69. Analysis & Synthesis Messages
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter
+ 12. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter|cntr_22l:auto_generated
+ 13. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:minutes_counter
+ 14. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:minutes_counter|cntr_22l:auto_generated
+ 15. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter
+ 16. Source assignments for g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter|cntr_12l:auto_generated
+ 17. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:seconds_counter
+ 18. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:seconds_counter|cntr_22l:auto_generated
+ 19. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:minutes_counter
+ 20. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:minutes_counter|cntr_22l:auto_generated
+ 21. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:hours_counter
+ 22. Source assignments for g23_HMS_counter:mars_hms|LPM_COUNTER:hours_counter|cntr_12l:auto_generated
+ 23. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:seconds_counter
+ 24. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:seconds_counter|cntr_22l:auto_generated
+ 25. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:minutes_counter
+ 26. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:minutes_counter|cntr_22l:auto_generated
+ 27. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:hours_counter
+ 28. Source assignments for g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:hours_counter|cntr_12l:auto_generated
+ 29. Source assignments for g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:secs_counter
+ 30. Source assignments for g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:days_counter
+ 31. Source assignments for g23_basic_timer:basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter
+ 32. Source assignments for g23_basic_timer:basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter
+ 33. Parameter Settings for User Entity Instance: g23_HMS_counter:earth_hms|LPM_COUNTER:seconds_counter
+ 34. Parameter Settings for User Entity Instance: g23_HMS_counter:earth_hms|LPM_COUNTER:minutes_counter
+ 35. Parameter Settings for User Entity Instance: g23_HMS_counter:earth_hms|LPM_COUNTER:hours_counter
+ 36. Parameter Settings for User Entity Instance: g23_HMS_counter:mars_hms|LPM_COUNTER:seconds_counter
+ 37. Parameter Settings for User Entity Instance: g23_HMS_counter:mars_hms|LPM_COUNTER:minutes_counter
+ 38. Parameter Settings for User Entity Instance: g23_HMS_counter:mars_hms|LPM_COUNTER:hours_counter
+ 39. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:seconds_counter
+ 40. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:minutes_counter
+ 41. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|LPM_COUNTER:hours_counter
+ 42. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:secs_counter
+ 43. Parameter Settings for User Entity Instance: g23_UTC_to_MTC:utc_mtc|LPM_COUNTER:days_counter
+ 44. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:earth
+ 45. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:earth|LPM_COUNTER:counter
+ 46. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:mars
+ 47. Parameter Settings for User Entity Instance: g23_basic_timer:basic_timer|g23_generic_timer:mars|LPM_COUNTER:counter
+ 48. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_divide:Div0
+ 49. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_divide:Div1
+ 50. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_divide:Div2
+ 51. Parameter Settings for Inferred Entity Instance: g23_YMD_counter:YMD_counter|lpm_divide:Mod1
+ 52. Parameter Settings for Inferred Entity Instance: g23_YMD_counter:YMD_counter|lpm_divide:Mod0
+ 53. Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1
+ 54. Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0
+ 55. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_mult:Mult0
+ 56. Parameter Settings for Inferred Entity Instance: g23_14_to_BCD:to_BCD|lpm_mult:Mult1
+ 57. Parameter Settings for Inferred Entity Instance: g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0
+ 58. Partition Dependent Files
+ 59. Port Connectivity Checks: "g23_7_segment_decoder:decode_0"
+ 60. Port Connectivity Checks: "g23_7_segment_decoder:decode_3"
+ 61. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter"
+ 62. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter"
+ 63. Port Connectivity Checks: "g23_UTC_to_MTC:utc_mtc"
+ 64. Port Connectivity Checks: "g23_HMS_counter:mars_hms"
+ 65. Port Connectivity Checks: "g23_HMS_counter:earth_hms"
+ 66. Port Connectivity Checks: "g23_YMD_counter:YMD_counter"
+ 67. Analysis & Synthesis Messages
 
 
 
@@ -100,20 +98,20 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 10 01:27:31 2014         ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 10 15:25:29 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab5                                      ;
 ; Top-level Entity Name              ; g23_lab5_testbed                              ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 2,052                                         ;
-;     Total combinational functions  ; 2,049                                         ;
-;     Dedicated logic registers      ; 212                                           ;
-; Total registers                    ; 212                                           ;
-; Total pins                         ; 42                                            ;
-; Total virtual pins                 ; 0                                             ;
-; Total memory bits                  ; 0                                             ;
-; Embedded Multiplier 9-bit elements ; 4                                             ;
-; Total PLLs                         ; 0                                             ;
+; Total logic elements               ; N/A until Partition Merge                     ;
+;     Total combinational functions  ; N/A until Partition Merge                     ;
+;     Dedicated logic registers      ; N/A until Partition Merge                     ;
+; Total registers                    ; N/A until Partition Merge                     ;
+; Total pins                         ; N/A until Partition Merge                     ;
+; Total virtual pins                 ; N/A until Partition Merge                     ;
+; Total memory bits                  ; N/A until Partition Merge                     ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                     ;
+; Total PLLs                         ; N/A until Partition Merge                     ;
 +------------------------------------+-----------------------------------------------+
 
 
@@ -213,199 +211,169 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
-; g23_7_segment_decoder.vhd        ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_7_segment_decoder.vhd  ;
-; g23_dayfrac_to_MTC.vhd           ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_dayfrac_to_MTC.vhd     ;
-; g23_generic_timer.vhd            ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_generic_timer.vhd      ;
-; g23_basic_timer.vhd              ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_basic_timer.vhd        ;
-; g23_Seconds_to_Days.vhd          ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_Seconds_to_Days.vhd    ;
-; g23_UTC_to_MTC.vhd               ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_UTC_to_MTC.vhd         ;
-; g23_lab5_testbed.vhd             ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_lab5_testbed.vhd       ;
-; g23_HMS_counter.vhd              ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_HMS_counter.vhd        ;
-; g23_YMD_counter.vhd              ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_YMD_counter.vhd        ;
-; g23_14_to_BCD.vhd                ; yes             ; User VHDL File               ; C:/Users/gludwi/digital-system-design/lab5/g23_14_to_BCD.vhd          ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf       ;
-; db/cntr_22l.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/cntr_22l.tdf            ;
-; db/cmpr_acc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/cmpr_acc.tdf            ;
-; db/cntr_12l.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/cntr_12l.tdf            ;
-; db/cmpr_9cc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/cmpr_9cc.tdf            ;
-; db/cntr_vqk.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/cntr_vqk.tdf            ;
-; db/cntr_sqk.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/cntr_sqk.tdf            ;
-; db/cntr_8fl.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/cntr_8fl.tdf            ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_divide.tdf        ;
-; db/lpm_divide_rfm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_divide_rfm.tdf      ;
-; db/sign_div_unsign_6nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/sign_div_unsign_6nh.tdf ;
-; db/alt_u_div_c5f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/alt_u_div_c5f.tdf       ;
-; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/add_sub_lkc.tdf         ;
-; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/add_sub_mkc.tdf         ;
-; db/lpm_divide_cso.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_divide_cso.tdf      ;
-; db/abs_divider_pbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/abs_divider_pbg.tdf     ;
-; db/alt_u_div_04f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/alt_u_div_04f.tdf       ;
-; db/lpm_abs_lr9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_abs_lr9.tdf         ;
-; db/lpm_abs_4t9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_abs_4t9.tdf         ;
-; db/lpm_divide_aso.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_divide_aso.tdf      ;
-; db/abs_divider_nbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/abs_divider_nbg.tdf     ;
-; db/alt_u_div_s3f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/alt_u_div_s3f.tdf       ;
-; db/lpm_abs_ir9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_abs_ir9.tdf         ;
-; db/lpm_abs_5t9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_abs_5t9.tdf         ;
-; db/lpm_divide_u7m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/lpm_divide_u7m.tdf      ;
-; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/sign_div_unsign_5nh.tdf ;
-; db/alt_u_div_e6f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/alt_u_div_e6f.tdf       ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_mult.tdf          ;
-; multcore.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/multcore.tdf          ;
-; mpar_add.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/mpar_add.tdf          ;
-; altshift.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/altshift.tdf          ;
-; db/mult_8ct.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/gludwi/digital-system-design/lab5/db/mult_8ct.tdf            ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+
+; g23_7_segment_decoder.vhd        ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab5/g23_7_segment_decoder.vhd  ;
+; g23_dayfrac_to_MTC.vhd           ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab5/g23_dayfrac_to_MTC.vhd     ;
+; g23_generic_timer.vhd            ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab5/g23_generic_timer.vhd      ;
+; g23_basic_timer.vhd              ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab5/g23_basic_timer.vhd        ;
+; g23_Seconds_to_Days.vhd          ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab5/g23_Seconds_to_Days.vhd    ;
+; g23_UTC_to_MTC.vhd               ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab5/g23_UTC_to_MTC.vhd         ;
+; g23_lab5_testbed.vhd             ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab5/g23_lab5_testbed.vhd       ;
+; g23_HMS_counter.vhd              ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab5/g23_HMS_counter.vhd        ;
+; g23_YMD_counter.vhd              ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab5/g23_YMD_counter.vhd        ;
+; g23_14_to_BCD.vhd                ; yes             ; User VHDL File               ; C:/Users/cdesal/github/digital-system-design/lab5/g23_14_to_BCD.vhd          ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf              ;
+; db/cntr_22l.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/cntr_22l.tdf            ;
+; db/cmpr_acc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/cmpr_acc.tdf            ;
+; db/cntr_12l.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/cntr_12l.tdf            ;
+; db/cmpr_9cc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/cmpr_9cc.tdf            ;
+; db/cntr_vqk.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/cntr_vqk.tdf            ;
+; db/cntr_sqk.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/cntr_sqk.tdf            ;
+; db/cntr_8fl.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/cntr_8fl.tdf            ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_divide.tdf               ;
+; db/lpm_divide_rfm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/lpm_divide_rfm.tdf      ;
+; db/sign_div_unsign_6nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/sign_div_unsign_6nh.tdf ;
+; db/alt_u_div_c5f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/alt_u_div_c5f.tdf       ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/add_sub_lkc.tdf         ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/add_sub_mkc.tdf         ;
+; db/lpm_divide_cso.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/lpm_divide_cso.tdf      ;
+; db/abs_divider_pbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/abs_divider_pbg.tdf     ;
+; db/alt_u_div_04f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/alt_u_div_04f.tdf       ;
+; db/lpm_abs_lr9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/lpm_abs_lr9.tdf         ;
+; db/lpm_abs_4t9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/lpm_abs_4t9.tdf         ;
+; db/lpm_divide_aso.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/lpm_divide_aso.tdf      ;
+; db/abs_divider_nbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/abs_divider_nbg.tdf     ;
+; db/alt_u_div_s3f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/alt_u_div_s3f.tdf       ;
+; db/lpm_abs_ir9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/lpm_abs_ir9.tdf         ;
+; db/lpm_abs_5t9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/lpm_abs_5t9.tdf         ;
+; db/lpm_divide_u7m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/lpm_divide_u7m.tdf      ;
+; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/sign_div_unsign_5nh.tdf ;
+; db/alt_u_div_e6f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/alt_u_div_e6f.tdf       ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_mult.tdf                 ;
+; multcore.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/multcore.tdf                 ;
+; mpar_add.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/mpar_add.tdf                 ;
+; altshift.tdf                     ; yes             ; Megafunction                 ; c:/altera/91sp2/quartus/libraries/megafunctions/altshift.tdf                 ;
+; db/mult_8ct.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/cdesal/github/digital-system-design/lab5/db/mult_8ct.tdf            ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 2,052 ;
-;                                             ;       ;
-; Total combinational functions               ; 2049  ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 512   ;
-;     -- 3 input functions                    ; 662   ;
-;     -- <=2 input functions                  ; 875   ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1219  ;
-;     -- arithmetic mode                      ; 830   ;
-;                                             ;       ;
-; Total registers                             ; 212   ;
-;     -- Dedicated logic registers            ; 212   ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 42    ;
-; Embedded Multiplier 9-bit elements          ; 4     ;
-; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 215   ;
-; Total fan-out                               ; 6732  ;
-; Average fan-out                             ; 2.91  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------+
+; Partition Status Summary                               ;
++----------------+-------------+-------------------------+
+; Partition Name ; Synthesized ; Reason                  ;
++----------------+-------------+-------------------------+
+; Top            ; yes         ; Dependent files changed ;
++----------------+-------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Dependent File Changes for Partition Top                                                                                              ;
++-----------+----------------------+-------------------+----------+----------------------------------+----------------------------------+
+; Hierarchy ; File Name            ; Relative Location ; Change   ; Old                              ; New                              ;
++-----------+----------------------+-------------------+----------+----------------------------------+----------------------------------+
+; |         ; g23_lab5_testbed.vhd ; Project Directory ; Checksum ; 2f72f53027162641b931cda6e29012ba ; 9427a18685d4cd31838a6a847dcf63e8 ;
++-----------+----------------------+-------------------+----------+----------------------------------+----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                              ;
+; Partition for Top-Level Resource Utilization by Entity                                                                                                                                                                                                                                                                                           ;
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                  ; Library Name ;
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |g23_lab5_testbed                              ; 2049 (114)        ; 212 (6)      ; 0           ; 4            ; 0       ; 2         ; 42   ; 0            ; |g23_lab5_testbed                                                                                                                                                    ; work         ;
-;    |g23_14_to_BCD:to_BCD|                      ; 548 (33)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD                                                                                                                               ;              ;
+; |g23_lab5_testbed                              ; 2059 (114)        ; 212 (6)      ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed                                                                                                                                                    ; work         ;
+;    |g23_14_to_BCD:to_BCD|                      ; 548 (33)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD                                                                                                                               ; work         ;
 ;       |lpm_divide:Div0|                        ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div0                                                                                                               ; work         ;
-;          |lpm_divide_rfm:auto_generated|       ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated                                                                                 ;              ;
-;             |sign_div_unsign_6nh:divider|      ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated|sign_div_unsign_6nh:divider                                                     ;              ;
-;                |alt_u_div_c5f:divider|         ; 59 (59)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated|sign_div_unsign_6nh:divider|alt_u_div_c5f:divider                               ;              ;
+;          |lpm_divide_rfm:auto_generated|       ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated                                                                                 ; work         ;
+;             |sign_div_unsign_6nh:divider|      ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated|sign_div_unsign_6nh:divider                                                     ; work         ;
+;                |alt_u_div_c5f:divider|         ; 59 (59)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div0|lpm_divide_rfm:auto_generated|sign_div_unsign_6nh:divider|alt_u_div_c5f:divider                               ; work         ;
 ;       |lpm_divide:Div1|                        ; 206 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div1                                                                                                               ; work         ;
-;          |lpm_divide_cso:auto_generated|       ; 206 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated                                                                                 ;              ;
-;             |abs_divider_pbg:divider|          ; 206 (8)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated|abs_divider_pbg:divider                                                         ;              ;
-;                |alt_u_div_04f:divider|         ; 182 (182)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated|abs_divider_pbg:divider|alt_u_div_04f:divider                                   ;              ;
-;                |lpm_abs_4t9:my_abs_num|        ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated|abs_divider_pbg:divider|lpm_abs_4t9:my_abs_num                                  ;              ;
+;          |lpm_divide_cso:auto_generated|       ; 206 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated                                                                                 ; work         ;
+;             |abs_divider_pbg:divider|          ; 206 (8)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated|abs_divider_pbg:divider                                                         ; work         ;
+;                |alt_u_div_04f:divider|         ; 182 (182)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated|abs_divider_pbg:divider|alt_u_div_04f:divider                                   ; work         ;
+;                |lpm_abs_4t9:my_abs_num|        ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div1|lpm_divide_cso:auto_generated|abs_divider_pbg:divider|lpm_abs_4t9:my_abs_num                                  ; work         ;
 ;       |lpm_divide:Div2|                        ; 235 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div2                                                                                                               ; work         ;
-;          |lpm_divide_aso:auto_generated|       ; 235 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated                                                                                 ;              ;
-;             |abs_divider_nbg:divider|          ; 235 (8)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated|abs_divider_nbg:divider                                                         ;              ;
-;                |alt_u_div_s3f:divider|         ; 209 (209)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated|abs_divider_nbg:divider|alt_u_div_s3f:divider                                   ;              ;
-;                |lpm_abs_5t9:my_abs_num|        ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated|abs_divider_nbg:divider|lpm_abs_5t9:my_abs_num                                  ;              ;
+;          |lpm_divide_aso:auto_generated|       ; 235 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated                                                                                 ; work         ;
+;             |abs_divider_nbg:divider|          ; 235 (8)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated|abs_divider_nbg:divider                                                         ; work         ;
+;                |alt_u_div_s3f:divider|         ; 209 (209)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated|abs_divider_nbg:divider|alt_u_div_s3f:divider                                   ; work         ;
+;                |lpm_abs_5t9:my_abs_num|        ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_divide:Div2|lpm_divide_aso:auto_generated|abs_divider_nbg:divider|lpm_abs_5t9:my_abs_num                                  ; work         ;
 ;       |lpm_mult:Mult0|                         ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_mult:Mult0                                                                                                                ; work         ;
-;          |multcore:mult_core|                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_mult:Mult0|multcore:mult_core                                                                                             ;              ;
+;          |multcore:mult_core|                  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_mult:Mult0|multcore:mult_core                                                                                             ; work         ;
 ;       |lpm_mult:Mult1|                         ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_mult:Mult1                                                                                                                ; work         ;
-;          |multcore:mult_core|                  ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_mult:Mult1|multcore:mult_core                                                                                             ;              ;
-;    |g23_7_segment_decoder:decode_0|            ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_0                                                                                                                     ;              ;
-;    |g23_7_segment_decoder:decode_1|            ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_1                                                                                                                     ; work         ;
-;    |g23_7_segment_decoder:decode_2|            ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_2                                                                                                                     ; work         ;
-;    |g23_7_segment_decoder:decode_3|            ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_3                                                                                                                     ;              ;
-;    |g23_HMS_counter:earth_hms|                 ; 55 (10)           ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms                                                                                                                          ;              ;
-;       |lpm_counter:hours_counter|              ; 13 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:hours_counter                                                                                                ;              ;
-;          |cntr_12l:auto_generated|             ; 13 (12)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:hours_counter|cntr_12l:auto_generated                                                                        ;              ;
-;             |cmpr_9cc:cmpr2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2                                                         ;              ;
-;       |lpm_counter:minutes_counter|            ; 16 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:minutes_counter                                                                                              ;              ;
-;          |cntr_22l:auto_generated|             ; 16 (14)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated                                                                      ;              ;
-;             |cmpr_acc:cmpr2|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                                                       ;              ;
-;       |lpm_counter:seconds_counter|            ; 16 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:seconds_counter                                                                                              ;              ;
-;          |cntr_22l:auto_generated|             ; 16 (14)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated                                                                      ;              ;
-;             |cmpr_acc:cmpr2|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                                                       ;              ;
-;    |g23_HMS_counter:mars_hms|                  ; 127 (9)           ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms                                                                                                                           ;              ;
-;       |lpm_counter:hours_counter|              ; 33 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:hours_counter                                                                                                 ;              ;
-;          |cntr_12l:auto_generated|             ; 33 (32)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated                                                                         ;              ;
-;             |cmpr_9cc:cmpr2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2                                                          ;              ;
-;       |lpm_counter:minutes_counter|            ; 43 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:minutes_counter                                                                                               ;              ;
-;          |cntr_22l:auto_generated|             ; 43 (42)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated                                                                       ;              ;
-;             |cmpr_acc:cmpr2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                                                        ;              ;
-;       |lpm_counter:seconds_counter|            ; 42 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:seconds_counter                                                                                               ;              ;
-;          |cntr_22l:auto_generated|             ; 42 (40)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated                                                                       ;              ;
-;             |cmpr_acc:cmpr2|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                                                        ;              ;
-;    |g23_UTC_to_MTC:utc_mtc|                    ; 719 (48)          ; 70 (0)       ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc                                                                                                                             ;              ;
-;       |g23_HMS_counter:HMS_counter|            ; 39 (9)            ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter                                                                                                 ;              ;
-;          |lpm_counter:hours_counter|           ; 11 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:hours_counter                                                                       ;              ;
-;             |cntr_12l:auto_generated|          ; 11 (8)            ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated                                               ;              ;
-;                |cmpr_9cc:cmpr2|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2                                ;              ;
-;          |lpm_counter:minutes_counter|         ; 10 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:minutes_counter                                                                     ;              ;
-;             |cntr_22l:auto_generated|          ; 10 (8)            ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated                                             ;              ;
-;                |cmpr_acc:cmpr2|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                              ;              ;
-;          |lpm_counter:seconds_counter|         ; 9 (0)             ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:seconds_counter                                                                     ;              ;
-;             |cntr_22l:auto_generated|          ; 9 (8)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated                                             ;              ;
-;                |cmpr_acc:cmpr2|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                              ;              ;
-;       |g23_Seconds_to_Days:seconds_to_days|    ; 153 (153)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_Seconds_to_Days:seconds_to_days                                                                                         ;              ;
-;       |g23_YMD_counter:YMD_counter|            ; 327 (78)          ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter                                                                                                 ;              ;
-;          |lpm_divide:Mod0|                     ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0                                                                                 ;              ;
-;             |lpm_divide_u7m:auto_generated|    ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated                                                   ;              ;
-;                |sign_div_unsign_5nh:divider|   ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
-;                   |alt_u_div_e6f:divider|      ; 148 (148)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider ;              ;
-;          |lpm_divide:Mod1|                     ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1                                                                                 ;              ;
-;             |lpm_divide_u7m:auto_generated|    ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated                                                   ;              ;
-;                |sign_div_unsign_5nh:divider|   ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ;              ;
-;                   |alt_u_div_e6f:divider|      ; 101 (101)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider ;              ;
-;       |g23_dayfrac_to_MTC:day_fraction_to_MTC| ; 119 (101)         ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC                                                                                      ;              ;
-;          |lpm_mult:Mult0|                      ; 18 (0)            ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0                                                                       ;              ;
-;             |mult_8ct:auto_generated|          ; 18 (18)           ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0|mult_8ct:auto_generated                                               ;              ;
-;       |lpm_counter:days_counter|               ; 15 (0)            ; 14 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|lpm_counter:days_counter                                                                                                    ;              ;
-;          |cntr_sqk:auto_generated|             ; 15 (15)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|lpm_counter:days_counter|cntr_sqk:auto_generated                                                                            ;              ;
-;       |lpm_counter:secs_counter|               ; 18 (0)            ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|lpm_counter:secs_counter                                                                                                    ;              ;
-;          |cntr_vqk:auto_generated|             ; 18 (18)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|lpm_counter:secs_counter|cntr_vqk:auto_generated                                                                            ;              ;
-;    |g23_YMD_counter:YMD_counter|               ; 322 (73)          ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter                                                                                                                        ;              ;
-;       |lpm_divide:Mod0|                        ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod0                                                                                                        ;              ;
-;          |lpm_divide_u7m:auto_generated|       ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated                                                                          ;              ;
-;             |sign_div_unsign_5nh:divider|      ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                                              ;              ;
-;                |alt_u_div_e6f:divider|         ; 148 (148)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider                        ;              ;
-;       |lpm_divide:Mod1|                        ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod1                                                                                                        ;              ;
-;          |lpm_divide_u7m:auto_generated|       ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated                                                                          ;              ;
-;             |sign_div_unsign_5nh:divider|      ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                                              ;              ;
-;                |alt_u_div_e6f:divider|         ; 101 (101)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider                        ;              ;
-;    |g23_basic_timer:basic_timer|               ; 110 (0)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer                                                                                                                        ;              ;
-;       |g23_generic_timer:earth|                ; 55 (14)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:earth                                                                                                ;              ;
-;          |lpm_counter:counter|                 ; 41 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:earth|lpm_counter:counter                                                                            ;              ;
-;             |cntr_8fl:auto_generated|          ; 41 (41)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:earth|lpm_counter:counter|cntr_8fl:auto_generated                                                    ;              ;
-;       |g23_generic_timer:mars|                 ; 55 (14)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:mars                                                                                                 ;              ;
-;          |lpm_counter:counter|                 ; 41 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:mars|lpm_counter:counter                                                                             ;              ;
-;             |cntr_8fl:auto_generated|          ; 41 (41)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:mars|lpm_counter:counter|cntr_8fl:auto_generated                                                     ;              ;
+;          |multcore:mult_core|                  ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_14_to_BCD:to_BCD|lpm_mult:Mult1|multcore:mult_core                                                                                             ; work         ;
+;    |g23_7_segment_decoder:decode_0|            ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_0                                                                                                                     ; work         ;
+;    |g23_7_segment_decoder:decode_1|            ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_1                                                                                                                     ; work         ;
+;    |g23_7_segment_decoder:decode_2|            ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_2                                                                                                                     ; work         ;
+;    |g23_7_segment_decoder:decode_3|            ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_7_segment_decoder:decode_3                                                                                                                     ; work         ;
+;    |g23_HMS_counter:earth_hms|                 ; 56 (11)           ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms                                                                                                                          ; work         ;
+;       |lpm_counter:hours_counter|              ; 13 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:hours_counter                                                                                                ; work         ;
+;          |cntr_12l:auto_generated|             ; 13 (12)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:hours_counter|cntr_12l:auto_generated                                                                        ; work         ;
+;             |cmpr_9cc:cmpr2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2                                                         ; work         ;
+;       |lpm_counter:minutes_counter|            ; 16 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:minutes_counter                                                                                              ; work         ;
+;          |cntr_22l:auto_generated|             ; 16 (14)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated                                                                      ; work         ;
+;             |cmpr_acc:cmpr2|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                                                       ; work         ;
+;       |lpm_counter:seconds_counter|            ; 16 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:seconds_counter                                                                                              ; work         ;
+;          |cntr_22l:auto_generated|             ; 16 (14)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated                                                                      ; work         ;
+;             |cmpr_acc:cmpr2|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:earth_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                                                       ; work         ;
+;    |g23_HMS_counter:mars_hms|                  ; 127 (9)           ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms                                                                                                                           ; work         ;
+;       |lpm_counter:hours_counter|              ; 33 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:hours_counter                                                                                                 ; work         ;
+;          |cntr_12l:auto_generated|             ; 33 (32)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated                                                                         ; work         ;
+;             |cmpr_9cc:cmpr2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2                                                          ; work         ;
+;       |lpm_counter:minutes_counter|            ; 43 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:minutes_counter                                                                                               ; work         ;
+;          |cntr_22l:auto_generated|             ; 43 (42)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated                                                                       ; work         ;
+;             |cmpr_acc:cmpr2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                                                        ; work         ;
+;       |lpm_counter:seconds_counter|            ; 42 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:seconds_counter                                                                                               ; work         ;
+;          |cntr_22l:auto_generated|             ; 42 (40)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated                                                                       ; work         ;
+;             |cmpr_acc:cmpr2|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_HMS_counter:mars_hms|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                                                        ; work         ;
+;    |g23_UTC_to_MTC:utc_mtc|                    ; 719 (48)          ; 70 (0)       ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc                                                                                                                             ; work         ;
+;       |g23_HMS_counter:HMS_counter|            ; 39 (9)            ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter                                                                                                 ; work         ;
+;          |lpm_counter:hours_counter|           ; 11 (0)            ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:hours_counter                                                                       ; work         ;
+;             |cntr_12l:auto_generated|          ; 11 (8)            ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated                                               ; work         ;
+;                |cmpr_9cc:cmpr2|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:hours_counter|cntr_12l:auto_generated|cmpr_9cc:cmpr2                                ; work         ;
+;          |lpm_counter:minutes_counter|         ; 10 (0)            ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:minutes_counter                                                                     ; work         ;
+;             |cntr_22l:auto_generated|          ; 10 (8)            ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated                                             ; work         ;
+;                |cmpr_acc:cmpr2|                ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:minutes_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                              ; work         ;
+;          |lpm_counter:seconds_counter|         ; 9 (0)             ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:seconds_counter                                                                     ; work         ;
+;             |cntr_22l:auto_generated|          ; 9 (8)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated                                             ; work         ;
+;                |cmpr_acc:cmpr2|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_counter|lpm_counter:seconds_counter|cntr_22l:auto_generated|cmpr_acc:cmpr2                              ; work         ;
+;       |g23_Seconds_to_Days:seconds_to_days|    ; 153 (153)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_Seconds_to_Days:seconds_to_days                                                                                         ; work         ;
+;       |g23_YMD_counter:YMD_counter|            ; 327 (78)          ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter                                                                                                 ; work         ;
+;          |lpm_divide:Mod0|                     ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0                                                                                 ; work         ;
+;             |lpm_divide_u7m:auto_generated|    ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_5nh:divider|   ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ; work         ;
+;                   |alt_u_div_e6f:divider|      ; 148 (148)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider ; work         ;
+;          |lpm_divide:Mod1|                     ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1                                                                                 ; work         ;
+;             |lpm_divide_u7m:auto_generated|    ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated                                                   ; work         ;
+;                |sign_div_unsign_5nh:divider|   ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                       ; work         ;
+;                   |alt_u_div_e6f:divider|      ; 101 (101)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider ; work         ;
+;       |g23_dayfrac_to_MTC:day_fraction_to_MTC| ; 119 (101)         ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC                                                                                      ; work         ;
+;          |lpm_mult:Mult0|                      ; 18 (0)            ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0                                                                       ; work         ;
+;             |mult_8ct:auto_generated|          ; 18 (18)           ; 0 (0)        ; 0           ; 4            ; 0       ; 2         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0|mult_8ct:auto_generated                                               ; work         ;
+;       |lpm_counter:days_counter|               ; 15 (0)            ; 14 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|lpm_counter:days_counter                                                                                                    ; work         ;
+;          |cntr_sqk:auto_generated|             ; 15 (15)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|lpm_counter:days_counter|cntr_sqk:auto_generated                                                                            ; work         ;
+;       |lpm_counter:secs_counter|               ; 18 (0)            ; 17 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|lpm_counter:secs_counter                                                                                                    ; work         ;
+;          |cntr_vqk:auto_generated|             ; 18 (18)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_UTC_to_MTC:utc_mtc|lpm_counter:secs_counter|cntr_vqk:auto_generated                                                                            ; work         ;
+;    |g23_YMD_counter:YMD_counter|               ; 322 (73)          ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter                                                                                                                        ; work         ;
+;       |lpm_divide:Mod0|                        ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod0                                                                                                        ; work         ;
+;          |lpm_divide_u7m:auto_generated|       ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated                                                                          ; work         ;
+;             |sign_div_unsign_5nh:divider|      ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                                              ; work         ;
+;                |alt_u_div_e6f:divider|         ; 148 (148)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider                        ; work         ;
+;       |lpm_divide:Mod1|                        ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod1                                                                                                        ; work         ;
+;          |lpm_divide_u7m:auto_generated|       ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated                                                                          ; work         ;
+;             |sign_div_unsign_5nh:divider|      ; 101 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider                                              ; work         ;
+;                |alt_u_div_e6f:divider|         ; 101 (101)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider                        ; work         ;
+;    |g23_basic_timer:basic_timer|               ; 110 (0)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer                                                                                                                        ; work         ;
+;       |g23_generic_timer:earth|                ; 55 (14)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:earth                                                                                                ; work         ;
+;          |lpm_counter:counter|                 ; 41 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:earth|lpm_counter:counter                                                                            ; work         ;
+;             |cntr_8fl:auto_generated|          ; 41 (41)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:earth|lpm_counter:counter|cntr_8fl:auto_generated                                                    ; work         ;
+;       |g23_generic_timer:mars|                 ; 55 (14)           ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:mars                                                                                                 ; work         ;
+;          |lpm_counter:counter|                 ; 41 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:mars|lpm_counter:counter                                                                             ; work         ;
+;             |cntr_8fl:auto_generated|          ; 41 (41)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g23_lab5_testbed|g23_basic_timer:basic_timer|g23_generic_timer:mars|lpm_counter:counter|cntr_8fl:auto_generated                                                     ; work         ;
 +------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary        ;
-+---------------------------------------+-------------+
-; Statistic                             ; Number Used ;
-+---------------------------------------+-------------+
-; Simple Multipliers (9-bit)            ; 0           ;
-; Simple Multipliers (18-bit)           ; 2           ;
-; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 4           ;
-; Signed Embedded Multipliers           ; 0           ;
-; Unsigned Embedded Multipliers         ; 2           ;
-; Mixed Sign Embedded Multipliers       ; 0           ;
-; Variable Sign Embedded Multipliers    ; 0           ;
-; Dedicated Input Shift Register Chains ; 0           ;
-+---------------------------------------+-------------+
-Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -433,46 +401,6 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Number of logic cells representing combinational loops                                         ; 17 ;
 +------------------------------------------------------------------------------------------------+----+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 212   ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 186   ;
-; Number of registers using Asynchronous Clear ; 93    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 202   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------+
-; Inverted Register Statistics                                       ;
-+----------------------------------------------------------+---------+
-; Inverted Register                                        ; Fan out ;
-+----------------------------------------------------------+---------+
-; g23_YMD_counter:YMD_counter|y[4]                         ; 10      ;
-; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[4]  ; 9       ;
-; g23_YMD_counter:YMD_counter|y[6]                         ; 10      ;
-; g23_YMD_counter:YMD_counter|y[7]                         ; 12      ;
-; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[7]  ; 11      ;
-; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[6]  ; 9       ;
-; g23_YMD_counter:YMD_counter|y[8]                         ; 10      ;
-; g23_YMD_counter:YMD_counter|y[9]                         ; 10      ;
-; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[9]  ; 9       ;
-; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[8]  ; 9       ;
-; g23_YMD_counter:YMD_counter|y[10]                        ; 10      ;
-; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|y[10] ; 9       ;
-; g23_YMD_counter:YMD_counter|m[0]                         ; 9       ;
-; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|m[0]  ; 8       ;
-; g23_YMD_counter:YMD_counter|d[0]                         ; 5       ;
-; g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|d[0]  ; 5       ;
-; Total number of inverted registers = 16                  ;         ;
-+----------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1370,46 +1298,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance                                                                       ;
-+---------------------------------------+------------------------------------------------------------------------------+
-; Name                                  ; Value                                                                        ;
-+---------------------------------------+------------------------------------------------------------------------------+
-; Number of entity instances            ; 3                                                                            ;
-; Entity Instance                       ; g23_14_to_BCD:to_BCD|lpm_mult:Mult0                                          ;
-;     -- LPM_WIDTHA                     ; 4                                                                            ;
-;     -- LPM_WIDTHB                     ; 10                                                                           ;
-;     -- LPM_WIDTHP                     ; 14                                                                           ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                     ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                                           ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                                                          ;
-;     -- USE_EAB                        ; OFF                                                                          ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                         ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                           ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                           ;
-; Entity Instance                       ; g23_14_to_BCD:to_BCD|lpm_mult:Mult1                                          ;
-;     -- LPM_WIDTHA                     ; 4                                                                            ;
-;     -- LPM_WIDTHB                     ; 7                                                                            ;
-;     -- LPM_WIDTHP                     ; 11                                                                           ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                     ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                                           ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                                                          ;
-;     -- USE_EAB                        ; OFF                                                                          ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                         ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                           ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                           ;
-; Entity Instance                       ; g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_fraction_to_MTC|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 32                                                                           ;
-;     -- LPM_WIDTHB                     ; 18                                                                           ;
-;     -- LPM_WIDTHP                     ; 50                                                                           ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                     ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                                           ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                                                          ;
-;     -- USE_EAB                        ; OFF                                                                          ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                                         ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                           ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                           ;
-+---------------------------------------+------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Partition Dependent Files                                                                                 ;
++-----------------------------------------+--------------------+---------+----------------------------------+
+; File                                    ; Location           ; Library ; Checksum                         ;
++-----------------------------------------+--------------------+---------+----------------------------------+
+; libraries/megafunctions/lpm_counter.tdf ; Quartus II Install ; work    ; 151f75e8fcf5e87e72b7df6bb2ea     ;
+; lmf/maxplus2.lmf                        ; Quartus II Install ; work    ; a36c8ec425c8a2589af98b2d4daabc3  ;
+; db/cmpr_9cc.tdf                         ; Project Directory  ; work    ; e2801e3d2636e41e856eba3c8537f    ;
+; db/cmpr_acc.tdf                         ; Project Directory  ; work    ; 12cd81b5a4c595e85ea21674377ce9c  ;
+; db/cntr_12l.tdf                         ; Project Directory  ; work    ; b3fa26ef1dc52ad1de2a81dbf2619678 ;
+; db/cntr_22l.tdf                         ; Project Directory  ; work    ; b338ed857d6fa64f804137c73fb3027  ;
+; db/cntr_8fl.tdf                         ; Project Directory  ; work    ; 69618c9cbdf7b43236d54bc99b271735 ;
+; db/cntr_sqk.tdf                         ; Project Directory  ; work    ; 35801f70c48ac843d56b82ad70742a3f ;
+; db/cntr_vqk.tdf                         ; Project Directory  ; work    ; 716492ef3da66d165fa9523449ff45   ;
+; g23_14_to_BCD.vhd                       ; Project Directory  ; work    ; d23147b798331d36adb75735614c6c9  ;
+; g23_7_segment_decoder.vhd               ; Project Directory  ; work    ; bc59584ddb88eeebac7fe5de389ec64  ;
+; g23_basic_timer.vhd                     ; Project Directory  ; work    ; b887d4ce1485dea47bacd7837d369f9  ;
+; g23_dayfrac_to_MTC.vhd                  ; Project Directory  ; work    ; 3da0e9b3fb3be89fb942e7efe4673d   ;
+; g23_generic_timer.vhd                   ; Project Directory  ; work    ; f1f6d0f0a842c8c445849f23c2db4f   ;
+; g23_HMS_counter.vhd                     ; Project Directory  ; work    ; 9eec9a57a7d85a769f7bed12d69e219  ;
+; g23_lab5_testbed.vhd                    ; Project Directory  ; work    ; 9427a18685d4cd31838a6a847dcf63e8 ;
+; g23_Seconds_to_Days.vhd                 ; Project Directory  ; work    ; d7eff5507ce7d814c92f567050df92cc ;
+; g23_UTC_to_MTC.vhd                      ; Project Directory  ; work    ; e8116066a330dabf7f536ca7c55f222  ;
+; g23_YMD_counter.vhd                     ; Project Directory  ; work    ; 994128d5285cec8f4976b5918cff8c40 ;
++-----------------------------------------+--------------------+---------+----------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -1518,7 +1431,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Thu Apr 10 01:27:23 2014
+    Info: Processing started: Thu Apr 10 15:25:22 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g23_lab5 -c g23_lab5
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file g23_7_segment_decoder.vhd
@@ -1671,6 +1584,9 @@ Info: Instantiated megafunction "g23_basic_timer:basic_timer|g23_generic_timer:m
     Info: Parameter "LPM_HINT" = "UNUSED"
 Info: Elaborating entity "g23_14_to_BCD" for hierarchy "g23_14_to_BCD:to_BCD"
 Info: Elaborating entity "g23_7_segment_decoder" for hierarchy "g23_7_segment_decoder:decode_3"
+Info: 1 design partition requires Analysis and Synthesis
+    Info: Partition "Top" requires synthesis because there were changes to its dependent source files
+Info: No design partitions will skip synthesis in the current incremental compilation
 Info: Inferred 10 megafunctions from design logic
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_14_to_BCD:to_BCD|Div0"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "g23_14_to_BCD:to_BCD|Div1"
@@ -1792,6 +1708,7 @@ Info: Instantiated megafunction "g23_UTC_to_MTC:utc_mtc|g23_dayfrac_to_MTC:day_f
 Info: Found 1 design units, including 1 entities, in source file db/mult_8ct.tdf
     Info: Found entity 1: mult_8ct
 Warning: 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Starting Logic Optimization and Technology Mapping for Top Partition
 Info: Ignored 54 buffer(s)
     Info: Ignored 54 SOFT buffer(s)
 Info: Registers with preset signals will power-up high
@@ -1808,17 +1725,15 @@ Info: Found the following redundant logic cells in design
     Info (17048): Logic cell "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod1|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider|add_sub_8_result_int[1]~14"
     Info (17048): Logic cell "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider|add_sub_6_result_int[1]~12"
     Info (17048): Logic cell "g23_UTC_to_MTC:utc_mtc|g23_YMD_counter:YMD_counter|lpm_divide:Mod0|lpm_divide_u7m:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_e6f:divider|add_sub_7_result_int[0]~16"
-Warning: Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "edit_mode"
-Info: Implemented 2101 device resources after synthesis - the final resource count might be different
+Info: Implemented 2111 device resources after synthesis - the final resource count might be different
     Info: Implemented 11 input pins
     Info: Implemented 31 output pins
-    Info: Implemented 2055 logic cells
+    Info: Implemented 2065 logic cells
     Info: Implemented 4 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 352 megabytes
-    Info: Processing ended: Thu Apr 10 01:27:31 2014
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Processing ended: Thu Apr 10 15:25:29 2014
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 
