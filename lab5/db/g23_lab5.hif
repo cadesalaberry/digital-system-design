@@ -8168,5 +8168,35 @@ a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end
+# entity
+g23_UTC_to_MTC
+# storage
+db|g23_lab5.(62).cnf
+db|g23_lab5.(62).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+g23_utc_to_mtc.vhd
+e8116066a330dabf7f536ca7c55f222
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
 # complete
 

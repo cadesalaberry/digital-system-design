@@ -1,5 +1,5 @@
 Fitter report for g23_lab5
-Thu Apr 10 18:46:45 2014
+Fri Apr 11 19:01:34 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -65,7 +65,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                     ;
 +------------------------------------+-----------------------------------------------+
-; Fitter Status                      ; Successful - Thu Apr 10 18:46:45 2014         ;
+; Fitter Status                      ; Successful - Fri Apr 11 19:01:34 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab5                                      ;
 ; Top-level Entity Name              ; g23_lab5_testbed                              ;
@@ -145,12 +145,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 2.33        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
-;     2-4 processors         ; < 0.1%      ;
+;     2-4 processors         ;  16.7%      ;
 +----------------------------+-------------+
 
 
@@ -200,7 +200,7 @@ Note: The table contains rows with duplicate information to facilitate sorting b
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/cdesal/github/digital-system-design/lab5/g23_lab5.pin.
+The pin-out file can be found in C:/Users/gludwi/digital-system-design/lab5/g23_lab5.pin.
 
 
 +-----------------------------------------------------------------------+
@@ -1411,7 +1411,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Thu Apr 10 18:46:39 2014
+    Info: Processing started: Fri Apr 11 19:01:28 2014
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off g23_lab5 -c g23_lab5
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Selected device EP2C20F484C7 for design "g23_lab5"
@@ -1484,7 +1484,7 @@ Info: Automatically promoted node g23_UTC_to_MTC:utc_mtc|g23_HMS_counter:HMS_cou
 Info: Starting register packing
 Info: Finished register packing
     Extra Info: No registers were packed into other blocks
-Info: Fitter preparation operations ending: elapsed time is 00:00:01
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -1611,17 +1611,17 @@ Warning: Found 35 output pins without output pin load capacitance assignment
     Info: Pin "mars_active" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
 Info: Delay annotation completed successfully
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info: Generated suppressed messages file C:/Users/cdesal/github/digital-system-design/lab5/g23_lab5.fit.smsg
+Info: Generated suppressed messages file C:/Users/gludwi/digital-system-design/lab5/g23_lab5.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 371 megabytes
-    Info: Processing ended: Thu Apr 10 18:46:46 2014
-    Info: Elapsed time: 00:00:07
+    Info: Processing ended: Fri Apr 11 19:01:34 2014
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:07
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/cdesal/github/digital-system-design/lab5/g23_lab5.fit.smsg.
+The suppressed messages can be found in C:/Users/gludwi/digital-system-design/lab5/g23_lab5.fit.smsg.
 
 

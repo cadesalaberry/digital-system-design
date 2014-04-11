@@ -1,5 +1,5 @@
 Flow report for g23_lab5
-Thu Apr 10 18:46:56 2014
+Fri Apr 11 19:01:44 2014
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Thu Apr 10 18:46:54 2014         ;
+; Flow Status                        ; Successful - Fri Apr 11 19:01:42 2014         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; g23_lab5                                      ;
 ; Top-level Entity Name              ; g23_lab5_testbed                              ;
@@ -216,7 +216,17 @@ applicable agreement for further details.
 ; Fitter                  ; 00:00:08     ; 1.0                     ; 371 MB              ; 00:00:06                           ;
 ; Assembler               ; 00:00:03     ; 1.0                     ; 276 MB              ; 00:00:01                           ;
 ; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 218 MB              ; 00:00:01                           ;
-; Total                   ; 00:10:33     ; --                      ; --                  ; 00:05:28                           ;
+; Analysis & Synthesis    ; 00:00:05     ; 1.0                     ; 333 MB              ; 00:00:03                           ;
+; Partition Merge         ; 00:00:03     ; 1.0                     ; 279 MB              ; 00:00:00                           ;
+; Fitter                  ; 00:00:06     ; 1.0                     ; 363 MB              ; 00:00:05                           ;
+; Assembler               ; 00:00:04     ; 1.0                     ; 272 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 208 MB              ; 00:00:00                           ;
+; Analysis & Synthesis    ; 00:00:08     ; 1.0                     ; 353 MB              ; 00:00:06                           ;
+; Partition Merge         ; 00:00:03     ; 1.0                     ; 278 MB              ; 00:00:00                           ;
+; Fitter                  ; 00:00:08     ; 2.3                     ; 371 MB              ; 00:00:06                           ;
+; Assembler               ; 00:00:03     ; 1.0                     ; 276 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 218 MB              ; 00:00:01                           ;
+; Total                   ; 00:11:18     ; --                      ; --                  ; 00:05:51                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -349,6 +359,16 @@ applicable agreement for further details.
 ; Fitter                  ; 156TR4060DS-03   ; Windows Vista ; 6.1        ; x86_64         ;
 ; Assembler               ; 156TR4060DS-03   ; Windows Vista ; 6.1        ; x86_64         ;
 ; Classic Timing Analyzer ; 156TR4060DS-03   ; Windows Vista ; 6.1        ; x86_64         ;
+; Analysis & Synthesis    ; 156TR4060DS-08   ; Windows Vista ; 6.1        ; x86_64         ;
+; Partition Merge         ; 156TR4060DS-08   ; Windows Vista ; 6.1        ; x86_64         ;
+; Fitter                  ; 156TR4060DS-08   ; Windows Vista ; 6.1        ; x86_64         ;
+; Assembler               ; 156TR4060DS-08   ; Windows Vista ; 6.1        ; x86_64         ;
+; Classic Timing Analyzer ; 156TR4060DS-08   ; Windows Vista ; 6.1        ; x86_64         ;
+; Analysis & Synthesis    ; 156TR4060DS-08   ; Windows Vista ; 6.1        ; x86_64         ;
+; Partition Merge         ; 156TR4060DS-08   ; Windows Vista ; 6.1        ; x86_64         ;
+; Fitter                  ; 156TR4060DS-08   ; Windows Vista ; 6.1        ; x86_64         ;
+; Assembler               ; 156TR4060DS-08   ; Windows Vista ; 6.1        ; x86_64         ;
+; Classic Timing Analyzer ; 156TR4060DS-08   ; Windows Vista ; 6.1        ; x86_64         ;
 +-------------------------+------------------+---------------+------------+----------------+
 
 
@@ -474,6 +494,16 @@ quartus_tan --read_settings_files=off --write_settings_files=off g23_lab5 -c g23
 quartus_map --read_settings_files=on --write_settings_files=off g23_lab5 -c g23_lab5
 quartus_map --read_settings_files=on --write_settings_files=off g23_lab5 -c g23_lab5
 quartus_map --read_settings_files=on --write_settings_files=off g23_lab5 -c g23_lab5
+quartus_map --read_settings_files=on --write_settings_files=off g23_lab5 -c g23_lab5
+quartus_cdb --read_settings_files=off --write_settings_files=off g23_lab5 -c g23_lab5 --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off g23_lab5 -c g23_lab5
+quartus_asm --read_settings_files=off --write_settings_files=off g23_lab5 -c g23_lab5
+quartus_tan --read_settings_files=off --write_settings_files=off g23_lab5 -c g23_lab5 --timing_analysis_only
+quartus_map --read_settings_files=on --write_settings_files=off g23_lab5 -c g23_lab5
+quartus_cdb --read_settings_files=off --write_settings_files=off g23_lab5 -c g23_lab5 --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off g23_lab5 -c g23_lab5
+quartus_asm --read_settings_files=off --write_settings_files=off g23_lab5 -c g23_lab5
+quartus_tan --read_settings_files=off --write_settings_files=off g23_lab5 -c g23_lab5 --timing_analysis_only
 quartus_map --read_settings_files=on --write_settings_files=off g23_lab5 -c g23_lab5
 quartus_cdb --read_settings_files=off --write_settings_files=off g23_lab5 -c g23_lab5 --merge=on
 quartus_fit --read_settings_files=off --write_settings_files=off g23_lab5 -c g23_lab5
